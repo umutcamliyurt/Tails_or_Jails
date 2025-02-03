@@ -1,0 +1,14 @@
+libcolamd.so.2 libcolamd2 #MINVER#
+* Build-Depends-Package: libsuitesparse-dev
+ colamd@Base 1:4.5.2
+ colamd_l@Base 1:4.5.2
+ colamd_l_recommended@Base 1:4.5.2
+ colamd_l_report@Base 1:4.5.2
+ colamd_l_set_defaults@Base 1:4.5.2
+ colamd_recommended@Base 1:4.5.2
+ colamd_report@Base 1:4.5.2
+ colamd_set_defaults@Base 1:4.5.2
+ symamd@Base 1:4.5.2
+ symamd_l@Base 1:4.5.2
+ symamd_l_report@Base 1:4.5.2
+ symamd_report@Base 1:4.5.2

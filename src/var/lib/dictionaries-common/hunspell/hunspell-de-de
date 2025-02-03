@@ -1,0 +1,10 @@
+Language: deutsch/Deutschland (German/Germany)
+Hash-Name: de_DE
+Emacsen-Name: de_DE
+Emacsen-Names: de_DE, german-new8
+Casechars: [A-Za-zÄÖÜäöüßâêéñà]
+Not-Casechars: [^A-Za-zÄÖÜäöüßâêéñà]
+Otherchars: [-]
+Additionalchars: ÄÖÜäöüßâêéñà
+Coding-System: utf-8
+Hunspell-Locales: de_DE

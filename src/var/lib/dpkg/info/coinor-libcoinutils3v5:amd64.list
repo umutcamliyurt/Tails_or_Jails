@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libCoinUtils.so.3.11.4
+/usr/share
+/usr/share/doc
+/usr/share/doc/coinor-libcoinutils3v5
+/usr/share/doc/coinor-libcoinutils3v5/changelog.Debian.gz
+/usr/share/doc/coinor-libcoinutils3v5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/coinor-libcoinutils3v5
+/usr/lib/x86_64-linux-gnu/libCoinUtils.so.3

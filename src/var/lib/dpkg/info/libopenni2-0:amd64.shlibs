@@ -1,0 +1,5 @@
+libDummyDevice 0 libopenni2-0 (>= 2.2.0.33+dfsg)
+libOniFile 0 libopenni2-0 (>= 2.2.0.33+dfsg)
+libPS1080 0 libopenni2-0 (>= 2.2.0.33+dfsg)
+libPSLink 0 libopenni2-0 (>= 2.2.0.33+dfsg)
+libOpenNI2 0 libopenni2-0 (>= 2.2.0.33+dfsg)

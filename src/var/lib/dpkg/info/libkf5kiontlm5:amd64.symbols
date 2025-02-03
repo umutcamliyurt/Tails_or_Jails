@@ -1,0 +1,13 @@
+libKF5KIONTLM.so.5 libkf5kiontlm5 #MINVER#
+* Build-Depends-Package: libkf5kio-dev
+ _ZN5KNTLM10lmResponseERK10QByteArrayPKh@Base 5.69.0
+ _ZN5KNTLM10ntlmv2HashERK7QStringS2_S2_@Base 5.69.0
+ _ZN5KNTLM12getNegotiateER10QByteArrayRK7QStringS4_j@Base 5.69.0
+ _ZN5KNTLM12lmv2ResponseERK10QByteArrayS2_PKh@Base 5.69.0
+ _ZN5KNTLM13getLMResponseERK7QStringPKh@Base 5.69.0
+ _ZN5KNTLM15getLMv2ResponseERK7QStringS2_S2_PKh@Base 5.69.0
+ _ZN5KNTLM15getNTLMResponseERK7QStringPKh@Base 5.69.0
+ _ZN5KNTLM17getNTLMv2ResponseERK7QStringS2_S2_RK10QByteArrayPKh@Base 5.69.0
+ _ZN5KNTLM6lmHashERK7QString@Base 5.69.0
+ _ZN5KNTLM7getAuthER10QByteArrayRKS0_RK7QStringS6_S6_S6_6QFlagsINS_8AuthFlagEE@Base 5.69.0
+ _ZN5KNTLM8ntlmHashERK7QString@Base 5.69.0

@@ -1,0 +1,15 @@
+/.
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libfuse3.so.3.14.0
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libfuse3-3
+/usr/share/doc/libfuse3-3/README.NFS
+/usr/share/doc/libfuse3-3/README.md
+/usr/share/doc/libfuse3-3/changelog.Debian.gz
+/usr/share/doc/libfuse3-3/changelog.gz
+/usr/share/doc/libfuse3-3/copyright
+/usr/share/doc/libfuse3-3/kernel.txt.gz
+/lib/x86_64-linux-gnu/libfuse3.so.3

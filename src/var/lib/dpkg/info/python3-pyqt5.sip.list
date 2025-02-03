@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/PyQt5
+/usr/lib/python3/dist-packages/PyQt5/sip.cpython-311-x86_64-linux-gnu.so
+/usr/lib/python3/dist-packages/PyQt5_sip-12.11.1.egg-info
+/usr/lib/python3/dist-packages/PyQt5_sip-12.11.1.egg-info/PKG-INFO
+/usr/lib/python3/dist-packages/PyQt5_sip-12.11.1.egg-info/dependency_links.txt
+/usr/lib/python3/dist-packages/PyQt5_sip-12.11.1.egg-info/top_level.txt
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-pyqt5.sip
+/usr/share/doc/python3-pyqt5.sip/changelog.Debian.gz
+/usr/share/doc/python3-pyqt5.sip/copyright

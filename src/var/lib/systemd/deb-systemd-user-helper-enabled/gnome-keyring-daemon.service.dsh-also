@@ -1,0 +1,2 @@
+/etc/systemd/user/sockets.target.wants/gnome-keyring-daemon.socket
+/etc/systemd/user/graphical-session-pre.target.wants/gnome-keyring-daemon.service

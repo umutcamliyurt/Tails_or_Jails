@@ -1,0 +1,4 @@
+[Allow users in plugdev and sudo groups to run usbguard actions without authentication]
+Identity=unix-group:plugdev;unix-group:sudo
+Action=org.usbguard1.setParameter;org.usbguard.Policy1.appendRule;org.usbguard.Devices1.applyDevicePolicy
+ResultActive=yes

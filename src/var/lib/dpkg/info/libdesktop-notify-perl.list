@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdesktop-notify-perl
+/usr/share/doc/libdesktop-notify-perl/changelog.Debian.gz
+/usr/share/doc/libdesktop-notify-perl/changelog.gz
+/usr/share/doc/libdesktop-notify-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Desktop::Notify.3pm.gz
+/usr/share/man/man3/Desktop::Notify::Notification.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Desktop
+/usr/share/perl5/Desktop/Notify
+/usr/share/perl5/Desktop/Notify/Notification.pm
+/usr/share/perl5/Desktop/Notify.pm

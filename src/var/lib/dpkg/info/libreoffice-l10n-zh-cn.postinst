@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/Langpack-zh-CN.xcd" "/etc/libreoffice/registry/Langpack-zh-CN.xcd"
+	ucfr --force libreoffice-l10n-zh-cn "/etc/libreoffice/registry/Langpack-zh-CN.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/res/fcfg_langpack_zh-CN.xcd" "/etc/libreoffice/registry/res/fcfg_langpack_zh-CN.xcd"
+	ucfr --force libreoffice-l10n-zh-cn "/etc/libreoffice/registry/res/fcfg_langpack_zh-CN.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/res/registry_zh-CN.xcd" "/etc/libreoffice/registry/res/registry_zh-CN.xcd"
+	ucfr --force libreoffice-l10n-zh-cn "/etc/libreoffice/registry/res/registry_zh-CN.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/cjk_zh-CN.xcd" "/etc/libreoffice/registry/cjk_zh-CN.xcd"
+	ucfr --force libreoffice-l10n-zh-cn "/etc/libreoffice/registry/cjk_zh-CN.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-l10n-zh-cn /usr/share/doc/libreoffice-common 1:6.4.0\~rc1\~git20191209 -- "$@"
+# End automatically added section

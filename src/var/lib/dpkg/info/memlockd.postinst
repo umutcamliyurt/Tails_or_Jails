@@ -1,0 +1,56 @@
+#!/bin/sh
+# postinst script for memlockd
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+
+case "$1" in
+    configure)
+	if ! getent group memlockd > /dev/null ; then
+	    addgroup --system --group memlockd > /dev/null
+	fi
+	if ! getent passwd memlockd > /dev/null ; then
+	    adduser --system --no-create-home --ingroup memlockd \
+		--gecos "memlockd system account" --no-create-home \
+		--disabled-login --home /usr/lib/memlockd --shell /bin/false \
+		--disabled-password memlockd > /dev/null
+	fi
+
+	update-rc.d memlockd defaults >/dev/null || true
+
+	systemctl enable memlockd.service || true
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+if which invoke-rc.d >/dev/null 2>&1; then
+	invoke-rc.d memlockd restart
+else
+	/etc/init.d/memlockd restart
+fi
+
+exit 0
+
+

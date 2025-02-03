@@ -1,0 +1,14 @@
+/.
+/lib
+/lib/udev
+/lib/udev/gobi_loader
+/lib/udev/rules.d
+/lib/udev/rules.d/60-gobi-loader.rules
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/gobi-loader
+/usr/share/doc/gobi-loader/README.Debian
+/usr/share/doc/gobi-loader/changelog.Debian.amd64.gz
+/usr/share/doc/gobi-loader/changelog.Debian.gz
+/usr/share/doc/gobi-loader/copyright

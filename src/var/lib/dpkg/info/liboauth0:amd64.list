@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/liboauth.so.0.8.7
+/usr/share
+/usr/share/doc
+/usr/share/doc/liboauth0
+/usr/share/doc/liboauth0/changelog.Debian.gz
+/usr/share/doc/liboauth0/changelog.gz
+/usr/share/doc/liboauth0/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/liboauth0
+/usr/lib/x86_64-linux-gnu/liboauth.so.0

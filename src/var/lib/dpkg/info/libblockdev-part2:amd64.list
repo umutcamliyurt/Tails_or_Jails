@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libbd_part.so.2.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libblockdev-part2
+/usr/share/doc/libblockdev-part2/changelog.Debian.gz
+/usr/share/doc/libblockdev-part2/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libblockdev-part2
+/usr/lib/x86_64-linux-gnu/libbd_part.so.2

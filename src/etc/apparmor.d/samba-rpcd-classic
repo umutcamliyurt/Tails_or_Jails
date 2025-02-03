@@ -1,0 +1,24 @@
+# ------------------------------------------------------------------
+#
+#    Copyright (C) 2022 SUSE LLC
+#
+#    This program is free software; you can redistribute it and/or
+#    modify it under the terms of version 2 of the GNU General Public
+#    License published by the Free Software Foundation.
+#
+# ------------------------------------------------------------------
+# vim:syntax=apparmor
+
+abi <abi/3.0>,
+
+include <tunables/global>
+
+profile samba-rpcd-classic /usr/lib*/samba/{,samba/}rpcd_classic flags=(complain,attach_disconnected) {
+  include <abstractions/samba-rpcd>
+  include <abstractions/wutmp>
+
+  /usr/lib*/samba/{,samba/}rpcd_classic mr,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/samba-rpcd-classic>
+}

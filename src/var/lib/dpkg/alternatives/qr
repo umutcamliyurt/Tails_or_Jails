@@ -1,0 +1,9 @@
+auto
+/usr/bin/qr
+qr.1.gz
+/usr/share/man/man1/qr.1.gz
+
+/usr/bin/python3-qr
+200
+/usr/share/man/man1/python3-qr.1.gz
+

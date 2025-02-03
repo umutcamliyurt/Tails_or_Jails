@@ -1,0 +1,14 @@
+/.
+/lib
+/lib/udev
+/lib/udev/ipheth-pair
+/lib/udev/rules.d
+/lib/udev/rules.d/90-iphone-tether.rules
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/ipheth-utils
+/usr/share/doc/ipheth-utils/NEWS.Debian.gz
+/usr/share/doc/ipheth-utils/README.Debian
+/usr/share/doc/ipheth-utils/changelog.Debian.gz
+/usr/share/doc/ipheth-utils/copyright

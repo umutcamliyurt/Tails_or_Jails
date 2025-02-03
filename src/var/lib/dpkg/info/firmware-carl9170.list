@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/firmware
+/usr/lib/firmware/carl9170-1.fw
+/usr/share
+/usr/share/bug
+/usr/share/bug/firmware-carl9170
+/usr/share/bug/firmware-carl9170/control
+/usr/share/bug/firmware-carl9170/presubj
+/usr/share/doc
+/usr/share/doc/firmware-carl9170
+/usr/share/doc/firmware-carl9170/changelog.Debian.gz
+/usr/share/doc/firmware-carl9170/copyright
+/usr/share/metainfo
+/usr/share/metainfo/firmware-carl9170.metainfo.xml

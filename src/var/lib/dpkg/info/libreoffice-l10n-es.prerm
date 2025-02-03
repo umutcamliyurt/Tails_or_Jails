@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-l10n-es /usr/share/doc/libreoffice-common 1:6.4.0\~rc1\~git20191209 -- "$@"
+# End automatically added section

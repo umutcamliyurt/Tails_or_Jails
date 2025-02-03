@@ -1,0 +1,3 @@
+/etc/dconf/db/ibus.d/00-upstream-settings
+/etc/dconf/profile/ibus
+/etc/xdg/Xwayland-session.d/10-ibus-x11

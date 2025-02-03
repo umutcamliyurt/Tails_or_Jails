@@ -1,0 +1,24 @@
+abi <abi/3.0>,
+
+include <tunables/global>
+
+profile samba-bgqd /usr/lib*/samba/{,samba/}samba-bgqd flags=(complain,attach_disconnected) {
+  include <abstractions/base>
+  include <abstractions/cups-client>
+  include <abstractions/nameservice>
+  include <abstractions/openssl>
+  include <abstractions/samba>
+
+  signal receive set=term peer=smbd,
+
+  @{PROC}/sys/kernel/core_pattern r,
+  owner @{PROC}/@{pid}/fd/ r,
+
+  @{run}/samba/samba-bgqd.pid wk,
+
+  /usr/lib*/samba/{,samba/}samba-bgqd mr,
+  /var/cache/samba/printing/*.tdb rwk,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/samba-bgqd>
+}

@@ -1,0 +1,32 @@
+# ------------------------------------------------------------------
+#
+#    Copyright (C) 2022 SUSE LLC
+#
+#    This program is free software; you can redistribute it and/or
+#    modify it under the terms of version 2 of the GNU General Public
+#    License published by the Free Software Foundation.
+#
+# ------------------------------------------------------------------
+# vim:syntax=apparmor
+
+abi <abi/3.0>,
+
+include <tunables/global>
+
+profile samba-dcerpcd /usr/lib*/samba/{,samba/}samba-dcerpcd flags=(complain,attach_disconnected) {
+  include <abstractions/samba-rpcd>
+
+  @{run}/samba/samba-dcerpcd.pid wk,
+
+  /usr/lib*/samba/{,samba/}samba-dcerpcd mr,
+
+  /usr/lib*/samba/ r,
+  /usr/lib*/samba/{,samba/}rpcd_{mdssvc,epmapper,rpcecho,fsrvp,lsad,winreg} Px -> samba-rpcd,
+  /usr/lib*/samba/{,samba/}rpcd_classic Px -> samba-rpcd-classic,
+  /usr/lib*/samba/{,samba/}rpcd_spoolss Px -> samba-rpcd-spoolss,
+
+  @{run}/samba/ncalrpc/ rw,
+  @{run}/samba/ncalrpc/** rw,
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/samba-dcerpcd>
+}

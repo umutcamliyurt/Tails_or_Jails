@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/lib
+/usr/lib/shim
+/usr/lib/shim/shimx64.efi.signed
+/usr/share
+/usr/share/doc
+/usr/share/doc/shim-signed
+/usr/share/doc/shim-signed/changelog.gz
+/usr/share/doc/shim-signed/copyright

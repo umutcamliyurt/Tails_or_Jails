@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+# Create the ssl-cert system group for snakeoil ownership:
+if ! getent group ssl-cert >/dev/null; then
+	addgroup --quiet --system --force-badname ssl-cert
+fi
+
+# no need to perform any check. If the certificates are there
+# it will exit 0.
+make-ssl-cert generate-default-snakeoil
+
+# allow group ssl-cert to access /etc/ssl/private
+if ! dpkg-statoverride --list /etc/ssl/private >/dev/null 2>&1
+then
+    dpkg-statoverride --update --add root ssl-cert 710 /etc/ssl/private
+fi
+
+

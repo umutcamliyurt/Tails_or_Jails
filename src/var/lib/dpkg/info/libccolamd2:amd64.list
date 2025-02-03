@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+/usr/share
+/usr/share/doc
+/usr/share/doc/libccolamd2
+/usr/share/doc/libccolamd2/NEWS.Debian.gz
+/usr/share/doc/libccolamd2/changelog.Debian.gz
+/usr/share/doc/libccolamd2/changelog.gz
+/usr/share/doc/libccolamd2/copyright
+/usr/lib/x86_64-linux-gnu/libccolamd.so.2

@@ -1,0 +1,7 @@
+/etc/apparmor.d/abstractions/gstreamer
+/etc/apparmor.d/abstractions/totem
+/etc/apparmor.d/usr.bin.irssi
+/etc/apparmor.d/usr.bin.pidgin
+/etc/apparmor.d/usr.bin.totem
+/etc/apparmor.d/usr.bin.totem-previewers
+/etc/apparmor.d/usr.sbin.apt-cacher-ng

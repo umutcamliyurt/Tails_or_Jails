@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libreoffice
+/usr/lib/libreoffice/program
+/usr/lib/libreoffice/program/libdbahsqllo.so
+/usr/lib/libreoffice/program/libdbalo.so
+/usr/share
+/usr/share/bug
+/usr/share/bug/libreoffice-base-core
+/usr/share/bug/libreoffice-base-core/presubj
+/usr/share/doc
+/usr/share/doc/libreoffice-base-core
+/usr/share/doc/libreoffice-base-core/changelog.Debian.gz
+/usr/share/doc/libreoffice-base-core/copyright

@@ -1,0 +1,315 @@
+Template: shim/title/secureboot
+Type: text
+Description: Configuring UEFI Secure Boot
+Description-cs.UTF-8: Nastavuje se UEFI Secure Boot
+Description-de.UTF-8: UEFI Secure Boot konfigurieren
+Description-es.UTF-8: Configuración de UEFI Secure Boot
+Description-fr.UTF-8: Configuration du « Secure Boot » de l'UEFI (Démarrage Sécurisé)
+Description-it.UTF-8: Configurazione di Secure Boot (avvio protetto) UEFI
+Description-nl.UTF-8: Configureren van UEFI Veilig Opstarten (UEFI Secure Boot)
+Description-pt.UTF-8: A configurar o Secure Boot UEFI
+Description-pt_BR.UTF-8: Configuração do UEFI Secure Boot
+Description-ro.UTF-8: Configurarea pornirii securizate UEFI „UEFI Secure Boot”
+Description-ru.UTF-8: Настройка UEFI Secure Boot
+Description-sv.UTF-8: Inställningar för UEFI Secure Boot
+
+Template: shim/error/bad_secureboot_key
+Type: error
+Description: Invalid password
+ The Secure Boot key you've entered is not valid. The password used must be
+ between 8 and 16 characters.
+Description-cs.UTF-8: Neplatné heslo
+ Klíč pro Secure Boot, který jste zadali, není platný. Heslo musí obsahovat 8 až 16 znaků.
+Description-de.UTF-8: Ungültiges Passwort
+ Der von Ihnen für Secure Boot eingegebene Schlüssel ist ungültig. Das verwendete Passwort muss zwischen 8 und 16 Zeichen lang sein.
+Description-es.UTF-8: Contraseña inválida
+ La clave que ha introducido para Secure Boot no es válida. La contraseña debe tener entre 8 y 16 caracteres.
+Description-fr.UTF-8: Mot de passe non valable
+ La clé du « Secure Boot » que vous avez saisie n’est pas valable. Le mot de passe utilisé doit contenir entre 8 et 16 caractères.
+Description-it.UTF-8: Password non valida
+ La chiave per il Secure Boot inserita non è valida. La password utilizzata deve contenere da 8 a 16 caratteri.
+Description-nl.UTF-8: Ongeldig wachtwoord
+ U voerde een ongeldige sleutel in voor Secure Boot. Het gebruikte wachtwoord moet tussen 8 en 16 tekens bevatten.
+Description-pt.UTF-8: Palavra-chave inválida
+ A chave do Secure Boot que introduziu não é válida. A palavra-chave deve conter entre 8 a 16 caracteres.
+Description-pt_BR.UTF-8: Senha inválida
+ A chave do Secure Boot que você digitou não é válida. A senha utilizada deve ter entre 8 e 16 caracteres.
+Description-ro.UTF-8: Parolă nevalidă
+ Cheia de pornire securizată „Secure Boot” pe care ați introdus-o nu este validă. Parola utilizată trebuie să aibă între 8 și 16 caractere.
+Description-ru.UTF-8: Неверный пароль
+ Введённый вами ключ Secure Boot неверен. Пароль должен содержать от 8 до 16 символов.
+Description-sv.UTF-8: Felaktigt lösenord
+ Nyckeln för Secure Boot är inte korrekt. Lösenordet måste vara mellan 8 och 16 tecken.
+
+Template: shim/disable_secureboot
+Type: boolean
+Default: true
+Description: Disable UEFI Secure Boot?
+ If Secure Boot remains enabled on your system, your system may still boot but
+ any hardware that requires third-party drivers to work correctly may not be
+ usable.
+Description-cs.UTF-8: Zakázat UEFI Secure Boot?
+ Pokud ve vašem systému zůstane Secure Boot povolen, systém se bude moci stále zavést, ale veškerý hardware, který ke své správné funkci vyžaduje ovladače třetích stran, nemusí fungovat.
+Description-de.UTF-8: UEFI Secure Boot deaktivieren?
+ Wenn Secure Boot aktiviert bleibt, kann es sein, dass Ihr System zwar noch startet, Sie aber jegliche Hardware, die von Dritten bereitgestellte Treiber benötigt, nicht verwenden können.
+Description-es.UTF-8: ¿Desea desactivar UEFI Secure Boot?
+ Si Secure Boot permanece activado en su sistema, podrá arrancarlo pero cualquier componente que requiera controladores de terceros para funcionar correctamente podría no ser usable.
+Description-fr.UTF-8: Faut-il désactiver le « Secure Boot » de l'UEFI ?
+ Si le « Secure Boot » reste activé sur votre système, celui-ci peut démarrer mais les périphériques ayant besoin de pilotes tiers pour fonctionner pourraient être inutilisables.
+Description-it.UTF-8: Disabilitare il Secure Boot UEFI?
+ Se Secure Boot rimane abilitato sul sistema, questo potrà comunque avviarsi, ma qualsiasi hardware che richiede driver di terze parti per funzionare correttamente potrebbe non essere utilizzabile.
+Description-nl.UTF-8: UEFI Secure Boot (veilig opstarten) uitschakelen?
+ Indien Secure Boot op uw systeem ingeschakeld blijft, zal uw systeem nog steeds opstarten maar mogelijk zal hardware die stuurprogramma's van derden nodig heeft om correct te functioneren, niet bruikbaar zijn.
+Description-pt.UTF-8: Desactivar o Secure Boot?
+ Se o Secure Boot persistir no seu sistema, poderá arrancar na mesma mas qualquer hardware que necessite de drivers de terceiros poderá não funcionar.
+Description-pt_BR.UTF-8: Desabilitar o UEFI Secure Boot?
+ Se o Secure Boot permanecer ativado em seu sistema, ele ainda poderá inicializar, mas qualquer hardware que exija drivers de terceiros para funcionar corretamente pode não ser utilizável.
+Description-ro.UTF-8: Dezactivați pornirea securizată UEFI „UEFI Secure Boot”?
+ Dacă pornirea securizată „Secure Boot” rămâne activată pe sistemul dvs., este posibil ca acesta să pornească în continuare, dar este posibil ca orice dispozitiv fizic care necesită controlori de la terți pentru a funcționa corect să nu poată fi utilizat.
+Description-ru.UTF-8: Отключить UEFI Secure Boot?
+ Если Secure Boot будет оставаться включённым в вашей системе, то система всё ещё может загружаться, однако любое оборудование, требующее для своей работы сторонние драйверы, может оказаться непригодным для эксплуатации.
+Description-sv.UTF-8: Avaktivera UEFI Secure Boot?
+ Om Secure Boot fortsätter att vara aktiverat på systemet kommer du fortfarande kunna starta systemet men hårdvara som kräver drivrutiner från tredje part kommer inte kunna användas.
+
+Template: shim/enable_secureboot
+Type: boolean
+Default: false
+Description: Enable UEFI Secure Boot?
+ If Secure Boot is enabled on your system, your system may still boot but
+ any hardware that requires third-party drivers to work correctly may not be
+ usable.
+Description-cs.UTF-8: Povolit UEFI Secure Boot?
+ Pokud je ve vašem systému povolen Secure Boot, systém se bude moci stále zavést, ale veškerý hardware, který ke své správné funkci vyžaduje ovladače třetích stran, nemusí fungovat.
+Description-de.UTF-8: UEFI Secure Boot aktivieren?
+ Wenn Secure Boot aktiv ist, kann es sein, dass Ihr System zwar noch startet, Sie aber jegliche Hardware, die von Dritten bereitgestellte Treiber benötigt, nicht verwenden können.
+Description-es.UTF-8: ¿Desea activar UEFI Secure Boot?
+ Si Secure Boot está activado en su sistema, podrá arrancarlo pero cualquier componente que requiera controladores de terceros para funcionar correctamente podría no ser usable.
+Description-fr.UTF-8: Faut-il activer le « Secure Boot » de l'UEFI ?
+ Si le « Secure Boot » est activé sur votre système, celui-ci peut démarrer mais les périphériques ayant besoin de pilotes tiers pour fonctionner pourraient être inutilisables.
+Description-it.UTF-8: Abilitare il Secure Boot UEFI?
+ Se Secure Boot viene abilitato sul sistema, questo potrà comunque avviarsi, ma qualsiasi hardware che richiede driver di terze parti per funzionare correttamente potrebbe non essere utilizzabile.
+Description-nl.UTF-8: UEFI Secure Boot (veilig opstarten) inschakelen?
+ Indien Secure Boot op uw systeem ingeschakeld wordt, zal uw systeem nog steeds opstarten maar mogelijk zal hardware die stuurprogramma's van derden nodig heeft om correct te functioneren, niet bruikbaar zijn.
+Description-pt.UTF-8: Activar o Secure Boot UEFI?
+ Se o Secure Boot estiver activo no seu sistema, poderá arrancar na mesma mas qualquer hardware que necessite de drivers de terceiros poderá não funcionar.
+Description-pt_BR.UTF-8: Habilitar o UEFI Secure Boot?
+ Se o Secure Boot estiver ativado em seu sistema, ele ainda poderá inicializar, mas qualquer hardware que exija drivers de terceiros para funcionar corretamente pode não ser utilizável.
+Description-ro.UTF-8: Activați pornirea securizată UEFI „UEFI Secure Boot”?
+ Dacă pornirea securizată „Secure Boot” este activată pe sistemul dvs., este posibil ca acesta să pornească în continuare, dar este posibil ca orice dispozitiv fizic care necesită controlori de la terți pentru a funcționa corect să nu poată fi utilizat.
+Description-ru.UTF-8: Включить UEFI Secure Boot?
+ Если Secure Boot будет включён в вашей системе, то система всё ещё может загружаться, однако любое оборудование, требующее для своей работы сторонние драйверы, может оказаться непригодным для эксплуатации.
+Description-sv.UTF-8: Aktivera UEFI Secure Boot?
+ Om Secure Boot är aktiverat på systemet kommer det att kunna starta men hårdvara som behöver drivrutiner från tredje part för att fungera kommer inte att kunna användas.
+
+Template: shim/secureboot_explanation
+Type: note
+Description: Your system has UEFI Secure Boot enabled
+ UEFI Secure Boot is not compatible with the use of third-party drivers.
+ .
+ The system will assist you in toggling UEFI Secure Boot. To ensure that this
+ change is being made by you as an authorized user, and not by an attacker,
+ you must choose a password now and then use the same password after reboot
+ to confirm the change.
+ .
+ If you choose to proceed but do not confirm the password upon reboot, the
+ Secure Boot configuration will not be changed, and the machine will continue
+ booting as before.
+ .
+ If Secure Boot remains enabled on your system, your system may still boot but
+ any hardware that requires third-party drivers to work correctly may not be
+ usable.
+Description-cs.UTF-8: Váš systém má povolen UEFI Secure Boot
+ UEFI Secure Boot není kompatibilní s používáním ovladačů třetích stran.
+ .
+ Tento systém vám pomůže v přepínání UEFI Secure Boot. Aby bylo zajištěno, že je tato změnu prováděna vámi, jakožto oprávněným uživatelem, a ne útočníkem, musíte si nyní pro potvrzení změny zvolit heslo a pak stejné heslo použít po restartu.
+ .
+ Pokud se rozhodnete pokračovat, ale po restartu heslo nepotvrdíte, nastavení Secure Boot se nezmění a počítač se bude zavádět jako před tím.
+ .
+ Pokud ve vašem systému zůstane Secure Boot povolen, systém se bude moci stále zavést, ale veškerý hardware, který ke své správné funkci vyžaduje ovladače třetích stran, nemusí fungovat.
+Description-de.UTF-8: UEFI Secure Boot ist auf Ihrem System aktiviert
+ UEFI Secure Boot ist mit von Dritten bereitgestellten Treibern inkompatibel.
+ .
+ Das System wird Sie beim Ein- und Ausschalten von UEFI Secure Boot unterstützen. Um sicherzustellen, dass hinter der entsprechenden Eingabe nicht ein Angreifer, sondern Sie als berechtigter Benutzer stehen, müssen Sie jetzt ein Passwort wählen. Dieses ist beim Wiederhochfahren erneut einzugeben, um die Änderung zu bestätigen.
+ .
+ Wenn Sie fortfahren, aber das Passwort beim nächsten Start nicht bestätigen, bleibt die Konfiguration von Secure Boot erhalten und Ihr Rechner wird starten wie zuvor.
+ .
+ Wenn Secure Boot aktiviert bleibt, kann es sein, dass Ihr System zwar noch startet, Sie aber jegliche Hardware, die von Dritten bereitgestellte Treiber benötigt, nicht verwenden können.
+Description-es.UTF-8: Su sistema tiene activado UEFI Secure Boot
+ UEFI Secure Boot no es compatible con el uso de controladores de terceros.
+ .
+ El sistema le asistirá para activar/desactivar UEFI Secure Boot. Para asegurarse de que este cambio lo realiza usted como usuario autorizado, y no un atacante, ahora debe elegir una contraseña y utilizar la misma contraseña después, tras reiniciar el equipo para confirmar el cambio.
+ .
+ Si decide continuar pero no confirma la contraseña tras reiniciar en equipo, la configuración de Secure Boot no cambiará y el equipo se iniciará como antes.
+ .
+ Si Secure Boot permanece activado en su sistema, podrá arrancarlo pero cualquier componente que requiera controladores de terceros para funcionar correctamente podría no ser usable.
+Description-fr.UTF-8: Votre système a le « Secure Boot » de l'UEFI activé.
+ Le « Secure Boot » de l'UEFI n'est pas compatible avec l'utilisation de pilotes tiers.
+ .
+ Le système va vous assister pour basculer en mode « Secure Boot » de l'UEFI. Pour vous assurer que cette modification est effectuée en tant qu'utilisateur autorisé, et non par un attaquant, vous devez choisir un mot de passe maintenant et utiliser le même mot de passe après le redémarrage pour confirmer le changement.
+ .
+ Si vous décidez de poursuivre mais ne confirmez pas le mot de passe lors du redémarrage, la configuration du « Secure Boot » ne sera pas modifiée, et le système continuera de démarrer comme avant.
+ .
+ Si le « Secure Boot » reste activé sur votre système, celui-ci peut démarrer mais les périphériques ayant besoin de pilotes tiers pour fonctionner pourraient être inutilisables.
+Description-it.UTF-8: Questo sistema ha il Secure Boot UEFI abilitato
+ Il Secure Boot UEFI non è compatibile con l'uso di driver di terze parti.
+ .
+ Il sistema aiuterà nella modifica del Secure Boot UEFI. Per assicurare che questa modifica venga fatta da un utente autorizzato e non da un autore di attacchi, è necessario scegliere una password ora e poi usare la stessa password dopo il riavvio per confermare la modifica.
+ .
+ Se si sceglie di procedere ma non si conferma la password dopo il riavvio, la configurazione del Secure Boot non verrà modificata e la macchina continuerà ad avviarsi come prima.
+ .
+ Se Secure Boot rimane abilitato sul sistema, questo potrà comunque avviarsi, ma qualsiasi hardware che richiede driver di terze parti per funzionare correttamente potrebbe non essere utilizzabile.
+Description-nl.UTF-8: Op uw systeem is UEFI Secure Boot (veilig opstarten) ingeschakeld
+ UEFI Secure Boot is incompatibel met het gebruik van stuurprogramma's van derden.
+ .
+ Het systeem zal u assisteren bij het omschakelen van UEFI Secure Boot. Om de garantie te hebben dat deze omschakeling door u als gemachtigde gebruiker gebeurt en niet door een aanvaller, moet u nu een wachtwoord kiezen en vervolgens na het heropstarten hetzelfde wachtwoord gebruiken om de wijziging te bevestigen.
+ .
+ Indien u ervoor kiest om verder te gaan maar bij het heropstarten het wachtwoord niet bevestigt, zal de configuratie van Secure Boot niet gewijzigd worden en zal het systeem nog steeds opstarten zoals voorheen.
+ .
+ Indien Secure Boot op uw systeem ingeschakeld blijft, zal uw systeem nog steeds opstarten maar mogelijk zal hardware die stuurprogramma's van derden nodig heeft om correct te functioneren, niet bruikbaar zijn.
+Description-pt.UTF-8: O seu sistema possui o Secure Boot activo.
+ O Secure Boot UEFI não é compatível com o uso drivers de terceiros.
+ .
+ O sistema irá auxiliá-lo a comutar para o Secure Boot UEFI. Para garantir que esta modificação é efectuada por um utilizador autorizado e não por um atacante, deverá escolher uma palavra-chave neste momento e então usar a palavra-chave a seguir ao arranque para confirmar a alteração.
+ .
+ Se escolher continuar sem definir a palavra-chave após o arranque, a configuração do Secure Boot não será alterada e o sistema será capaz de arrancar como antes.
+ .
+ Se o Secure Boot persistir no seu sistema, poderá arrancar na mesma mas qualquer hardware que necessite de drivers de terceiros poderá não funcionar.
+Description-pt_BR.UTF-8: Seu sistema tem o UEFI Secure Boot ativado
+ O UEFI Secure Boot não é compatível com o uso de drivers de terceiros.
+ .
+ O sistema irá ajudá-lo a alterar o UEFI Secure Boot. Para garantir que essa alteração seja feita por você como um usuário autorizado, e não por um invasor, você deve escolher uma senha agora e usar a mesma senha após a reinicialização para confirmar a alteração.
+ .
+ Se você optar por continuar, mas não confirmar a senha na reinicialização, a configuração do Secure Boot não será alterada e a máquina continuará inicializando como antes.
+ .
+ Se o Secure Boot permanecer ativado em seu sistema, ele ainda poderá inicializar, mas qualquer hardware que exija drivers de terceiros para funcionar corretamente pode não ser utilizável.
+Description-ro.UTF-8: Sistemul dvs. are activată pornirea securizată UEFI „UEFI Secure Boot”
+ Pornirea securizată UEFI „UEFI Secure Boot” nu este compatibilă cu utilizarea de controlori de la terți.
+ .
+ Sistemul vă va ajuta să activați/dezactivați pornirea securizată UEFI „UEFI Secure Boot”. Pentru a vă asigura că această modificare este efectuată de dumneavoastră, ca utilizator autorizat, și nu de un atacator, trebuie să alegeți o parolă acum și apoi să folosiți aceeași parolă după repornire pentru a confirma modificarea.
+ .
+ Dacă alegeți să continuați, dar nu confirmați parola la repornire, configurația de pornire securizată „Secure Boot” nu va fi modificată, iar mașina va continua să pornească la fel ca înainte.
+ .
+ Dacă pornirea securizată „Secure Boot” rămâne activată pe sistemul dvs., este posibil ca acesta să pornească în continuare, dar este posibil ca orice dispozitiv fizic care necesită controlori de la terți pentru a funcționa corect să nu poată fi utilizat.
+Description-ru.UTF-8: В вашей системе включён UEFI Secure Boot
+ UEFI Secure Boot несовместим с использованием сторонних драйверов.
+ .
+ Система поможет вам переключить UEFI Secure Boot. Для того чтобы гарантировать, что данное изменение производится авторизованным пользователем, а не злоумышленником, вам следует выбрать пароль, который вы в дальнейшем будете использовать после перезагрузки для того, чтобы подтвердить данное изменение.
+ .
+ Если вы решите продолжить, но не подтвердите пароль при перезагрузке, то настройка Secure Boot не будет изменена, а ваша машина будет загружаться так же, как и ранее.
+ .
+ Если Secure Boot будет оставаться включённым в вашей системе, то система всё ещё может загружаться, однако любое оборудование, требующее для своей работы сторонние драйверы, может оказаться непригодным для эксплуатации.
+Description-sv.UTF-8: Systemet har UEFI Secure Boot aktivt
+ UEFI Secure Boot kan inte användas tillsammans med drivrutiner från tredjepart.
+ .
+ Systemet kommer att hjälpa dig hantera UEFI Secure Boot. För att säkerställa att förändringarna görs i gott uppsåt och inte av en ondsint utomstående så måste lösenordet som nu väljs användas efter omstart för att aktivera förändringarna.
+ .
+ Om du väljer att fortsätta utan att ange lösenordet vid uppstart kommer inställningarna för Secure Boot inte att ändras och maskinen kommer att fortsätta start som förr.
+ .
+ Om Secure Boot fortsätter att vara aktiverat på systemet kommer du fortfarande kunna starta systemet men hårdvara som kräver drivrutiner från tredje part kommer inte kunna användas.
+
+Template: shim/secureboot_key
+Type: password
+Description: UEFI Secure Boot password:
+ Please enter a password for configuring UEFI Secure Boot.
+ .
+ This password will be used after a reboot to confirm authorization for a
+ change to Secure Boot state.
+Description-cs.UTF-8: Heslo pro UEFI Secure Boot:
+ Zadejte prosím heslo pro nastavování UEFI Secure Boot.
+ .
+ Toto heslo bude použito po restartu pro potvrzení oprávnění ke změně stavu Secure Boot.
+Description-de.UTF-8: UEFI Secure Boot Passwort:
+ Bitte geben Sie zur Konfiguration von UEFI Secure Boot ein Passwort ein.
+ .
+ Dieses Passwort dient nach dem Wiederhochfahren zur Prüfung, ob der Benutzer berechtigt ist, den Secure-Boot-Zustand zu ändern.
+Description-es.UTF-8: Contraseña de UEFI Secure Boot:
+ Por favor, introduzca una contraseña para configurar UEFI Secure Boot.
+ .
+ Se utilizará esta contraseña cuando reinicie para confirmar la autorización del cambio del estado de Secure Boot.
+Description-fr.UTF-8: Mot de passe pour le « Secure Boot » de l'UEFI :
+ Veuillez saisir un mot de passe pour configurer le « Secure Boot » de l'UEFI.
+ .
+ Ce mot de passe sera utilisé après le redémarrage pour confirmer l'autorisation du changement d'état du « Secure Boot » de l'UEFI.
+Description-it.UTF-8: Password per Secure Boot UEFI:
+ Inserire una password per configurare il Secure Boot UEFI.
+ .
+ Questa password verrà usata dopo il riavvio per confermare l'autorizzazione per una modifica allo stato del Secure Boot.
+Description-nl.UTF-8: Wachtwoord voor UEFI Secure Boot (veilig opstarten):
+ Geef een wachtwoord op voor het configureren van UEFI Secure Boot.
+ .
+ Dit wachtwoord zal na een herstart gebruikt worden om te bevestigen dat een wijziging aan de toestand van Secure Boot toegestaan is.
+Description-pt.UTF-8: Palavra-chave do Secure Boot UEFI?
+ Por favor introduza uma palavra-chave para configurar o Secure Boot UEFI.
+ .
+ Esta palavra-chave será utilizada após reiniciar de modo a confirmar a alteração do estado do Secure Boot.
+Description-pt_BR.UTF-8: Senha do UEFI Secure Boot:
+ Insira uma senha para configurar o UEFI Secure Boot.
+ .
+ Essa senha será usada após uma reinicialização para confirmar a autorização para uma alteração no estado do Secure Boot.
+Description-ro.UTF-8: Parola pornirii securizate UEFI „UEFI Secure Boot”:
+ Introduceți o parolă pentru configurarea pornirii securizate UEFI „UEFI Secure Boot”.
+ .
+ Această parolă va fi folosită după o repornire pentru a confirma autorizarea pentru modificarea stării de pornire securizată „Secure Boot”.
+Description-ru.UTF-8: Пароль UEFI Secure Boot:
+ Введите пароль для настройки UEFI Secure Boot.
+ .
+ Этот пароль будет использован после перезагрузки для подтверждения авторизации на изменение состояния Secure Boot.
+Description-sv.UTF-8: UEFI Secure Boot-lösenord:
+ Ange lösenord för inställningar av UEFI Secure Boot.
+ .
+ Detta lösenord kommer att användas efter en omstart för att säkerställa förändring av Secure Boot.
+
+Template: shim/secureboot_key_again
+Type: password
+Description: Re-enter password to verify:
+ Please enter the same password again to verify that you have typed it
+ correctly.
+Description-cs.UTF-8: Zadejte stejné heslo pro ověření:
+ Zadejte prosím znovu stejné heslo k ověření, že jste jej napsali správně.
+Description-de.UTF-8: Bestätigen Sie die Richtigkeit des Passwortes, indem Sie es noch einmal eingeben:
+ Geben Sie das Passwort bitte zum Ausschließen von Tippfehlern noch einmal ein.
+Description-es.UTF-8: Vuelva a introducir la contraseña para verificarla:
+ Por favor, introduzca la misma contraseña otra vez para comprobar que la ha tecleado correctamente.
+Description-fr.UTF-8: Saisissez à nouveau le mot de passe pour le confirmer :
+ Veuillez entrer à nouveau le mot de passe pour vérifier que vous l'avez correctement saisi.
+Description-it.UTF-8: Reinserire la password per verifica:
+ Inserire nuovamente la stessa password per verificare di averla digitata correttamente.
+Description-nl.UTF-8: Voer ter verificatie het wachtwoord opnieuw in:
+ Voer hetzelfde wachtwoord nogmaals in om na te gaan of u het correct typte.
+Description-pt.UTF-8: Volte a introduzir a palavra-chave para confirmar:
+ Introduza a palavra-chave de novo para verificar que a introduziu correctamente.
+Description-pt_BR.UTF-8: Digite novamente a senha para verificar:
+ Digite a mesma senha novamente para verificar se você a digitou corretamente.
+Description-ro.UTF-8: Reintroduceți parola pentru verificare:
+ Introduceți din nou aceeași parolă pentru a verifica dacă ați tastat-o corect.
+Description-ru.UTF-8: Для проверки введите пароль ещё раз:
+ Введите ещё раз тот же пароль для проверки того, что вы ввели его правильно.
+Description-sv.UTF-8: Repetera lösenordet:
+ Repetera samma lösenord för att säkerställa att det angavs korrekt.
+
+Template: shim/error/secureboot_key_mismatch
+Type: error
+Description: Password input error
+ The two passwords you entered were not the same. Please try again.
+Description-cs.UTF-8: Chyba při zadávání hesla
+ Zadaná hesla nejsou stejná. Zkuste to prosím znovu.
+Description-de.UTF-8: Passworteingabe-Fehler
+ Die beiden von Ihnen eingegebenen Passwörter sind verschieden. Versuchen Sie es noch einmal.
+Description-es.UTF-8: Error al introducir la contraseña.
+ Las dos contraseñas que ha introducido no coinciden. Por favor, inténtelo de nuevo.
+Description-fr.UTF-8: Erreur lors de la saisie du mot de passe
+ Les deux mots de passe que vous venez de saisir ne sont pas identiques. Veuillez recommencer.
+Description-it.UTF-8: Errore nell'inserimento della password
+ Le due password inserite non erano identiche. Riprovare.
+Description-nl.UTF-8: Fout bij wachtwoordinvoer
+ De twee ingevoerde wachtwoorden waren niet identiek. Probeer het nogmaals.
+Description-pt.UTF-8: Erro na introdução da palavra-chave
+ As duas palavras-chave que introduziu não são idênticas. Por favor tente de novo.
+Description-pt_BR.UTF-8: Erro de entrada de senha
+ As duas senhas que você digitou não eram as mesmas. Por favor, tente novamente.
+Description-ro.UTF-8: Eroare de introducere a parolei
+ Cele două parole pe care le-ați introdus nu au corespuns. Încercați din nou.
+Description-ru.UTF-8: Ошибка ввода пароля
+ Введённые вами пароли не совпадают. Попробуйте ещё раз.
+Description-sv.UTF-8: Fel vid inmatning av lösenord
+ De båda lösenorden som angavs stämde inte överens. Försök igen.

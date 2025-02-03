@@ -1,0 +1,4 @@
+libply-boot-client 5 libplymouth5 (>= 22.02.122)
+libply-splash-core 5 libplymouth5 (>= 22.02.122)
+libply-splash-graphics 5 libplymouth5 (>= 22.02.122)
+libply 5 libplymouth5 (>= 22.02.122)

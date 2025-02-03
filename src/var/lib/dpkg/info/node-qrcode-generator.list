@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/node-qrcode-generator
+/usr/share/doc/node-qrcode-generator/README.md
+/usr/share/doc/node-qrcode-generator/changelog.Debian.gz
+/usr/share/doc/node-qrcode-generator/copyright
+/usr/share/javascript
+/usr/share/javascript/qrcode-generator
+/usr/share/nodejs
+/usr/share/nodejs/qrcode-generator
+/usr/share/nodejs/qrcode-generator/package.json
+/usr/share/nodejs/qrcode-generator/qrcode.d.ts
+/usr/share/nodejs/qrcode-generator/qrcode.js
+/usr/share/javascript/qrcode-generator/qrcode.js

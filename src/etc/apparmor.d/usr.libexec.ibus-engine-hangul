@@ -1,0 +1,25 @@
+# Author: Changwoo Ryu <cwryu@debian.org>
+
+#include <tunables/global>
+
+/usr/libexec/ibus-engine-hangul flags=(complain,attach_disconnected) {
+    #include <abstractions/base>
+    #include <abstractions/dconf>
+    #include <abstractions/dbus-session-strict>
+    #include <abstractions/libhangul1>
+
+    /usr/share/ibus-hangul/** r,
+    /usr/share/ibus/keymaps/* r,
+
+    /usr/share/glib-2.0/schemas/gschemas.compiled r,
+    owner @{HOME}/.{cache,config}/ibus/bus/ rw,
+    owner @{HOME}/.{cache,config}/ibus/bus/* rw,
+
+    owner /{,var/}run/user/*/dconf/user rw,
+    owner @{HOME}/.config/dconf/user rw,
+
+    /usr/bin/ibus PUx,
+    @{PROC}/@{pid}/fd/ r,
+
+    signal (receive) set=("term") peer=/usr/bin/ibus-daemon,
+}

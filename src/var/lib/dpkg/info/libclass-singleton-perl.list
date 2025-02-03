@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libclass-singleton-perl
+/usr/share/doc/libclass-singleton-perl/changelog.Debian.gz
+/usr/share/doc/libclass-singleton-perl/changelog.gz
+/usr/share/doc/libclass-singleton-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Class::Singleton.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Class
+/usr/share/perl5/Class/Singleton.pm

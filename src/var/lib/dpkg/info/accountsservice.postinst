@@ -1,0 +1,52 @@
+#!/bin/sh
+
+set -e
+
+get_pid() {
+    [ -n "$1" ] || return 0
+    [ -S /var/run/dbus/system_bus_socket ] || return 0
+
+    dbus-send --system --dest=org.freedesktop.DBus --print-reply \
+              /org/freedesktop/DBus org.freedesktop.DBus.GetConnectionUnixProcessID \
+              string:$1 2>/dev/null | awk '/uint32/ {print $2}'
+}
+
+if [ "$1" = "configure" -a ! -d /run/systemd/system ]; then
+    # stop accounts-daemon
+    kill $(get_pid org.freedesktop.Accounts) 2>/dev/null || true
+fi
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.Accounts.conf 0.6.55-1\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'accounts-daemon.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'accounts-daemon.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'accounts-daemon.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'accounts-daemon.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'accounts-daemon.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+

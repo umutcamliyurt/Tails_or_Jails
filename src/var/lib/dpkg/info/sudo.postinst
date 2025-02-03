@@ -1,0 +1,53 @@
+#!/bin/sh
+
+set -e
+
+# remove old link
+# this was already present in 2017
+
+if [ -L /etc/alternatives/sudo ]; then
+	rm /etc/alternatives/sudo
+fi
+
+# remove legacy conffile no longer delivered
+# this was added in 1.8.21p2-1 in 2017.
+
+if [ -f /etc/sudoers.dist ]; then
+        rm /etc/sudoers.dist 
+fi
+
+# complain if no sudoers file is present
+if [ ! -f /etc/sudoers ];then
+	echo "WARNING:  /etc/sudoers not present!";
+fi
+
+# make sure sudoers has the correct permissions and owner/group
+if [ -f /etc/sudoers ];then
+    chown root:root /etc/sudoers
+    chmod 440 /etc/sudoers
+fi
+
+# if we've gotten this far .. remove the saved, unchanged old sudoers file
+rm -f /etc/sudoers.pre-conffile
+
+# Automatically added by dh_installtmpfiles/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "$(command -v systemd-tmpfiles)" ]; then
+		systemd-tmpfiles ${DPKG_ROOT:+--root="$DPKG_ROOT"} --create sudo.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] && [ -x "/etc/init.d/sudo" ]; then
+		update-rc.d sudo defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native sudo $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+

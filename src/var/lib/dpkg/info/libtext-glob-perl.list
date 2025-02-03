@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libtext-glob-perl
+/usr/share/doc/libtext-glob-perl/changelog.Debian.gz
+/usr/share/doc/libtext-glob-perl/changelog.gz
+/usr/share/doc/libtext-glob-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Text::Glob.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Text
+/usr/share/perl5/Text/Glob.pm

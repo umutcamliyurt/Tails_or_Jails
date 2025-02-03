@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libZXing.so.1.4.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libzxing2
+/usr/share/doc/libzxing2/AUTHORS.ZXing
+/usr/share/doc/libzxing2/NOTICE
+/usr/share/doc/libzxing2/README.md.gz
+/usr/share/doc/libzxing2/changelog.Debian.amd64.gz
+/usr/share/doc/libzxing2/changelog.Debian.gz
+/usr/share/doc/libzxing2/copyright
+/usr/lib/x86_64-linux-gnu/libZXing.so.2

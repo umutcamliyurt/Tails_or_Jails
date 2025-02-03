@@ -1,0 +1,382 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/bin.ping"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/bin.ping"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/php-fpm"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/php-fpm"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/samba-bgqd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/samba-bgqd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/samba-dcerpcd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/samba-dcerpcd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/samba-rpcd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/samba-rpcd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/samba-rpcd-classic"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/samba-rpcd-classic"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/samba-rpcd-spoolss"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/samba-rpcd-spoolss"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/sbin.klogd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/sbin.klogd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/sbin.syslog-ng"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/sbin.syslog-ng"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/sbin.syslogd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/sbin.syslogd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.avahi-daemon"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.avahi-daemon"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.dnsmasq"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.dnsmasq"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.identd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.identd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.mdnsd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.mdnsd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.nmbd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.nmbd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.nscd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.nscd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.smbd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.smbd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.smbldap-useradd"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.smbldap-useradd"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.sbin.traceroute"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.sbin.traceroute"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.anvil 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.config 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.deliver 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dict 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-lda 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.lmtp 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.log 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.ssl-params 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.sbin.dovecot 2.13-3\~ -- "$@"
+# End automatically added section

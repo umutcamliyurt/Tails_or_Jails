@@ -1,0 +1,16 @@
+#! /bin/sh
+set -e
+
+# Must load the confmodule for our template to be installed correctly.
+. /usr/share/debconf/confmodule
+
+case $1 in
+    triggered|configure)
+	SHIM_NOTRIGGER=y update-secureboot-policy
+	;;
+esac
+
+
+
+exit 0
+

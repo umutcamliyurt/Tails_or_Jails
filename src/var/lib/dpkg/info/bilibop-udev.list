@@ -1,0 +1,12 @@
+/.
+/lib
+/lib/udev
+/lib/udev/rules.d
+/lib/udev/rules.d/66-bilibop.rules
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/bilibop-udev
+/usr/share/doc/bilibop-udev/README.Debian
+/usr/share/doc/bilibop-udev/changelog.gz
+/usr/share/doc/bilibop-udev/copyright

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libportal-gtk3.so.1.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libportal-gtk3-1
+/usr/share/doc/libportal-gtk3-1/changelog.Debian.gz
+/usr/share/doc/libportal-gtk3-1/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libportal-gtk3-1
+/usr/lib/x86_64-linux-gnu/libportal-gtk3.so.1

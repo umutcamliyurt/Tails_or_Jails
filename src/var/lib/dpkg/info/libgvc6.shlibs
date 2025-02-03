@@ -1,0 +1,9 @@
+libgvplugin_core 6 libgvc6
+libgvplugin_dot_layout 6 libgvc6
+libgvplugin_gd 6 libgvc6
+libgvplugin_neato_layout 6 libgvc6
+libgvplugin_pango 6 libgvc6
+libgvplugin_visio 6 libgvc6
+libgvplugin_webp 6 libgvc6
+libgvplugin_xlib 6 libgvc6
+libgvc 6 libgvc6

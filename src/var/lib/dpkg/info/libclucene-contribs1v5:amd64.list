@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libclucene-contribs-lib.so.2.3.3.4
+/usr/share
+/usr/share/doc
+/usr/share/doc/libclucene-contribs1v5
+/usr/share/doc/libclucene-contribs1v5/changelog.Debian.gz
+/usr/share/doc/libclucene-contribs1v5/changelog.gz
+/usr/share/doc/libclucene-contribs1v5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libclucene-contribs1v5
+/usr/lib/x86_64-linux-gnu/libclucene-contribs-lib.so.1

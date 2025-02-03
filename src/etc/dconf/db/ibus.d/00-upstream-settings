@@ -1,0 +1,62 @@
+# This file is a part of the IBus packaging and should not be changed.
+#
+# Instead create your own file next to it with a higher numbered prefix,
+# and run
+#
+#       dconf update
+#
+
+[desktop/ibus/general]
+dconf-preserve-name-prefixes=['/desktop/ibus/engine/pinyin', '/desktop/ibus/engine/bopomofo', '/desktop/ibus/engine/hangul']
+embed-preedit-text=true
+enable-by-default=false
+engines-order=@as []
+preload-engines=@as []
+switcher-delay-time=400
+use-global-engine=true
+use-system-keyboard-layout=false
+use-xmodmap=true
+version=''
+xkb-latin-layouts=['af', 'af(fa-olpc)', 'af(ps-olpc)', 'af(ps)', 'af(uz)', 'af(uz-olpc)', 'am', 'am(eastern)', 'am(eastern-alt)', 'am(phonetic)', 'am(phonetic-alt)', 'am(western)', 'ara', 'ara(azerty)', 'ara(azerty_digits)', 'ara(buckwalter)', 'ara(digits)', 'ara(qwerty)', 'ara(qwerty_digits)', 'az(cyrillic)', 'bd', 'bd(probhat)', 'bg', 'bg(bas_phonetic)', 'bg(phonetic)', 'brai', 'brai(left_hand)', 'brai(right_hand)', 'bt', 'by', 'by(legacy)', 'ca(ike)', 'ca(multi-2gr)', 'cn(tib)', 'cn(tib_asciinum)', 'cn(ug)', 'cz', 'cz(ucw)', 'de(ru)', 'dev', 'et', 'fr(geo)', 'ge', 'ge(os)', 'gr', 'gr(extended)', 'gr(nodeadkeys)', 'gr(polytonic)', 'gr(simple)', 'gur', 'il', 'il(biblical)', 'il(lyx)', 'il(phonetic)', 'in', 'in(ben)', 'in(ben_baishakhi)', 'in(ben_bornona)', 'in(ben_gitanjali)', 'in(ben_inscript)', 'in(ben_probhat)', 'in(bolnagri)', 'in(deva)', 'in(guj)', 'in(guru)', 'in(hin-kagapa)', 'in(hin-wx)', 'in(jhelum)', 'in(kan)', 'in(kan-kagapa)', 'in(mal)', 'in(mal_enhanced)', 'in(mal_lalitha)', 'in(mar-kagapa)', 'in(ori)', 'in(san-kagapa)', 'in(tam)', 'in(tam_tamilnet)', 'in(tam_tamilnet_TAB)', 'in(tam_tamilnet_TSCII)', 'in(tam_tamilnet_with_tam_nums)', 'in(tel)', 'in(tel-kagapa)', 'in(urd-phonetic)', 'in(urd-phonetic3)', 'in(urd-winkeys)', 'iq', 'ir', 'ir(pes_keypad)', 'jp(kana)', 'jp(mac)', 'kg', 'kg(phonetic)', 'kh', 'kz', 'kz(kazrus)', 'kz(ruskaz)', 'la', 'la(stea)', 'lk', 'lk(tam_TAB)', 'lk(tam_unicode)', 'ma', 'ma(tifinagh)', 'ma(tifinagh-alt)', 'ma(tifinagh-alt-phonetic)', 'ma(tifinagh-extended)', 'ma(tifinagh-extended-phonetic)', 'ma(tifinagh-phonetic)', 'me(cyrillic)', 'me(cyrillicalternatequotes)', 'me(cyrillicyz)', 'mk', 'mk(nodeadkeys)', 'mm', 'mn', 'mv', 'np', 'ph(capewell-dvorak-bay)', 'ph(capewell-qwerf2k6-bay)', 'ph(colemak-bay)', 'ph(dvorak-bay)', 'ph(qwerty-bay)', 'pk', 'pk(ara)', 'pk(snd)', 'pk(urd-crulp)', 'pk(urd-nla)', 'pl(ru_phonetic_dvorak)', 'rs', 'rs(alternatequotes)', 'rs(rue)', 'rs(yz)', 'ru', 'ru(bak)', 'ru(chm)', 'ru(cv)', 'ru(dos)', 'ru(kom)', 'ru(legacy)', 'ru(mac)', 'ru(os_legacy)', 'ru(os_winkeys)', 'ru(phonetic)', 'ru(phonetic_winkeys)', 'ru(sah)', 'ru(srp)', 'ru(tt)', 'ru(typewriter)', 'ru(typewriter-legacy)', 'ru(udm)', 'ru(xal)', 'se(rus)', 'se(rus_nodeadkeys)', 'se(swl)', 'sy', 'sy(syc)', 'sy(syc_phonetic)', 'th', 'th(pat)', 'th(tis)', 'tj', 'tj(legacy)', 'tz', 'ua', 'ua(homophonic)', 'ua(legacy)', 'ua(phonetic)', 'ua(rstu)', 'ua(rstu_ru)', 'ua(typewriter)', 'ua(winkeys)', 'us(chr)', 'us(rus)', 'uz']
+
+[desktop/ibus/general/hotkey]
+disable-unconditional=@as []
+enable-unconditional=@as []
+next-engine=['Alt+Shift_L']
+next-engine-in-menu=['Alt+Shift_L']
+prev-engine=@as []
+previous-engine=@as []
+trigger=['Control+space', 'Zenkaku_Hankaku', 'Alt+Kanji', 'Alt+grave', 'Hangul', 'Alt+Release+Alt_R']
+triggers=['<Super>space']
+
+[desktop/ibus/panel]
+auto-hide-timeout=10000
+custom-font='Sans 10'
+custom-icon='Adwaita'
+custom-theme='Adwaita'
+follow-input-cursor-when-always-shown=false
+lookup-table-orientation=1
+property-icon-delay-time=500
+show=0
+show-icon-on-systray=true
+show-im-name=false
+use-custom-font=false
+use-custom-icon=false
+use-custom-theme=false
+use-glyph-from-engine-lang=true
+x=-1
+xkb-icon-rgba='#51a2da'
+y=-1
+
+[desktop/ibus/panel/emoji]
+favorite-annotations=@as []
+favorites=@as []
+font='Monospace 16'
+has-partial-match=false
+hotkey=['<Super>period']
+lang='en'
+load-emoji-at-startup=true
+load-unicode-at-startup=false
+partial-match-condition=0
+partial-match-length=3
+unicode-hotkey=['<Control><Shift>u']

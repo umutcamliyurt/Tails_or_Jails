@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libxmlsec1-nss.so.1.2.37
+/usr/share
+/usr/share/doc
+/usr/share/doc/libxmlsec1-nss
+/usr/share/doc/libxmlsec1-nss/README.Debian
+/usr/share/doc/libxmlsec1-nss/README.md
+/usr/share/doc/libxmlsec1-nss/changelog.Debian.gz
+/usr/share/doc/libxmlsec1-nss/changelog.gz
+/usr/share/doc/libxmlsec1-nss/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libxmlsec1-nss
+/usr/lib/x86_64-linux-gnu/libxmlsec1-nss.so.1

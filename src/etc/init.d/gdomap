@@ -1,0 +1,63 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          gdomap
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start the GNUstep distributed object mapper
+# Description:       Start the GNUstep distributed object mapper
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+DAEMON=/usr/bin/gdomap
+NAME=gdomap
+DESC="GNUstep distributed object mapper"
+
+PIDFILE=/var/run/$NAME.pid
+
+GDOMAP_ARGS=
+if [ -f /etc/default/$NAME ]; then
+    . /etc/default/$NAME
+fi
+
+[ -x "$DAEMON" ] || exit 0
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	# Create an empty directory where the process would chroot to.
+	if [ ! -d /var/run/gdomap ]; then
+	    mkdir /var/run/gdomap
+	    chmod 0755 /var/run/gdomap
+	fi
+	log_daemon_msg "Starting $DESC" $NAME
+	start-stop-daemon --start --oknodo --quiet --exec $DAEMON \
+		-- -I $PIDFILE $GDOMAP_ARGS
+	log_end_msg $?
+	;;
+  stop)
+	log_daemon_msg "Stopping $DESC" $NAME
+	start-stop-daemon --stop --oknodo --quiet --exec $DAEMON \
+		-- -I $PIDFILE $GDOMAP_ARGS
+	rm -f $PIDFILE
+	log_end_msg $?
+	;;
+  restart|force-reload)
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+  status)
+	status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	log_action_msg "Usage: $N {start|stop|restart|force-reload|status}"
+	exit 1
+	;;
+esac
+
+exit 0

@@ -1,0 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: torproject
+Label: torproject
+Suite: bookworm
+Codename: bookworm
+Date: Wed, 08 Jan 2025 11:30:22 UTC
+Architectures: amd64
+Components: main
+MD5Sum:
+ 87d800e5f8da27ea3f72df57bc34047c 3633 main/binary-amd64/Packages
+ 36472bd7de7da6a0b0afbfe07d5b0914 1849 main/binary-amd64/Packages.gz
+ c7f374a01cdde6374fab0730c3677323 91 main/binary-amd64/Release
+SHA1:
+ 08d936d817e3337459d33293bf395e1eb71adbcb 3633 main/binary-amd64/Packages
+ b2874afc6cf59243f659703f47ecc0952071fb74 1849 main/binary-amd64/Packages.gz
+ 65ebb840d743a4a37d781f7b2310a76c1dd19df0 91 main/binary-amd64/Release
+SHA256:
+ d7e76d95bd310285841f76ee57e4d8711bed775c001b7a45eb6376d7962e9760 3633 main/binary-amd64/Packages
+ 2ad43afa2fcbe2d792928c8f7d29d07d7626d476bc59eb5e1eb7808125b88d4e 1849 main/binary-amd64/Packages.gz
+ bcf1a1a2514fe91fb8335e2eec1991d08eeb8ff8d81b37271802dab3a18536ad 91 main/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQTWj4cUnrp3VBVzwcEkU6qc5BI6mgUCZ35hzgAKCRAkU6qc5BI6
+mmqvAP9I3TZ88sCze0Xlx8GlJ/wFq4QEc7v13+8bA+0Rm+TqYgEA9yOJ12Dv+6sX
+CiO4raU6K3psEe1ld01Rr7MjObhgVgI=
+=fN4j
+-----END PGP SIGNATURE-----

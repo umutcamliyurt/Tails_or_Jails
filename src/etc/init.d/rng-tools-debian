@@ -1,0 +1,175 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          rng-tools-debian rng-tools
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: rng-tools (Debian variant)
+# Description:       The rng-tools daemon bridges between a hardware
+#                    TRNG and the kernel PRNG, verifying input data.
+### END INIT INFO
+
+# absolute basics
+LC_ALL=C PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export LC_ALL PATH
+unset LANGUAGE
+
+# exit cleanly if disabled or not installed
+test -x /usr/sbin/rngd || exit 0
+
+# Debian/LSB init script foobar
+DESC='Hardware RNG entropy gatherer daemon'
+NAME=rngd
+. /lib/init/vars.sh
+test -t 0 && VERBOSE=yes
+. /lib/lsb/init-functions
+
+# read options
+HRNGDEVICE=
+HRNGSELECT=
+RNGDOPTIONS=
+test -r /etc/default/rng-tools-debian && . /etc/default/rng-tools-debian
+
+finddevice() {
+	if test -n "$HRNGDEVICE" && test -c "$HRNGDEVICE"; then
+		# use it unseen
+		return 0
+	fi
+	# list of devices to try/auto-detect
+	for x in hwrng hw_random hwrandom intel_rng i810_rng; do
+		for y in /dev /dev/misc; do
+			test -c "$y/$x" || continue
+			if timeout -k 1s 5s \
+			    dd if="$y/$x" bs=1 count=1 >/dev/null 2>&1; then
+				HRNGDEVICE=$y/$x
+				return 0
+			fi
+			logger -t rng-tools-debian \
+			    "found $y/$x but could not use it"
+		done
+	done
+	return 1
+}
+
+# prepare for actions
+case $1 in
+(start|restart|try-restart|force-reload)
+	test -z "$HRNGSELECT" || printf '%s' "$HRNGSELECT" \
+	    >/sys/devices/virtual/misc/hw_random/rng_current
+	if ! finddevice; then
+		logger -t rng-tools-debian \
+		    "not starting: no hardware RNG device found"
+		log_daemon_msg "Configuring $DESC"
+		log_progress_msg "no hardware RNG device found!"
+		log_end_msg 1
+		test -e /run/rngd.installing || exit 0
+		# during postinst run, inform user more
+		cat <<-\EOF
+
+			!!! no hardware RNG device found !!!
+			rng-tools-debian will SILENTLY not start the daemon!
+
+			To fix this, edit /etc/default/rng-tools-debian to
+			set options suitable for your hardware random device;
+			possibly load some kernel module first, ideally from
+			initramfs (add to /etc/initramfs-tools/modules), so
+			it is available early enough during boot.
+
+		EOF
+		exit 0
+	fi
+	;;
+(stop|status)
+	;;
+(reload|*)
+	# not supported
+	echo >&2 "Usage: $0 {start|stop|restart|try-restart|force-reload|status}"
+	exit 3
+	;;
+esac
+
+# take action
+rv=0
+case $1 in
+(status)
+	status_of_proc -p /var/run/rngd.pid /usr/sbin/rngd rngd
+	exit $?
+	;;
+(start)
+	test x"$VERBOSE" = x"no" || log_daemon_msg "Starting $DESC"
+	if start-stop-daemon --start --quiet \
+	    --pidfile /var/run/rngd.pid \
+	    --startas /usr/sbin/rngd --name rngd \
+	    --exec /usr/sbin/rngd --test; then
+		test x"$VERBOSE" = x"no" || log_progress_msg "rngd"
+		start-stop-daemon --start --quiet \
+		    --pidfile /var/run/rngd.pid \
+		    --startas /usr/sbin/rngd --name rngd \
+		    --exec /usr/sbin/rngd -- -r $HRNGDEVICE $RNGDOPTIONS
+		rv=$?
+	else
+		test x"$VERBOSE" = x"no" || \
+		    log_progress_msg "rngd already running"
+	fi
+	;;
+(stop)
+	test x"$VERBOSE" = x"no" || log_daemon_msg "Stopping $DESC"
+	test x"$VERBOSE" = x"no" || log_progress_msg "rngd"
+	start-stop-daemon --stop --quiet --retry=10 \
+	    --pidfile /var/run/rngd.pid \
+	    --name rngd --exec /usr/sbin/rngd
+	rc=$?
+	if test $rc -gt 1; then
+		rv=$rc
+	else
+		start-stop-daemon --stop --quiet --oknodo \
+		    --retry=0/30/KILL/5 --exec /usr/sbin/rngd
+		rc=$?
+		test $rc -gt 1 && test $rv -lt $rc && rv=$rc
+	fi
+	rm -f /var/run/rngd.pid
+	;;
+(restart|force-reload)
+	test x"$VERBOSE" = x"no" || log_daemon_msg "Restarting $DESC"
+	test x"$VERBOSE" = x"no" || log_progress_msg "rngd"
+	start-stop-daemon --stop --quiet --retry=10 \
+	    --pidfile /var/run/rngd.pid \
+	    --name rngd --exec /usr/sbin/rngd
+	if test $? -lt 2; then
+		start-stop-daemon --stop --quiet --oknodo \
+		    --retry=0/30/KILL/5 --exec /usr/sbin/rngd
+	fi
+	rm -f /var/run/rngd.pid
+	start-stop-daemon --start --quiet \
+	    --pidfile /var/run/rngd.pid \
+	    --startas /usr/sbin/rngd --name rngd \
+	    --exec /usr/sbin/rngd -- -r $HRNGDEVICE $RNGDOPTIONS
+	rv=$?
+	;;
+(try-restart)
+	test x"$VERBOSE" = x"no" || log_daemon_msg "Trying to restart $DESC"
+	if ! status_of_proc -p /var/run/rngd.pid \
+	    /usr/sbin/rngd rngd >/dev/null 2>&1; then
+		test x"$VERBOSE" = x"no" || log_progress_msg "is not running."
+		test x"$VERBOSE" = x"no" || log_end_msg 1
+		exit 0
+	fi
+	test x"$VERBOSE" = x"no" || log_progress_msg "rngd"
+	start-stop-daemon --stop --quiet --retry=10 \
+	    --pidfile /var/run/rngd.pid \
+	    --name rngd --exec /usr/sbin/rngd
+	if test $? -lt 2; then
+		start-stop-daemon --stop --quiet --oknodo \
+		    --retry=0/30/KILL/5 --exec /usr/sbin/rngd
+	fi
+	rm -f /var/run/rngd.pid
+	start-stop-daemon --start --quiet \
+	    --pidfile /var/run/rngd.pid \
+	    --startas /usr/sbin/rngd --name rngd \
+	    --exec /usr/sbin/rngd -- -r $HRNGDEVICE $RNGDOPTIONS
+	rv=$?
+	;;
+esac
+test x"$VERBOSE" = x"no" || log_end_msg $rv
+exit $rv

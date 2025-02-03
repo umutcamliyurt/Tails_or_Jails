@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "upgrade" ] || [ "$1" = "install" ]; then
+	for f in rtl_bt/rtl8723cs_xx_config.bin rtl_bt/rtl8723cs_xx_fw.bin; do
+		dpkg-divert --package firmware-realtek --no-rename --quiet \
+			--divert "/lib/firmware/$f.usr-is-merged" \
+			--add "/lib/firmware/$f"
+	done
+fi
+
+
+
+exit 0

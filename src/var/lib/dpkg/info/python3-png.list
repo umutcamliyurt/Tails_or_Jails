@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/png.py
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info/LICENCE
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info/METADATA
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info/RECORD
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info/WHEEL
+/usr/lib/python3/dist-packages/pypng-0.20220715.0.dist-info/top_level.txt
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-png
+/usr/share/doc/python3-png/changelog.Debian.gz
+/usr/share/doc/python3-png/copyright

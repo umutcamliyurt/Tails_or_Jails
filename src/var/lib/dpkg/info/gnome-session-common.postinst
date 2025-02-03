@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+# Abuse dpkg-maintscript-helper to move/remove /etc/gnome/defaults.list
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" le-nl "3.20.1-2~"; then
+  if [ -f "/etc/gnome/defaults.list.dpkg-backup" ]; then
+    echo "Obsolete conffile /etc/gnome/defaults.list has been modified by you."
+    echo "Moving the file to /etc/xdg/gnome-mimeapps.list ..."
+    mv -f "/etc/gnome/defaults.list.dpkg-backup" "/etc/xdg/gnome-mimeapps.list"
+  fi
+fi
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/gnome/defaults.list 3.20.1-2\~ -- "$@"
+# End automatically added section
+
+
+exit 0

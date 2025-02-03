@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/gstreamer-1.0
+/usr/lib/x86_64-linux-gnu/gstreamer-1.0/libgstpipewire.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/gstreamer1.0-pipewire
+/usr/share/doc/gstreamer1.0-pipewire/changelog.Debian.gz
+/usr/share/doc/gstreamer1.0-pipewire/copyright

@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libqgpgme.so.15.1.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libqgpgme15
+/usr/share/doc/libqgpgme15/README.gz
+/usr/share/doc/libqgpgme15/changelog.Debian.amd64.gz
+/usr/share/doc/libqgpgme15/changelog.Debian.gz
+/usr/share/doc/libqgpgme15/changelog.gz
+/usr/share/doc/libqgpgme15/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libqgpgme15
+/usr/lib/x86_64-linux-gnu/libqgpgme.so.15

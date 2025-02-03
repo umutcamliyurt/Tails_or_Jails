@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libcarp-assert-more-perl
+/usr/share/doc/libcarp-assert-more-perl/changelog.Debian.gz
+/usr/share/doc/libcarp-assert-more-perl/changelog.gz
+/usr/share/doc/libcarp-assert-more-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Carp::Assert::More.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Carp
+/usr/share/perl5/Carp/Assert
+/usr/share/perl5/Carp/Assert/More.pm

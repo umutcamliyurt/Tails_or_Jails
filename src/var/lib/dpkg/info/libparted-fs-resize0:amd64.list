@@ -1,0 +1,9 @@
+/.
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libparted-fs-resize.so.0.0.4
+/usr
+/usr/share
+/usr/share/doc
+/lib/x86_64-linux-gnu/libparted-fs-resize.so.0
+/usr/share/doc/libparted-fs-resize0

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Remove the configuration file if present, see README.Debian-packaging
+# Needed only in libgraphivzN
+if [ -f /usr/lib/graphviz/config6 ]; then
+	rm -f /usr/lib/graphviz/config6
+fi
+if [ -f /usr/lib/graphviz/config6a ]; then
+	rm -f /usr/lib/graphviz/config6a
+fi
+
+if [ -f /usr/lib/x86_64-linux-gnu/graphviz/config6a ]; then
+	rm -f /usr/lib/x86_64-linux-gnu/graphviz/config6a
+fi
+
+

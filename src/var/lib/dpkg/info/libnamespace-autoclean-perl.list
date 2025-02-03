@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnamespace-autoclean-perl
+/usr/share/doc/libnamespace-autoclean-perl/CONTRIBUTING.gz
+/usr/share/doc/libnamespace-autoclean-perl/changelog.Debian.gz
+/usr/share/doc/libnamespace-autoclean-perl/changelog.gz
+/usr/share/doc/libnamespace-autoclean-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/namespace::autoclean.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/namespace
+/usr/share/perl5/namespace/autoclean.pm

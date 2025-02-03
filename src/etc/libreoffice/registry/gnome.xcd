@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<oor:data xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oor="http://openoffice.org/2001/registry">
+  <dependency file="main"/>
+  <oor:component-data xmlns:install="http://openoffice.org/2004/installation" oor:name="Configuration" oor:package="org.openoffice.ucb">
+    <node oor:name="ContentProviders">
+      <node oor:name="Local">
+        <node oor:name="SecondaryKeys">
+          <node oor:name="Office">
+            <node oor:name="ProviderData">
+              <node oor:name="Provider999" oor:op="replace">
+                <prop oor:name="ServiceName">
+                  <value>com.sun.star.ucb.GIOContentProvider</value>
+                </prop>
+                <prop oor:name="URLTemplate">
+                  <value>.*</value>
+                </prop>
+                <prop oor:name="Arguments">
+                  <value/>
+                </prop>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </oor:component-data>
+</oor:data>

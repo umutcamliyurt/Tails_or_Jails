@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.anvil 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.config 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.deliver 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dict 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-lda 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.lmtp 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.log 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.ssl-params 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.sbin.dovecot 2.13-3\~ -- "$@"
+# End automatically added section

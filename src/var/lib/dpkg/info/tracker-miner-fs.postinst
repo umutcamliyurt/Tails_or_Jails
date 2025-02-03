@@ -1,0 +1,66 @@
+#!/bin/sh
+# postinst script for tracker-miner-fs
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+
+case "$1" in
+    configure)
+        if [ -x /lib/systemd/systemd-sysctl ] ; then
+            /lib/systemd/systemd-sysctl 30-tracker.conf || true
+        fi
+	if dpkg --compare-versions "$2" le-nl "3.1.2-1~"; then
+            deb-systemd-helper --user purge 'tracker-miner-fs.service' >/dev/null || true
+            deb-systemd-helper --user unmask 'tracker-miner-fs.service' >/dev/null || true
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+# Automatically added by dh_installsystemduser/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] ; then
+		# The following line should be removed in trixie or trixie+1
+		deb-systemd-helper --user unmask 'tracker-miner-fs-3.service' >/dev/null || true
+
+		# was-enabled defaults to true, so new installations run enable.
+		if deb-systemd-helper --quiet --user was-enabled 'tracker-miner-fs-3.service' ; then
+			# Enables the unit on first installation, creates new
+			# symlinks on upgrades if the unit file has changed.
+			deb-systemd-helper --user enable 'tracker-miner-fs-3.service' >/dev/null || true
+		else
+			# Update the statefile to add new symlinks (if any), which need to be
+			# cleaned up on purge. Also remove old symlinks.
+			deb-systemd-helper --user update-state 'tracker-miner-fs-3.service' >/dev/null || true
+		fi
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/tracker-miner-apps.desktop 2.3.1-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/tracker-miner-fs.desktop 3.1.2-1\~ -- "$@"
+# End automatically added section
+
+
+exit 0

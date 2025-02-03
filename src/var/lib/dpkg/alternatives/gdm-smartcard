@@ -1,0 +1,10 @@
+auto
+/etc/pam.d/gdm-smartcard
+
+/etc/pam.d/gdm-smartcard-pkcs11-exclusive
+30
+/etc/pam.d/gdm-smartcard-sssd-exclusive
+50
+/etc/pam.d/gdm-smartcard-sssd-or-password
+40
+

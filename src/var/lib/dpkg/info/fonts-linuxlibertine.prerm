@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.3.3
+dpkg-maintscript-helper rm_conffile /etc/fonts/conf.avail/90-fonts-linux-libertine.conf 5.3.0-4\~ -- "$@"
+# End automatically added section

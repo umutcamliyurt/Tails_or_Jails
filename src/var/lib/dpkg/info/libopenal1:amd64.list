@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libopenal.so.1.19.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libopenal1
+/usr/share/doc/libopenal1/changelog.Debian.gz
+/usr/share/doc/libopenal1/changelog.gz
+/usr/share/doc/libopenal1/copyright
+/usr/share/doc/libopenal1/examples
+/usr/share/doc/libopenal1/examples/alsoftrc.sample
+/usr/lib/x86_64-linux-gnu/libopenal.so.1

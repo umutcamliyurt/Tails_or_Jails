@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+case "${1}" in
+    purge|remove)
+        # Trigger uevents for external, physical block devices owned by
+        # 'disk' group.
+        if [ -d /sys/block -a -c /dev/null ] &&
+            invoke-rc.d udev status >/dev/null 2>&1; then
+            opt=
+            for dev in $(ls /sys/block | grep -Ev '^(loop|dm-)'); do
+                udevadm info --attribute-walk --name ${dev} |
+                grep -Eq '^[[:blank:]]*SUBSYSTEMS=="(usb|firewire|memstick|mmc)"' || continue
+                ls -l /dev/${dev} |
+                grep -Eq '^([^[:blank:]]+[[:blank:]]+){3}disk\s' || continue
+                opt="${opt} --sysname-match=${dev}*"
+            done
+            [ -z "${opt}" ] ||
+            udevadm trigger ${opt}
+        fi
+        ;;
+esac
+
+
+:
+# vim: et ts=4 sts=4 sw=4

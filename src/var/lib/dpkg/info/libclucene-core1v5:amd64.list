@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libclucene-core.so.2.3.3.4
+/usr/lib/x86_64-linux-gnu/libclucene-shared.so.2.3.3.4
+/usr/share
+/usr/share/doc
+/usr/share/doc/libclucene-core1v5
+/usr/share/doc/libclucene-core1v5/README
+/usr/share/doc/libclucene-core1v5/changelog.Debian.gz
+/usr/share/doc/libclucene-core1v5/changelog.gz
+/usr/share/doc/libclucene-core1v5/copyright
+/usr/lib/x86_64-linux-gnu/libclucene-core.so.1
+/usr/lib/x86_64-linux-gnu/libclucene-shared.so.1

@@ -1,0 +1,3 @@
+# Allow the user service tails-start-system-gnome-session-target.service
+# to start the system target gnome-session.target.
+amnesia	ALL = NOPASSWD: /bin/systemctl start gnome-session.target

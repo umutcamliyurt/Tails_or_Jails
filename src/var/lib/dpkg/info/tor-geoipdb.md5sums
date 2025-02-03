@@ -1,0 +1,6 @@
+7ada855125d4362b1a5157be5bab16eb  usr/share/doc/tor-geoipdb/changelog.Debian.gz
+8f420af335769098ff2432a1c2339dd5  usr/share/doc/tor-geoipdb/changelog.gz
+37f21a6b842810abefcd3cf551e7140c  usr/share/doc/tor-geoipdb/copyright
+c7d831192214c86b7ec5c6ee7e3d8172  usr/share/lintian/overrides/tor-geoipdb
+9a8dfa77a4fca80f311529c593533561  usr/share/tor/geoip
+0a5bcf5df7ae6ad5eb77bad6c78d7706  usr/share/tor/geoip6

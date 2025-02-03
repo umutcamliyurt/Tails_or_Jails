@@ -1,0 +1,4 @@
+libmutter-11 0 libmutter-11-0 (>= 43.8)
+libmutter-clutter-11 0 libmutter-11-0 (>= 43.8)
+libmutter-cogl-11 0 libmutter-11-0 (>= 43.8)
+libmutter-cogl-pango-11 0 libmutter-11-0 (>= 43.8)

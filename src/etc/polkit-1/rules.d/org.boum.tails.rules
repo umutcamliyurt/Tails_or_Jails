@@ -1,0 +1,10 @@
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.udisks2.open-device" &&
+        subject.user == "amnesia")
+    {
+        if (subject.active && subject.local) {
+            return polkit.Result.YES;
+        }
+
+    }
+});

@@ -1,0 +1,504 @@
+libQt5Svg.so.5 libqt5svg5 #MINVER#
+| libqt5svg5 #MINVER#, qtsvg-abi-5-15-8
+* Build-Depends-Package: libqt5svg5-dev
+ Qt_5.0@Qt_5.0 5.6.0~beta
+ Qt_5.10@Qt_5.10 5.10.0
+ Qt_5.11@Qt_5.11 5.11.1
+ Qt_5.12@Qt_5.12 5.12.0
+ Qt_5.13@Qt_5.13 5.14.1
+ Qt_5.14@Qt_5.14 5.14.1
+ Qt_5.15@Qt_5.15 5.15.1
+ Qt_5.1@Qt_5.1 5.6.0~beta
+ Qt_5.2@Qt_5.2 5.6.0~beta
+ Qt_5.3@Qt_5.3 5.6.0~beta
+ Qt_5.4@Qt_5.4 5.6.0~beta
+ Qt_5.5@Qt_5.5 5.6.0~beta
+ Qt_5.6@Qt_5.6 5.6.0~beta
+ Qt_5.7@Qt_5.7 5.7.0
+ Qt_5.8@Qt_5.8 5.9.0
+ Qt_5.9@Qt_5.9 5.9.0
+ Qt_5@Qt_5 5.6.0~beta
+ Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 0 1
+ _ZN10QSvgSwitch4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN10QSvgSwitch4initEv@Qt_5_PRIVATE_API 0 1
+ _ZN10QSvgSwitchC1EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN10QSvgSwitchC2EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN10QSvgWidget10paintEventEP11QPaintEvent@Qt_5 5.6.0~beta
+ _ZN10QSvgWidget11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.0~beta
+ _ZN10QSvgWidget11qt_metacastEPKc@Qt_5 5.6.0~beta
+ _ZN10QSvgWidget16staticMetaObjectE@Qt_5 5.6.0~beta
+ _ZN10QSvgWidget4loadERK10QByteArray@Qt_5 5.6.0~beta
+ _ZN10QSvgWidget4loadERK7QString@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetC1EP7QWidget@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetC1ERK7QStringP7QWidget@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetC2EP7QWidget@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetC2ERK7QStringP7QWidget@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetD0Ev@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetD1Ev@Qt_5 5.6.0~beta
+ _ZN10QSvgWidgetD2Ev@Qt_5 5.6.0~beta
+ _ZN11QSvgEllipse4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgEllipseC1EP8QSvgNodeRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgEllipseC2EP8QSvgNodeRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler10charactersERK10QStringRef@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler10endElementERK10QStringRef@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler10setInStyleEb@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler12resolveNodesEv@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler12startElementERK7QStringRK20QXmlStreamAttributes@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler13pushColorCopyEv@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler13setAnimPeriodEii@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler16resolveGradientsEP8QSvgNodei@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler18parseCSStoXMLAttrsERK7QStringP7QVectorI16QSvgCssAttributeE@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler21processingInstructionERK7QStringS2_@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler26setDefaultCoordinateSystemENS_10LengthTypeE@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler4initEv@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler5parseEv@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler8popColorEv@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandler9pushColorERK6QColor@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC1EP16QXmlStreamReader@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC1EP9QIODevice@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC1ERK10QByteArray@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC2EP16QXmlStreamReader@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC2EP9QIODevice@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerC2ERK10QByteArray@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgHandlerD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgPolygon4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgPolygonC1EP8QSvgNodeRK9QPolygonF@Qt_5_PRIVATE_API 0 1
+ _ZN11QSvgPolygonC2EP8QSvgNodeRK9QPolygonF@Qt_5_PRIVATE_API 0 1
+ _ZN12QSvgPolyline4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN12QSvgPolylineC1EP8QSvgNodeRK9QPolygonF@Qt_5_PRIVATE_API 0 1
+ _ZN12QSvgPolylineC2EP8QSvgNodeRK9QPolygonF@Qt_5_PRIVATE_API 0 1
+ _ZN12QSvgRenderer10setViewBoxERK5QRect@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer10setViewBoxERK6QRectF@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer11qt_metacastEPKc@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer13repaintNeededEv@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer15setCurrentFrameEi@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer16staticMetaObjectE@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer18setAspectRatioModeEN2Qt15AspectRatioModeE@Qt_5 5.15.1
+ _ZN12QSvgRenderer18setFramesPerSecondEi@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer4loadEP16QXmlStreamReader@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer4loadERK10QByteArray@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer4loadERK7QString@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer6renderEP8QPainter@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer6renderEP8QPainterRK6QRectF@Qt_5 5.6.0~beta
+ _ZN12QSvgRenderer6renderEP8QPainterRK7QStringRK6QRectF@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC1EP16QXmlStreamReaderP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC1EP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC1ERK10QByteArrayP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC1ERK7QStringP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC2EP16QXmlStreamReaderP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC2EP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC2ERK10QByteArrayP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererC2ERK7QStringP7QObject@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererD0Ev@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererD1Ev@Qt_5 5.6.0~beta
+ _ZN12QSvgRendererD2Ev@Qt_5 5.6.0~beta
+ _ZN13QSvgAnimation4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle11setFillRuleEN2Qt8FillRuleE@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle12setFillStyleEP21QSvgFillStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle14setFillOpacityEd@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyle8setBrushE6QBrush@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyleC1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFillStyleC2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyle13SVGToQtWeightEi@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyleC1EP8QSvgFontP16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyleC1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyleC2EP8QSvgFontP16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgFontStyleC2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN13QSvgGenerator10setViewBoxERK5QRect@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator10setViewBoxERK6QRectF@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator11setFileNameERK7QString@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator13setResolutionEi@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator14setDescriptionERK7QString@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator15setOutputDeviceEP9QIODevice@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator7setSizeERK5QSize@Qt_5 5.6.0~beta
+ _ZN13QSvgGenerator8setTitleERK7QString@Qt_5 5.6.0~beta
+ _ZN13QSvgGeneratorC1Ev@Qt_5 5.6.0~beta
+ _ZN13QSvgGeneratorC2Ev@Qt_5 5.6.0~beta
+ _ZN13QSvgGeneratorD0Ev@Qt_5 5.6.0~beta
+ _ZN13QSvgGeneratorD1Ev@Qt_5 5.6.0~beta
+ _ZN13QSvgGeneratorD2Ev@Qt_5 5.6.0~beta
+ _ZN15QSvgCompOpStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgCompOpStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgCompOpStyleC1EN8QPainter15CompositionModeE@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgCompOpStyleC2EN8QPainter15CompositionModeE@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgExtraStatesC1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgExtraStatesC2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgStrokeStyle12setDashArrayERK7QVectorIdE@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgStrokeStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgStrokeStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgStrokeStyleC1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN15QSvgStrokeStyleC2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN16QGraphicsSvgItem11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem11qt_metacastEPKc@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem12setElementIdERK7QString@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem16staticMetaObjectE@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem17setCachingEnabledEb@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem17setSharedRendererEP12QSvgRenderer@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem19setMaximumCacheSizeERK5QSize@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItemC1EP13QGraphicsItem@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItemC1ERK7QStringP13QGraphicsItem@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItemC2EP13QGraphicsItem@Qt_5 5.6.0~beta
+ _ZN16QGraphicsSvgItemC2ERK7QStringP13QGraphicsItem@Qt_5 5.6.0~beta
+ _ZN16QSvgAnimateColor14setRepeatCountEd@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColor5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColor6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColor7setArgsEbRK5QListI6QColorE@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColor9setFreezeEb@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColorC1Eiii@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgAnimateColorC2Eiii@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgOpacityStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgOpacityStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgOpacityStyleC1Ed@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgOpacityStyleC2Ed@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgQualityStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgQualityStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgQualityStyleC1Ei@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgQualityStyleC2Ei@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument10addSvgFontEP8QSvgFont@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument10setViewBoxERK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument11setAnimatedEb@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument12addNamedNodeERK7QStringP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument13addNamedStyleERK7QStringP21QSvgFillStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument15setCurrentFrameEi@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument16restartAnimationEv@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument17mapSourceToTargetEP8QPainterRK6QRectFS4_@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument18setFramesPerSecondEi@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument22setPreserveAspectRatioEb@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4drawEP8QPainter@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4drawEP8QPainterRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4drawEP8QPainterRK7QStringRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4loadEP16QXmlStreamReader@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4loadERK10QByteArray@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument4loadERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument8setWidthEib@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocument9setHeightEib@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocumentC1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocumentC2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocumentD0Ev@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocumentD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN16QSvgTinyDocumentD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyle11setStopLinkERK7QStringP16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyle12resolveStopsEv@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyle12setTransformERK10QTransform@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyle19resolveStops_helperEP11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyle5brushEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyleC1EP9QGradient@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgGradientStyleC2EP9QGradient@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNode8addChildEP8QSvgNodeRK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNodeC1EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNodeC2EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNodeD0Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNodeD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStructureNodeD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStylePropertyD0Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStylePropertyD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN17QSvgStylePropertyD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN18QSvgTransformStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN18QSvgTransformStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN18QSvgTransformStyleC1ERK10QTransform@Qt_5_PRIVATE_API 0 1
+ _ZN18QSvgTransformStyleC2ERK10QTransform@Qt_5_PRIVATE_API 0 1
+ _ZN19QSvgSolidColorStyleC1ERK6QColor@Qt_5_PRIVATE_API 0 1
+ _ZN19QSvgSolidColorStyleC2ERK6QColor@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform13resolveMatrixEPK8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform14setRepeatCountEd@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform7setArgsENS_13TransformTypeENS_8AdditiveERK7QVectorIdE@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransform9setFreezeEb@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransformC1Eiii@Qt_5_PRIVATE_API 0 1
+ _ZN20QSvgAnimateTransformC2Eiii@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgFillStyleProperty5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgFillStyleProperty6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgViewportFillStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgViewportFillStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgViewportFillStyleC1ERK6QBrush@Qt_5_PRIVATE_API 0 1
+ _ZN21QSvgViewportFillStyleC2ERK6QBrush@Qt_5_PRIVATE_API 0 1
+ _ZN5QSvgG4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN5QSvgGC1EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN5QSvgGC2EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN7QSvgArc4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN7QSvgArcC1EP8QSvgNodeRK12QPainterPath@Qt_5_PRIVATE_API 0 1
+ _ZN7QSvgArcC2EP8QSvgNodeRK12QPainterPath@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgDefs4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgDefsC1EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgDefsC2EP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgFont13setFamilyNameERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgFont13setUnitsPerEmEd@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgFont8addGlyphE5QCharRK12QPainterPathd@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgFontC1Ed@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgFontC2Ed@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgLine4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgLineC1EP8QSvgNodeRK6QLineF@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgLineC2EP8QSvgNodeRK6QLineF@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode10setVisibleEb@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode11setXmlClassERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode11strokeWidthEP8QPainter@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode14setDisplayModeENS_11DisplayModeE@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode16setRequiredFontsERK11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode18setRequiredFormatsERK11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode19appendStylePropertyEP17QSvgStylePropertyRK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode19setRequiredFeaturesERK11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode20setRequiredLanguagesERK11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode21setRequiredExtensionsERK11QStringList@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNode9setNodeIdERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNodeC1EPS_@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNodeC2EPS_@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNodeD0Ev@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNodeD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgNodeD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgPath4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgPathC1EP8QSvgNodeRK12QPainterPath@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgPathC2EP8QSvgNodeRK12QPainterPath@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgRect4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgRectC1EP8QSvgNodeRK6QRectFii@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgRectC2EP8QSvgNodeRK6QRectFii@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgText11setTextAreaERK6QSizeF@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgText4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgText7addTextERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgText9LINEBREAKE@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgTextC1EP8QSvgNodeRK7QPointF@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgTextC2EP8QSvgNodeRK7QPointF@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgTextD0Ev@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgTextD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN8QSvgTextD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgGlyphC1E5QCharRK12QPainterPathd@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgGlyphC2E5QCharRK12QPainterPathd@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgImage4drawEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgImageC1EP8QSvgNodeRK6QImageRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgImageC2EP8QSvgNodeRK6QImageRK6QRectF@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgStyle5applyEP8QPainterPK8QSvgNodeR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgStyle6revertEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgStyleD1Ev@Qt_5_PRIVATE_API 0 1
+ _ZN9QSvgStyleD2Ev@Qt_5_PRIVATE_API 0 1
+ _ZNK10QSvgCircle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK10QSvgSwitch4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK10QSvgWidget10metaObjectEv@Qt_5 5.6.0~beta
+ _ZNK10QSvgWidget8rendererEv@Qt_5 5.6.0~beta
+ _ZNK10QSvgWidget8sizeHintEv@Qt_5 5.6.0~beta
+ _ZNK11QSvgEllipse4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgEllipse6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler12currentColorEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler17animationDurationEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler23defaultCoordinateSystemEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler6deviceEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler7inStyleEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler8documentEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgHandler8selectorEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgPolygon4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK11QSvgPolygon6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK12QPaintDevice7devTypeEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgPolyline4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK12QSvgPolyline6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK12QSvgRenderer10metaObjectEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer11defaultSizeEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer12currentFrameEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer13elementExistsERK7QString@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer15aspectRatioModeEv@Qt_5 5.15.1
+ _ZNK12QSvgRenderer15boundsOnElementERK7QString@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer15framesPerSecondEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer16matrixForElementERK7QString@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer17animationDurationEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer19transformForElementERK7QString@Qt_5 5.15.1
+ _ZNK12QSvgRenderer7isValidEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer7viewBoxEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer8animatedEv@Qt_5 5.6.0~beta
+ _ZNK12QSvgRenderer8viewBoxFEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgAnimation4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK13QSvgFillStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK13QSvgFontStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK13QSvgGenerator10resolutionEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator11descriptionEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator11paintEngineEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator12outputDeviceEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator4sizeEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator5titleEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator6metricEN12QPaintDevice17PaintDeviceMetricE@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator7viewBoxEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator8fileNameEv@Qt_5 5.6.0~beta
+ _ZNK13QSvgGenerator8viewBoxFEv@Qt_5 5.6.0~beta
+ _ZNK15QSvgCompOpStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK15QSvgStrokeStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QGraphicsSvgItem10metaObjectEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem12boundingRectEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem16isCachingEnabledEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem16maximumCacheSizeEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem4typeEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem8rendererEv@Qt_5 5.6.0~beta
+ _ZNK16QGraphicsSvgItem9elementIdEv@Qt_5 5.6.0~beta
+ _ZNK16QSvgAnimateColor4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgOpacityStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgQualityStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument10namedStyleERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument12currentFrameEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument13elementExistsERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument15boundsOnElementERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument19transformForElementERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument4sizeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument7svgFontERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument8animatedEv@Qt_5_PRIVATE_API 0 1
+ _ZNK16QSvgTinyDocument9namedNodeERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK17QSvgGradientStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK17QSvgStructureNode19previousSiblingNodeEP8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZNK17QSvgStructureNode6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK17QSvgStructureNode9scopeNodeERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK18QSvgTransformStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK19QSvgSolidColorStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK20QSvgAnimateTransform4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK21QSvgViewportFillStyle4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK5QSvgG4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK7QSvgArc4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK7QSvgArc6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgDefs4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgFont10familyNameEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgFont4drawEP8QPainterRK7QPointFRK7QStringd6QFlagsIN2Qt13AlignmentFlagEE@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgLine4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgLine6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode10applyStyleEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode11displayModeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode11revertStyleEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode13requiredFontsEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode13stylePropertyEN17QSvgStyleProperty4TypeE@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode13stylePropertyERK7QString@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode14isDescendantOfEPKS_@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode15requiredFormatsEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode16requiredFeaturesEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode17requiredLanguagesEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode17transformedBoundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode17transformedBoundsEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode18requiredExtensionsEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgNode8documentEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgPath4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgPath6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgRect4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgRect6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZNK8QSvgText4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK9QSvgImage4typeEv@Qt_5_PRIVATE_API 0 1
+ _ZNK9QSvgImage6boundsEP8QPainterR15QSvgExtraStates@Qt_5_PRIVATE_API 0 1
+ _ZTI10QSvgCircle@Qt_5_PRIVATE_API 0 1
+ _ZTI10QSvgSwitch@Qt_5_PRIVATE_API 0 1
+ _ZTI10QSvgWidget@Qt_5 5.6.0~beta
+ _ZTI11QSvgEllipse@Qt_5_PRIVATE_API 0 1
+ _ZTI11QSvgPolygon@Qt_5_PRIVATE_API 0 1
+ _ZTI12QSvgPolyline@Qt_5_PRIVATE_API 0 1
+ _ZTI12QSvgRenderer@Qt_5 5.6.0~beta
+ _ZTI13QSvgAnimation@Qt_5_PRIVATE_API 0 1
+ _ZTI13QSvgFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI13QSvgFontStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI13QSvgGenerator@Qt_5 5.6.0~beta
+ _ZTI14QSvgRefCounted@Qt_5_PRIVATE_API 0 1
+ _ZTI15QSvgCompOpStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI15QSvgStrokeStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI16QGraphicsSvgItem@Qt_5 5.6.0~beta
+ _ZTI16QSvgAnimateColor@Qt_5_PRIVATE_API 0 1
+ _ZTI16QSvgOpacityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI16QSvgQualityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZTI17QSvgGradientStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI17QSvgStructureNode@Qt_5_PRIVATE_API 0 1
+ _ZTI17QSvgStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTI18QSvgTransformStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI19QSvgSolidColorStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI20QSvgAnimateTransform@Qt_5_PRIVATE_API 0 1
+ _ZTI21QSvgFillStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTI21QSvgViewportFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTI5QSvgG@Qt_5_PRIVATE_API 0 1
+ _ZTI7QSvgArc@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgDefs@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgFont@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgLine@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgPath@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgRect@Qt_5_PRIVATE_API 0 1
+ _ZTI8QSvgText@Qt_5_PRIVATE_API 0 1
+ _ZTI9QSvgImage@Qt_5_PRIVATE_API 0 1
+ _ZTI9QSvgTspan@Qt_5_PRIVATE_API 0 1
+ _ZTS10QSvgCircle@Qt_5_PRIVATE_API 0 1
+ _ZTS10QSvgSwitch@Qt_5_PRIVATE_API 0 1
+ _ZTS10QSvgWidget@Qt_5 5.6.0~beta
+ _ZTS11QSvgEllipse@Qt_5_PRIVATE_API 0 1
+ _ZTS11QSvgPolygon@Qt_5_PRIVATE_API 0 1
+ _ZTS12QSvgPolyline@Qt_5_PRIVATE_API 0 1
+ _ZTS12QSvgRenderer@Qt_5 5.6.0~beta
+ _ZTS13QSvgAnimation@Qt_5_PRIVATE_API 0 1
+ _ZTS13QSvgFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS13QSvgFontStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS13QSvgGenerator@Qt_5 5.6.0~beta
+ _ZTS14QSvgRefCounted@Qt_5_PRIVATE_API 0 1
+ _ZTS15QSvgCompOpStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS15QSvgStrokeStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS16QGraphicsSvgItem@Qt_5 5.6.0~beta
+ _ZTS16QSvgAnimateColor@Qt_5_PRIVATE_API 0 1
+ _ZTS16QSvgOpacityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS16QSvgQualityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZTS17QSvgGradientStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS17QSvgStructureNode@Qt_5_PRIVATE_API 0 1
+ _ZTS17QSvgStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTS18QSvgTransformStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS19QSvgSolidColorStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS20QSvgAnimateTransform@Qt_5_PRIVATE_API 0 1
+ _ZTS21QSvgFillStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTS21QSvgViewportFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTS5QSvgG@Qt_5_PRIVATE_API 0 1
+ _ZTS7QSvgArc@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgDefs@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgFont@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgLine@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgPath@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgRect@Qt_5_PRIVATE_API 0 1
+ _ZTS8QSvgText@Qt_5_PRIVATE_API 0 1
+ _ZTS9QSvgImage@Qt_5_PRIVATE_API 0 1
+ _ZTS9QSvgTspan@Qt_5_PRIVATE_API 0 1
+ _ZTV10QSvgCircle@Qt_5_PRIVATE_API 0 1
+ _ZTV10QSvgSwitch@Qt_5_PRIVATE_API 0 1
+ _ZTV10QSvgWidget@Qt_5 5.6.0~beta
+ _ZTV11QSvgEllipse@Qt_5_PRIVATE_API 0 1
+ _ZTV11QSvgPolygon@Qt_5_PRIVATE_API 0 1
+ _ZTV12QSvgPolyline@Qt_5_PRIVATE_API 0 1
+ _ZTV12QSvgRenderer@Qt_5 5.6.0~beta
+ _ZTV13QSvgAnimation@Qt_5_PRIVATE_API 0 1
+ _ZTV13QSvgFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV13QSvgFontStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV13QSvgGenerator@Qt_5 5.6.0~beta
+ _ZTV15QSvgCompOpStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV15QSvgStrokeStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV16QGraphicsSvgItem@Qt_5 5.6.0~beta
+ _ZTV16QSvgAnimateColor@Qt_5_PRIVATE_API 0 1
+ _ZTV16QSvgOpacityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV16QSvgQualityStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV16QSvgTinyDocument@Qt_5_PRIVATE_API 0 1
+ _ZTV17QSvgGradientStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV17QSvgStructureNode@Qt_5_PRIVATE_API 0 1
+ _ZTV17QSvgStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTV18QSvgTransformStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV19QSvgSolidColorStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV20QSvgAnimateTransform@Qt_5_PRIVATE_API 0 1
+ _ZTV21QSvgFillStyleProperty@Qt_5_PRIVATE_API 0 1
+ _ZTV21QSvgViewportFillStyle@Qt_5_PRIVATE_API 0 1
+ _ZTV5QSvgG@Qt_5_PRIVATE_API 0 1
+ _ZTV7QSvgArc@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgDefs@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgFont@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgLine@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgNode@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgPath@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgRect@Qt_5_PRIVATE_API 0 1
+ _ZTV8QSvgText@Qt_5_PRIVATE_API 0 1
+ _ZTV9QSvgImage@Qt_5_PRIVATE_API 0 1
+ _ZTV9QSvgTspan@Qt_5_PRIVATE_API 0 1
+ _ZThn16_N10QSvgWidgetD0Ev@Qt_5 5.6.0~beta
+ _ZThn16_N10QSvgWidgetD1Ev@Qt_5 5.6.0~beta
+ _ZThn16_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget@Qt_5 5.6.0~beta
+ _ZThn16_NK16QGraphicsSvgItem12boundingRectEv@Qt_5 5.6.0~beta
+ _ZThn16_NK16QGraphicsSvgItem4typeEv@Qt_5 5.6.0~beta

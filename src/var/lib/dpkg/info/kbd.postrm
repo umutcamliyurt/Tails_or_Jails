@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove)
+        for file in dumpkeys loadkeys; do
+            if [ -L /usr/bin/$file ]; then
+                rm /usr/bin/$file
+            fi
+        done
+        ;;
+esac
+
+
+
+# vim:sw=4:sts=4:et:

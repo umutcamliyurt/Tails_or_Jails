@@ -1,0 +1,30 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    upgrade)
+        if dpkg --compare-versions "$2" lt 2.02.122-2; then
+            if [ -x "/usr/bin/deb-systemd-helper" ]; then
+                deb-systemd-helper purge lvm2-activation.service lvm2-activation-early.service >/dev/null
+                deb-systemd-helper unmask lvm2-activation.service lvm2-activation-early.service >/dev/null
+            fi
+        fi
+        if dpkg --compare-versions "$2" lt "2.03.02-3~"; then
+            invoke-rc.d lvm2-lvmetad stop || true
+        fi
+        if dpkg --compare-versions "$2" lt "2.03.16-2~"; then
+            invoke-rc.d lvm2 stop || true
+            invoke-rc.d lvm2-lvmpolld stop || true
+        fi
+    ;;
+esac
+
+# Automatically added by dh_installdeb/13.10
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2-lvmetad 2.03.02-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2 2.03.16-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2-lvmpolld 2.03.16-2\~ -- "$@"
+# End automatically added section
+
+
+exit 0

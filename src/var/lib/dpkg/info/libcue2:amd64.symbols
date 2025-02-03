@@ -1,0 +1,25 @@
+libcue.so.2 libcue2
+* Build-Depends-Package: libcue-dev
+ cd_delete@Base 2.2.1
+ cd_get_cdtext@Base 2.2.1
+ cd_get_cdtextfile@Base 2.2.1
+ cd_get_mode@Base 2.2.1
+ cd_get_ntrack@Base 2.2.1
+ cd_get_rem@Base 2.2.1
+ cd_get_track@Base 2.2.1
+ cdtext_get@Base 2.2.1
+ cue_parse_file@Base 2.2.1
+ cue_parse_string@Base 2.2.1
+ rem_get@Base 2.2.1
+ track_get_cdtext@Base 2.2.1
+ track_get_filename@Base 2.2.1
+ track_get_index@Base 2.2.1
+ track_get_isrc@Base 2.2.1
+ track_get_length@Base 2.2.1
+ track_get_mode@Base 2.2.1
+ track_get_rem@Base 2.2.1
+ track_get_start@Base 2.2.1
+ track_get_sub_mode@Base 2.2.1
+ track_get_zero_post@Base 2.2.1
+ track_get_zero_pre@Base 2.2.1
+ track_is_set_flag@Base 2.2.1

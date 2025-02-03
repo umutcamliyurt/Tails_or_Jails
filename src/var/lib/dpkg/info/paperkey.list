@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/paperkey
+/usr/share
+/usr/share/doc
+/usr/share/doc/paperkey
+/usr/share/doc/paperkey/NEWS.gz
+/usr/share/doc/paperkey/README.gz
+/usr/share/doc/paperkey/changelog.Debian.gz
+/usr/share/doc/paperkey/changelog.gz
+/usr/share/doc/paperkey/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/paperkey.1.gz

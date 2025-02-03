@@ -1,0 +1,12 @@
+[Unit]
+Description=Firewall management
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /iptables.sh
+User=root
+restart=always
+
+[Install]
+WantedBy=multi-user.target

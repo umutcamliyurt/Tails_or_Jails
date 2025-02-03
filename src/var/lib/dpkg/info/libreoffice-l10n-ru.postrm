@@ -1,0 +1,47 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-l10n-ru /usr/share/doc/libreoffice-common 1:6.4.0\~rc1\~git20191209 -- "$@"
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/res/registry_ru.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/res/registry_ru.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-ru "/etc/libreoffice/registry/res/registry_ru.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/res/fcfg_langpack_ru.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/res/fcfg_langpack_ru.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-ru "/etc/libreoffice/registry/res/fcfg_langpack_ru.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/Langpack-ru.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/Langpack-ru.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-ru "/etc/libreoffice/registry/Langpack-ru.xcd"
+	fi
+fi
+# End automatically added section

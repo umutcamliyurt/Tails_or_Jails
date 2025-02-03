@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
+/usr/share
+/usr/share/doc
+/usr/share/doc/libjemalloc2
+/usr/share/doc/libjemalloc2/README
+/usr/share/doc/libjemalloc2/changelog.Debian.gz
+/usr/share/doc/libjemalloc2/changelog.gz
+/usr/share/doc/libjemalloc2/copyright

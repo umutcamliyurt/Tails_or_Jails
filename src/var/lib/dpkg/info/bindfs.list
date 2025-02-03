@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/bindfs
+/usr/share
+/usr/share/doc
+/usr/share/doc/bindfs
+/usr/share/doc/bindfs/README.md
+/usr/share/doc/bindfs/TODO
+/usr/share/doc/bindfs/changelog.Debian.gz
+/usr/share/doc/bindfs/changelog.gz
+/usr/share/doc/bindfs/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/bindfs.1.gz

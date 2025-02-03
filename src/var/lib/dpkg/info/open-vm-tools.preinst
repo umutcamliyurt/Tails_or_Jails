@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/vmware-tools/guestproxy-ssl.conf 2:11.3.0-1\~ open-vm-tools -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/vmware-tools/vm-support 2:11.3.0-1\~ open-vm-tools -- "$@"
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/open-vm-tools" ] ; then
+	chmod +x "/etc/init.d/open-vm-tools" >/dev/null || true
+fi
+# End automatically added section

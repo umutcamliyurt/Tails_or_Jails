@@ -1,0 +1,2 @@
+/etc/apparmor.d/usr.bin.thunderbird
+/etc/thunderbird/pref/thunderbird.js

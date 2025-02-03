@@ -1,0 +1,83 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          usbguard
+# Required-Start:    $local_fs $network $remote_fs $syslog
+# Required-Stop:     $local_fs $network $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: USB device authorization policy framework
+# Description:        The USBGuard software framework helps to protect your computer against rogue
+#                     USB devices (a.k.a. BadUSB) by implementing basic allow- and blocklisting
+#                     capabilities based on device attributes.
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+NAME=usbguard
+DAEMON=/usr/sbin/usbguard-daemon
+DESC="Usbguard daemon"
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+if test -f /etc/default/$NAME; then
+	. /etc/default/$NAME
+fi
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+. /lib/init/vars.sh
+
+. /lib/lsb/init-functions
+
+usbguard_daemon_start()
+{
+	if [ -f "$PIDFILE" ]; then
+		log_failure_msg "$DESC is running already."
+		exit 1
+	fi
+
+	start-stop-daemon --start --exec $DAEMON -- -f -s -c /etc/usbguard/usbguard-daemon.conf
+}
+
+usbguard_daemon_stop()
+{
+	if [ -f "$PIDFILE" ]; then
+		start-stop-daemon --stop --signal INT --pidfile $PIDFILE
+		rm -f $PIDFILE
+	fi
+}
+
+usbguard_daemon_status() {
+	if [ ! -e $PIDFILE ]; then
+		status_of_proc "${DAEMON}" "${DESC}"
+	else
+		status_of_proc -p "${PIDFILE}" "${DAEMON}" "${DESC}"
+	fi
+}
+
+case "$1" in
+  start)
+  	log_begin_msg "Starting ${DESC}"
+	usbguard_daemon_start
+	log_end_msg $?
+	;;
+  stop)
+  	log_begin_msg "Stopping ${DESC}"
+	usbguard_daemon_stop
+	log_end_msg $?
+	;;
+  status)
+  	usbguard_daemon_status
+	;;
+  restart|reload|force-reload)
+  	log_begin_msg "Restarting ${DESC}"
+	usbguard_daemon_stop
+	usbguard_daemon_start
+	log_end_msg $?
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}"
+	exit 1
+	;;
+esac

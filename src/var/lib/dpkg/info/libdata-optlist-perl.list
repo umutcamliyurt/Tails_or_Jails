@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdata-optlist-perl
+/usr/share/doc/libdata-optlist-perl/changelog.Debian.gz
+/usr/share/doc/libdata-optlist-perl/changelog.gz
+/usr/share/doc/libdata-optlist-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Data::OptList.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Data
+/usr/share/perl5/Data/OptList.pm

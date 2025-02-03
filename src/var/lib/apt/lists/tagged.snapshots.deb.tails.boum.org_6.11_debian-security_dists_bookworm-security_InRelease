@@ -1,0 +1,56 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: debian-security
+Label: debian-security
+Suite: bookworm-security
+Codename: bookworm-security
+Date: Wed, 08 Jan 2025 11:30:17 UTC
+Architectures: amd64
+Components: main contrib non-free non-free-firmware
+MD5Sum:
+ 2915555941a51dcb95908bc789977849 228539 main/binary-amd64/Packages
+ e075d1c6979cb870c356d110a434c726 57016 main/binary-amd64/Packages.gz
+ 2f8bc8b5ef957d9e788eefc9f4e43e8c 110 main/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 contrib/binary-amd64/Packages.gz
+ 86a6f758c744ebdd34107f56346e7139 113 contrib/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 non-free/binary-amd64/Packages.gz
+ 3f7ebed02326e778d7d25c3b3c946061 114 non-free/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free-firmware/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 non-free-firmware/binary-amd64/Packages.gz
+ 49debf3d90a4389e1831370367cc3a6d 123 non-free-firmware/binary-amd64/Release
+SHA1:
+ 3c7b33802065c364754f877df54b454c13f617fa 228539 main/binary-amd64/Packages
+ 15c53904f394ef96d6f391fb0c188c3923fef012 57016 main/binary-amd64/Packages.gz
+ 381e5e568a55df23972861d33d9aa8140c241d2e 110 main/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 contrib/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 contrib/binary-amd64/Packages.gz
+ fda9cf247cb272291839e0d6412d125e9e1b1a94 113 contrib/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 non-free/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 non-free/binary-amd64/Packages.gz
+ 8f176904a53dff1535da2afeb5958c2776e91744 114 non-free/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 non-free-firmware/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 non-free-firmware/binary-amd64/Packages.gz
+ a025c85ffed698f76c2a5e93417bbd3ee1198a1d 123 non-free-firmware/binary-amd64/Release
+SHA256:
+ 699008e201adc4fe43153e4f06e7ad1641862ac822cdae2d8b029a8c1a6b27f7 228539 main/binary-amd64/Packages
+ 147e0472d01aee34dc68b0c34d00900d8f95aa5e0e67071883b8bf42999572c5 57016 main/binary-amd64/Packages.gz
+ ce0acb74275533d77f78e40c56292d34cc4456dfa5e13d0a425effd7bb8ee849 110 main/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 contrib/binary-amd64/Packages.gz
+ e440abc6edfbf8122de8a6dc47b8dba24e00c4c1ebb823abd9f3c55281407848 113 contrib/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 non-free/binary-amd64/Packages.gz
+ 66a38059890d1437fd680d3f5828bbbabaae5d8686ae12ff7e86596d3f5488b4 114 non-free/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free-firmware/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 non-free-firmware/binary-amd64/Packages.gz
+ 0a4f21d3249aee2e91aacb5844c1d0ebb30d164b8145b14cc1fe0e00745d87e1 123 non-free-firmware/binary-amd64/Release
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQTWj4cUnrp3VBVzwcEkU6qc5BI6mgUCZ35hygAKCRAkU6qc5BI6
+mg9WAP9sIWN8ws6wfdrVTDM7R0F6ha4ABlpQLs5HV6WZ6vIFjQEA8hx/WkDvV7CF
+Dmotl1y0Oe2RyYKGnKntsFsvnDslBQs=
+=B7tr
+-----END PGP SIGNATURE-----

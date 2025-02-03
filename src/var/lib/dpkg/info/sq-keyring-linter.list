@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/bin
+/usr/bin/sq-keyring-linter
+/usr/share
+/usr/share/doc
+/usr/share/doc/sq-keyring-linter
+/usr/share/doc/sq-keyring-linter/changelog.Debian.gz
+/usr/share/doc/sq-keyring-linter/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/sq-keyring-linter.1.gz

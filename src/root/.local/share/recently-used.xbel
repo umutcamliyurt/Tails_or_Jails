@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///tor-browser/start-tor-browser.desktop" added="2025-02-02T15:59:40.161444Z" modified="2025-02-02T15:59:44.819765Z" visited="2025-02-02T15:59:40.161445Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-desktop"/>
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;libreoffice --writer %U&apos;" modified="2025-02-02T15:59:40.161454Z" count="1"/>
+          <bookmark:application name="LibreOffice 7.4" exec="&apos;soffice %u&apos;" modified="2025-02-02T15:59:44.819764Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

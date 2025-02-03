@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/cups.cpython-311-x86_64-linux-gnu.so
+/usr/lib/python3/dist-packages/pycups-2.0.1.egg-info
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-cups
+/usr/share/doc/python3-cups/README
+/usr/share/doc/python3-cups/TODO
+/usr/share/doc/python3-cups/changelog.Debian.amd64.gz
+/usr/share/doc/python3-cups/changelog.Debian.gz
+/usr/share/doc/python3-cups/changelog.gz
+/usr/share/doc/python3-cups/copyright
+/usr/share/doc/python3-cups/NEWS.gz

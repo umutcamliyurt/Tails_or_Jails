@@ -1,0 +1,5 @@
+libaircrack-ce-wpa 1.7.0 aircrack-ng (>= 1:1.7)
+libaircrack-ce-wpa-x86-avx 1.7.0 aircrack-ng (>= 1:1.7)
+libaircrack-ce-wpa-x86-avx2 1.7.0 aircrack-ng (>= 1:1.7)
+libaircrack-ce-wpa-x86-sse2 1.7.0 aircrack-ng (>= 1:1.7)
+libaircrack-osdep 1.7.0 aircrack-ng (>= 1:1.7)

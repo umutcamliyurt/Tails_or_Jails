@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/mokutil
+/usr/share
+/usr/share/bash-completion
+/usr/share/bash-completion/completions
+/usr/share/bash-completion/completions/mokutil
+/usr/share/doc
+/usr/share/doc/mokutil
+/usr/share/doc/mokutil/changelog.Debian.gz
+/usr/share/doc/mokutil/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/mokutil.1.gz

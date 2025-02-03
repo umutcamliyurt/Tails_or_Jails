@@ -1,0 +1,12 @@
+auto
+/lib/firmware/regulatory.db
+regulatory.db.p7s
+/lib/firmware/regulatory.db.p7s
+
+/lib/firmware/regulatory.db-debian
+100
+/lib/firmware/regulatory.db.p7s-debian
+/lib/firmware/regulatory.db-upstream
+50
+/lib/firmware/regulatory.db.p7s-upstream
+

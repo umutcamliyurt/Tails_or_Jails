@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/atomicwrites
+/usr/lib/python3/dist-packages/atomicwrites/__init__.py
+/usr/lib/python3/dist-packages/atomicwrites-1.4.1.egg-info
+/usr/lib/python3/dist-packages/atomicwrites-1.4.1.egg-info/PKG-INFO
+/usr/lib/python3/dist-packages/atomicwrites-1.4.1.egg-info/dependency_links.txt
+/usr/lib/python3/dist-packages/atomicwrites-1.4.1.egg-info/top_level.txt
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-atomicwrites
+/usr/share/doc/python3-atomicwrites/README.rst.gz
+/usr/share/doc/python3-atomicwrites/changelog.Debian.gz
+/usr/share/doc/python3-atomicwrites/copyright

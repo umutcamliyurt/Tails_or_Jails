@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/bin/exiv2
+/usr/share
+/usr/share/doc
+/usr/share/doc/exiv2
+/usr/share/doc/exiv2/README.md.gz
+/usr/share/doc/exiv2/changelog.Debian.gz
+/usr/share/doc/exiv2/changelog.gz
+/usr/share/doc/exiv2/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/exiv2.1.gz

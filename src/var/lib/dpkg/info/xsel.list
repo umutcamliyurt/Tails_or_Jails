@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/bin/xsel
+/usr/share
+/usr/share/doc
+/usr/share/doc/xsel
+/usr/share/doc/xsel/README.gz
+/usr/share/doc/xsel/changelog.Debian.gz
+/usr/share/doc/xsel/changelog.gz
+/usr/share/doc/xsel/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/xsel.1x.gz

@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libraw.so.20.0.0
+/usr/lib/x86_64-linux-gnu/libraw_r.so.20.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libraw20
+/usr/share/doc/libraw20/NEWS.Debian.gz
+/usr/share/doc/libraw20/changelog.Debian.gz
+/usr/share/doc/libraw20/changelog.gz
+/usr/share/doc/libraw20/copyright
+/usr/lib/x86_64-linux-gnu/libraw.so.20
+/usr/lib/x86_64-linux-gnu/libraw_r.so.20

@@ -1,0 +1,4 @@
+# /etc/apt/sources.list
+
+deb http://tagged.snapshots.deb.tails.boum.org/6.11/debian bookworm main contrib non-free non-free-firmware
+deb http://tagged.snapshots.deb.tails.boum.org/6.11/debian-security bookworm-security main contrib non-free non-free-firmware

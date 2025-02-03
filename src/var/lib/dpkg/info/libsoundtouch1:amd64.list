@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libSoundTouch.so.1.0.0
+/usr/lib/x86_64-linux-gnu/libSoundTouchDll.so.1.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsoundtouch1
+/usr/share/doc/libsoundtouch1/changelog.Debian.gz
+/usr/share/doc/libsoundtouch1/copyright
+/usr/lib/x86_64-linux-gnu/libSoundTouch.so.1
+/usr/lib/x86_64-linux-gnu/libSoundTouchDll.so.1

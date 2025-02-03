@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libKF5GlobalAccel.so.5.103.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libkf5globalaccel5
+/usr/share/doc/libkf5globalaccel5/changelog.Debian.gz
+/usr/share/doc/libkf5globalaccel5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libkf5globalaccel5
+/usr/share/qlogging-categories5
+/usr/share/qlogging-categories5/kglobalaccel.categories
+/usr/share/qlogging-categories5/kglobalaccel.renamecategories
+/usr/lib/x86_64-linux-gnu/libKF5GlobalAccel.so.5

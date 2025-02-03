@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+case $1 in
+remove|deconfigure)
+	# from #929185
+	update-alternatives --remove default-GM.sf3 \
+	    /usr/share/sounds/sf2/TimGM6mb.sf2
+	update-alternatives --remove default-GM.sf2 \
+	    /usr/share/sounds/sf2/TimGM6mb.sf2
+	# remove directories if they were created in postinst
+	# mkdir -p them first so that rmdir doesn’t fail if they don’t exist
+	mkdir -p \
+	    /usr/share/sounds/sf2 /usr/share/sounds/sf3
+	rmdir --ignore-fail-on-non-empty \
+	    /usr/share/sounds/sf2 /usr/share/sounds/sf3
+	;;
+
+upgrade|failed-upgrade)
+	;;
+
+*)
+	echo >&2 "prerm called with unknown subcommand '$1'"
+	exit 1
+	;;
+esac
+
+
+
+exit 0

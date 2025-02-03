@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/gstreamer-1.0
+/usr/lib/x86_64-linux-gnu/gstreamer-1.0/libgstgtk.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/gstreamer1.0-gtk3
+/usr/share/doc/gstreamer1.0-gtk3/changelog.Debian.gz
+/usr/share/doc/gstreamer1.0-gtk3/changelog.gz
+/usr/share/doc/gstreamer1.0-gtk3/copyright

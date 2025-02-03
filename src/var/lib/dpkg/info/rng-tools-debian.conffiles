@@ -1,0 +1,4 @@
+/etc/default/rng-tools-debian
+/etc/init.d/rng-tools-debian
+/etc/logcheck/ignore.d.server/rng-tools-debian
+/etc/logcheck/violations.ignore.d/rng-tools-debian

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libeval-closure-perl
+/usr/share/doc/libeval-closure-perl/changelog.Debian.gz
+/usr/share/doc/libeval-closure-perl/changelog.gz
+/usr/share/doc/libeval-closure-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Eval::Closure.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Eval
+/usr/share/perl5/Eval/Closure.pm

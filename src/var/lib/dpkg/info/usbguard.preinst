@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.11.1
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/usbguard" ] ; then
+	chmod +x "/etc/init.d/usbguard" >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.1
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/usbguard-dbus" ] ; then
+	chmod +x "/etc/init.d/usbguard-dbus" >/dev/null || true
+fi
+# End automatically added section

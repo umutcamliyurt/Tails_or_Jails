@@ -1,0 +1,5 @@
+libnetsnmp 40 libsnmp40 (>= 5.9.3+dfsg)
+libnetsnmpagent 40 libsnmp40 (>= 5.9.3+dfsg)
+libnetsnmphelpers 40 libsnmp40 (>= 5.9.3+dfsg)
+libnetsnmpmibs 40 libsnmp40 (>= 5.9.3+dfsg)
+libsnmp 40 libsnmp40 (>= 5.9.3+dfsg)

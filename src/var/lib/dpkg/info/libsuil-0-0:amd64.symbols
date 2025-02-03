@@ -1,0 +1,13 @@
+libsuil-0.so.0 libsuil-0-0 #MINVER#
+* Build-Depends-Package: libsuil-dev
+ suil_host_free@Base 0.4.2
+ suil_host_new@Base 0.4.2
+ suil_host_set_touch_func@Base 0.6.0~dfsg0
+ suil_init@Base 0.10.0~dfsg0
+ suil_instance_extension_data@Base 0.4.2
+ suil_instance_free@Base 0.4.2
+ suil_instance_get_handle@Base 0.8.0~dfsg0
+ suil_instance_get_widget@Base 0.4.2
+ suil_instance_new@Base 0.4.2
+ suil_instance_port_event@Base 0.4.2
+ suil_ui_supported@Base 0.4.2

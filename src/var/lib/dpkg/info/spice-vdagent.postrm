@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/spice-vdagent" ] ; then
+	chmod -x "/etc/init.d/spice-vdagent" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d spice-vdagent remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'spice-vdagentd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section

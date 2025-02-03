@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnumber-compare-perl
+/usr/share/doc/libnumber-compare-perl/changelog.Debian.gz
+/usr/share/doc/libnumber-compare-perl/changelog.gz
+/usr/share/doc/libnumber-compare-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Number::Compare.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Number
+/usr/share/perl5/Number/Compare.pm

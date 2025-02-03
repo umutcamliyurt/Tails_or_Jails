@@ -1,0 +1,94 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Tails
+Label: Tails
+Suite: 6.11
+Codename: 6.11
+Version: 6.0
+Date: Thu, 30 Jan 2025 16:56:33 UTC
+Architectures: amd64
+Components: main non-free contrib
+Description: Tails 6.11 packages
+MD5Sum:
+ 812e0f602c9c6c56e373c065050c2083 29967 main/binary-amd64/Packages
+ 5c0ec0fd66877bae59140de3be257b93 9790 main/binary-amd64/Packages.gz
+ c0484f5c2c54fdb1e339523dff1ddf62 9414 main/binary-amd64/Packages.bz2
+ 104e7020a8bf68f5d0f098530e6e7d2b 123 main/binary-amd64/Release
+ 3ca992fe8891af6b2a2c6ca634d7aec5 13616 main/source/Sources
+ 9746f799c6cd34840bb190d4b9c55623 4454 main/source/Sources.gz
+ 234f659a5ddf9304480d20f75c69e09b 4458 main/source/Sources.bz2
+ 1ab392657b46d72f8a43dc7378e95a72 124 main/source/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 non-free/binary-amd64/Packages.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3 14 non-free/binary-amd64/Packages.bz2
+ d7c6519fe80dcc5be829143967056d99 127 non-free/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 non-free/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 non-free/source/Sources.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3 14 non-free/source/Sources.bz2
+ c1eb490d69ff8cf6022254aaa8a374ce 128 non-free/source/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/binary-amd64/Packages
+ 7029066c27ac6f5ef18d660d5741979a 20 contrib/binary-amd64/Packages.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3 14 contrib/binary-amd64/Packages.bz2
+ ae5b9f77cf3d597af849d728f73ac02f 126 contrib/binary-amd64/Release
+ d41d8cd98f00b204e9800998ecf8427e 0 contrib/source/Sources
+ 7029066c27ac6f5ef18d660d5741979a 20 contrib/source/Sources.gz
+ 4059d198768f9f8dc9372dc1c54bc3c3 14 contrib/source/Sources.bz2
+ 2787fa5597a2cd57fa1eddb8c4c2b22d 127 contrib/source/Release
+SHA1:
+ 34bc695fb9f311f3f1eefff2fa831746d00179a6 29967 main/binary-amd64/Packages
+ 9fdc6c8946137285ea4298659e973806562ba00f 9790 main/binary-amd64/Packages.gz
+ 920174a6a210ec2b3f395aca2c7128f78b6cee69 9414 main/binary-amd64/Packages.bz2
+ d1778c9965e6dcdac167094bca4101d9f432f5f7 123 main/binary-amd64/Release
+ 0983c67ca8b1a2fff5d2ed556897189ab7d35de3 13616 main/source/Sources
+ a3fe188e14b469733caa3d12673da35497ece98c 4454 main/source/Sources.gz
+ 91db23dbed5b745d615c581584349bf531899f86 4458 main/source/Sources.bz2
+ 9b1b01a0d2f7aafc1f48d54a7e8be88f2a16e0e0 124 main/source/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 non-free/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 non-free/binary-amd64/Packages.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2 14 non-free/binary-amd64/Packages.bz2
+ 5aeefd2fd0fe2bcf66be02b4dc23c2607ba013b3 127 non-free/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 non-free/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 non-free/source/Sources.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2 14 non-free/source/Sources.bz2
+ b091a7cc906c3437d7fa8fa3d0a955b73c3a22b5 128 non-free/source/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 contrib/binary-amd64/Packages
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 contrib/binary-amd64/Packages.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2 14 contrib/binary-amd64/Packages.bz2
+ 40e61b10669bce5004fa8a6b66a0faadc64dff0b 126 contrib/binary-amd64/Release
+ da39a3ee5e6b4b0d3255bfef95601890afd80709 0 contrib/source/Sources
+ 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 contrib/source/Sources.gz
+ 64a543afbb5f4bf728636bdcbbe7a2ed0804adc2 14 contrib/source/Sources.bz2
+ 865e621fda5c46b32ab219680e4efa1d2b8bb52e 127 contrib/source/Release
+SHA256:
+ 20a3347c2f8b8dbfd26e09ef1f874b360c0bf637baf12031381e538d22660adf 29967 main/binary-amd64/Packages
+ 983701d11ec2d90fd73d040c8da51a2d293e43b1399718d78b11475c582be811 9790 main/binary-amd64/Packages.gz
+ 27123929c8f6f4bbef2636086217a24046f6b6177ed92b60505e664196b1e4db 9414 main/binary-amd64/Packages.bz2
+ c6dc449ec9f46b5f0caf50b0111161ad955e1e320377494ff4d1cb76078b032c 123 main/binary-amd64/Release
+ 00f6d1935eb5aac9e30c6f28f04caf4dbc179987a2a07ad277fd6eb50e67ca55 13616 main/source/Sources
+ dc7f6944faabf3e621fa155c0be3d361d2ecc272b32df74c57caa8fc811303c0 4454 main/source/Sources.gz
+ 7ced0d3bc48d10e5734cb1d99fe6287b1c681631d72638a005ba11b734bff372 4458 main/source/Sources.bz2
+ 2fcf3e5d865875890a640e0bcb1d3999ec99e49823a0b4eb5ab1252564015400 124 main/source/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 non-free/binary-amd64/Packages.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058 14 non-free/binary-amd64/Packages.bz2
+ f60a7aa4be4729339bf195f0480057c5eb4ce36b96bff6c1558b2efa10c45f2e 127 non-free/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 non-free/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 non-free/source/Sources.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058 14 non-free/source/Sources.bz2
+ a6537959d0279b7f69c5b5748efdb7ac3d774ce1f5e3babe0729e36b9b91d3ae 128 non-free/source/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/binary-amd64/Packages
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 contrib/binary-amd64/Packages.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058 14 contrib/binary-amd64/Packages.bz2
+ b3b891009416d9d13bc76726ec19a7c9bed3cbd9f794cc24f0fd4d0122e19c65 126 contrib/binary-amd64/Release
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 contrib/source/Sources
+ 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 contrib/source/Sources.gz
+ d3dda84eb03b9738d118eb2be78e246106900493c0ae07819ad60815134a8058 14 contrib/source/Sources.bz2
+ 4008cf2ea6e7d189e2581303d7ad123724dbcc91e36b33df7e3b2e805a230395 127 contrib/source/Release
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQTWj4cUnrp3VBVzwcEkU6qc5BI6mgUCZ5uvQQAKCRAkU6qc5BI6
+mpKkAQDzfYZrunbO4d+TTv7UoS1u/nBYQ1DugeP+JVSYoJtiEwEA86SKE9VEklO+
+zHbbqKHuZyjfbtN4YR2A7OxC/r21zQ4=
+=8a7I
+-----END PGP SIGNATURE-----

@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/qt5
+/usr/lib/x86_64-linux-gnu/qt5/plugins
+/usr/lib/x86_64-linux-gnu/qt5/plugins/styles
+/usr/lib/x86_64-linux-gnu/qt5/plugins/styles/adwaita.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/adwaita-qt
+/usr/share/doc/adwaita-qt/changelog.Debian.gz
+/usr/share/doc/adwaita-qt/copyright

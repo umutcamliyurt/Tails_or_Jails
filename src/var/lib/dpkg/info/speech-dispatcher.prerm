@@ -1,0 +1,30 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_installsystemd/13.11.1
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'speech-dispatcherd.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.1
+dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/mary-generic-disabled.conf 0.11.0\~ speech-dispatcher -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/espeak-generic.conf 0.10.2-1\~ speech-dispatcher -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/pico-generic.conf 0.10.2-1\~ speech-dispatcher -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/ivona.conf 0.10.2-3\~ speech-dispatcher -- "$@"
+# End automatically added section
+
+
+if [ -z "$(dpkg-query -f '${Version}' -W speech-dispatcher-baratinoo 2> /dev/null)" ]
+then
+	dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/baratinoo.conf 0.10.2-1\~ speech-dispatcher -- "$@"
+fi
+
+if [ -z "$(dpkg-query -f '${Version}' -W speech-dispatcher-ibmtts 2> /dev/null)" ]
+then
+	dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/ibmtts.conf 0.10.2-1\~ speech-dispatcher -- "$@"
+fi
+
+if [ -z "$(dpkg-query -f '${Version}' -W speech-dispatcher-kali 2> /dev/null)" ]
+then
+	dpkg-maintscript-helper rm_conffile /etc/speech-dispatcher/modules/kali.conf 0.10.2-1\~ speech-dispatcher -- "$@"
+fi

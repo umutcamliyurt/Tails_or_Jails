@@ -1,0 +1,3 @@
+/etc/default/memlockd
+/etc/init.d/memlockd
+/etc/memlockd.cfg

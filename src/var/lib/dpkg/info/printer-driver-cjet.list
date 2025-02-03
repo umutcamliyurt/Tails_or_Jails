@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/cjet
+/usr/share
+/usr/share/doc
+/usr/share/doc/printer-driver-cjet
+/usr/share/doc/printer-driver-cjet/README.gz
+/usr/share/doc/printer-driver-cjet/TODO
+/usr/share/doc/printer-driver-cjet/changelog.Debian.gz
+/usr/share/doc/printer-driver-cjet/changelog.gz
+/usr/share/doc/printer-driver-cjet/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/cjet.1.gz

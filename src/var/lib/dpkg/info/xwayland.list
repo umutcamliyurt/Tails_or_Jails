@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/bin
+/usr/bin/Xwayland
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/pkgconfig
+/usr/lib/x86_64-linux-gnu/pkgconfig/xwayland.pc
+/usr/share
+/usr/share/doc
+/usr/share/doc/xwayland
+/usr/share/doc/xwayland/changelog.Debian.gz
+/usr/share/doc/xwayland/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/Xwayland.1.gz

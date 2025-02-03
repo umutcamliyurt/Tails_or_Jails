@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmodule-implementation-perl
+/usr/share/doc/libmodule-implementation-perl/changelog.Debian.gz
+/usr/share/doc/libmodule-implementation-perl/changelog.gz
+/usr/share/doc/libmodule-implementation-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Module::Implementation.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Module
+/usr/share/perl5/Module/Implementation.pm

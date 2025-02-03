@@ -1,0 +1,36 @@
+#!/bin/sh
+set -e
+
+rm -f /var/cache/ferm/*.sh /var/cache/ferm/*.tmp
+
+if [ "$1" = "purge" ]; then
+	rm -f /etc/default/ferm
+fi
+
+# Automatically added by dh_installinit/13.10
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/ferm" ] ; then
+	chmod -x "/etc/init.d/ferm" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d ferm remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'ferm.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdebconf/13.10
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+	. /usr/share/debconf/confmodule
+	db_purge
+fi
+# End automatically added section
+

@@ -1,0 +1,13 @@
+/.
+/lib
+/lib/x86_64-linux-gnu
+/lib/x86_64-linux-gnu/libbrlapi.so.0.8.4
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libbrlapi0.8
+/usr/share/doc/libbrlapi0.8/NEWS.Debian.gz
+/usr/share/doc/libbrlapi0.8/changelog.Debian.gz
+/usr/share/doc/libbrlapi0.8/changelog.gz
+/usr/share/doc/libbrlapi0.8/copyright
+/lib/x86_64-linux-gnu/libbrlapi.so.0.8

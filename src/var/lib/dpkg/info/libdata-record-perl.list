@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdata-record-perl
+/usr/share/doc/libdata-record-perl/README
+/usr/share/doc/libdata-record-perl/buildinfo_all.gz
+/usr/share/doc/libdata-record-perl/changelog.Debian.gz
+/usr/share/doc/libdata-record-perl/changelog.gz
+/usr/share/doc/libdata-record-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Data::Record.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Data
+/usr/share/perl5/Data/Record.pm

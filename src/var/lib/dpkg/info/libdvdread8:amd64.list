@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libdvdread.so.8.0.0
+/usr/share
+/usr/share/bug
+/usr/share/bug/libdvdread8
+/usr/share/bug/libdvdread8/control
+/usr/share/doc
+/usr/share/doc/libdvdread8
+/usr/share/doc/libdvdread8/README.css
+/usr/share/doc/libdvdread8/changelog.Debian.gz
+/usr/share/doc/libdvdread8/changelog.gz
+/usr/share/doc/libdvdread8/copyright
+/usr/lib/x86_64-linux-gnu/libdvdread.so.8

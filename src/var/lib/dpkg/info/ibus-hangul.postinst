@@ -1,0 +1,54 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_apparmor/3.0.7-1
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.ibus.ibus-engine-hangul"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.ibus.ibus-engine-hangul"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.7-1
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.ibus.ibus-setup-hangul"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.ibus.ibus-setup-hangul"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+
+# Automatically added by dh_python3
+if command -v py3compile >/dev/null 2>&1; then
+	py3compile -p ibus-hangul:amd64 /usr/share/ibus-hangul
+fi
+if command -v pypy3compile >/dev/null 2>&1; then
+	pypy3compile -p ibus-hangul:amd64 /usr/share/ibus-hangul || true
+fi
+
+# End automatically added section
+# Automatically added by dh_installdeb/13.10.1
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-engine-hangul 1.5.3-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-setup-hangul 1.5.3-2\~ -- "$@"
+# End automatically added section

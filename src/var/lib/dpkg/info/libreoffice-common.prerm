@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.oosplash /etc/apparmor.d/usr.lib.libreoffice.program.oosplash 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.senddoc /etc/apparmor.d/usr.lib.libreoffice.program.senddoc 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.soffice.bin /etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.xpdfimport /etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport 1:5.4.3-1 -- "$@"
+# End automatically added section

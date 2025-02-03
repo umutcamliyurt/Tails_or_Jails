@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+mandir=/usr/share/man
+
+if [ "$1" = "configure" ] ; then
+	update-alternatives --install /usr/bin/qr qr /usr/bin/python3-qr 200 --slave $mandir/man1/qr.1.gz qr.1.gz $mandir/man1/python3-qr.1.gz
+fi
+
+
+# Automatically added by dh_python3
+if command -v py3compile >/dev/null 2>&1; then
+	py3compile -p python3-qrcode 
+fi
+if command -v pypy3compile >/dev/null 2>&1; then
+	pypy3compile -p python3-qrcode  || true
+fi
+
+# End automatically added section
+
+
+exit 0

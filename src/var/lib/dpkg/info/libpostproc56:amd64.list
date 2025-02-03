@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libpostproc.so.56.6.100
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpostproc56
+/usr/share/doc/libpostproc56/changelog.Debian.gz
+/usr/share/doc/libpostproc56/changelog.gz
+/usr/share/doc/libpostproc56/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libpostproc56
+/usr/lib/x86_64-linux-gnu/libpostproc.so.56

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+# Update the configuration file (/usr/lib/[MULTIARCH]/graphviz/config6a)
+# Needed for the plugins too
+if [ -x /usr/sbin/libgvc6-config-update ]; then
+	libgvc6-config-update -c
+fi
+
+# Remove the old configuration file if present, see README.Debian-packaging
+# Needed only in libgraphivzN
+if [ -f /usr/lib/graphviz/config ]; then
+	rm -f /usr/lib/graphviz/config6
+fi
+if [ -f /usr/lib/graphviz/config6a ]; then
+	rm -f /usr/lib/graphviz/config6a
+fi
+
+

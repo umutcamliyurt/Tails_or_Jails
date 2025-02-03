@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+/usr/share
+/usr/share/doc
+/usr/share/doc/libamd2
+/usr/share/doc/libamd2/NEWS.Debian.gz
+/usr/share/doc/libamd2/changelog.Debian.gz
+/usr/share/doc/libamd2/changelog.gz
+/usr/share/doc/libamd2/copyright
+/usr/lib/x86_64-linux-gnu/libamd.so.2

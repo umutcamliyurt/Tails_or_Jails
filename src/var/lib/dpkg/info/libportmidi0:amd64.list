@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libportmidi.so.0.0.0
+/usr/lib/x86_64-linux-gnu/libporttime.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libportmidi0
+/usr/share/doc/libportmidi0/changelog.Debian.gz
+/usr/share/doc/libportmidi0/changelog.gz
+/usr/share/doc/libportmidi0/copyright
+/usr/lib/x86_64-linux-gnu/libportmidi.so.0
+/usr/lib/x86_64-linux-gnu/libporttime.so.0

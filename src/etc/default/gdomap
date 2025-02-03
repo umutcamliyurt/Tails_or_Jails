@@ -1,0 +1,4 @@
+# Defaults for the gdomap init script.
+# See gdomap(8) for details.
+
+GDOMAP_ARGS="-p -j /var/run/gdomap"

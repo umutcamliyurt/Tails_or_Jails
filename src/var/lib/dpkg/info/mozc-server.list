@@ -1,0 +1,17 @@
+/.
+/etc
+/etc/apparmor.d
+/etc/apparmor.d/abstractions
+/etc/apparmor.d/abstractions/mozc-server
+/etc/apparmor.d/abstractions/mozc-server/mozc-server.apparmor
+/usr
+/usr/lib
+/usr/lib/mozc
+/usr/lib/mozc/mozc_renderer
+/usr/lib/mozc/mozc_server
+/usr/share
+/usr/share/doc
+/usr/share/doc/mozc-server
+/usr/share/doc/mozc-server/README.Debian
+/usr/share/doc/mozc-server/changelog.Debian.gz
+/usr/share/doc/mozc-server/copyright

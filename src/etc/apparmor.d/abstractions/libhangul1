@@ -1,0 +1,7 @@
+# Profile abstraction for libhangul
+# Author: Changwoo Ryu <cwryu@debian.org>
+
+  #include <abstractions/base>
+  /usr/share/libhangul/** r,
+
+  owner @{HOME}/.local/share/libhangul/** r,

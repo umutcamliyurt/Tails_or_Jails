@@ -1,0 +1,4 @@
+/etc/init.d/usbguard
+/etc/init.d/usbguard-dbus
+/etc/logrotate.d/usbguard
+/etc/usbguard/usbguard-daemon.conf

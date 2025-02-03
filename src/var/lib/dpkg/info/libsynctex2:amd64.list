@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libsynctex.so.2.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsynctex2
+/usr/share/doc/libsynctex2/README.txt
+/usr/share/doc/libsynctex2/changelog.Debian.gz
+/usr/share/doc/libsynctex2/changelog.gz
+/usr/share/doc/libsynctex2/copyright
+/usr/share/doc/libsynctex2/synctex_parser_readme.txt.gz
+/usr/lib/x86_64-linux-gnu/libsynctex.so.2

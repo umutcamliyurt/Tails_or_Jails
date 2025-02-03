@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/xkbset
+/usr/bin/xkbset-gui
+/usr/share
+/usr/share/doc
+/usr/share/doc/xkbset
+/usr/share/doc/xkbset/README
+/usr/share/doc/xkbset/TODO
+/usr/share/doc/xkbset/changelog.Debian.gz
+/usr/share/doc/xkbset/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/xkbset.1.gz

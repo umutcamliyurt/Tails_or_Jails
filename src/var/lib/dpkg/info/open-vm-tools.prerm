@@ -1,0 +1,42 @@
+#!/bin/bash
+
+set -e
+
+# let debhelper stop the service first...
+
+# Automatically added by dh_installsystemd/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'vgauth.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'open-vm-tools.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -x "/etc/init.d/open-vm-tools" ] ; then
+	invoke-rc.d --skip-systemd-native open-vm-tools stop || exit 1
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/vmware-tools/guestproxy-ssl.conf 2:11.3.0-1\~ open-vm-tools -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/vmware-tools/vm-support 2:11.3.0-1\~ open-vm-tools -- "$@"
+# End automatically added section
+
+
+# then notify vmware about it
+
+if which systemd-detect-virt 1>/dev/null; then
+    checktool='systemd-detect-virt'
+else
+    checktool='vmware-checkvm'
+fi
+
+if which ${checktool} 1>/dev/null && which vmware-rpctool 1>/dev/null; then
+    if ${checktool} | grep -iq vmware; then
+        vmware-rpctool 'tools.set.version 0' &> /dev/null || /bin/true
+    fi
+fi
+
+exit 0

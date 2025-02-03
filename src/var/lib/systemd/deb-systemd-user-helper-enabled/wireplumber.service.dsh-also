@@ -1,0 +1,1 @@
+/etc/systemd/user/pipewire.service.wants/wireplumber.service

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+case "${1}" in
+	install|upgrade)
+		# initramfs-tools: update-initramfs
+		dpkg-divert --package live-tools --quiet --add --rename --divert /usr/sbin/update-initramfs.orig.initramfs-tools /usr/sbin/update-initramfs
+		dpkg-divert --package live-tools --quiet --add --rename --divert /usr/share/man/man8/update-initramfs.orig.initramfs-tools.8.gz /usr/share/man/man8/update-initramfs.8.gz
+		;;
+
+	abort-upgrade)
+
+		;;
+
+	*)
+		echo "preinst called with unknown argument \`$1'" >&2
+		exit 1
+		;;
+esac
+
+# Automatically added by dh_installinit/13.10
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/live-tools" ] ; then
+	chmod +x "/etc/init.d/live-tools" >/dev/null || true
+fi
+# End automatically added section
+
+
+exit 0

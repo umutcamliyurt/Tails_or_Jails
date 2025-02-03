@@ -1,0 +1,2 @@
+/etc/X11/Xsession.d/55gnome-session_gnomerc
+/etc/profile.d/gnome-session_gnomerc.sh

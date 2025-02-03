@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsub-quote-perl
+/usr/share/doc/libsub-quote-perl/changelog.Debian.gz
+/usr/share/doc/libsub-quote-perl/changelog.gz
+/usr/share/doc/libsub-quote-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Sub::Defer.3pm.gz
+/usr/share/man/man3/Sub::Quote.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Sub
+/usr/share/perl5/Sub/Defer.pm
+/usr/share/perl5/Sub/Quote.pm

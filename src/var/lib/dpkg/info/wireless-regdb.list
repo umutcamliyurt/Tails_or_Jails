@@ -1,0 +1,17 @@
+/.
+/lib
+/lib/firmware
+/lib/firmware/regulatory.db-debian
+/lib/firmware/regulatory.db-upstream
+/lib/firmware/regulatory.db.p7s-debian
+/lib/firmware/regulatory.db.p7s-upstream
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/wireless-regdb
+/usr/share/doc/wireless-regdb/README.Debian
+/usr/share/doc/wireless-regdb/changelog.Debian.gz
+/usr/share/doc/wireless-regdb/copyright
+/usr/share/man
+/usr/share/man/man5
+/usr/share/man/man5/regulatory.db.5.gz

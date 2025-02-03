@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/bin
+/usr/bin/pinentry-gtk-2
+/usr/share
+/usr/share/doc
+/usr/share/doc/pinentry-gtk2
+/usr/share/doc/pinentry-gtk2/AUTHORS
+/usr/share/doc/pinentry-gtk2/NEWS.gz
+/usr/share/doc/pinentry-gtk2/changelog.Debian.gz
+/usr/share/doc/pinentry-gtk2/changelog.gz
+/usr/share/doc/pinentry-gtk2/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/pinentry-gtk-2.1.gz

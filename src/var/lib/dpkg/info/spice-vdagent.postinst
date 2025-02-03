@@ -1,0 +1,52 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installtmpfiles/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "$(command -v systemd-tmpfiles)" ]; then
+		systemd-tmpfiles ${DPKG_ROOT:+--root="$DPKG_ROOT"} --create spice-vdagentd.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] && [ -x "/etc/init.d/spice-vdagent" ]; then
+		update-rc.d spice-vdagent defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native spice-vdagent $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'spice-vdagentd.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'spice-vdagentd.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'spice-vdagentd.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'spice-vdagentd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'spice-vdagentd.service' 'spice-vdagentd.socket' >/dev/null || true
+	fi
+fi
+# End automatically added section

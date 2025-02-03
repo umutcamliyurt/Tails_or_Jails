@@ -1,0 +1,4 @@
+/etc/init.d/plymouth
+/etc/init.d/plymouth-log
+/etc/logrotate.d/bootlog
+/etc/plymouth/plymouthd.conf

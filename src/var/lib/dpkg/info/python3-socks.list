@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/PySocks-1.7.1.egg-info
+/usr/lib/python3/dist-packages/PySocks-1.7.1.egg-info/PKG-INFO
+/usr/lib/python3/dist-packages/PySocks-1.7.1.egg-info/dependency_links.txt
+/usr/lib/python3/dist-packages/PySocks-1.7.1.egg-info/top_level.txt
+/usr/lib/python3/dist-packages/socks.py
+/usr/lib/python3/dist-packages/sockshandler.py
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-socks
+/usr/share/doc/python3-socks/README.md.gz
+/usr/share/doc/python3-socks/changelog.Debian.gz
+/usr/share/doc/python3-socks/copyright

@@ -1,0 +1,57 @@
+#! /bin/sh
+set -e
+
+# If we're not on an EFI system, do nothing
+if [ ! -d /sys/firmware/efi ]; then
+    exit 0
+fi
+
+case amd64 in
+    i386)
+	SHIM_REMOVE="mmia32.efi fbia32.efi";;
+    amd64)
+	SHIM_REMOVE="mmx64.efi fbx64.efi";;
+    arm64)
+	SHIM_REMOVE="mmaa64.efi fbaa64.efi";;
+    *)
+	echo "Unsupported dpkg architecture amd64 in $0. ABORT"
+	exit 1
+	;;
+esac
+
+# Pull out a config value from /etc/default/grub
+config_item ()
+{
+    if [ -f /etc/default/grub ]; then
+	. /etc/default/grub || return
+	for x in /etc/default/grub.d/*.cfg; do
+	    if [ -e "$x" ]; then
+		. "$x"
+	    fi
+	done
+    fi
+    eval echo "\$$1"
+}
+
+case $1 in
+    remove|purge)
+	bootloader_id="$(config_item GRUB_DISTRIBUTOR | tr A-Z a-z | \
+			 cut -d' ' -f1)"
+	case $bootloader_id in
+	    kubuntu) bootloader_id=ubuntu ;;
+	esac
+
+	# If we're being removed, remove the copies installed in the
+	# ESP. grub-install doesn't clean those up for us.
+	if [ "$bootloader_id" ] && \
+	   [ -d "/boot/efi/EFI/$bootloader_id" ]; then
+
+	    cd /boot/efi/EFI/$bootloader_id
+	    rm -f $SHIM_REMOVE
+	fi
+	;;
+esac
+
+
+
+exit 0

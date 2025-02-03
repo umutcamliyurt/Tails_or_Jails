@@ -1,0 +1,13 @@
+libKF5Crash.so.5 libkf5crash5 #MINVER#
+* Build-Depends-Package: libkf5crash-dev
+ _ZN6KCrash10initializeEv@Base 5.15.0
+ _ZN6KCrash12crashHandlerEv@Base 4.96.0
+ _ZN6KCrash15loadedByKdeinitE@Base 4.96.0
+ _ZN6KCrash15setCrashHandlerEPFviE@Base 4.96.0
+ _ZN6KCrash15setErrorMessageERK7QString@Base 5.69.0
+ _ZN6KCrash16isDrKonqiEnabledEv@Base 4.96.0
+ _ZN6KCrash17setDrKonqiEnabledEb@Base 4.96.0
+ _ZN6KCrash19defaultCrashHandlerEi@Base 4.96.0
+ _ZN6KCrash21emergencySaveFunctionEv@Base 4.96.0
+ _ZN6KCrash24setEmergencySaveFunctionEPFviE@Base 4.96.0
+ _ZN6KCrash8setFlagsE6QFlagsINS_9CrashFlagEE@Base 4.96.0

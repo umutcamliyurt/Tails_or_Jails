@@ -1,0 +1,103 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+        configure)
+	    # if ther is not rules.conf file we assume this is
+	    # the first time usbguard is installed
+            if [ ! -f /etc/usbguard/rules.conf ]; then
+                usbguard generate-policy >> /etc/usbguard/rules.conf || true
+                usbguard add-user -g plugdev --devices=modify,list,listen --policy=list --exceptions=listen
+	    fi
+            chmod og-rwx /etc/usbguard/rules.conf
+            if [ ! -f /etc/usbguard/usbguard-daemon.conf ]; then
+                touch /etc/usbguard/usbguard-daemon.conf
+            fi
+            chmod og-rwx -f /etc/usbguard/usbguard-daemon.conf
+            chmod og-rwx -f /etc/usbguard/rules.d
+        ;;
+        abort-upgrade|abort-remove|abort-deconfigure)
+            exit 0
+        ;;
+        *)
+            echo "postinst called with unknown argument $1"
+            exit 1
+        ;;
+esac
+
+# Automatically added by dh_installinit/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] && [ -x "/etc/init.d/usbguard" ]; then
+		update-rc.d usbguard defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native usbguard $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] && [ -x "/etc/init.d/usbguard-dbus" ]; then
+		update-rc.d usbguard-dbus defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native usbguard-dbus $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'usbguard-dbus.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'usbguard-dbus.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'usbguard-dbus.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'usbguard-dbus.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'usbguard.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'usbguard.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'usbguard.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'usbguard.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'usbguard-dbus.service' 'usbguard.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+exit 0

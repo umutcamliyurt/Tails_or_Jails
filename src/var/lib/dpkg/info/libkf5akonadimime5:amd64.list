@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libKF5AkonadiMime.so.5.22.3
+/usr/lib/x86_64-linux-gnu/qt5
+/usr/lib/x86_64-linux-gnu/qt5/plugins
+/usr/lib/x86_64-linux-gnu/qt5/plugins/akonadi_serializer_mail.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/libkf5akonadimime5
+/usr/share/doc/libkf5akonadimime5/changelog.Debian.gz
+/usr/share/doc/libkf5akonadimime5/copyright
+/usr/lib/x86_64-linux-gnu/libKF5AkonadiMime.so.5

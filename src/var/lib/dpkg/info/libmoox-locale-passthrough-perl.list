@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmoox-locale-passthrough-perl
+/usr/share/doc/libmoox-locale-passthrough-perl/changelog.Debian.gz
+/usr/share/doc/libmoox-locale-passthrough-perl/changelog.gz
+/usr/share/doc/libmoox-locale-passthrough-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/MooX::Locale::Passthrough.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/MooX
+/usr/share/perl5/MooX/Locale
+/usr/share/perl5/MooX/Locale/Passthrough.pm

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libsrtp2.so.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsrtp2-1
+/usr/share/doc/libsrtp2-1/changelog.Debian.gz
+/usr/share/doc/libsrtp2-1/changelog.gz
+/usr/share/doc/libsrtp2-1/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libsrtp2-1

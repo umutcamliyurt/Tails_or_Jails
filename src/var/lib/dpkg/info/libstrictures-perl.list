@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libstrictures-perl
+/usr/share/doc/libstrictures-perl/NEWS.Debian.gz
+/usr/share/doc/libstrictures-perl/changelog.Debian.gz
+/usr/share/doc/libstrictures-perl/changelog.gz
+/usr/share/doc/libstrictures-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/strictures.3pm.gz
+/usr/share/man/man3/strictures::extra.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/strictures
+/usr/share/perl5/strictures/extra.pm
+/usr/share/perl5/strictures.pm

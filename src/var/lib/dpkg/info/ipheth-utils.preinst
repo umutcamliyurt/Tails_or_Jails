@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ -L /usr/share/doc/ipheth-utils ]; then
+    rm /usr/share/doc/ipheth-utils
+fi
+
+
+

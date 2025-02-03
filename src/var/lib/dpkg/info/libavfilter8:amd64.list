@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libavfilter.so.8.44.100
+/usr/share
+/usr/share/doc
+/usr/share/doc/libavfilter8
+/usr/share/doc/libavfilter8/changelog.Debian.gz
+/usr/share/doc/libavfilter8/changelog.gz
+/usr/share/doc/libavfilter8/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libavfilter8
+/usr/lib/x86_64-linux-gnu/libavfilter.so.8

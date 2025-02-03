@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libCgl.so.1.10.3
+/usr/share
+/usr/share/doc
+/usr/share/doc/coinor-libcgl1
+/usr/share/doc/coinor-libcgl1/changelog.Debian.gz
+/usr/share/doc/coinor-libcgl1/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/coinor-libcgl1
+/usr/lib/x86_64-linux-gnu/libCgl.so.1

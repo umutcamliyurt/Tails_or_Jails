@@ -1,0 +1,159 @@
+#!/bin/sh
+
+set -e
+
+
+case "$1" in
+	remove|abort-install|abort-upgrade)
+		rm -rf /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share/prereg/bundled
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share/prereg/ || true
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share/ || true
+		# this belongs to -core, but won't work until we have -common stuff removed, too, so try here again
+		# in adduition to -core
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/program/ || true
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g` || true
+		# and try to remove /@OOBRANDDIR@ itself
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g` || true
+	;;
+	purge)
+		rm -f /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share/config/javasettingsunopkginstall.xml
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share/config || true
+		rmdir /`echo usr/lib/libreoffice | sed -e s,usr/,var/,g`/share || true
+	;;
+esac
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.oosplash /etc/apparmor.d/usr.lib.libreoffice.program.oosplash 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.senddoc /etc/apparmor.d/usr.lib.libreoffice.program.senddoc 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.soffice.bin /etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.xpdfimport /etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport 1:5.4.3-1 -- "$@"
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.libreoffice.program.xpdfimport" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.libreoffice.program.xpdfimport" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.libreoffice.program.xpdfimport" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.libreoffice.program.xpdfimport" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.libreoffice.program.soffice.bin" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.libreoffice.program.soffice.bin" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.libreoffice.program.soffice.bin" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.libreoffice.program.soffice.bin" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.libreoffice.program.senddoc" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.libreoffice.program.senddoc" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.libreoffice.program.senddoc" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.libreoffice.program.senddoc" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.libreoffice.program.senddoc" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.libreoffice.program.oosplash" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.libreoffice.program.oosplash" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.libreoffice.program.oosplash" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.libreoffice.program.oosplash" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.libreoffice.program.oosplash" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/res/fcfg_langpack_en-US.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/res/fcfg_langpack_en-US.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/res/fcfg_langpack_en-US.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/Langpack-en-US.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/Langpack-en-US.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/Langpack-en-US.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/lingucomponent.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/lingucomponent.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/lingucomponent.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/xsltfilter.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/xsltfilter.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/xsltfilter.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/pdfimport.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/pdfimport.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/pdfimport.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/main.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/main.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-common "/etc/libreoffice/registry/main.xcd"
+	fi
+fi
+# End automatically added section
+

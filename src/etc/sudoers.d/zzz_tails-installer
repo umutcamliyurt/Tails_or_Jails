@@ -1,0 +1,5 @@
+# Same purpose as config/chroot_local-includes/etc/sudoers.d/zzz_tps,
+# see the comment there.
+Cmnd_Alias TAILS_INSTALLER = /usr/local/bin/tails-installer "", /usr/local/bin/tails-installer --backup, /usr/local/bin/tails-installer --verbose
+Defaults!TAILS_INSTALLER env_keep+="ENVFILE"
+amnesia   ALL =(tails-persistent-storage)    NOPASSWD: TAILS_INSTALLER

@@ -1,0 +1,1 @@
+/etc/systemd/user/graphical-session-pre.target.wants/xdg-desktop-portal-rewrite-launchers.service

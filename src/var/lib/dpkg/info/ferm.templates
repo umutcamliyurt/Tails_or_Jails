@@ -1,0 +1,69 @@
+Template: ferm/enable
+Type: boolean
+Default: true
+Description: Enable ferm on bootup?
+ Ferm can load firewall rules on every bootup from /etc/ferm/ferm.conf.
+ .
+ The default configuration allows SSH login on port 22; if you are
+ installing this package remotely on another port, you should not
+ choose this option, and later edit /etc/default/ferm to enable ferm.
+Description-cs.UTF-8: Povolit ferm při zavádění systému?
+ Ferm může při každém startu systému nahrát pravidla firewallu ze souboru /etc/ferm/ferm.conf.
+ .
+ Výchozí konfigurace umožňuje přihlášení přes SSH na portu 22. Instalujete-li tento balík vzdáleně přes jiný port, měli byste nyní tuto možnost zamítnout a později povolit ferm úpravou souboru /etc/default/ferm.
+Description-da.UTF-8: Aktiver ferm ved opstart?
+ Ferm kan indlæse brandmursregler ved hver opstart fra /etc/ferm/ferm.conf.
+ .
+ Standardkonfigurationen tillader SSH-logind på port 22; hvis du installerer denne pakke eksternt på en anden port, skal du ikke vælge denne indstilling, men senere redigere /etc/default/ferm for at aktivere ferm.
+Description-de.UTF-8: Ferm beim Systemstart aktivieren?
+ Ferm kann die Firewallregeln bei jedem Systemstart aus /etc/ferm/ferm.conf laden.
+ .
+ Die Standardkonfiguration beschränkt den Zugang auf SSH (Port 22); wenn Ihr SSH Dienst auf einem anderen Port läuft, sollten Sie diese Option nicht wählen und später /etc/default/ferm manuell editieren um ferm zu aktivieren.
+Description-es.UTF-8: ¿Iniciar ferm durante el arranque?
+ Ferm cargará las reglas del cortafuegos durante el arranque desde «/etc/ferm/ferm.conf».
+ .
+ La configuración predeterminada permite el acceso por SSH a través del puerto 22; Si está instalando este paquete remotamente a través de otro puerto, no debería elegir esta opción, edite más tarde «/etc/default/ferm» para activarlo.
+Description-fi.UTF-8: Käynnistetäänkö ferm käynnistettäessä tietokone?
+ Ferm voi ladata palomuurisäännöt tiedostosta /etc/ferm/ferm.conf jokaisen käynnistyksen yhteydessä.
+ .
+ Oletusasetukset sallivat SSH-kirjautumiset portissa 22. Jos asennat tätä pakettia etänä toisen portin kautta, älä valitse tätä vaihtoehtoa, vaan muokkaa myöhemmin tiedostoa /etc/default/ferm ottaaksesi fermin käyttöön.
+Description-fr.UTF-8: Faut-il lancer ferm au démarrage ?
+ Ferm peut charger à chaque démarrage les règles du pare-feu présentes dans /etc/ferm/ferm.conf.
+ .
+ La configuration par défaut autorise les connexions SSH sur le port 22. Si vous installez ce paquet à distance en utilisant un autre port, vous devriez refuser cette option et modifier /etc/default/ferm pour activer ferm.
+Description-it.UTF-8: Abilitare ferm all'avvio?
+ Ferm può caricare le regole del firewall da /etc/ferm/ferm.conf ad ogni avvio.
+ .
+ La configurazione predefinita permette il login SSH sulla porta 22; se si sta installando questo pacchetto da remoto su un'altra porta, non si dovrebbe scegliere questa opzione ma modificare successivamente /etc/default/ferm per abilitare ferm.
+Description-ja.UTF-8: システム起動時に ferm を有効にしますか?
+ ferm は、毎回のシステム起動時に /etc/ferm/ferm.conf からファイアウォールの設定を読み込むことができます。
+ .
+ デフォルトの設定ではポート番号 22 で SSH のログインを許可しています。リモートから別のポート番号にてこのパッケージをインストールしている場合、この設定を選んではいけません。後ほど ferm を有効にするために /etc/default/ferm を編集してください。
+Description-nl.UTF-8: Wilt u ferm activeren tijdens het opstarten van het systeem?
+ Ferm kan firewall-regels laden van /etc/ferm/ferm.conf bij elke systeemstart.
+ .
+ De standaardconfiguratie laat aanmelden via SSH op poort 22 toe; als u dit pakket van op afstand via een andere poort installeert slaat u deze optie best af, om dan later ferm te activeren door /etc/default/ferm handmatig aan te passen.
+Description-pl.UTF-8: Włączać ferm w czasie uruchomienia systemu?
+ Ferm może ładować reguły zapory sieciowej w czasie każdego rozruchu, z pliku /etc/ferm/ferm.conf.
+ .
+ Domyślna konfiguracja zezwala na logowanie przez SSH za pomocą portu 22; jeśli pakiet jest instalowany zdalnie z innego portu, to nie należy wybierać tej wersji, lecz powinno się włączyć ferm później, edytując plik /etc/default/ferm.
+Description-pt.UTF-8: Activar o ferm no arranque?
+ O ferm pode carregar regras de firewall do ficheiro /etc/ferm/ferm.conf em cada arranque.
+ .
+ A configuração por omissão permite login por SSH no porto 22; Se está a instalar este pacote remotamente noutro porto, não deve escolher esta opção, e posteriormente editar o ficheiro /etc/default/ferm para activar o ferm.
+Description-pt_BR.UTF-8: Habilitar o ferm na inicialização do sistema?
+ O ferm pode carregar as regras de firewall a cada inicialização do sistema, a partir de /etc/ferm/ferm.conf.
+ .
+ A configuração padrão permite login SSH via porta 22; se você está instalando esse pacote remotamente via outra porta, você deve rejeitar essa opção, e mais tarde editar o arquivo /etc/default/ferm para habilitar o ferm.
+Description-ru.UTF-8: Запускать ferm при загрузке операционной системы?
+ Ferm может загружать правила межсетевого экрана из файла /etc/ferm/ferm.conf при запуске операционной системы.
+ .
+ Настройками по умолчанию разрешён доступ по SSH на порту 22; если вы устанавливаете этот пакет подключившись удалённо по другому порту, то ответьте отрицательно, и позже отредактируйте /etc/default/ferm, чтобы включить запуск ferm.
+Description-sk.UTF-8: Zapnúť ferm pri štarte?
+ Ferm môže načítať pravidlá firewallu pri každom štarte z /etc/ferm/ferm.conf.
+ .
+ Predvolená konfigurácia umožňuje prihlásenie pomocou SSH na porte 22. Ak tento balík inštalujete vzdialene na inom porte, nemali by ste vybrať túto voľbu, ale neskôr upraviť /etc/default/ferm a zapnúť ferm.
+Description-sv.UTF-8: Aktivera ferm vid systemets uppstart?
+ Ferm kan ladda brandväggsregler från /etc/ferm/ferm.conf vid varje systemuppstart.
+ .
+ Standardkonfigurationen tillåter SSH-inloggningar på port 22; om du installerar det här paketet genom fjärråtkomst på en annan port, ska du inte välja detta val. Ändra i så fall /etc/default/ferm senare för att aktivera ferm.

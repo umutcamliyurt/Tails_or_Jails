@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/bin
+/usr/bin/tcpflow
+/usr/share
+/usr/share/doc
+/usr/share/doc/tcpflow
+/usr/share/doc/tcpflow/AUTHORS
+/usr/share/doc/tcpflow/README.md.gz
+/usr/share/doc/tcpflow/changelog.Debian.amd64.gz
+/usr/share/doc/tcpflow/changelog.Debian.gz
+/usr/share/doc/tcpflow/changelog.gz
+/usr/share/doc/tcpflow/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/tcpflow.1.gz

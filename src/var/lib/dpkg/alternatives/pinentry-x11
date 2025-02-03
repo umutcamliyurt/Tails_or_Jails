@@ -1,0 +1,15 @@
+manual
+/usr/bin/pinentry-x11
+pinentry-x11.1.gz
+/usr/share/man/man1/pinentry-x11.1.gz
+
+/usr/bin/pinentry-gnome3
+90
+/usr/share/man/man1/pinentry-gnome3.1.gz
+/usr/bin/pinentry-gtk-2
+85
+/usr/share/man/man1/pinentry-gtk-2.1.gz
+/usr/bin/pinentry-qt
+80
+/usr/share/man/man1/pinentry-qt.1.gz
+

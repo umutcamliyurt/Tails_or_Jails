@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/bin
+/usr/bin/eglinfo.x86_64-linux-gnu
+/usr/bin/es2_info.x86_64-linux-gnu
+/usr/bin/es2gears_wayland.x86_64-linux-gnu
+/usr/bin/es2gears_x11.x86_64-linux-gnu
+/usr/bin/es2tri.x86_64-linux-gnu
+/usr/bin/glxdemo.x86_64-linux-gnu
+/usr/bin/glxgears.x86_64-linux-gnu
+/usr/bin/glxheads.x86_64-linux-gnu
+/usr/bin/glxinfo.x86_64-linux-gnu
+/usr/share
+/usr/share/doc
+/usr/share/doc/mesa-utils-bin
+/usr/share/doc/mesa-utils-bin/changelog.Debian.gz
+/usr/share/doc/mesa-utils-bin/copyright

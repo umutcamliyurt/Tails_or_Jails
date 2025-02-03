@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libprotobuf.so.32.0.12
+/usr/share
+/usr/share/doc
+/usr/share/doc/libprotobuf32
+/usr/share/doc/libprotobuf32/changelog.Debian.gz
+/usr/share/doc/libprotobuf32/changelog.gz
+/usr/share/doc/libprotobuf32/copyright
+/usr/lib/x86_64-linux-gnu/libprotobuf.so.32

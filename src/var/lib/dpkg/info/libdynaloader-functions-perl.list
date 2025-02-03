@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdynaloader-functions-perl
+/usr/share/doc/libdynaloader-functions-perl/changelog.Debian.gz
+/usr/share/doc/libdynaloader-functions-perl/changelog.gz
+/usr/share/doc/libdynaloader-functions-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/DynaLoader::Functions.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/DynaLoader
+/usr/share/perl5/DynaLoader/Functions.pm

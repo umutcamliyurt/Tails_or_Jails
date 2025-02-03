@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/pcscd" ] ; then
+	chmod -x "/etc/init.d/pcscd" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d pcscd remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/reader.conf.d/0comments 1.9.3-2\~ pcscd -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'pcscd.service' 'pcscd.socket' >/dev/null || true
+	fi
+fi
+# End automatically added section

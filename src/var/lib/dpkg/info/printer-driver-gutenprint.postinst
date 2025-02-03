@@ -1,0 +1,12 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = configure ] && dpkg --compare-versions "$2" lt-nl 5.3.1-7~; then
+    # Force upgrade of gutenprint PPDs accross major versions
+    cups-genppdupdate -x
+fi
+
+
+
+exit 0

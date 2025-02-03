@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/Brlapi-0.8.4.egg-info
+/usr/lib/python3/dist-packages/Brlapi-0.8.4.egg-info/PKG-INFO
+/usr/lib/python3/dist-packages/Brlapi-0.8.4.egg-info/dependency_links.txt
+/usr/lib/python3/dist-packages/Brlapi-0.8.4.egg-info/top_level.txt
+/usr/lib/python3/dist-packages/brlapi.cpython-311-x86_64-linux-gnu.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-brlapi
+/usr/share/doc/python3-brlapi/NEWS.Debian.gz
+/usr/share/doc/python3-brlapi/changelog.Debian.gz
+/usr/share/doc/python3-brlapi/changelog.gz
+/usr/share/doc/python3-brlapi/copyright

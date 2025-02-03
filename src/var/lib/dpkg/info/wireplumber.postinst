@@ -1,0 +1,45 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installsystemduser/13.11.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] ; then
+		# The following line should be removed in trixie or trixie+1
+		deb-systemd-helper --user unmask 'wireplumber.service' >/dev/null || true
+
+		# was-enabled defaults to true, so new installations run enable.
+		if deb-systemd-helper --quiet --user was-enabled 'wireplumber.service' ; then
+			# Enables the unit on first installation, creates new
+			# symlinks on upgrades if the unit file has changed.
+			deb-systemd-helper --user enable 'wireplumber.service' >/dev/null || true
+		else
+			# Update the statefile to add new symlinks (if any), which need to be
+			# cleaned up on purge. Also remove old symlinks.
+			deb-systemd-helper --user update-state 'wireplumber.service' >/dev/null || true
+		fi
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.1
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/bluetooth.conf 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/bluetooth.lua.d/00-functions.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/bluetooth.lua.d/30-bluez-monitor.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/bluetooth.lua.d/50-bluez-config.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/bluetooth.lua.d/90-enable-all.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/common/00-functions.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.conf 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/00-functions.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/20-default-access.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/30-alsa-monitor.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/30-v4l2-monitor.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/40-device-defaults.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/50-alsa-config.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/50-default-access-config.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/50-v4l2-config.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/main.lua.d/90-enable-all.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/policy.conf 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/policy.lua.d/00-functions.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/policy.lua.d/10-default-policy.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/policy.lua.d/50-endpoints-config.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/policy.lua.d/90-enable-all.lua 0.4.2-3\~ wireplumber -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/wireplumber/wireplumber.conf 0.4.2-3\~ wireplumber -- "$@"
+# End automatically added section

@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ]; then
+    update-alternatives \
+        --install /usr/bin/tor-prompt tor-prompt /usr/bin/python3-tor-prompt 200 \
+        --slave /usr/share/man/man8/tor-prompt.8.gz tor-prompt.8.gz \
+                /usr/share/man/man8/python3-tor-prompt.8.gz
+
+fi
+
+
+# Automatically added by dh_python3
+if command -v py3compile >/dev/null 2>&1; then
+	py3compile -p python3-stem 
+fi
+if command -v pypy3compile >/dev/null 2>&1; then
+	pypy3compile -p python3-stem  || true
+fi
+
+# End automatically added section
+
+
+exit 0

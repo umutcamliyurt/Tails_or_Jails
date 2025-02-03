@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/bitstring-3.1.7.egg-info
+/usr/lib/python3/dist-packages/bitstring.py
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-bitstring
+/usr/share/doc/python3-bitstring/changelog.Debian.gz
+/usr/share/doc/python3-bitstring/changelog.gz
+/usr/share/doc/python3-bitstring/copyright

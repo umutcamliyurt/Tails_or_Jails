@@ -1,0 +1,14 @@
+#! /bin/sh
+#
+# prerm file for mime-support
+
+set -e
+
+if [ "$1" = "remove" ]; then
+    rm -f /etc/mailcap
+fi
+
+# /usr/bin/open alternative
+if [ "$1" = remove ]; then
+    update-alternatives --quiet --remove open /usr/bin/run-mailcap
+fi

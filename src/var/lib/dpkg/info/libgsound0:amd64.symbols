@@ -1,0 +1,16 @@
+libgsound.so.0 libgsound0 #MINVER#
+* Build-Depends-Package: libgsound-dev
+ gsound_context_cache@Base 1.0.1
+ gsound_context_cachev@Base 1.0.1
+ gsound_context_get_type@Base 1.0.1
+ gsound_context_new@Base 1.0.1
+ gsound_context_open@Base 1.0.1
+ gsound_context_play_full@Base 1.0.1
+ gsound_context_play_full_finish@Base 1.0.1
+ gsound_context_play_fullv@Base 1.0.1
+ gsound_context_play_simple@Base 1.0.1
+ gsound_context_play_simplev@Base 1.0.1
+ gsound_context_set_attributes@Base 1.0.1
+ gsound_context_set_attributesv@Base 1.0.1
+ gsound_context_set_driver@Base 1.0.1
+ gsound_error_quark@Base 1.0.1

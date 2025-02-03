@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libstring-errf-perl
+/usr/share/doc/libstring-errf-perl/changelog.Debian.gz
+/usr/share/doc/libstring-errf-perl/changelog.gz
+/usr/share/doc/libstring-errf-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/String::Errf.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/String
+/usr/share/perl5/String/Errf.pm

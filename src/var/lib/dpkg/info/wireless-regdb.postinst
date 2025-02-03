@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    # d-i currently installs its copies of regulatory.db{,.p7s} as
+    # regular files, which we need to remove before running
+    # update-alternatives
+    if dpkg --compare-versions "$2" lt 2022.04.08-2~; then
+	for file in regulatory.db regulatory.db.p7s; do
+	    if [ ! -L /lib/firmware/"$file" ] || \
+	       [ "$(readlink /lib/firmware/"$file")" != \
+		 /etc/alternatives/"$file" ]; then
+		rm -f /lib/firmware/"$file"
+	    fi
+	done
+    fi
+
+    update-alternatives --install \
+	/lib/firmware/regulatory.db regulatory.db /lib/firmware/regulatory.db-debian 100 \
+	--slave /lib/firmware/regulatory.db.p7s regulatory.db.p7s /lib/firmware/regulatory.db.p7s-debian
+    update-alternatives --install \
+	/lib/firmware/regulatory.db regulatory.db /lib/firmware/regulatory.db-upstream 50 \
+	--slave /lib/firmware/regulatory.db.p7s regulatory.db.p7s /lib/firmware/regulatory.db.p7s-upstream
+fi
+
+

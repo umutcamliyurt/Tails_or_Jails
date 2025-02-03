@@ -1,0 +1,6 @@
+libuno_purpenvhelpergcc3.so.3 libuno-purpenvhelpergcc3-3 #MINVER#
+| libuno-purpenvhelpergcc3-3 #MINVER#, libstdc++6 (>= 4.1.1)
+ GLIBCXX_3.4@GLIBCXX_3.4 3.6 1
+ UDK_3_0_0@UDK_3_0_0 1.4.0
+ _ZN4cppu6helper7purpenv13createMappingEPP12_uno_MappingP16_uno_EnvironmentS6_PFvbPvS7_P33_typelib_TypeDescriptionReferenceP24_typelib_MethodParameteriPK24_typelib_TypeDescriptionS7_PS7_PP8_uno_AnyES7_@UDK_3_0_0 1.4.0
+ _ZN4cppu6helper7purpenv29Environment_initWithEnterableEP16_uno_EnvironmentPNS_9EnterableE@UDK_3_0_0 1.4.0

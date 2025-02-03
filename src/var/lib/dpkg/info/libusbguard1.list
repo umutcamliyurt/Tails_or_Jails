@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libusbguard.so.1.0.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libusbguard1
+/usr/share/doc/libusbguard1/NEWS.Debian.gz
+/usr/share/doc/libusbguard1/changelog.Debian.amd64.gz
+/usr/share/doc/libusbguard1/changelog.Debian.gz
+/usr/share/doc/libusbguard1/changelog.gz
+/usr/share/doc/libusbguard1/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libusbguard1
+/usr/lib/x86_64-linux-gnu/libusbguard.so.1

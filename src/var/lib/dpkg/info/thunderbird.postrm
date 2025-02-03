@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/icedove/pref/icedove.js 1:45.7.1-2\~ icedove -- "$@"
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.bin.thunderbird" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.bin.thunderbird" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.bin.thunderbird" || true
+    rm -f "/etc/apparmor.d/local/usr.bin.thunderbird" || true
+    rm -f /var/cache/apparmor/*/"usr.bin.thunderbird" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/tor-geoipdb
+/usr/share/doc/tor-geoipdb/changelog.Debian.gz
+/usr/share/doc/tor-geoipdb/changelog.gz
+/usr/share/doc/tor-geoipdb/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/tor-geoipdb
+/usr/share/tor
+/usr/share/tor/geoip
+/usr/share/tor/geoip6

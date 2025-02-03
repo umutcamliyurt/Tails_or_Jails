@@ -1,0 +1,25 @@
+#! /bin/sh
+
+set -e
+
+case "$1" in
+    purge)
+# We don't remove the colord and scanner users on purge.
+# This should change once bug #621833 is resolved.
+
+# Remove colord's state directory
+	rm -rf /var/lib/colord
+	;;
+esac	
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.ColorManager.conf 1.4.3-4\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+
+
+exit 0

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmro-compat-perl
+/usr/share/doc/libmro-compat-perl/changelog.Debian.gz
+/usr/share/doc/libmro-compat-perl/changelog.gz
+/usr/share/doc/libmro-compat-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/MRO::Compat.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/MRO
+/usr/share/perl5/MRO/Compat.pm

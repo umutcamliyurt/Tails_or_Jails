@@ -1,0 +1,2 @@
+<delegatePublic publicIdStartString="-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"><catalog="file:///usr/share/xml/polkit-1/catalog.xml">
+<delegateSystem systemIdStartString="http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd"><catalog="file:///usr/share/xml/polkit-1/catalog.xml">

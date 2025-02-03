@@ -1,0 +1,4 @@
+# Addresses to probe for GNUstep name service.
+# If this file does not contain any valid addresses, the local networks
+# are probed.
+localhost.localdomain

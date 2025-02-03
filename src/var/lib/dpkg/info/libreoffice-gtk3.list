@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libreoffice
+/usr/lib/libreoffice/program
+/usr/lib/libreoffice/program/libvclplug_gtk3lo.so
+/usr/share
+/usr/share/bug
+/usr/share/bug/libreoffice-gtk3
+/usr/share/bug/libreoffice-gtk3/presubj
+/usr/share/doc
+/usr/share/doc/libreoffice-gtk3
+/usr/share/doc/libreoffice-gtk3/changelog.Debian.gz
+/usr/share/doc/libreoffice-gtk3/copyright

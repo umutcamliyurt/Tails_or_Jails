@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libimport-into-perl
+/usr/share/doc/libimport-into-perl/changelog.Debian.gz
+/usr/share/doc/libimport-into-perl/changelog.gz
+/usr/share/doc/libimport-into-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Import::Into.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Import
+/usr/share/perl5/Import/Into.pm

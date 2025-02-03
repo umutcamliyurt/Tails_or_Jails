@@ -1,0 +1,2 @@
+libparted 2 libparted2 (>= 3.5)
+udeb: libparted 2 libparted2-udeb (>= 3.5)

@@ -1,0 +1,2 @@
+# Triggers added by dh_installcatalogs/12.1.1
+activate-await update-sgmlcatalog

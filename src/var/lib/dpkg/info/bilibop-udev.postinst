@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -e
+
+belong_to_disk_group() {
+    for g in $(stat -c %G ${1}*); do
+        [ "${g}" = "disk" ] || return 1
+    done
+}
+
+case "${1}" in
+    configure)
+        . /usr/lib/bilibop/common.sh
+
+        # Be sure the needed virtual filesystems are mounted, and udev is
+        # running; or do nothing:
+        if [ -h /proc/mounts -a -d /sys/block -a -c /dev/null ] &&
+            invoke-rc.d udev status >/dev/null 2>&1 &&
+            BILIBOP_DISK="$(physical_hard_disk /)" &&
+            query_sysfs_attrs ${BILIBOP_DISK} | grep -Eq '^[[:blank:]]*SUBSYSTEMS=="(usb|firewire|memstick|mmc)"'; then
+
+            # Trigger uevents for the disk hosting the root filesystem and its
+            # partitions:
+            udevadm trigger --sysname-match=${BILIBOP_DISK##*/}*
+            udevadm settle
+
+            # But it can happen that this doesn't work and new rules must be
+            # explicitly loaded before triggering uevents:
+            if ! belong_to_disk_group ${BILIBOP_DISK}; then
+                udevadm control --reload-rules
+                udevadm trigger --sysname-match=${BILIBOP_DISK##*/}*
+                udevadm settle
+
+                if ! belong_to_disk_group ${BILIBOP_DISK}; then
+                    [ -f /etc/udev/rules.d/66-bilibop.rules ] || exit 2
+                fi
+            fi
+        fi
+        ;;
+esac
+
+
+:
+# vim: et ts=4 sts=4 sw=4

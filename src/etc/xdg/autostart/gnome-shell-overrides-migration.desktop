@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=GNOME settings overrides migration
+NoDisplay=true
+Exec=/usr/libexec/gnome-shell-overrides-migration.sh

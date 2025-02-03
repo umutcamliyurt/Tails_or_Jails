@@ -1,0 +1,2 @@
+/etc/apparmor.d/usr.libexec.ibus-engine-hangul
+/etc/apparmor.d/usr.libexec.ibus-setup-hangul

@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-gnome /usr/share/doc/libreoffice-core 1:6.4.0\~alpha1\~git20191013 -- "$@"
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/gnome.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/gnome.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-gnome "/etc/libreoffice/registry/gnome.xcd"
+	fi
+fi
+# End automatically added section

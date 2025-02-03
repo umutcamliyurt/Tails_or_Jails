@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libchewing3-data
+/usr/share/doc/libchewing3-data/changelog.Debian.gz
+/usr/share/doc/libchewing3-data/changelog.gz
+/usr/share/doc/libchewing3-data/copyright
+/usr/share/libchewing
+/usr/share/libchewing/dictionary.dat
+/usr/share/libchewing/index_tree.dat
+/usr/share/libchewing/pinyin.tab
+/usr/share/libchewing/swkb.dat
+/usr/share/libchewing/symbols.dat

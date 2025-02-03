@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libgnustep-base.so.1.28.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgnustep-base1.28
+/usr/share/doc/libgnustep-base1.28/NEWS.Debian.gz
+/usr/share/doc/libgnustep-base1.28/changelog.Debian.gz
+/usr/share/doc/libgnustep-base1.28/changelog.gz
+/usr/share/doc/libgnustep-base1.28/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libgnustep-base1.28
+/usr/lib/libgnustep-base.so.1.28

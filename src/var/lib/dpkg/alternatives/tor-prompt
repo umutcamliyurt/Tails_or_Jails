@@ -1,0 +1,9 @@
+auto
+/usr/bin/tor-prompt
+tor-prompt.8.gz
+/usr/share/man/man8/tor-prompt.8.gz
+
+/usr/bin/python3-tor-prompt
+200
+/usr/share/man/man8/python3-tor-prompt.8.gz
+

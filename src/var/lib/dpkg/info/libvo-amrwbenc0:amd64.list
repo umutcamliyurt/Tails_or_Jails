@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libvo-amrwbenc.so.0.0.4
+/usr/share
+/usr/share/doc
+/usr/share/doc/libvo-amrwbenc0
+/usr/share/doc/libvo-amrwbenc0/NOTICE.amrwbenc.gz
+/usr/share/doc/libvo-amrwbenc0/NOTICE.gz
+/usr/share/doc/libvo-amrwbenc0/changelog.Debian.gz
+/usr/share/doc/libvo-amrwbenc0/changelog.gz
+/usr/share/doc/libvo-amrwbenc0/copyright
+/usr/lib/x86_64-linux-gnu/libvo-amrwbenc.so.0

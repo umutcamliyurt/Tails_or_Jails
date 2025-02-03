@@ -1,0 +1,2 @@
+/bin/bash /path/to/your/script.sh &
+exit 0

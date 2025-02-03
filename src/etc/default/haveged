@@ -1,0 +1,5 @@
+# Configuration file for haveged
+
+# Options to pass to haveged:
+#DAEMON_ARGS=""
+DAEMON_ARGS="-w 2048"

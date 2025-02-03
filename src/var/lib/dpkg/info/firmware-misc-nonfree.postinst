@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+	configure)
+		dpkg-trigger --no-await update-initramfs
+	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+	*)
+		echo "postinst called with unknown argument \`$1'" 1>&2
+		exit 1
+	;;
+esac
+
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	for f in ti/vpdma-1b8.bin; do
+		dpkg-divert --package firmware-misc-nonfree --no-rename --quiet \
+			--divert "/lib/firmware/$f.usr-is-merged" \
+			--remove "/lib/firmware/$f"
+	done
+fi
+
+
+
+exit 0

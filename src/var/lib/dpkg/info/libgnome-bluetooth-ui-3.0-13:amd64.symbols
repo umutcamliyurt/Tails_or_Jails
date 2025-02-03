@@ -1,0 +1,6 @@
+libgnome-bluetooth-ui-3.0.so.13 libgnome-bluetooth-ui-3.0-13 #MINVER#
+* Build-Depends-Package: libgnome-bluetooth-ui-3.0-dev
+ bluetooth_settings_widget_get_default_adapter_powered@Base 3.18.2
+ bluetooth_settings_widget_get_type@Base 3.12.0
+ bluetooth_settings_widget_new@Base 3.12.0
+ bluetooth_settings_widget_set_default_adapter_powered@Base 42~beta

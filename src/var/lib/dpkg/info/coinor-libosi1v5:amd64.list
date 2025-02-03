@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libOsi.so.1.13.6
+/usr/lib/x86_64-linux-gnu/libOsiCommonTests.so.1.13.6
+/usr/share
+/usr/share/doc
+/usr/share/doc/coinor-libosi1v5
+/usr/share/doc/coinor-libosi1v5/changelog.Debian.gz
+/usr/share/doc/coinor-libosi1v5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/coinor-libosi1v5
+/usr/lib/x86_64-linux-gnu/libOsi.so.1
+/usr/lib/x86_64-linux-gnu/libOsiCommonTests.so.1

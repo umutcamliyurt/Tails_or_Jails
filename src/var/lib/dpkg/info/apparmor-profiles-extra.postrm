@@ -1,0 +1,57 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_apparmor/3.0.8-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.apt-cacher-ng" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.apt-cacher-ng" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.apt-cacher-ng" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.apt-cacher-ng" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.apt-cacher-ng" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.bin.totem-previewers" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.bin.totem-previewers" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.bin.totem-previewers" || true
+    rm -f "/etc/apparmor.d/local/usr.bin.totem-previewers" || true
+    rm -f /var/cache/apparmor/*/"usr.bin.totem-previewers" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.bin.totem" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.bin.totem" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.bin.totem" || true
+    rm -f "/etc/apparmor.d/local/usr.bin.totem" || true
+    rm -f /var/cache/apparmor/*/"usr.bin.totem" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.bin.pidgin" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.bin.pidgin" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.bin.pidgin" || true
+    rm -f "/etc/apparmor.d/local/usr.bin.pidgin" || true
+    rm -f /var/cache/apparmor/*/"usr.bin.pidgin" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.bin.irssi" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.bin.irssi" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.bin.irssi" || true
+    rm -f "/etc/apparmor.d/local/usr.bin.irssi" || true
+    rm -f /var/cache/apparmor/*/"usr.bin.irssi" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section

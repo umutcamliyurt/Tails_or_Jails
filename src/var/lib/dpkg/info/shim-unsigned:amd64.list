@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/shim
+/usr/lib/shim/BOOTX64.CSV
+/usr/lib/shim/fbx64.efi
+/usr/lib/shim/mmx64.efi
+/usr/lib/shim/shimx64.efi
+/usr/share
+/usr/share/doc
+/usr/share/doc/shim-unsigned
+/usr/share/doc/shim-unsigned/changelog.Debian.gz
+/usr/share/doc/shim-unsigned/copyright
+/usr/share/shim
+/usr/share/shim/debian-uefi-ca.der

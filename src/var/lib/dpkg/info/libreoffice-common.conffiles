@@ -1,0 +1,7 @@
+/etc/apparmor.d/usr.lib.libreoffice.program.oosplash
+/etc/apparmor.d/usr.lib.libreoffice.program.senddoc
+/etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin
+/etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport
+/etc/libreoffice/psprint.conf
+/etc/libreoffice/soffice.sh
+/etc/libreoffice/sofficerc

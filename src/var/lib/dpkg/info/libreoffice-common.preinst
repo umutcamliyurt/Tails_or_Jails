@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# fix up broken 0 byte file, should be a dir
+if [ "$1" = "upgrade" ] && dpkg --compare-versions "$2" lt-nl "1:7.4.1~rc1-3"; then
+        if [ -f /usr/lib/libreoffice/share/extensions -a ! -s /usr/lib/libreoffice/share/extensions ]; then
+                rm /usr/lib/libreoffice/share/extensions
+        fi
+fi
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.oosplash /etc/apparmor.d/usr.lib.libreoffice.program.oosplash 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.senddoc /etc/apparmor.d/usr.lib.libreoffice.program.senddoc 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.soffice.bin /etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.xpdfimport /etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport 1:5.4.3-1 -- "$@"
+# End automatically added section
+

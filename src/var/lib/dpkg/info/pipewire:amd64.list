@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/systemd
+/usr/lib/systemd/user
+/usr/lib/systemd/user/pipewire.service
+/usr/lib/systemd/user/pipewire.socket
+/usr/share
+/usr/share/doc
+/usr/share/doc/pipewire
+/usr/share/doc/pipewire/NEWS.gz
+/usr/share/doc/pipewire/README.Debian.gz
+/usr/share/doc/pipewire/changelog.Debian.gz
+/usr/share/doc/pipewire/copyright

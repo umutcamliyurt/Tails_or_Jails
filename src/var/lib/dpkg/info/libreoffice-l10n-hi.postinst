@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/Langpack-hi.xcd" "/etc/libreoffice/registry/Langpack-hi.xcd"
+	ucfr --force libreoffice-l10n-hi "/etc/libreoffice/registry/Langpack-hi.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/res/fcfg_langpack_hi.xcd" "/etc/libreoffice/registry/res/fcfg_langpack_hi.xcd"
+	ucfr --force libreoffice-l10n-hi "/etc/libreoffice/registry/res/fcfg_langpack_hi.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/res/registry_hi.xcd" "/etc/libreoffice/registry/res/registry_hi.xcd"
+	ucfr --force libreoffice-l10n-hi "/etc/libreoffice/registry/res/registry_hi.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/ctl_hi.xcd" "/etc/libreoffice/registry/ctl_hi.xcd"
+	ucfr --force libreoffice-l10n-hi "/etc/libreoffice/registry/ctl_hi.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-l10n-hi /usr/share/doc/libreoffice-common 1:6.4.0\~rc1\~git20191209 -- "$@"
+# End automatically added section

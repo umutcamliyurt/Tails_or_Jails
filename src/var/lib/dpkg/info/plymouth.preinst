@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/plymouth" ] ; then
+	chmod +x "/etc/init.d/plymouth" >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/plymouth-log" ] ; then
+	chmod +x "/etc/init.d/plymouth-log" >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = upgrade ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'plymouth-halt.service' 'plymouth-kexec.service' 'plymouth-poweroff.service' 'plymouth-quit-wait.service' 'plymouth-quit.service' 'plymouth-read-write.service' 'plymouth-reboot.service' 'plymouth-start.service' 'plymouth-switch-root-initramfs.service' 'plymouth-switch-root.service' 'systemd-ask-password-plymouth.path' 'systemd-ask-password-plymouth.service' >/dev/null || true
+fi
+# End automatically added section

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "upgrade" ] || [ "$1" = "install" ]; then
+	for f in ti/vpdma-1b8.bin; do
+		dpkg-divert --package firmware-misc-nonfree --no-rename --quiet \
+			--divert "/lib/firmware/$f.usr-is-merged" \
+			--add "/lib/firmware/$f"
+	done
+fi
+
+
+
+exit 0

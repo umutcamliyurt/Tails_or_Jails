@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libclass-method-modifiers-perl
+/usr/share/doc/libclass-method-modifiers-perl/CONTRIBUTING
+/usr/share/doc/libclass-method-modifiers-perl/changelog.Debian.gz
+/usr/share/doc/libclass-method-modifiers-perl/changelog.gz
+/usr/share/doc/libclass-method-modifiers-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Class::Method::Modifiers.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Class
+/usr/share/perl5/Class/Method
+/usr/share/perl5/Class/Method/Modifiers.pm

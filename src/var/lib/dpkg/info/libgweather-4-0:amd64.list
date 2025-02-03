@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libgweather-4
+/usr/lib/x86_64-linux-gnu/libgweather-4/Locations.bin
+/usr/lib/x86_64-linux-gnu/libgweather-4.so.0.200.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgweather-4-0
+/usr/share/doc/libgweather-4-0/NEWS.gz
+/usr/share/doc/libgweather-4-0/README.md
+/usr/share/doc/libgweather-4-0/changelog.Debian.gz
+/usr/share/doc/libgweather-4-0/copyright
+/usr/lib/x86_64-linux-gnu/libgweather-4.so.0

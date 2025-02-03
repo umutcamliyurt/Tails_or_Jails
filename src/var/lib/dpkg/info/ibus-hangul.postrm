@@ -1,0 +1,28 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.10.1
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-engine-hangul 1.5.3-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-setup-hangul 1.5.3-2\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.7-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.ibus.ibus-setup-hangul" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.ibus.ibus-setup-hangul" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.ibus.ibus-setup-hangul" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.ibus.ibus-setup-hangul" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.ibus.ibus-setup-hangul" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.7-1
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.lib.ibus.ibus-engine-hangul" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.lib.ibus.ibus-engine-hangul" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.lib.ibus.ibus-engine-hangul" || true
+    rm -f "/etc/apparmor.d/local/usr.lib.ibus.ibus-engine-hangul" || true
+    rm -f /var/cache/apparmor/*/"usr.lib.ibus.ibus-engine-hangul" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section

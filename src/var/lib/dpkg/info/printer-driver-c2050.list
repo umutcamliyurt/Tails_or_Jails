@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/bin
+/usr/bin/c2050
+/usr/bin/ps2lexmark
+/usr/share
+/usr/share/doc
+/usr/share/doc/printer-driver-c2050
+/usr/share/doc/printer-driver-c2050/README
+/usr/share/doc/printer-driver-c2050/changelog.Debian.amd64.gz
+/usr/share/doc/printer-driver-c2050/changelog.Debian.gz
+/usr/share/doc/printer-driver-c2050/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/c2050.1.gz
+/usr/share/man/man1/ps2lexmark.1.gz

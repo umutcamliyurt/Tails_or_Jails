@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        # see #261801
+        for file in dumpkeys loadkeys; do
+            if [ ! -e /usr/bin/$file ]; then
+                ln -s /bin/$file /usr/bin/$file
+            fi
+        done
+        ;;
+esac
+
+
+
+# vim:sw=4:sts=4:et:

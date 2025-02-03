@@ -1,0 +1,177 @@
+#!/bin/sh
+
+set -e
+
+update_lool_systemplate() {
+        echo -n "Updating LibreOffice Online systemplate... "
+        su lool --shell=/bin/sh -c 'loolwsd-systemplate-setup /var/lib/lool/systemplate /usr/lib/libreoffice >/dev/null 2>&1'
+        echo "done."
+}
+validate_extensions() {
+  INSTDIR=`mktemp -d`
+  if HOME=$INSTDIR /usr/lib/libreoffice/program/unopkg list --bundled >/dev/null 2>/dev/null; then
+	HOME=$INSTDIR /usr/lib/libreoffice/program/unopkg validate -v --bundled
+  fi
+}
+
+make_lo_sync_extensions() {
+	if [ -d /usr/lib/libreoffice/share/extensions ]; then
+		touch /usr/lib/libreoffice/share/extensions
+	fi
+}
+
+if [ "$1" = "triggered" ]; then
+        for triggername in $2; do
+                case "$triggername" in
+                        # new "bundled" extensions (since 3.3)
+                        "/usr/lib/libreoffice/share/extensions")
+                          make_lo_sync_extensions
+                        ;;
+                        "/usr/lib/libreoffice")
+                        # check also whether /usr/bin/loolwsd-systemplate-setup
+                        # is +x do to not fail when it's gone but
+                        # /var/lib/lool/systemplate is still there (loolwsd
+			# removed but not purged)
+                          if [ -x /usr/bin/loolwsd-systemplate-setup -a \
+				-d /var/lib/lool/systemplate ]; then
+                            update_lool_systemplate
+                          fi
+                        ;;
+                esac
+        done
+fi
+
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/main.xcd" "/etc/libreoffice/registry/main.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/main.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/pdfimport.xcd" "/etc/libreoffice/registry/pdfimport.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/pdfimport.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/xsltfilter.xcd" "/etc/libreoffice/registry/xsltfilter.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/xsltfilter.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/lingucomponent.xcd" "/etc/libreoffice/registry/lingucomponent.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/lingucomponent.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/Langpack-en-US.xcd" "/etc/libreoffice/registry/Langpack-en-US.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/Langpack-en-US.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+	ucf --three-way "/usr/lib/libreoffice/share/.registry/res/fcfg_langpack_en-US.xcd" "/etc/libreoffice/registry/res/fcfg_langpack_en-US.xcd"
+	ucfr --force libreoffice-common "/etc/libreoffice/registry/res/fcfg_langpack_en-US.xcd"
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.libreoffice.program.oosplash"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.libreoffice.program.oosplash"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.libreoffice.program.senddoc"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.libreoffice.program.senddoc"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.libreoffice.program.soffice.bin"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "configure" ]; then
+    APP_PROFILE="/etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport"
+    if [ -f "$APP_PROFILE" ]; then
+        # Add the local/ include
+        LOCAL_APP_PROFILE="/etc/apparmor.d/local/usr.lib.libreoffice.program.xpdfimport"
+
+        test -e "$LOCAL_APP_PROFILE" || {
+            mkdir -p `dirname "$LOCAL_APP_PROFILE"`
+            install --mode 644 /dev/null "$LOCAL_APP_PROFILE"
+        }
+
+        # Reload the profile, including any abstraction updates
+        if aa-enabled --quiet 2>/dev/null; then
+            apparmor_parser -r -T -W "$APP_PROFILE" || true
+        fi
+    fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.oosplash /etc/apparmor.d/usr.lib.libreoffice.program.oosplash 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.senddoc /etc/apparmor.d/usr.lib.libreoffice.program.senddoc 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.soffice.bin /etc/apparmor.d/usr.lib.libreoffice.program.soffice.bin 1:5.4.3-1 -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/apparmor.d/usr.lib.libreofficeprogram.xpdfimport /etc/apparmor.d/usr.lib.libreoffice.program.xpdfimport 1:5.4.3-1 -- "$@"
+# End automatically added section
+
+
+# do this manually since dpkg-maintscript-helper dir_to_symlink
+# does not work reliably in this case because we cannot ensure that all
+# conflicting packages previously shipping files in
+# /usr/lib/libreoffice/share/registry are either upgraded or removed
+# but not just deconfigured, see #985297
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt-nl "1:7.0.4-4~" ; then
+	if [ ! -L /usr/lib/libreoffice/share/registry ]; then
+		if [ -d /usr/lib/libreoffice/share/registry ]; then
+			# this will fail if the directory is not yet empty
+			rmdir -v /usr/lib/libreoffice/share/registry
+		fi
+		ln -sfvT /etc/libreoffice/registry /usr/lib/libreoffice/share/registry
+	fi
+fi

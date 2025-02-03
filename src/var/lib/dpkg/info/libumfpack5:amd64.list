@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+/usr/share
+/usr/share/doc
+/usr/share/doc/libumfpack5
+/usr/share/doc/libumfpack5/NEWS.Debian.gz
+/usr/share/doc/libumfpack5/changelog.Debian.gz
+/usr/share/doc/libumfpack5/changelog.gz
+/usr/share/doc/libumfpack5/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libumfpack5
+/usr/lib/x86_64-linux-gnu/libumfpack.so.5

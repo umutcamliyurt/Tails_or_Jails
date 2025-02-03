@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.10.1
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-engine-hangul 1.5.3-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.ibus.ibus-setup-hangul 1.5.3-2\~ -- "$@"
+# End automatically added section

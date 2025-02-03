@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/mutter-11
+/usr/lib/x86_64-linux-gnu/mutter-11/Cally-11.typelib
+/usr/lib/x86_64-linux-gnu/mutter-11/Clutter-11.typelib
+/usr/lib/x86_64-linux-gnu/mutter-11/Cogl-11.typelib
+/usr/lib/x86_64-linux-gnu/mutter-11/CoglPango-11.typelib
+/usr/lib/x86_64-linux-gnu/mutter-11/Meta-11.typelib
+/usr/share
+/usr/share/doc
+/usr/share/doc/gir1.2-mutter-11
+/usr/share/doc/gir1.2-mutter-11/changelog.Debian.gz
+/usr/share/doc/gir1.2-mutter-11/copyright

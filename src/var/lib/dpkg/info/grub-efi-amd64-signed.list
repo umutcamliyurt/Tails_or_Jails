@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/grub
+/usr/lib/grub/x86_64-efi-signed
+/usr/lib/grub/x86_64-efi-signed/gcdx64.efi.signed
+/usr/lib/grub/x86_64-efi-signed/grubnetx64-installer.efi.signed
+/usr/lib/grub/x86_64-efi-signed/grubnetx64.efi.signed
+/usr/lib/grub/x86_64-efi-signed/grubx64.efi.signed
+/usr/share
+/usr/share/bug
+/usr/share/bug/grub-efi-amd64-signed
+/usr/share/bug/grub-efi-amd64-signed/control
+/usr/share/doc
+/usr/share/doc/grub-efi-amd64-signed
+/usr/share/doc/grub-efi-amd64-signed/changelog.gz
+/usr/share/doc/grub-efi-amd64-signed/copyright

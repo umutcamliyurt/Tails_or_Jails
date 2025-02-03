@@ -1,0 +1,56 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+    
+# create the scanner group if it isn't already there
+# We need to check for the existence of the group to avoid system/non-system
+# group discrepencies. (Bug #648287, LP: #989921)
+        if ! getent group scanner >/dev/null; then
+	    addgroup --quiet --system scanner
+        fi
+
+# ...create colord user if it isn't already there...
+        adduser --system --group --home /var/lib/colord \
+	    --quiet --gecos "colord colour management daemon" colord
+
+# ...add system-wide icc profiles directory...
+        mkdir -p /var/lib/colord/icc
+# ...finally, ensure /var/lib/colord has the right permissions
+	chown colord:colord /var/lib/colord /var/lib/colord/icc
+# Restore selinux context (Bug #695085)
+        if which restorecon >/dev/null 2>&1; then
+            restorecon /var/lib/colord /var/lib/colord/icc
+        fi
+
+	;;
+esac	
+
+# Automatically added by dh_installtmpfiles/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "$(command -v systemd-tmpfiles)" ]; then
+		systemd-tmpfiles ${DPKG_ROOT:+--root="$DPKG_ROOT"} --create colord.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.freedesktop.ColorManager.conf 1.4.3-4\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.11.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'colord.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0

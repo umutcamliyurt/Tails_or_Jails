@@ -1,0 +1,28 @@
+#!/bin/sh
+set -e
+
+action=$1
+version=$2
+
+if [ "$action" = upgrade ]; then
+    # remove old cache files
+    rm -f /var/cache/ferm/*.sh /var/cache/ferm/*.tmp
+fi
+
+if [ "$action" = upgrade -a -n "$version" ]; then
+    if dpkg --compare-versions "$version" lt "1.1.1" &&
+        dpkg --compare-versions "$version" gt "1.1-1"; then
+        # upgrade from the 1.2 alpha ("1.1+svnXX") releases
+
+        # this flag has been obsoleted, it is now a variable in
+        # /etc/default/ferm
+        rm -f /etc/ferm/disabled_on_bootup
+    fi
+fi
+
+# Automatically added by dh_installinit/13.10
+if [ "$1" = "install" ] && [ -n "$2" ] && [ -e "/etc/init.d/ferm" ] ; then
+	chmod +x "/etc/init.d/ferm" >/dev/null || true
+fi
+# End automatically added section
+

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/share
+/usr/share/doc
+/usr/share/doc/gnupg2
+/usr/share/doc/gnupg2/NEWS.Debian.gz
+/usr/share/doc/gnupg2/changelog.Debian.gz
+/usr/share/doc/gnupg2/changelog.gz
+/usr/share/doc/gnupg2/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/bin/gpg2
+/usr/share/man/man1/gpg2.1.gz

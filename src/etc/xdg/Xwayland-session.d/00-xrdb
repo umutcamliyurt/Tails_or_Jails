@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# This script mimic what /etc/X11/Xsession.d/30x11-common_xresources is doing
+# but for Xwayland
+
+USRRESOURCES=$HOME/.Xresources
+SYSRESOURCES=/etc/X11/Xresources
+OPTIONFILE=/etc/X11/Xsession.options
+
+# read OPTIONFILE
+OPTIONS=$(cat "$OPTIONFILE") || true
+
+has_option() {
+  if [ "${OPTIONS#*
+$1}" != "$OPTIONS" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+if [ -d "$SYSRESOURCES" ] && which xrdb >/dev/null 2>&1; then
+  RESOURCEFILES=$(run-parts --list $SYSRESOURCES)
+  if [ -n "$RESOURCEFILES" ]; then
+    for RESOURCEFILE in $RESOURCEFILES; do
+      xrdb -merge $RESOURCEFILE
+    done
+  fi
+fi
+
+if has_option allow-user-resources && [ -f "$USRRESOURCES" ]; then
+  if which xrdb >/dev/null 2>&1; then
+    xrdb -merge $USRRESOURCES
+  fi
+fi

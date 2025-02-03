@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.10
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2-lvmetad 2.03.02-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2 2.03.16-2\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/lvm2-lvmpolld 2.03.16-2\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lvm2-lvmpolld.socket' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'blk-availability.service' 'lvm2-monitor.service' >/dev/null || true
+	fi
+fi
+# End automatically added section

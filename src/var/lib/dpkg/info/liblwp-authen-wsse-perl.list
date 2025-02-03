@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/liblwp-authen-wsse-perl
+/usr/share/doc/liblwp-authen-wsse-perl/changelog.Debian.gz
+/usr/share/doc/liblwp-authen-wsse-perl/changelog.gz
+/usr/share/doc/liblwp-authen-wsse-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/LWP::Authen::Wsse.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/LWP
+/usr/share/perl5/LWP/Authen
+/usr/share/perl5/LWP/Authen/Wsse.pm

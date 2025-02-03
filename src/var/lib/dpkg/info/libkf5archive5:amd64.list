@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libKF5Archive.so.5.103.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libkf5archive5
+/usr/share/doc/libkf5archive5/changelog.Debian.gz
+/usr/share/doc/libkf5archive5/copyright
+/usr/share/qlogging-categories5
+/usr/share/qlogging-categories5/karchive.categories
+/usr/share/qlogging-categories5/karchive.renamecategories
+/usr/lib/x86_64-linux-gnu/libKF5Archive.so.5

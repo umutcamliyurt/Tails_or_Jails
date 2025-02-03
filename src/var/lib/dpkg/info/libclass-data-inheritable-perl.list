@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libclass-data-inheritable-perl
+/usr/share/doc/libclass-data-inheritable-perl/changelog.Debian.gz
+/usr/share/doc/libclass-data-inheritable-perl/changelog.gz
+/usr/share/doc/libclass-data-inheritable-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Class::Data::Inheritable.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Class
+/usr/share/perl5/Class/Data
+/usr/share/perl5/Class/Data/Inheritable.pm

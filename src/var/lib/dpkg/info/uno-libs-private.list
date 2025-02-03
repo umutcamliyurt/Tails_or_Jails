@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libreoffice
+/usr/lib/libreoffice/program
+/usr/lib/libreoffice/program/libreglo.so
+/usr/lib/libreoffice/program/libstorelo.so
+/usr/lib/libreoffice/program/libunoidllo.so
+/usr/lib/libreoffice/program/libxmlreaderlo.so
+/usr/share
+/usr/share/bug
+/usr/share/bug/uno-libs-private
+/usr/share/bug/uno-libs-private/presubj
+/usr/share/doc
+/usr/share/doc/uno-libs-private
+/usr/share/doc/uno-libs-private/changelog.Debian.gz
+/usr/share/doc/uno-libs-private/copyright

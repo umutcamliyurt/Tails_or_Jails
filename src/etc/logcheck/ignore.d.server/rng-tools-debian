@@ -1,0 +1,9 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: rngd [-.[:alnum:]]+ starting up\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: (bits received from HRNG source|bits sent to kernel pool|entropy added to kernel pool): [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: FIPS 140-2 (successes|failures): [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: FIPS 140-2\(2001-10-10\) (Monobit|Poker|Runs|Long run|Continuous run): [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: (HRNG source|FIPS tests) speed: \(min=[.[[:digit:]]+; avg=[.[:digit:]]+; max=[.[:digit:]]+\)(K|M)ibits/s$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: (Lowest ready-buffers level|Entropy starvations): [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: stats: Time spent starving for entropy: \(min=[.[:digit:]]+; avg=[.[:digit:]]+; max=[.[:digit:]]+\)us$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: entropy feed to the kernel ready$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ rngd\[[[:digit:]]+\]: Exiting\.\.\.$

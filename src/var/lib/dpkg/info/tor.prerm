@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.11.4
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -x "/etc/init.d/tor" ] ; then
+	invoke-rc.d tor stop || tor_error_init
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/tor/tor-tsocks.conf 0.2.4.12-alpha-1 tor -- "$@"
+# End automatically added section
+# Automatically added by dh_runit/2.15.2
+# Unlike postrm, I can be sure, that runit-helper is present on
+# prerm.
+if [ -z "${DPKG_ROOT:-}" ] ; then
+    NAME='tor' ENABLE='yes' ONUPGRADE='restart' /lib/runit-helper/runit-helper prerm "$@"
+fi
+# End automatically added section

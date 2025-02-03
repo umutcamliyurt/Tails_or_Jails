@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libjson-maybexs-perl
+/usr/share/doc/libjson-maybexs-perl/changelog.Debian.gz
+/usr/share/doc/libjson-maybexs-perl/changelog.gz
+/usr/share/doc/libjson-maybexs-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/JSON::MaybeXS.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/JSON
+/usr/share/perl5/JSON/MaybeXS.pm

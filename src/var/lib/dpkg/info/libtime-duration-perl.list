@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libtime-duration-perl
+/usr/share/doc/libtime-duration-perl/changelog.Debian.gz
+/usr/share/doc/libtime-duration-perl/changelog.gz
+/usr/share/doc/libtime-duration-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Time::Duration.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Time
+/usr/share/perl5/Time/Duration.pm

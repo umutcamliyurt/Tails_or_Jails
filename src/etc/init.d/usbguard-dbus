@@ -1,0 +1,70 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          usbguard-dbus
+# Required-Start:    $local_fs $network $remote_fs $syslog
+# Required-Stop:     $local_fs $network $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: USB device authorization policy framework - dbus interface
+# Description:       The USBGuard software framework helps to protect your computer against rogue
+#                    USB devices (a.k.a. BadUSB) by implementing basic allow- and blocklisting
+#                    capabilities based on device attributes.
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+NAME=usbguard-dbus
+DAEMON=/usr/sbin/usbguard-dbus
+DESC="Usbguard dbus"
+SCRIPTNAME=/etc/init.d/$NAME
+
+if test -f /etc/default/$NAME; then
+	. /etc/default/$NAME
+fi
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+. /lib/init/vars.sh
+
+. /lib/lsb/init-functions
+
+usbguard_dbus_start()
+{
+	start-stop-daemon --start --exec $DAEMON --background -- --system
+}
+
+usbguard_dbus_stop()
+{
+	start-stop-daemon --stop --signal INT --exec $DAEMON
+}
+
+usbguard_dbus_status() {
+	status_of_proc "${DAEMON}" "${DESC}"
+}
+
+case "$1" in
+  start)
+  	log_begin_msg "Starting ${DESC}"
+	usbguard_dbus_start
+	log_end_msg $?
+	;;
+  stop)
+  	log_begin_msg "Stopping ${DESC}"
+	usbguard_dbus_stop
+	log_end_msg $?
+	;;
+  status)
+  	usbguard_dbus_status
+	;;
+  restart|reload|force-reload)
+  	log_begin_msg "Restarting ${DESC}"
+	usbguard_dbus_stop
+	usbguard_dbus_start
+	log_end_msg $?
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}"
+	exit 1
+	;;
+esac

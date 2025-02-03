@@ -1,0 +1,556 @@
+Package: gdisk
+Version: 1.0.10-1~bpo12+1~tails1
+Architecture: amd64
+Maintainer: Jonathan Carter <jcc@debian.org>
+Installed-Size: 924
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 3.0), libncursesw6 (>= 6), libpopt0 (>= 1.14), libstdc++6 (>= 5.2), libtinfo6 (>= 6), libuuid1 (>= 2.16)
+Recommends: groff-base
+Homepage: http://sourceforge.net/projects/gptfdisk/
+Priority: optional
+Section: admin
+Filename: pool/main/g/gdisk/gdisk_1.0.10-1~bpo12+1~tails1_amd64.deb
+Size: 228460
+SHA256: c40882201d79a3ea4b630cc514e3c18a0c8adb3d9e9d8589bd59e36899656c32
+SHA1: 80c4d03d54209c5dff1713db11fdf8f408ae4a45
+MD5sum: a88c4b8e79cde68a61f64c214809a8da
+Description: GPT fdisk text-mode partitioning tool
+ GPT fdisk (aka gdisk) is a text-mode partitioning
+ tool that provides utilities for Globally Unique
+ Identifier (GUID) Partition Table (GPT) disks.
+ .
+ Features:
+ .
+  - Edit GUID partition table definitions
+  - In place conversion of BSD disklabels to GPT
+  - In place conversion of MBR to GPT
+  - In place conversion of GPT to MBR
+  - Create hybrid MBR/GPT layouts
+  - Repair damaged GPT data structures
+  - Repair damaged MBR structures
+  - Back up GPT data to a file (and restore from file)
+
+Package: gdisk-dbgsym
+Source: gdisk
+Version: 1.0.10-1~bpo12+1~tails1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Jonathan Carter <jcc@debian.org>
+Installed-Size: 1610
+Depends: gdisk (= 1.0.10-1~bpo12+1~tails1)
+Priority: optional
+Section: debug
+Filename: pool/main/g/gdisk/gdisk-dbgsym_1.0.10-1~bpo12+1~tails1_amd64.deb
+Size: 1483452
+SHA256: 979ef96904d83a6f58a79f48b4e0485b5838687e71de76f1527f348d95d1907e
+SHA1: c40a412ccee481953b4b664b05d06e8fb4975e37
+MD5sum: 4ddb8d79647c40c0741d1ba2da077f62
+Description: debug symbols for gdisk
+Build-Ids: 0be964681d5d5866174a1c92c4697f2fd9899cb4 316ca4675dbebe57cde78a0e9748d3eea97cae5f 48867f90c1ba2906b7ba8dfadf8cf810515a9680 4ef8b9c69769a56547d2bfd97681923235d92967
+
+Package: gir1.2-nm-1.0
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 342
+Depends: gir1.2-glib-2.0, libnm0 (>= 1.42.2)
+Multi-Arch: same
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: introspection
+Filename: pool/main/n/network-manager/gir1.2-nm-1.0_1.42.4-1.0tails1_amd64.deb
+Size: 77340
+SHA256: 082d906035e1b35075fe2b7c9d9d4f6662a8eb7f308574eddc0df346a72b4a8b
+SHA1: 92cd1decd293f9dcf891b907c1f7636d20ffef47
+MD5sum: e481699cb8110199322f51d283314dec
+Description: GObject introspection data for the libnm library
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, Wi-Fi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains introspection data for NetworkManager using libnm.
+ .
+ It can be used by packages using the GIRepository format to generate
+ dynamic bindings.
+
+Package: gnome-settings-daemon
+Version: 43.0-4.0tails1
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 1371
+Depends: gnome-settings-daemon-common (= 43.0-4.0tails1), gsettings-desktop-schemas (>= 42~), default-logind | logind, libspa-0.2-bluetooth | pulseaudio-module-bluetooth, pipewire-audio | pulseaudio, libasound2 (>= 1.0.16), libc6 (>= 2.34), libcairo2 (>= 1.2.4), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.16), libcolord2 (>= 1.4.5), libcups2 (>= 1.6.0), libfontconfig1 (>= 2.12.6), libgcr-base-3-1 (>= 3.8.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgeoclue-2-0 (>= 2.4.0), libgeocode-glib-2-0 (>= 3.26.3), libglib2.0-0 (>= 2.59.0), libgnome-desktop-3-20 (>= 3.37.1), libgtk-3-0 (>= 3.21.5), libgudev-1.0-0 (>= 146), libgweather-4-0 (>= 4.1), libmm-glib0 (>= 1.6.8), libnm0 (>= 1.0.0), libnotify4 (>= 0.7.3), libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.13.4-2~), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpolkit-gobject-1-0 (>= 0.99), libpulse-mainloop-glib0 (>= 12.99.3), libpulse0 (>= 12.99.3), libupower-glib3 (>= 0.99.12), libwacom9 (>= 2.0.0), libwayland-client0 (>= 1.0.2), libx11-6, libxext6, libxfixes3 (>= 1:6.0.0), libxi6 (>= 2:1.2.99.4)
+Recommends: iio-sensor-proxy, pipewire-audio, pkexec, x11-xserver-utils
+Suggests: usbguard
+Breaks: afterstep (<< 2.2.12-11.1~), budgie-core (<< 10.4+git20171031.10.g9f71bb8-1.2~), cairo-dock (<< 3.4.1-1.2~), evolution (<< 3.37.3~), gdm3 (<< 3.37.0), gnome-control-center (<< 1:41.4-2~), gnome-initial-setup (<< 3.27), gnome-session (<< 3.37.0), gnome-session-flashback (<< 3.26.0-3~), gnome-shell (<< 3.37.90), gnome-shell-extensions (<< 3.27), libgtk-3-0 (<< 3.24.23~), libgtk-4-0 (<< 3.99.1~), libmutter-6-0 (<< 3.37), libmutter-7-0 (<< 3.39), openbox-gnome-session (<< 3.6.1-7~), xmonad (<< 0.13-7~)
+Priority: optional
+Section: gnome
+Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon_43.0-4.0tails1_amd64.deb
+Size: 321316
+SHA256: c70313c8c0a1fde7b334452fe1b5398bf8fa498ebceea0c59ca9ab44e7850b44
+SHA1: 010cf8b7076e1876774f8ccf4148f001a1ccd838
+MD5sum: 3fabd439b93fdaf3028d0f1f8dcef130
+Description: daemon handling the GNOME session settings
+ This package contains the daemon which is responsible for setting the
+ various parameters of a GNOME session and the applications that run
+ under it. It handles the following kinds of settings:
+ .
+  * Keyboard: layout, accessibility options, shortcuts, media keys
+  * Clipboard management
+  * Theming: background, icons, GTK+ applications
+  * Cleanup of unused files
+  * Mouse: cursors, speed, accessibility options
+  * Startup of other daemons: screensaver, sound daemon
+ .
+ It also sets various application settings through X resources and
+ freedesktop.org XSETTINGS.
+
+Package: gnome-settings-daemon-common
+Source: gnome-settings-daemon
+Version: 43.0-4.0tails1
+Architecture: all
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 4938
+Depends: dconf-gsettings-backend | gsettings-backend
+Breaks: gnome-settings-daemon (<< 3.30.1.2-2~), gnome-settings-daemon-schemas (<< 3.30.1.2-2~)
+Replaces: gnome-settings-daemon (<< 3.30.1.2-2~), gnome-settings-daemon-schemas (<< 3.30.1.2-2~)
+Provides: gnome-settings-daemon-schemas (= 43.0-4.0tails1)
+Priority: optional
+Section: gnome
+Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon-common_43.0-4.0tails1_all.deb
+Size: 614668
+SHA256: 1cb7090c56fb7a64e6dca425c4aa47f1fd8d207681862b53cbb6379aae2e251e
+SHA1: 883bb8fea244bcf114c83305a26bf30e465c46bc
+MD5sum: b5d2c958bab1da5ba0156b35a592a8a4
+Description: daemon handling the GNOME session settings - common files
+ This package contains GSettings schemas and other architecture-independent
+ files for GNOME Settings Daemon. It is probably not interesting on its own for
+ end users, but packages may depend on this if they only need to read and write
+ settings & don't themselves care if the settings daemon is actually running or
+ not.
+
+Package: gnome-settings-daemon-dbgsym
+Source: gnome-settings-daemon
+Version: 43.0-4.0tails1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 1271
+Depends: gnome-settings-daemon (= 43.0-4.0tails1)
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon-dbgsym_43.0-4.0tails1_amd64.deb
+Size: 918432
+SHA256: 4be4cc324b9517d6c081fe20b00040b1338043c0038248f433ce5cb486add2ba
+SHA1: fa5049f8f8b1cdb434de81fb1df93e798e85057d
+MD5sum: 269917940685ca6840161ace026657dc
+Description: debug symbols for gnome-settings-daemon
+Build-Ids: 0237cf56eb0f24c3c59e1d2dc7baf6d48ee45670 1e96d30487282c6a2b35d48e670d1dbb9d60d632 251b9f5880a6c769be4d954e9a3a0cd060723959 3560d82bc150acbd6ef8f13d57ef3319512405c0 4961528d7b7388e3ed8b8d07c824abfea713e2f6 4d13aceee753501c3c0b7b43d23ce1529f0e4f1a 4d5c198d4c91557e81fa830b031dc064e651bd71 5cc2b553e7c9459d0704999e491b9d93d85a65ee 62c17ed2ee7eab769bda2ecf33c6fc7dc8f178c7 63d8d8fd3e6975e68118aeb34cf904a5a610099c 6eb7efbc644a7c92046234b45a1c9fab0e1d53f6 790cab14b5f820000cb08719525d0f42d39b51ed 825fba24a5ba6e39973a14e7e13441e0dc2fd4a5 94e1317faec5979504e9c02578504c9395413622 b5854011d7b656beaee432f8575b158158a2c9a3 bd93d5c9ca14895eb86b302b75209e9e672652b9 be4c22578064574ebc932f0db2ef423c616a3698 cbd4467e6331ce306a5f30a3012f3a1df581afee cf9558856add0ac176f168e3db97b5ac4eb93825 e382e8fc890d5f6f104a0efcaf4721890b7600b7 f721c9b31d5f8c597e6890f543ddf9820ba73eea
+
+Package: gnome-settings-daemon-dev
+Source: gnome-settings-daemon
+Version: 43.0-4.0tails1
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 28
+Depends: libglib2.0-dev (>= 2.56)
+Multi-Arch: same
+Priority: optional
+Section: libdevel
+Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon-dev_43.0-4.0tails1_amd64.deb
+Size: 10500
+SHA256: 1042a0aa61efa69b11325bc9d1c942ca411def7e05a15385df4788def3eaad8e
+SHA1: ce8346b16cbf546b1b33f84cd05882751e4a6ca0
+MD5sum: df185a01c191c49003ef1d37d97e370f
+Description: Headers for building applications communicating with gnome-settings-daemon
+ This package contains header files required to build applications that
+ communicate with the GNOME settings daemon over D-Bus.
+
+Package: gnome-shell
+Version: 43.9-0+deb12u2.0tails1
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 3897
+Depends: gir1.2-accountsservice-1.0, gir1.2-adw-1, gir1.2-atk-1.0, gir1.2-atspi-2.0 (>= 2.36), gir1.2-gcr-3, gir1.2-gdesktopenums-3.0, gir1.2-gdkpixbuf-2.0, gir1.2-gdm-1.0, gir1.2-geoclue-2.0, gir1.2-glib-2.0, gir1.2-gnomebluetooth-3.0 (>= 42.3), gir1.2-gnomedesktop-3.0 (>= 3.35.90), gir1.2-graphene-1.0 (>= 1.10.2), gir1.2-gstreamer-1.0, gir1.2-gtk-3.0, gir1.2-gtk-4.0, gir1.2-gweather-4.0 (>= 4.1), gir1.2-freedesktop, gir1.2-ibus-1.0 (>= 1.5.22-2ubuntu2~), gir1.2-mutter-11 (>= 43.5), gir1.2-nm-1.0, gir1.2-nma-1.0, gir1.2-pango-1.0, gir1.2-polkit-1.0, gir1.2-rsvg-2.0, gir1.2-soup-3.0, gir1.2-upowerglib-1.0, gir1.2-webkit2-4.1, gnome-backgrounds, gnome-settings-daemon (>= 40~), gnome-shell-common (= 43.9-0+deb12u2.0tails1), gsettings-desktop-schemas (>= 42~beta), gstreamer1.0-pipewire (>= 0.3.10), libglib2.0-bin, python3, dconf-gsettings-backend | gsettings-backend, libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.34), libcairo2 (>= 1.14.0), libecal-2.0-2 (>= 3.45), libedataserver-1.2-27 (>= 3.45), libgcr-base-3-1 (>= 3.8.0), libgdk-pixbuf-2.0-0 (>= 2.23.0), libgirepository-1.0-1 (>= 1.35.9), libgjs0g (>= 1.73.1), libgles2, libglib2.0-0 (>= 2.67.3), libgnome-autoar-0-0 (>= 0.1.1), libgnome-desktop-3-20 (>= 3.35.90), libgraphene-1.0-0 (>= 1.5.4), libgtk-3-0 (>= 3.13.7), libgtk-4-1 (>= 4.0.0), libical3 (>= 3.0.0), libjson-glib-1.0-0 (>= 1.5.2), libmutter-11-0 (>= 43.5), libnm0 (>= 1.4.0), libpango-1.0-0 (>= 1.37.5), libpangocairo-1.0-0 (>= 1.14.0), libpolkit-agent-1-0 (>= 0.99), libpolkit-gobject-1-0 (>= 0.94), libpulse-mainloop-glib0 (>= 13), libpulse0 (>= 13), libsecret-1-0 (>= 0.7), libsystemd0, libwayland-server0 (>= 1.0.2), libx11-6, libxfixes3
+Recommends: bolt, chrome-gnome-shell, evolution-data-server (>= 3.45), gdm3, gkbd-capplet, gnome-control-center (>= 1:42), gnome-remote-desktop, gnome-menus, gnome-user-docs, ibus, iio-sensor-proxy, power-profiles-daemon, switcheroo-control, unzip
+Suggests: gir1.2-malcontent-0 (>= 0.6.0), gir1.2-telepathyglib-0.12, gir1.2-telepathylogger-0.2, gnome-shell-extension-prefs
+Breaks: gnome-shell-extension-appindicator (<< 36), gnome-shell-extension-dash-to-panel (<< 43), gnome-shell-extension-dashtodock (<< 70), gnome-shell-extension-desktop-icons (<< 21.04), gnome-shell-extension-desktop-icons-ng (<< 0.16.0~), gnome-shell-extension-taskbar (<< 57.0-2.1~), gnome-shell-extension-top-icons-plus (<< 27-3~), gnome-shell-extension-workspaces-to-dock (<< 54~), gnome-shell-extensions (<< 40.0~)
+Provides: notification-daemon, polkit-1-auth-agent
+Homepage: https://wiki.gnome.org/Projects/GnomeShell
+Priority: optional
+Section: gnome
+Filename: pool/main/g/gnome-shell/gnome-shell_43.9-0+deb12u2.0tails1_amd64.deb
+Size: 855648
+SHA256: 349fefdd9078db2a93afd1e810f2389687d331ece2a5d1fe2b87be49d8e14192
+SHA1: deee81c6a474be229f27c40c62c677223fafdd87
+MD5sum: 4b75342b5d66f0adf0f3fd3520a47446
+Description: graphical shell for the GNOME desktop
+ The GNOME Shell provides core interface functions like switching
+ windows, launching applications or see your notifications. It takes
+ advantage of the capabilities of modern graphics hardware and
+ introduces innovative user interface concepts to provide a
+ delightful and easy to use experience. GNOME Shell is the defining
+ technology of the GNOME 3 user experience.
+
+Package: gnome-shell-common
+Source: gnome-shell
+Version: 43.9-0+deb12u2.0tails1
+Architecture: all
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 6942
+Depends: dconf-gsettings-backend | gsettings-backend
+Breaks: gnome-shell (<< 3.36.1-6~)
+Replaces: gnome-shell (<< 3.36.1-6~)
+Homepage: https://wiki.gnome.org/Projects/GnomeShell
+Priority: optional
+Section: gnome
+Filename: pool/main/g/gnome-shell/gnome-shell-common_43.9-0+deb12u2.0tails1_all.deb
+Size: 799136
+SHA256: b3bf0c3eb73dce88ffb728dae6950f33d128c6fe5b605e126111272f1ac21a1a
+SHA1: 7ec847b9d42b88bfb8cbf72287edb0a847795f97
+MD5sum: 6b3299925ac21bf487aaa4adb5bc0686
+Description: common files for the GNOME graphical shell
+ This package contains translations and data files for the GNOME shell.
+
+Package: gnome-shell-dbgsym
+Source: gnome-shell
+Version: 43.9-0+deb12u2.0tails1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 1529
+Depends: gnome-shell (= 43.9-0+deb12u2.0tails1)
+Priority: optional
+Section: debug
+Filename: pool/main/g/gnome-shell/gnome-shell-dbgsym_43.9-0+deb12u2.0tails1_amd64.deb
+Size: 1259004
+SHA256: 4dc18a7fdce2c835cce559ae3d453ea4b632e4059ffb0cecd4b0ffa7214853a3
+SHA1: 1fd1da4322fa7347dd94859b5cf41232043dd9f0
+MD5sum: 843b32a1bc1922389c6a9bf854e30b69
+Description: debug symbols for gnome-shell
+Build-Ids: 00a3d0656a85a1678db568a12a65cf645ae3756a 0c85676217d674ed7dcbd36053ad512ea276a9d1 0cfb9d2013ac81a2f3d996afbd2a515eceeea313 1083aa150f40a2ed9c7d561626d777be13fc7d28 14f020a7eb37fdf83e189880c057f2c0d6dbf9c0 6fc3b0d7881898057221944146e4aa4b72159103 8eaae986d98ddef3ce16397823c1e79d9b35becd a28c5afb653d775a428812ab197f4986994d1885 a827a81cd04d76423a23113226624924a63303ae acd5f171043055e86bc9aeef4580becaace29786 f3903ab8b2450c06f2772528f806843594e5a352
+
+Package: gnome-shell-extension-prefs
+Source: gnome-shell
+Version: 43.9-0+deb12u2.0tails1
+Architecture: amd64
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Installed-Size: 60
+Depends: gir1.2-adw-1, gir1.2-gtk-4.0, gjs (>= 1.73.1), gnome-shell (= 43.9-0+deb12u2.0tails1), gnome-shell-common (= 43.9-0+deb12u2.0tails1)
+Recommends: chrome-gnome-shell
+Breaks: gnome-shell (<< 3.36.0-2)
+Replaces: gnome-shell (<< 3.36.0-2)
+Provides: gnome-extensions-app
+Homepage: https://wiki.gnome.org/Projects/GnomeShell
+Priority: optional
+Section: gnome
+Filename: pool/main/g/gnome-shell/gnome-shell-extension-prefs_43.9-0+deb12u2.0tails1_amd64.deb
+Size: 28420
+SHA256: d237437d76ac1c043ace43f2f0eae0192bf65dac6e0490ef380a28dc0033b1df
+SHA1: 86097b22355e82fbde1382a0456e55fb615ae875
+MD5sum: 177ed8c21f664c2f3456ffaece284d8d
+Description: tool to enable / disable GNOME Shell extensions
+ This package contains a tool which users who use Shell extensions can use to
+ toggle them on and off, and access their preferences.
+
+Package: libnm-dev
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 10943
+Depends: libnm0 (= 1.42.4-1.0tails1), gir1.2-nm-1.0 (= 1.42.4-1.0tails1), libglib2.0-dev
+Multi-Arch: same
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: libdevel
+Filename: pool/main/n/network-manager/libnm-dev_1.42.4-1.0tails1_amd64.deb
+Size: 718088
+SHA256: 4c4aa48af07342666132cd6e3514cba2dd08db1d528e7be3eb9356ca504605ff
+SHA1: 6e9573fea2b34219edd9ebb358799c942a0b169d
+MD5sum: 4310ef059ca148b33006968ccdf9db9f
+Description: GObject-based client library for NetworkManager (development files)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, Wi-Fi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains header and development files.
+
+Package: libnm0
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 1506
+Depends: libc6 (>= 2.34), libglib2.0-0 (>= 2.43.2), libgnutls30 (>= 3.7.2), libudev1 (>= 183)
+Multi-Arch: same
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: libs
+Filename: pool/main/n/network-manager/libnm0_1.42.4-1.0tails1_amd64.deb
+Size: 436444
+SHA256: 160ed8bfb5b9cec3091f0ea92381130ec4f7ced9b3e8c860c325d32ae75a5c3b
+SHA1: 7ef1a0c09eb0f9e2a111faa0612c9070fb170629
+MD5sum: ee1569847d9f7d23a76a6262036eec89
+Description: GObject-based client library for NetworkManager
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, Wi-Fi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package contains a convenience library to ease the access to
+ NetworkManager.
+
+Package: libnm0-dbgsym
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 2765
+Depends: libnm0 (= 1.42.4-1.0tails1)
+Multi-Arch: same
+Priority: optional
+Section: debug
+Filename: pool/main/n/network-manager/libnm0-dbgsym_1.42.4-1.0tails1_amd64.deb
+Size: 2597752
+SHA256: b70201b8320f4ecdee4cbd22c311c9f041b428b977f8144a0649f8798d197c02
+SHA1: a978a643576c4f3c5954523c2caa8fb4c6e32e69
+MD5sum: 98c7f8817ff7622dc601621ad59bb4ad
+Description: debug symbols for libnm0
+Build-Ids: ba03b4e7b7cb4109ee045dec347852474ed5ded2
+
+Package: live-boot
+Version: 1:20170112
+Architecture: all
+Maintainer: Live Systems Maintainers <debian-live@lists.debian.org>
+Installed-Size: 140
+Depends: live-boot-initramfs-tools | live-boot-backend
+Recommends: live-boot-doc, live-tools, rsync, uuid-runtime
+Suggests: cryptsetup, curlftpfs, httpfs2, wget
+Homepage: https://debian-live.alioth.debian.org/live-boot/
+Priority: optional
+Section: misc
+Filename: pool/main/l/live-boot/live-boot_20170112_all.deb
+Size: 53100
+SHA256: d3d52d7e36d43483cb57bb59b25702ad486a4eb6787f9ad5d855eef1f304357d
+SHA1: 91aa329fca39dca5ab1ba1bf0bb10ab646299b65
+MD5sum: be42395d808daf77908504b857f4f122
+Description: Live System Boot Components
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-boot contains the components to configure a live system during the boot
+ process (early userspace).
+ .
+ In addition to live-boot, a backend for the initrd generation is required, such
+ as live-boot-initramfs-tools.
+
+Package: live-boot-doc
+Source: live-boot
+Version: 1:20170112
+Architecture: all
+Maintainer: Live Systems Maintainers <debian-live@lists.debian.org>
+Installed-Size: 87
+Homepage: https://debian-live.alioth.debian.org/live-boot/
+Priority: optional
+Section: doc
+Filename: pool/main/l/live-boot/live-boot-doc_20170112_all.deb
+Size: 67060
+SHA256: f8fd80c78d908d582cc9f974ac73c3ea26cae36a027ac518607829d5adba5e5d
+SHA1: 21cc8202126b56c1540e6d75246467b68ac8ca1c
+MD5sum: 4c0914fd3ad39eac4c7a917ff07effdc
+Description: Live System Boot Components (documentation)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-boot contains the components to configure a live system during the boot
+ process (early userspace).
+ .
+ This package contains the documentation.
+
+Package: live-boot-initramfs-tools
+Source: live-boot
+Version: 1:20170112
+Architecture: all
+Maintainer: Live Systems Maintainers <debian-live@lists.debian.org>
+Installed-Size: 46
+Depends: busybox | busybox-initramfs, initramfs-tools, udev
+Conflicts: live-boot-backend
+Replaces: live-boot-backend
+Provides: live-boot-backend
+Homepage: https://debian-live.alioth.debian.org/live-boot/
+Priority: optional
+Section: misc
+Filename: pool/main/l/live-boot/live-boot-initramfs-tools_20170112_all.deb
+Size: 30714
+SHA256: 14aad2a6a9f9f58bd65e9e80e5ddd461ccda4920ba1998b7566ab5349a2186d8
+SHA1: c754621fb6b76046cc02cb24ffca1f1b40a3f0ea
+MD5sum: 350b4370b64b7158ee218fa79e03373b
+Description: Live System Boot Components (initramfs-tools backend)
+ The Live Systems project maintains the components to build Debian based Live
+ systems and the official Debian Live images themselves.
+ .
+ live-boot contains the components to configure a live system during the boot
+ process (early userspace).
+ .
+ This package contains the initramfs-tools backend.
+
+Package: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 15145
+Depends: libaudit1 (>= 1:2.2.1), libbluetooth3 (>= 4.91), libc6 (>= 2.34), libcurl3-gnutls (>= 7.24.0), libglib2.0-0 (>= 2.68.0), libgnutls30 (>= 3.7.2), libjansson4 (>= 2.14), libmm-glib0 (>= 1.4.0), libndp0 (>= 1.2), libnewt0.52 (>= 0.52.23), libnm0 (= 1.42.4-1.0tails1), libpsl5 (>= 0.13.0), libreadline8 (>= 6.0), libselinux1 (>= 3.1~), libsystemd0 (>= 209), libteamdctl0 (>= 1.9), libudev1 (>= 183), default-dbus-system-bus | dbus-system-bus, udev, adduser, polkitd | policykit-1
+Recommends: ppp, dnsmasq-base, modemmanager, wireless-regdb, wpasupplicant, libpam-systemd
+Suggests: libteam-utils, iptables
+Breaks: ppp (>= 2.4.9-2~), ppp (<< 2.4.9-1+~)
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: net
+Filename: pool/main/n/network-manager/network-manager_1.42.4-1.0tails1_amd64.deb
+Size: 3140264
+SHA256: 2d05444337fd947f455da51931ba6927dd514b1faf94b0e9dcab8c6efd3d8b56
+SHA1: 458e72f78ece9188f9f65be5b2eb45c87fc225f8
+MD5sum: ae9547bc6a8c31976b310595a5c85205
+Description: network management framework (daemon and userspace tools)
+ NetworkManager is a system network service that manages your network devices
+ and connections, attempting to keep active network connectivity when
+ available. It manages ethernet, Wi-Fi, mobile broadband (WWAN), and PPPoE
+ devices, and provides VPN integration with a variety of different VPN
+ services.
+ .
+ This package provides the userspace daemons and a command line interface to
+ interact with NetworkManager.
+ .
+ Optional dependencies:
+  * ppp: Required for establishing dial-up connections (e.g. via GSM).
+  * dnsmasq-base/iptables: Required for creating Ad-hoc connections and
+    connection sharing.
+  * libteam-utils: Network Team driver allows multiple network interfaces to be
+    teamed together and act like a single one. This process is called "ethernet
+    bonding", "channel teaming" or "link aggregation".
+
+Package: network-manager-config-connectivity-debian
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: all
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 20
+Depends: network-manager (>= 1.42.4-1.0tails1)
+Multi-Arch: foreign
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: net
+Filename: pool/main/n/network-manager/network-manager-config-connectivity-debian_1.42.4-1.0tails1_all.deb
+Size: 7820
+SHA256: c9bde6a2419aab162e5bf22506ede4461596bd6469aca68043985dba15f37abc
+SHA1: aa62b13ff09d3f853d5ae0c8e73e1acbfc7f7150
+MD5sum: 22f95df2cae20625a2a294a93062cd04
+Description: NetworkManager configuration to enable connectivity checking
+ This package contains a configuration file which enables NetworkManager's
+ connectivity checking functionality.
+ .
+ NetworkManager will try to connect to a Debian server to determine the
+ connection status.
+ .
+ This is particularly useful for captive portal detection.
+ .
+ No user data is transmitted in the connectivity checks, but merely contacting
+ the Debian connectivity check servers reveals that the user is running a
+ Debian(-based) operating system with NetworkManager.
+
+Package: network-manager-dbgsym
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 11691
+Depends: network-manager (= 1.42.4-1.0tails1)
+Priority: optional
+Section: debug
+Filename: pool/main/n/network-manager/network-manager-dbgsym_1.42.4-1.0tails1_amd64.deb
+Size: 10969492
+SHA256: eb3b030e11b23e0941646f11f72a2164b9f001c49b93e66777ced9c50ef47bfc
+SHA1: 5ff8593a26e5c6e45b1c5892041e6862fe74158e
+MD5sum: 7fce377fdefcaf751c7922ba69de27de
+Description: debug symbols for network-manager
+Build-Ids: 1fcc84c061021bdbe836ea599e64c3e9ca69495e 21edacd0ff0ed67bcf337a968510f2ea54ba369c 260a467837d3fbc84bc32970531c2102dc4addc5 2b518d8de851d9a384018b2ec717cd243cc7bb43 2c59199ff3ab8c8fee782e13ba36bf47f9c1e843 33ba131982d139e80d3977e213605c42a7d848de 35ce74c006395eb8f7f7dd73b0b317d3da541d79 42c95e6b2285d7cbb25466df561e58cdf1631c51 483ec89f73ab3fbeb110dad7ea7c0d30f7421bd9 48c72246fb0e915437bbcb48f5cca0435f99f466 57ed6a1ad7a9587540705807d703e11e6308b77b 71bf056c162ca619648a15d38915e196f16328d4 85d7bec9ae3c0ec49177c5f012c9860e3d6bbea3 9c3ea0f6bd3f41ec80e493c514ef3ad48b1452f9 a1af9dd4865ef2f365bafd9e5492e5a22a5b1377 a78041f0d6bc6fcc64342b9ab1612a8191d444f6 afb276817f51945899c8c11517506cd27c816383 d2334dbbc7c7fce67b4517f2f57f0d2775d59143
+
+Package: network-manager-dev
+Source: network-manager
+Version: 1.42.4-1.0tails1
+Architecture: all
+Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Installed-Size: 2372
+Multi-Arch: foreign
+Homepage: https://wiki.gnome.org/Projects/NetworkManager
+Priority: optional
+Section: devel
+Filename: pool/main/n/network-manager/network-manager-dev_1.42.4-1.0tails1_all.deb
+Size: 213812
+SHA256: c9350937e1a7129f9791081f1949fb12e31ba301a0a490e99286fcab37578ed8
+SHA1: 9981365f924b50a9982bb3f9b4b4855db799ce30
+MD5sum: afbfdb871ffc889874eb489b99c40479
+Description: network management framework (development files)
+ This package provides documentation of the NetworkManager D-Bus API, the
+ configuration formats and command line utilities.
+ It also provides D-Bus introspection files.
+
+Package: onionshare
+Version: 2.6.2-1~0.tails1
+Architecture: all
+Maintainer: Debian Privacy Tools Maintainers <pkg-privacy-maintainers@lists.alioth.debian.org>
+Installed-Size: 3152
+Depends: onionshare-cli, python3-gnupg, python3-qrcode, python3-qtpy, python3-werkzeug, python3:any
+Homepage: https://onionshare.org
+Priority: optional
+Section: net
+Filename: pool/main/o/onionshare/onionshare_2.6.2-1~0.tails1_all.deb
+Size: 1217872
+SHA256: d20e5883165aef3dfe685abb817f90bd1b58168097704e169eb9e400a25159cb
+SHA1: 501f7e29632d0e84af5f2c63f7a3e51a97a8fa1b
+MD5sum: cac8b88a06ce7b7b44c25e33f354b343
+Description: Share a file over Tor Hidden Services anonymously and securely
+ OnionShare lets you securely and anonymously share a file of any size with
+ someone. It works by starting a web server, making it accessible as a Tor
+ hidden service, and generating an unguessable URL to access and download
+ the file. It doesn't require setting up a server on the Internet somewhere
+ or using a third party filesharing service. You host the file on your own
+ computer and use a Tor hidden service to make it temporarily accessible
+ over the Internet. The other user just needs to use the Tor Browser and
+ TO Enter the URL to download the file from you.
+
+Package: onionshare-cli
+Source: onionshare
+Version: 2.6.2-1~0.tails1
+Architecture: all
+Maintainer: Debian Privacy Tools Maintainers <pkg-privacy-maintainers@lists.alioth.debian.org>
+Installed-Size: 619
+Depends: tor, cython3, python3-cffi, python3-click, python3-colorama, python3-eventlet, python3-flask (>= 3.0.0), python3-flask (<< 4.0.0), python3-flask-compress, python3-flask-socketio, python3-gevent, python3-gevent-websocket, python3-nacl, python3-packaging, python3-pkg-resources, python3-psutil, python3-qrcode, python3-requests, python3-socks, python3-stem (>= 1.8.1), python3-unidecode, python3-urllib3, python3-waitress, python3-werkzeug, python3-wheel, python3:any
+Recommends: obfs4proxy
+Homepage: https://onionshare.org
+Priority: optional
+Section: net
+Filename: pool/main/o/onionshare/onionshare-cli_2.6.2-1~0.tails1_all.deb
+Size: 152524
+SHA256: 66bb8e67dc665e44fcedf0999bc497445561ccaa91764394cc31058b1c4ba14a
+SHA1: 64bbcf6a24d82335fa8abe2639d03f91be7f6953
+MD5sum: 2c6eff86e6613e1a8c38a0214309bc5e
+Description: Share a file over Tor Hidden Services anonymously and securely - cli
+ OnionShare lets you securely and anonymously share a file of any size with
+ someone. It works by starting a web server, making it accessible as a Tor
+ hidden service, and generating an unguessable URL to access and download
+ the file. It doesn't require setting up a server on the Internet somewhere
+ or using a third party filesharing service. You host the file on your own
+ computer and use a Tor hidden service to make it temporarily accessible
+ over the Internet. The other user just needs to use the Tor Browser and
+ TO Enter the URL to download the file from you.
+ .
+ This package is the Commandline interface of Onionshare.
+

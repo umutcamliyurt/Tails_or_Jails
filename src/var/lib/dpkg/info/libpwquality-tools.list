@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/bin
+/usr/bin/pwmake
+/usr/bin/pwscore
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpwquality-tools
+/usr/share/doc/libpwquality-tools/changelog.Debian.amd64.gz
+/usr/share/doc/libpwquality-tools/changelog.Debian.gz
+/usr/share/doc/libpwquality-tools/changelog.gz
+/usr/share/doc/libpwquality-tools/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/pwmake.1.gz
+/usr/share/man/man1/pwscore.1.gz

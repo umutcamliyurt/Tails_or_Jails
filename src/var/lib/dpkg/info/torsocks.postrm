@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+dpkg-maintscript-helper mv_conffile \
+	/etc/torsocks.conf /etc/tor/torsocks.conf 2.0~ -- "$@"
+
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/bash_completion.d/torsocks 2.2.0\~rc1-1\~ -- "$@"
+dpkg-maintscript-helper mv_conffile /etc/torsocks.conf /etc/tor/torsocks.conf 2.0\~ -- "$@"
+# End automatically added section
+

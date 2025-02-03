@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpath-tiny-perl
+/usr/share/doc/libpath-tiny-perl/changelog.Debian.gz
+/usr/share/doc/libpath-tiny-perl/changelog.gz
+/usr/share/doc/libpath-tiny-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/Path::Tiny.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/Path
+/usr/share/perl5/Path/Tiny.pm

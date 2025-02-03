@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/dbus-1/system.d/org.gnome.SettingsDaemon.DateTimeMechanism.conf 3.8.2-2\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/gnome-settings-daemon.desktop 3.24.2-1\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/org.gnome.SettingsDaemon.A11yKeyboard.desktop 3.27.90-1\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/org.gnome.SettingsDaemon.Clipboard.desktop 3.33.90-2\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/org.gnome.SettingsDaemon.Mouse.desktop 3.33.90-2\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/org.gnome.SettingsDaemon.Orientation.desktop 3.25.92-1\~ gnome-settings-daemon -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/xdg/autostart/org.gnome.SettingsDaemon.XRANDR.desktop 3.25.92-1\~ gnome-settings-daemon -- "$@"
+# End automatically added section

@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/tesseract-ocr-osd
+/usr/share/doc/tesseract-ocr-osd/changelog.Debian.gz
+/usr/share/doc/tesseract-ocr-osd/changelog.gz
+/usr/share/doc/tesseract-ocr-osd/copyright
+/usr/share/tesseract-ocr
+/usr/share/tesseract-ocr/5
+/usr/share/tesseract-ocr/5/tessdata
+/usr/share/tesseract-ocr/5/tessdata/osd.traineddata

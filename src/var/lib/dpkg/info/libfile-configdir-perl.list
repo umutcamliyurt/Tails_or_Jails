@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libfile-configdir-perl
+/usr/share/doc/libfile-configdir-perl/README.md.gz
+/usr/share/doc/libfile-configdir-perl/changelog.Debian.gz
+/usr/share/doc/libfile-configdir-perl/changelog.gz
+/usr/share/doc/libfile-configdir-perl/copyright
+/usr/share/man
+/usr/share/man/man3
+/usr/share/man/man3/File::ConfigDir.3pm.gz
+/usr/share/perl5
+/usr/share/perl5/File
+/usr/share/perl5/File/ConfigDir.pm

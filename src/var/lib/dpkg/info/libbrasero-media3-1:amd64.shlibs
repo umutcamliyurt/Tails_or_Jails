@@ -1,0 +1,3 @@
+libbrasero-burn3 1 libbrasero-media3-1 (>= 3.0.0)
+libbrasero-media3 1 libbrasero-media3-1 (>= 3.0.0)
+libbrasero-utils3 1 libbrasero-media3-1 (>= 3.0.0)

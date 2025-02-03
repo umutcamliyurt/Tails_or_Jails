@@ -1,0 +1,36 @@
+# Author: Changwoo Ryu <cwryu@debian.org>
+
+#include <tunables/global>
+
+/usr/libexec/ibus-setup-hangul flags=(complain,attach_disconnected) {
+    #include <abstractions/base>
+
+    /{,usr/}bin/bash ixr,
+    /{,usr/}bin/dash ixr,
+
+    /usr/bin/python* Cx -> python_profile,
+    profile python_profile flags=(complain,attach_disconnected) {
+	#include <abstractions/base>
+	#include <abstractions/dconf>
+	#include <abstractions/python>
+	#include <abstractions/dbus-session-strict>
+	#include <abstractions/gnome>
+	#include <abstractions/libhangul1>
+
+	# mapping python itself
+	/usr/bin/python3.* r,
+	# gobject-introspection python cache
+	/usr/lib/python3/dist-packages/gi/overrides/__pycache__/*.pyc* rw,
+
+	/usr/share/ibus-hangul/icons/* r,
+	/usr/share/ibus-hangul/setup/ r,
+	/usr/share/ibus-hangul/setup/** r,
+
+	/usr/share/glib-2.0/schemas/gschemas.compiled r,
+	owner @{HOME}/.{cache,config}/ibus/bus/ rw,
+	owner @{HOME}/.{cache,config}/ibus/bus/* rw,
+
+	owner /{,var/}run/user/*/dconf/user rw,
+	owner @{HOME}/.config/dconf/user rw,
+    }
+}

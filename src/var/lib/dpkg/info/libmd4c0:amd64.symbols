@@ -1,0 +1,3 @@
+libmd4c.so.0 libmd4c0 #MINVER#
+* Build-Depends-Package: libmd4c-dev
+ md_parse@Base 0.2.7

@@ -1,0 +1,348 @@
+
+Log started: 2025-02-02  15:11:06
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149922 files and directories currently installed.)
+Removing torsocks (2.4.0-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:11:10
+
+Log started: 2025-02-02  15:11:54
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149906 files and directories currently installed.)
+Removing onionshare (2.6.2-1~0.tails1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare, directory '/usr/share/onionshare' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare, directory '/usr/lib/python3/dist-packages/onionshare/tab/mode/website_mode' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare, directory '/usr/lib/python3/dist-packages/onionshare/tab/mode/share_mode' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare, directory '/usr/lib/python3/dist-packages/onionshare/tab/mode/receive_mode' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare, directory '/usr/lib/python3/dist-packages/onionshare/tab/mode/chat_mode' not empty so not removed
+Removing onionshare-cli (2.6.2-1~0.tails1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing onionshare-cli, directory '/usr/lib/python3/dist-packages/onionshare_cli/web' not empty so not removed
+Removing tor-geoipdb (0.4.8.13-1~d12.bookworm+1) ...
+Removing tor (0.4.8.13-1~d12.bookworm+1) ...
+Running in chroot, ignoring request.
+Stopping tor daemon...done (not running - there is no /run/tor/tor.pid).
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1.1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for mailcap (3.70+nmu1) ...
+Processing triggers for desktop-file-utils (0.26-1) ...
+Log ended: 2025-02-02  15:11:56
+
+Log started: 2025-02-02  15:12:03
+Selecting previously unselected package tor.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149319 files and directories currently installed.)
+Preparing to unpack .../tor_0.4.8.13-1~d12.bookworm+1_amd64.deb ...
+Unpacking tor (0.4.8.13-1~d12.bookworm+1) ...
+Setting up tor (0.4.8.13-1~d12.bookworm+1) ...
+Running in chroot, ignoring request.
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:12:06
+
+Log started: 2025-02-02  15:13:03
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149360 files and directories currently installed.)
+Removing firmware-b43-installer (1:019-8) ...
+/var/lib/dpkg/info/firmware-b43-installer.prerm: Deleting installed firmware...
+Removing firmware-b43legacy-installer (1:019-8) ...
+/var/lib/dpkg/info/firmware-b43legacy-installer.prerm: Deleting installed firmware...
+Removing hplip (3.22.10+dfsg0-2) ...
+Removing wget (1.21.3-1+b2) ...
+Processing triggers for dbus (1.14.10-1~deb12u1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:13:04
+
+Log started: 2025-02-02  15:13:11
+Selecting previously unselected package wget.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149197 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:13:12
+
+Log started: 2025-02-02  15:13:24
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149285 files and directories currently installed.)
+Purging configuration files for torsocks (2.4.0-1) ...
+Log ended: 2025-02-02  15:13:24
+
+Log started: 2025-02-02  15:13:35
+Selecting previously unselected package torsocks.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149285 files and directories currently installed.)
+Preparing to unpack .../torsocks_2.4.0-1_amd64.deb ...
+Unpacking torsocks (2.4.0-1) ...
+Setting up torsocks (2.4.0-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:13:36
+
+Log started: 2025-02-02  15:50:58
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149301 files and directories currently installed.)
+Removing tor (0.4.8.13-1~d12.bookworm+1) ...
+Running in chroot, ignoring request.
+Stopping tor daemon...done (not running - there is no /run/tor/tor.pid).
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:51:00
+
+Log started: 2025-02-02  15:51:04
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149260 files and directories currently installed.)
+Removing torsocks (2.4.0-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  15:51:05
+
+Log started: 2025-02-02  16:06:06
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149244 files and directories currently installed.)
+Removing wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Purging configuration files for wget (1.21.3-1+b2) ...
+Log ended: 2025-02-02  16:06:07
+
+Log started: 2025-02-02  16:06:11
+Selecting previously unselected package wget.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:06:12
+
+Log started: 2025-02-02  16:06:30
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149244 files and directories currently installed.)
+Removing wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Purging configuration files for wget (1.21.3-1+b2) ...
+Log ended: 2025-02-02  16:06:31
+
+Log started: 2025-02-02  16:06:34
+Selecting previously unselected package wget.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:06:35
+
+Log started: 2025-02-02  16:08:03
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149245 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) over (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:08:05
+
+Log started: 2025-02-02  16:08:33
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149244 files and directories currently installed.)
+Removing wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Purging configuration files for wget (1.21.3-1+b2) ...
+Log ended: 2025-02-02  16:08:34
+
+Log started: 2025-02-02  16:08:48
+Selecting previously unselected package wget.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149155 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:08:49
+
+Log started: 2025-02-02  16:11:44
+Selecting previously unselected package tor.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149245 files and directories currently installed.)
+Preparing to unpack .../tor_0.4.8.13-1~d12.bookworm+1_amd64.deb ...
+Unpacking tor (0.4.8.13-1~d12.bookworm+1) ...
+Setting up tor (0.4.8.13-1~d12.bookworm+1) ...
+Running in chroot, ignoring request.
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:11:47
+
+Log started: 2025-02-02  16:13:06
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149286 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) over (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:13:07
+
+Log started: 2025-02-02  16:13:30
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149285 files and directories currently installed.)
+Removing cython3 (0.29.32-2+b1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/pyximport' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Utility' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Tests' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Tempita' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Runtime' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Plex' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Distutils' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Debugger/Tests' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Compiler/Tests' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing cython3, directory '/usr/lib/python3/dist-packages/Cython/Build/Tests' not empty so not removed
+Removing hplip-data (3.22.10+dfsg0-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/ui5' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/scan' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/prnt' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/pcard' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/installer' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/fax' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/copier' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing hplip-data, directory '/usr/share/hplip/base/pexpect' not empty so not removed
+Removing python3-gevent-websocket (0.10.1-5) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent-websocket, directory '/usr/lib/python3/dist-packages/geventwebsocket/protocols' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent-websocket, directory '/usr/lib/python3/dist-packages/geventwebsocket/gunicorn' not empty so not removed
+Removing python3-gevent (22.10.2-3) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent, directory '/usr/lib/python3/dist-packages/gevent/resolver' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent, directory '/usr/lib/python3/dist-packages/gevent/libuv' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent, directory '/usr/lib/python3/dist-packages/gevent/libev' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-gevent, directory '/usr/lib/python3/dist-packages/gevent/_ffi' not empty so not removed
+Removing libc-ares2:amd64 (1.18.1-3) ...
+Removing libev4:amd64 (1:4.33-1) ...
+Removing python3-qtpy (2.3.0-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-qtpy, directory '/usr/lib/python3/dist-packages/qtpy/tests' not empty so not removed
+Removing python3-pyqt5.qtchart (5.15.6+dfsg-1) ...
+Removing libqt5charts5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtpositioning (5.15.9+dfsg-1) ...
+Removing libqt5location5:amd64 (5.15.8+dfsg-3+deb12u1) ...
+Removing python3-pyqt5.qtmultimedia (5.15.9+dfsg-1) ...
+Removing libqt5multimediawidgets5:amd64 (5.15.8-2) ...
+Removing libqt5multimedia5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtopengl (5.15.9+dfsg-1) ...
+Removing libqt5opengl5:amd64 (5.15.8+dfsg-11+deb12u2) ...
+Removing python3-pyqt5.qtwebkit (5.15.9+dfsg-1) ...
+Removing libqt5webkit5:amd64 (5.212.0~alpha4-30) ...
+Removing libqt5positioningquick5:amd64 (5.15.8+dfsg-3+deb12u1) ...
+Removing libqt5positioning5:amd64 (5.15.8+dfsg-3+deb12u1) ...
+Removing python3-pyqt5.qtquick (5.15.9+dfsg-1) ...
+Removing libqt5quickwidgets5:amd64 (5.15.8+dfsg-3) ...
+Removing python3-pyqt5.qtremoteobjects (5.15.9+dfsg-1) ...
+Removing libqt5remoteobjects5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtsensors (5.15.9+dfsg-1) ...
+Removing libqt5sensors5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtserialport (5.15.9+dfsg-1) ...
+Removing libqt5serialport5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtwebchannel (5.15.9+dfsg-1) ...
+Removing libqt5webchannel5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtwebsockets (5.15.9+dfsg-1) ...
+Removing libqt5websockets5:amd64 (5.15.8-2) ...
+Removing python3-pyqt5.qtxmlpatterns (5.15.9+dfsg-1) ...
+Removing libqt5xmlpatterns5:amd64 (5.15.8-2) ...
+Removing python3-flask-socketio (5.3.2-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-flask-socketio, directory '/usr/lib/python3/dist-packages/flask_socketio' not empty so not removed
+Removing python3-socketio (5.7.2-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-socketio, directory '/usr/lib/python3/dist-packages/socketio' not empty so not removed
+Removing python3-bidict (0.22.1-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-bidict, directory '/usr/lib/python3/dist-packages/bidict' not empty so not removed
+Removing python3-flask-compress (1.4.0-5) ...
+Removing python3-flask (3.1.0-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-flask, directory '/usr/lib/python3/dist-packages/flask/sansio' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-flask, directory '/usr/lib/python3/dist-packages/flask/json' not empty so not removed
+Removing python3-blinker (1.9.0-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-blinker, directory '/usr/lib/python3/dist-packages/blinker' not empty so not removed
+Removing python3-cffi (1.15.1-5) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-cffi, directory '/usr/lib/python3/dist-packages/cffi' not empty so not removed
+Removing python3-click (8.1.3-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-click, directory '/usr/lib/python3/dist-packages/click' not empty so not removed
+Removing python3-colorama (0.4.6-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-colorama, directory '/usr/lib/python3/dist-packages/colorama/tests' not empty so not removed
+Removing python3-engineio (4.3.4-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-engineio, directory '/usr/lib/python3/dist-packages/engineio/async_drivers' not empty so not removed
+Removing python3-eventlet (0.33.1-4) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/zipkin/_thrift/zipkinCore' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/support' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/hubs' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/greenio' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/green/urllib' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/green/http' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-eventlet, directory '/usr/lib/python3/dist-packages/eventlet/green/OpenSSL' not empty so not removed
+Removing python3-greenlet (2.0.2-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-greenlet, directory '/usr/lib/python3/dist-packages/greenlet/tests' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-greenlet, directory '/usr/lib/python3/dist-packages/greenlet/platform' not empty so not removed
+Removing python3-itsdangerous (2.2.0-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-itsdangerous, directory '/usr/lib/python3/dist-packages/itsdangerous' not empty so not removed
+Removing python3-jinja2 (3.1.2-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-jinja2, directory '/usr/lib/python3/dist-packages/jinja2' not empty so not removed
+Removing python3-werkzeug (3.1.3-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/wrappers' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/sansio' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/routing' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/middleware' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/debug' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-werkzeug, directory '/usr/lib/python3/dist-packages/werkzeug/datastructures' not empty so not removed
+Removing python3-markupsafe (2.1.2-1+b1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-markupsafe, directory '/usr/lib/python3/dist-packages/markupsafe' not empty so not removed
+Removing python3-nacl (1.5.0-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-nacl, directory '/usr/lib/python3/dist-packages/nacl/pwhash' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-nacl, directory '/usr/lib/python3/dist-packages/nacl/bindings' not empty so not removed
+Removing python3-pexpect (4.8.0-4) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-pexpect, directory '/usr/lib/python3/dist-packages/pexpect' not empty so not removed
+Removing python3-pycparser (2.21-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-pycparser, directory '/usr/lib/python3/dist-packages/pycparser' not empty so not removed
+Removing python3-ply (3.11-5) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-ply, directory '/usr/lib/python3/dist-packages/ply' not empty so not removed
+Removing python3-ptyprocess (0.7.0-5) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-ptyprocess, directory '/usr/lib/python3/dist-packages/ptyprocess' not empty so not removed
+Removing python3-pyqt5.qtsql (5.15.9+dfsg-1) ...
+Removing python3-pyqt5.qtsvg (5.15.9+dfsg-1) ...
+Removing python3-pyqt5.qttexttospeech (5.15.9+dfsg-1) ...
+Removing python3-reportlab (3.6.12-1+deb12u1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/platypus' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/pdfgen' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/pdfbase' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/graphics/widgets' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/graphics/samples' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/graphics/charts' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab, directory '/usr/lib/python3/dist-packages/reportlab/graphics/barcode' not empty so not removed
+Removing python3-reportlab-accel:amd64 (3.6.12-1+deb12u1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-reportlab-accel:amd64, directory '/usr/lib/python3/dist-packages/reportlab/lib' not empty so not removed
+Removing python3-unidecode (1.3.6-1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-unidecode, directory '/usr/lib/python3/dist-packages/unidecode' not empty so not removed
+Removing python3-waitress (2.1.2-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-waitress, directory '/usr/lib/python3/dist-packages/waitress' not empty so not removed
+Removing python3-wheel (0.38.4-2) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-wheel, directory '/usr/lib/python3/dist-packages/wheel/vendored/packaging' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-wheel, directory '/usr/lib/python3/dist-packages/wheel/cli' not empty so not removed
+Removing python3-zope.event (4.4-3) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-zope.event, directory '/usr/lib/python3/dist-packages/zope/event' not empty so not removed
+Removing python3-zope.interface (5.5.2-1+b1) ...
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-zope.interface, directory '/usr/lib/python3/dist-packages/zope/interface/tests' not empty so not removed
+[1mdpkg:[0m [1;33mwarning:[0m while removing python3-zope.interface, directory '/usr/lib/python3/dist-packages/zope/interface/common/tests' not empty so not removed
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+Log ended: 2025-02-02  16:13:37
+
+Log started: 2025-02-02  16:14:08
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146399 files and directories currently installed.)
+Preparing to unpack .../wget_1.21.3-1+b2_amd64.deb ...
+Unpacking wget (1.21.3-1+b2) over (1.21.3-1+b2) ...
+Setting up wget (1.21.3-1+b2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  16:14:12
+
+Log started: 2025-02-02  19:27:58
+Selecting previously unselected package torsocks.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146399 files and directories currently installed.)
+Preparing to unpack .../torsocks_2.4.0-1_amd64.deb ...
+Unpacking torsocks (2.4.0-1) ...
+Setting up torsocks (2.4.0-1) ...
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  19:28:01
+
+Log started: 2025-02-02  20:10:13
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146415 files and directories currently installed.)
+Preparing to unpack .../tor_0.4.8.13-1~d12.bookworm+1_amd64.deb ...
+Unpacking tor (0.4.8.13-1~d12.bookworm+1) over (0.4.8.13-1~d12.bookworm+1) ...
+Setting up tor (0.4.8.13-1~d12.bookworm+1) ...
+Running in chroot, ignoring request.
+Processing triggers for man-db (2.11.2-2) ...
+Log ended: 2025-02-02  20:10:17
+
+Log started: 2025-02-02  20:12:30
+Selecting previously unselected package python3-wheel.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146415 files and directories currently installed.)
+Preparing to unpack .../python3-wheel_0.38.4-2_all.deb ...
+Unpacking python3-wheel (0.38.4-2) ...
+Setting up python3-wheel (0.38.4-2) ...
+Log ended: 2025-02-02  20:12:30
+
+Log started: 2025-02-02  20:12:55
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146445 files and directories currently installed.)
+Removing python3-wheel (0.38.4-2) ...
+Log ended: 2025-02-02  20:12:55
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

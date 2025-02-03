@@ -1,0 +1,95 @@
+#!/bin/sh
+set -e
+
+action=$1
+version=$2
+
+# generate default file if it doesn't exist
+if [ ! -e /etc/default/ferm ]; then
+	cat > /etc/default/ferm <<-END
+	# configuration for /etc/init.d/ferm
+
+	# use iptables-restore for fast firewall initialization?
+	FAST=yes
+
+	# cache the output of ferm --lines in /var/cache/ferm?
+	CACHE=no
+
+	# additional paramaters for ferm (like --def '\$foo=bar')
+	OPTIONS=
+
+	# Enable the ferm init script? (i.e. run on bootup)
+	END
+fi
+
+if [ "$action" = configure ]; then
+    . /usr/share/debconf/confmodule
+    db_version 2.0
+
+    # get values from debconf db
+    db_get ferm/enable
+    if [ "$RET" = "false" ]; then
+	    VALUE="no"
+    else
+	    VALUE="yes"
+    fi
+
+    # If the admin deleted or commented some variables but then set
+    # them via debconf, (re-)add them to the configuration file
+    grep -Eq '^ *ENABLED=' /etc/default/ferm || \
+	    echo "ENABLED=\"$VALUE\"" >> /etc/default/ferm
+
+    # make the firewall configuration readable only by root and group adm
+    if ! dpkg-statoverride --list /etc/ferm > /dev/null 2>&1
+    then
+        if [ -d /etc/ferm ]; then
+            chown -R root:adm /etc/ferm
+            chmod 2750 /etc/ferm
+        fi
+    fi
+fi
+
+# Automatically added by dh_installinit/13.10
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -z "${DPKG_ROOT:-}" ] && [ -x "/etc/init.d/ferm" ]; then
+		update-rc.d ferm defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native ferm $_dh_action || exit 1
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'ferm.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'ferm.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'ferm.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'ferm.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.10
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'ferm.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+

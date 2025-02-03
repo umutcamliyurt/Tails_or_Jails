@@ -1,0 +1,230 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.anvil 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.config 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.deliver 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dict 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-auth 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.dovecot-lda 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.imap-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.lmtp 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.log 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.managesieve-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.pop3-login 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.lib.dovecot.ssl-params 2.13-3\~ -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/apparmor.d/usr.sbin.dovecot 2.13-3\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.traceroute" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.traceroute" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.traceroute" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.traceroute" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.traceroute" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.smbldap-useradd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.smbldap-useradd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.smbldap-useradd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.smbldap-useradd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.smbldap-useradd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.smbd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.smbd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.smbd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.smbd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.smbd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.nscd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.nscd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.nscd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.nscd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.nscd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.nmbd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.nmbd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.nmbd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.nmbd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.nmbd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.mdnsd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.mdnsd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.mdnsd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.mdnsd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.mdnsd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.identd" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.identd" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.identd" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.identd" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.identd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.dnsmasq" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.dnsmasq" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.dnsmasq" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.dnsmasq" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.dnsmasq" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/usr.sbin.avahi-daemon" ] ; then
+    rm -f "/etc/apparmor.d/disable/usr.sbin.avahi-daemon" || true
+    rm -f "/etc/apparmor.d/force-complain/usr.sbin.avahi-daemon" || true
+    rm -f "/etc/apparmor.d/local/usr.sbin.avahi-daemon" || true
+    rm -f /var/cache/apparmor/*/"usr.sbin.avahi-daemon" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/sbin.syslogd" ] ; then
+    rm -f "/etc/apparmor.d/disable/sbin.syslogd" || true
+    rm -f "/etc/apparmor.d/force-complain/sbin.syslogd" || true
+    rm -f "/etc/apparmor.d/local/sbin.syslogd" || true
+    rm -f /var/cache/apparmor/*/"sbin.syslogd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/sbin.syslog-ng" ] ; then
+    rm -f "/etc/apparmor.d/disable/sbin.syslog-ng" || true
+    rm -f "/etc/apparmor.d/force-complain/sbin.syslog-ng" || true
+    rm -f "/etc/apparmor.d/local/sbin.syslog-ng" || true
+    rm -f /var/cache/apparmor/*/"sbin.syslog-ng" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/sbin.klogd" ] ; then
+    rm -f "/etc/apparmor.d/disable/sbin.klogd" || true
+    rm -f "/etc/apparmor.d/force-complain/sbin.klogd" || true
+    rm -f "/etc/apparmor.d/local/sbin.klogd" || true
+    rm -f /var/cache/apparmor/*/"sbin.klogd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/samba-rpcd-spoolss" ] ; then
+    rm -f "/etc/apparmor.d/disable/samba-rpcd-spoolss" || true
+    rm -f "/etc/apparmor.d/force-complain/samba-rpcd-spoolss" || true
+    rm -f "/etc/apparmor.d/local/samba-rpcd-spoolss" || true
+    rm -f /var/cache/apparmor/*/"samba-rpcd-spoolss" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/samba-rpcd-classic" ] ; then
+    rm -f "/etc/apparmor.d/disable/samba-rpcd-classic" || true
+    rm -f "/etc/apparmor.d/force-complain/samba-rpcd-classic" || true
+    rm -f "/etc/apparmor.d/local/samba-rpcd-classic" || true
+    rm -f /var/cache/apparmor/*/"samba-rpcd-classic" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/samba-rpcd" ] ; then
+    rm -f "/etc/apparmor.d/disable/samba-rpcd" || true
+    rm -f "/etc/apparmor.d/force-complain/samba-rpcd" || true
+    rm -f "/etc/apparmor.d/local/samba-rpcd" || true
+    rm -f /var/cache/apparmor/*/"samba-rpcd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/samba-dcerpcd" ] ; then
+    rm -f "/etc/apparmor.d/disable/samba-dcerpcd" || true
+    rm -f "/etc/apparmor.d/force-complain/samba-dcerpcd" || true
+    rm -f "/etc/apparmor.d/local/samba-dcerpcd" || true
+    rm -f /var/cache/apparmor/*/"samba-dcerpcd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/samba-bgqd" ] ; then
+    rm -f "/etc/apparmor.d/disable/samba-bgqd" || true
+    rm -f "/etc/apparmor.d/force-complain/samba-bgqd" || true
+    rm -f "/etc/apparmor.d/local/samba-bgqd" || true
+    rm -f /var/cache/apparmor/*/"samba-bgqd" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/php-fpm" ] ; then
+    rm -f "/etc/apparmor.d/disable/php-fpm" || true
+    rm -f "/etc/apparmor.d/force-complain/php-fpm" || true
+    rm -f "/etc/apparmor.d/local/php-fpm" || true
+    rm -f /var/cache/apparmor/*/"php-fpm" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_apparmor/3.0.8-3
+if [ "$1" = "purge" ] && ! [ -e "/etc/apparmor.d/bin.ping" ] ; then
+    rm -f "/etc/apparmor.d/disable/bin.ping" || true
+    rm -f "/etc/apparmor.d/force-complain/bin.ping" || true
+    rm -f "/etc/apparmor.d/local/bin.ping" || true
+    rm -f /var/cache/apparmor/*/"bin.ping" || true
+    rmdir /etc/apparmor.d/disable 2>/dev/null || true
+    rmdir /etc/apparmor.d/local   2>/dev/null || true
+    rmdir /etc/apparmor.d         2>/dev/null || true
+fi
+# End automatically added section

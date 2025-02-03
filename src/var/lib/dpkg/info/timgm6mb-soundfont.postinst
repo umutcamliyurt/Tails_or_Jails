@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+case $1 in
+configure)
+	# need the directories existing before update-alternatives
+	mkdir -p /usr/share/sounds/sf2 /usr/share/sounds/sf3
+	# see #929185 for the history behind this
+	update-alternatives --force --install \
+	    /usr/share/sounds/sf2/default-GM.sf2 default-GM.sf2 \
+	    /usr/share/sounds/sf2/TimGM6mb.sf2 20
+	update-alternatives --force --install \
+	    /usr/share/sounds/sf3/default-GM.sf3 default-GM.sf3 \
+	    /usr/share/sounds/sf2/TimGM6mb.sf2 20
+	;;
+
+abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+triggered)
+	;;
+
+*)
+	echo >&2 "postinst called with unknown subcommand '$1'"
+	exit 1
+	;;
+esac
+
+
+
+exit 0

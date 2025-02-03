@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libdaemon.so.0.5.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libdaemon0
+/usr/share/doc/libdaemon0/changelog.Debian.gz
+/usr/share/doc/libdaemon0/copyright
+/usr/lib/x86_64-linux-gnu/libdaemon.so.0

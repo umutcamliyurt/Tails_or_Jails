@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libmysofa.so.1.3.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmysofa1
+/usr/share/doc/libmysofa1/changelog.Debian.gz
+/usr/share/doc/libmysofa1/copyright
+/usr/share/libmysofa
+/usr/share/libmysofa/MIT_KEMAR_normal_pinna.sofa
+/usr/lib/x86_64-linux-gnu/libmysofa.so.1
+/usr/share/libmysofa/default.sofa

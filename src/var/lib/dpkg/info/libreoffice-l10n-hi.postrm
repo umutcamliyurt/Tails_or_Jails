@@ -1,0 +1,61 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/13.11.4
+dpkg-maintscript-helper symlink_to_dir /usr/share/doc/libreoffice-l10n-hi /usr/share/doc/libreoffice-common 1:6.4.0\~rc1\~git20191209 -- "$@"
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/ctl_hi.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/ctl_hi.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-hi "/etc/libreoffice/registry/ctl_hi.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/res/registry_hi.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/res/registry_hi.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-hi "/etc/libreoffice/registry/res/registry_hi.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/res/fcfg_langpack_hi.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/res/fcfg_langpack_hi.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-hi "/etc/libreoffice/registry/res/fcfg_langpack_hi.xcd"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_ucf/13.11.4
+if [ "$1" = "purge" ]; then
+	for ext in .ucf-new .ucf-old .ucf-dist ""; do
+		rm -f "/etc/libreoffice/registry/Langpack-hi.xcd$ext"
+	done
+	
+	if [ -x "`command -v ucf`" ]; then
+		ucf --purge "/etc/libreoffice/registry/Langpack-hi.xcd"
+	fi
+	if [ -x "`command -v ucfr`" ]; then
+		ucfr --force --purge libreoffice-l10n-hi "/etc/libreoffice/registry/Langpack-hi.xcd"
+	fi
+fi
+# End automatically added section

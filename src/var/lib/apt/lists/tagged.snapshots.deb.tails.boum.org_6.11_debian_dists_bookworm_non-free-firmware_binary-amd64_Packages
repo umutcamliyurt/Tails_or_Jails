@@ -1,0 +1,53 @@
+Package: amd64-microcode
+Version: 3.20240820.1~deb12u1
+Installed-Size: 494
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Architecture: amd64
+Recommends: initramfs-tools (>= 0.113~) | dracut (>= 044) | tiny-initramfs
+Breaks: intel-microcode (<< 2)
+Size: 173596
+SHA256: cc9ee6db1887f271979ea5540d6dc699208ff8597b32d3ac0b92fd502bb2284f
+SHA1: c9b4241ba5aa253a8d7d396c8fddecfb879e6cd0
+MD5sum: d9c0a1462c265cdbd0a6cc83bbf518a1
+Description: Platform firmware and microcode for AMD CPUs and SoCs
+ This package contains microcode patches for AMD AMD64
+ processors.  AMD releases microcode patches to correct
+ processor behavior as documented in the respective processor
+ revision guides.
+ .
+ This package includes the required firmware to enable AMD
+ SEV (Secure Encrypted Virtualization) functionality.
+ .
+ This package also includes AMD TAs (Trusted Applications)
+ required by AMD platform drivers such as AMD PMF (Platform
+ Management Framework).
+ .
+ For Intel processors, please refer to the intel-microcode package.
+Section: non-free-firmware/admin
+Priority: standard
+Filename: pool/non-free-firmware/a/amd64-microcode/amd64-microcode_3.20240820.1~deb12u1_amd64.deb
+
+Package: intel-microcode
+Version: 3.20240910.1~deb12u1
+Installed-Size: 13776
+Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
+Architecture: amd64
+Depends: iucode-tool (>= 1.0)
+Recommends: initramfs-tools (>= 0.113~)
+Conflicts: microcode.ctl (<< 0.18~0)
+Size: 6997988
+SHA256: 9276e9e8b75211a9be63513894201937a00308cd8a40cf7ff8b89dfed888efd3
+SHA1: c2be12736ebfc9d01732f4421f519ce1335f5f64
+MD5sum: ac270d989c86c7d356fbd56f46452942
+Description: Processor microcode firmware for Intel CPUs
+ This package contains updated system processor microcode for
+ Intel i686 and Intel X86-64 processors.  Intel releases microcode
+ updates to correct processor behavior as documented in the
+ respective processor specification updates.
+ .
+ For AMD processors, please refer to the amd64-microcode package.
+Homepage: https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files
+Section: non-free-firmware/admin
+Priority: standard
+Filename: pool/non-free-firmware/i/intel-microcode/intel-microcode_3.20240910.1~deb12u1_amd64.deb
+

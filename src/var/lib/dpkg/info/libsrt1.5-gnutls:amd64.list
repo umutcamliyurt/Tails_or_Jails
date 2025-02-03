@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libsrt-gnutls.so.1.5.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsrt1.5-gnutls
+/usr/share/doc/libsrt1.5-gnutls/changelog.Debian.gz
+/usr/share/doc/libsrt1.5-gnutls/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libsrt1.5-gnutls
+/usr/lib/x86_64-linux-gnu/libsrt-gnutls.so.1.5

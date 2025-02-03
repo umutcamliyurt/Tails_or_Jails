@@ -1,0 +1,105 @@
+Package: b43-fwcutter
+Version: 1:019-8
+Installed-Size: 95
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.34)
+Size: 25748
+SHA256: 0d5ba5911c32d42915d6397f3aaccbce969dbf1562292f62bf3cf2efe306fea2
+SHA1: 92c241c167e2a72aa24dff12e7580fcc2e463519
+MD5sum: 4d39e0ccfff172ef71e739cd6a93d2e7
+Description: utility for extracting Broadcom 43xx firmware
+ This package provides a tool for extracting BCM43xx wireless chip
+ firmware from Broadcom's proprietary driver files.
+ .
+ It is used by the firmware-b43(legacy)-installer packages as part of
+ the automated process of downloading and installing firmware.
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Tag: implemented-in::c, role::program, scope::utility
+Section: contrib/utils
+Priority: optional
+Filename: pool/contrib/b/b43-fwcutter/b43-fwcutter_019-8_amd64.deb
+
+Package: firmware-b43-installer
+Source: b43-fwcutter
+Version: 1:019-8
+Installed-Size: 27
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Replaces: firmware-b43-lpphy-installer (<= 1:015-14)
+Depends: b43-fwcutter (>= 1:019-8), pciutils, bzip2, ca-certificates, wget
+Breaks: firmware-b43-lpphy-installer (<= 1:015-14)
+Size: 7384
+SHA256: fa2662276289e51987a16fc9ab0dcd8bcc2afca45c5f9c842b6d5642897566a5
+SHA1: 4763a617966fdb3b67355f7732b88ed54ac4d264
+MD5sum: e820f3f53b635c290fb6569f580871cc
+Description: firmware installer for the b43 driver
+ This package downloads and installs the firmware needed by the b43
+ kernel driver for some Broadcom 43xx wireless network cards.
+ .
+ Supported chipsets:
+  * BCM4306/3 (chip revision 3 only);
+  * BCM4311 (NOT PCI Id 14e4:4313);
+  * BCM4312;
+  * BCM43131;
+  * BCM4318;
+  * BCM4321 (only partial support, not all versions tested);
+  * BCM43217;
+  * BCM4322 (only partial support for some versions, not all versions tested);
+  * BCM43222 (not all versions tested);
+  * BCM43224 (not all versions tested);
+  * BCM43225;
+  * BCM43227;
+  * BCM43228;
+  * BCM4331;
+  * BCM47xx (detection not reliable, may not support all versions).
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Section: contrib/kernel
+Priority: optional
+Filename: pool/contrib/b/b43-fwcutter/firmware-b43-installer_019-8_all.deb
+
+Package: firmware-b43legacy-installer
+Source: b43-fwcutter
+Version: 1:019-8
+Installed-Size: 24
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: all
+Depends: b43-fwcutter (>= 1:019-8), pciutils, ca-certificates, wget
+Size: 6576
+SHA256: 60c7801b9194c1cf5ee2e6031a1b0e7fc39a9e3d9dfd0b1bbeb060ae71a58bbf
+SHA1: 284cbe4158170c58ec8b407c84b23844513c1101
+MD5sum: 819e7d9b358fbe3acbd3f985787fb54f
+Description: firmware installer for the b43legacy driver
+ This package downloads and installs the firmware needed by the b43legacy
+ kernel driver for some Broadcom 43xx wireless network cards.
+ .
+ Supported chipsets:
+  * BCM4301;
+  * BCM4306/2;
+  * BCM4306.
+Homepage: https://wireless.wiki.kernel.org/en/users/drivers/b43
+Section: contrib/kernel
+Priority: optional
+Filename: pool/contrib/b/b43-fwcutter/firmware-b43legacy-installer_019-8_all.deb
+
+Package: gobi-loader
+Source: gobi-loader (0.6-1)
+Version: 0.6-1+b2
+Installed-Size: 28
+Maintainer: Mark Hymers <mhy@debian.org>
+Architecture: amd64
+Depends: libc6 (>= 2.2.5)
+Size: 6346
+SHA256: a8ccf8505ec6a7a66042abe7563f62091c79e7114652db697b1627cf86d60ab9
+SHA1: 2b64bcb86ffbff3e0cf871f74b9239d981d3db67
+MD5sum: 7eb1138778880a9f36d650041ccc14b6
+Description: Firmware loader for Qualcomm Gobi USB chipsets.
+ gobi-loader is a firmware loader for Qualcomm Gobi USB chipsets. These devices
+ appear in an uninitialised state when power is applied and require firmware to
+ be loaded before they can be used as modems. gobi-loader adds a udev rule that
+ will trigger loading of the firmware and make the modem usable.
+Homepage: http://www.codon.org.uk/~mjg59/gobi_loader/
+Section: contrib/admin
+Priority: optional
+Filename: pool/contrib/g/gobi-loader/gobi-loader_0.6-1+b2_amd64.deb
+

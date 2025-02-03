@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  purge)
+	rm -rf /var/lib/sudo
+	rm -rf /run/sudo
+  ;;
+
+  remove|upgrade|deconfigure)
+  ;;
+
+  abort-upgrade|failed-upgrade)
+    if [ -e "/etc/sudoers.pre-conffile" ]; then
+	mv /etc/sudoers.pre-conffile /etc/sudoers
+    fi
+  ;;
+
+  *)
+        echo "unknown argument --> $1" >&2
+        exit 0
+  ;;
+esac
+
+# Automatically added by dh_installinit/13.11.4
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/sudo" ] ; then
+	chmod -x "/etc/init.d/sudo" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d sudo remove >/dev/null
+fi
+# End automatically added section
+

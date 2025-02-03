@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libgc.so.1.5.1
+/usr/lib/x86_64-linux-gnu/libgccpp.so.1.5.0
+/usr/lib/x86_64-linux-gnu/libgctba.so.1.5.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgc1
+/usr/share/doc/libgc1/README.environment.gz
+/usr/share/doc/libgc1/changelog.Debian.gz
+/usr/share/doc/libgc1/changelog.gz
+/usr/share/doc/libgc1/copyright
+/usr/lib/x86_64-linux-gnu/libgc.so.1
+/usr/lib/x86_64-linux-gnu/libgccpp.so.1
+/usr/lib/x86_64-linux-gnu/libgctba.so.1

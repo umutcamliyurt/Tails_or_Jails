@@ -1,0 +1,17 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+    "http://www.freedesktop.org/standards/menu-spec/menu-1.0.dtd">
+<!-- Do not edit manually - generated and managed by xdg-desktop-menu -->
+<Menu>
+    <Name>Applications</Name>
+<Menu>
+    <Name>Tails</Name>
+    <Directory>Tails.directory</Directory>
+    <Include>
+        <Filename>org.boum.tails.AdditionalSoftware.desktop</Filename>
+        <Filename>org.boum.tails.PersistentStorage.desktop</Filename>
+        <Filename>tails-about.desktop</Filename>
+        <Filename>tails-documentation.desktop</Filename>
+        <Filename>tails-installer.desktop</Filename>
+    </Include>
+</Menu>
+</Menu>

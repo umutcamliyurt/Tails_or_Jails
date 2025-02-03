@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/pyinotify-0.9.6.egg-info
+/usr/lib/python3/dist-packages/pyinotify.py
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-pyinotify
+/usr/share/doc/python3-pyinotify/changelog.Debian.gz
+/usr/share/doc/python3-pyinotify/copyright
