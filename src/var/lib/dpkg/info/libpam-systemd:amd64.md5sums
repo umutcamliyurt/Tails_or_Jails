@@ -1,0 +1,8 @@
+45b8516362e22d7c86d17c1c906c34b9  usr/lib/x86_64-linux-gnu/security/pam_systemd.so
+a66c10c4ee10961ddbac16f350bc8dfe  usr/lib/x86_64-linux-gnu/security/pam_systemd_loadkey.so
+b7e89684f137768560b096b860e97723  usr/share/doc/libpam-systemd/NEWS.Debian.gz
+6d98763e2f1575ba3698f8bb5822d993  usr/share/doc/libpam-systemd/changelog.Debian.gz
+2f9a62d56e222c0821d4981a163e0ce1  usr/share/doc/libpam-systemd/copyright
+ad0ca85f6e3ac5a74ace82d9abfe40d9  usr/share/lintian/overrides/libpam-systemd
+4603a5538d5caf38232dcb0afa0b0d6d  usr/share/man/man8/pam_systemd.8.gz
+9dfe5c25c668641a5b9c776e22588ec9  usr/share/pam-configs/systemd

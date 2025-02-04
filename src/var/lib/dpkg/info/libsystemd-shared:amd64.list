@@ -3,8 +3,8 @@
 /usr/lib
 /usr/lib/x86_64-linux-gnu
 /usr/lib/x86_64-linux-gnu/systemd
-/usr/lib/x86_64-linux-gnu/systemd/libsystemd-core-252.so
-/usr/lib/x86_64-linux-gnu/systemd/libsystemd-shared-252.so
+/usr/lib/x86_64-linux-gnu/systemd/libsystemd-core-257.so
+/usr/lib/x86_64-linux-gnu/systemd/libsystemd-shared-257.so
 /usr/share
 /usr/share/doc
 /usr/share/doc/libsystemd-shared

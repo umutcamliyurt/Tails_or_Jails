@@ -3,13 +3,22 @@ set -e
 
 # Files
 LG="/etc/locale.gen"
-EE="/etc/default/locale"
+EE="/etc/locale.conf"
+LEGACY_EE="/etc/default/locale"
 
 # Sanitize environnement
 LC_ALL=C
 LANG=C
 
 if [ "$1" = configure ]; then
+    # Transition to /etc/locale.conf
+    if [ -f "$LEGACY_EE" ] && [ ! -L "$LEGACY_EE" ] && [ ! -e "$EE" ]; then
+        mv "$LEGACY_EE" "$EE"
+    fi
+    if [ ! -e "$LEGACY_EE"  ]; then
+        ln -sfr "$EE" "$LEGACY_EE"
+    fi
+
     # Load debconf
     . /usr/share/debconf/confmodule
     db_version 2.0

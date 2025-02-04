@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "remove" ]; then
+  for d in lib32 libo32 libx32; do
+    # Remove DEP17 M4 protective diversions
+    dpkg-divert --quiet --package base-files --remove --no-rename --divert "/.$d.usr-is-merged" "/$d"
+  done
+fi
+
+

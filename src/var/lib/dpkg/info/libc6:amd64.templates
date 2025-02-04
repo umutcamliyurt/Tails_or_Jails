@@ -652,6 +652,8 @@ Description-ro.UTF-8: Nucleul trebuie să fie înnoit
  Această versiune a bibliotecii libc GNU necesită versiunea nucleului ${kernel_ver} sau o versiune ulterioară.  Actualizați nucleul și să reporniți înainte de a instala glibc. Este posibil să fie nevoie să utilizați comanda «apt -f install» după repornire, pentru a rezolva problemele de dependențe.
 Description-sk.UTF-8: Kernel sa musí aktualizovať
  Táto verzia GNU libc vyžaduje verziu kernelu ${kernel_ver} alebo neskoršiu. Aktualizujte prosím Váš kernel a reštartujte systém pred inštaláciou glibc. V prípade chýbajúcich závislostí po reštarte, použite príkaz "apt -f install".
+Description-sv.UTF-8: Kärnan måste uppgraderas
+ Den här versionen av GNU libc behöver åtminstone version ${kernel_ver} av kärnan. Uppgradera kärnan och starta om systemet före glibc installeras. Det kan tänkas att du behöver köra "apt -f install" för att lösa beroendeknutar efter omstart.
 Description-tr.UTF-8: Linux çekirdeği güncellenmelidir
  GNU libc kitaplığının bu sürümü ${kernel_ver} çekirdek sürümü ya da daha yenisi ile çalışabilmektedir. GNU libc kurulumu öncesinde çekirdek sürümünüzü güncelleyin ve sisteminizi yeniden başlatın. Bağımlılık sorunlarını gidermek için, yeniden başlatmanız sonrasında "apt -f install" komutunu kullanmanız gerekebilir.
 Description-zh_CN.UTF-8: 内核需要升级
@@ -691,6 +693,8 @@ Description-ru.UTF-8: Версия ядра не поддерживается
  Для данной версии GNU libc требуется ядро версии ${kernel_ver} или новее. Более старые версии могут работать, но они официально не поддерживаются в Debian. Рассмотрите возможность обновления ядра.
 Description-sk.UTF-8: Verzia kernelu nie je podporovaná
  Táto verzia GNU libc vyžaduje verziu kernelu ${kernel_ver} alebo neskoršiu. Staršia verzia môže fungovať, ale nie je oficiálne podporovaná Debianom. Zvážte prosím aktualizáciu vášho kernelu.
+Description-sv.UTF-8: Kärnans version har inget stöd
+ Den här versionen av GNU libc behöver åtminstone version ${kernel_ver} av kärnan. Äldre versioner kan eventuellt fungera men det finns inget officiellt stöd för dessa från Debianprojektet. Överväg att uppgradera din kärna.
 Description-tr.UTF-8: Linux çekirdeği sürümü desteklenmiyor
  GNU libc kitaplığının bu sürümü ${kernel_ver} çekirdek sürümü ya da daha yenisi ile çalışabilmektedir. Eski sürümler ile çalışabilse de, eski sürümler Debian tarafından desteklenmemektedir. Çekirdek sürümünüzü güncelleme konusunu değerlendirin.
 Description-zh_CN.UTF-8: 不支持的内核版本

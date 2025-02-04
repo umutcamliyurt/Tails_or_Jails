@@ -7,8 +7,6 @@
 /etc/ld.so.conf
 /etc/ld.so.conf.d
 /etc/ld.so.conf.d/libc.conf
-/sbin
-/sbin/ldconfig
 /usr
 /usr/bin
 /usr/bin/getconf
@@ -38,6 +36,7 @@
 /usr/lib/locale/C.utf8/LC_TIME
 /usr/sbin
 /usr/sbin/iconvconfig
+/usr/sbin/ldconfig
 /usr/sbin/zic
 /usr/share
 /usr/share/doc

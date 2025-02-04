@@ -25,7 +25,7 @@ if [ "${PS1-}" ]; then
 fi
 
 if [ -d /etc/profile.d ]; then
-  for i in /etc/profile.d/*.sh; do
+  for i in $(run-parts --list --regex '^[a-zA-Z0-9_][a-zA-Z0-9._-]*\.sh$' /etc/profile.d); do
     if [ -r $i ]; then
       . $i
     fi

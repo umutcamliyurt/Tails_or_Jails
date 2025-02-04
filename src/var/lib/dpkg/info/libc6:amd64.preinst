@@ -25,7 +25,10 @@ then
     # Only change LC_ALL after loading debconf to ensure the debconf templates
     # are properly localized.
     export LC_ALL=C
+fi
 
+if [ "$type" != abort-upgrade ] && [ -z "$DPKG_ROOT" ]
+then
     # See if LD_LIBRARY_PATH contains the traditional /lib, but not the
     # multiarch path
     dirs=$(echo $LD_LIBRARY_PATH | sed 's/:/ /g')
@@ -166,7 +169,7 @@ if [ "$type" = upgrade ]
 then
     if [ -n "$preversion" ] && [ -x "$(command -v ischroot)" ] && ! ischroot; then
 	# NSS authentication trouble guard
-	if dpkg --compare-versions "$preversion" lt 2.36; then
+	if dpkg --compare-versions "$preversion" lt 2.40; then
 	    if grep -E -q '(^|/)(xscreensaver|xlockmore)' /proc/*/cmdline 2>/dev/null; then
 		if [ "$USE_DEBCONF" ] ; then
 		    db_version 2.0
@@ -303,12 +306,8 @@ then
                 fi
             fi
 
-	fi # end upgrading and $preversion lt 2.36
+	fi # end upgrading and $preversion lt 2.40
     fi # Upgrading
-
-    # This will keep us from using hwcap libs (optimized) during an
-    # upgrade.
-    touch "$DPKG_ROOT/etc/ld.so.nohwcap"
 fi
 
 # We create the top-level lib symlink on merged-usr systems, so that we can
@@ -330,10 +329,41 @@ if [ "$1" = "install" ] || [ "$1" = "upgrade" ]; then
     fi
 fi
 
+# begin-remove-after: released:forky
+# Add DEP17 M4 protective diversions. These are needed for old base-files and
+# for multilib symlinks not included in base-files. Since we want to avoid
+# Pre-Depends: base-files (>= trixie) and we add them on behalf of base-files
+# when needed. As bookworm's base-files installs bin lib and sbin, the only
+# directory we may miss is the one containing the runtime linker when it is not
+# /lib.
+rtlddir=/lib64
+if [ "$1" = install -o "$1" = upgrade ] && [ "$rtlddir" != "/lib" ]; then
+    if test -d "$DPKG_ROOT$rtlddir" && ! test -h "$DPKG_ROOT$rtlddir"; then
+        echo
+        echo "The current installation does not have a merged-/usr layout."
+        echo "This is unsupported and unpacking libc6 would break the system."
+        echo "Refusing to unpack. Please install the usrmerge package and try again."
+        echo
+        exit 1
+    fi
+    if dpkg --compare-versions "$(dpkg-query -f '${Version}' -W base-files)" le 13 || ! dpkg-query -L base-files | grep -qxF "$rtlddir"; then
+        dpkg-divert --quiet --add --no-rename --package base-files --divert "/.${rtlddir#/}.usr-is-merged" "$rtlddir"
+    fi
+fi
+# end-remove-after
+
+# Add DEP17 M8 protective diversions for the runtime dynamic linker. It is
+# installed in both libc (multiarch) and libc-alt (multilib) amounting to a
+# move and thus DEP17 P1 problem. This diversion should be removed by forky's
+# libc.postinst.
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+    dpkg-divert --quiet --add --no-rename --divert "/lib64/ld-linux-x86-64.so.2.usr-is-merged" "/lib64/ld-linux-x86-64.so.2"
+fi
+
 
 
 if [ -n "$preversion" ]; then
-    if dpkg --compare-versions "$preversion" lt 2.36; then
+    if dpkg --compare-versions "$preversion" lt 2.40; then
        # unconditionally wipe ld.so.cache on major version upgrades; this
        # makes those upgrades a bit slower, but is less error-prone than
        # hoping we notice every time the cache format is changed upstream

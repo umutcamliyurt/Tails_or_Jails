@@ -346,3 +346,467 @@ Log started: 2025-02-02  20:12:55
 Removing python3-wheel (0.38.4-2) ...
 Log ended: 2025-02-02  20:12:55
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+Log started: 2025-02-04  16:35:09
+Selecting previously unselected package binutils-common:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 146422 files and directories currently installed.)
+Preparing to unpack .../00-binutils-common_2.40-2_amd64.deb ...
+Unpacking binutils-common:amd64 (2.40-2) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../01-libbinutils_2.40-2_amd64.deb ...
+Unpacking libbinutils:amd64 (2.40-2) ...
+Selecting previously unselected package libctf-nobfd0:amd64.
+Preparing to unpack .../02-libctf-nobfd0_2.40-2_amd64.deb ...
+Unpacking libctf-nobfd0:amd64 (2.40-2) ...
+Selecting previously unselected package libctf0:amd64.
+Preparing to unpack .../03-libctf0_2.40-2_amd64.deb ...
+Unpacking libctf0:amd64 (2.40-2) ...
+Selecting previously unselected package libgprofng0:amd64.
+Preparing to unpack .../04-libgprofng0_2.40-2_amd64.deb ...
+Unpacking libgprofng0:amd64 (2.40-2) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../05-binutils-x86-64-linux-gnu_2.40-2_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.40-2) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../06-binutils_2.40-2_amd64.deb ...
+Unpacking binutils (2.40-2) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../07-libc-dev-bin_2.36-9+deb12u9_amd64.deb ...
+Unpacking libc-dev-bin (2.36-9+deb12u9) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../08-linux-libc-dev_6.1.119-1_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (6.1.119-1) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../09-libcrypt-dev_1%3a4.4.33-2_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.33-2) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../10-libtirpc-dev_1.3.3+ds-1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.3+ds-1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../11-libnsl-dev_1.3.0-2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../12-rpcsvc-proto_1.4.3-1_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.3-1) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../13-libc6-dev_2.36-9+deb12u9_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.36-9+deb12u9) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../14-libcc1-0_12.2.0-14_amd64.deb ...
+Unpacking libcc1-0:amd64 (12.2.0-14) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../15-libitm1_12.2.0-14_amd64.deb ...
+Unpacking libitm1:amd64 (12.2.0-14) ...
+Selecting previously unselected package libasan8:amd64.
+Preparing to unpack .../16-libasan8_12.2.0-14_amd64.deb ...
+Unpacking libasan8:amd64 (12.2.0-14) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../17-liblsan0_12.2.0-14_amd64.deb ...
+Unpacking liblsan0:amd64 (12.2.0-14) ...
+Selecting previously unselected package libtsan2:amd64.
+Preparing to unpack .../18-libtsan2_12.2.0-14_amd64.deb ...
+Unpacking libtsan2:amd64 (12.2.0-14) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../19-libubsan1_12.2.0-14_amd64.deb ...
+Unpacking libubsan1:amd64 (12.2.0-14) ...
+Selecting previously unselected package libgcc-12-dev:amd64.
+Preparing to unpack .../20-libgcc-12-dev_12.2.0-14_amd64.deb ...
+Unpacking libgcc-12-dev:amd64 (12.2.0-14) ...
+Selecting previously unselected package gcc-12.
+Preparing to unpack .../21-gcc-12_12.2.0-14_amd64.deb ...
+Unpacking gcc-12 (12.2.0-14) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../22-gcc_4%3a12.2.0-3_amd64.deb ...
+Unpacking gcc (4:12.2.0-3) ...
+Selecting previously unselected package libstdc++-12-dev:amd64.
+Preparing to unpack .../23-libstdc++-12-dev_12.2.0-14_amd64.deb ...
+Unpacking libstdc++-12-dev:amd64 (12.2.0-14) ...
+Selecting previously unselected package g++-12.
+Preparing to unpack .../24-g++-12_12.2.0-14_amd64.deb ...
+Unpacking g++-12 (12.2.0-14) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../25-g++_4%3a12.2.0-3_amd64.deb ...
+Unpacking g++ (4:12.2.0-3) ...
+Selecting previously unselected package make.
+Preparing to unpack .../26-make_4.3-4.1_amd64.deb ...
+Unpacking make (4.3-4.1) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../27-dpkg-dev_1.21.22_all.deb ...
+Unpacking dpkg-dev (1.21.22) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../28-build-essential_12.9_amd64.deb ...
+Unpacking build-essential (12.9) ...
+Setting up binutils-common:amd64 (2.40-2) ...
+Setting up linux-libc-dev:amd64 (6.1.119-1) ...
+Setting up libctf-nobfd0:amd64 (2.40-2) ...
+Setting up libtirpc-dev:amd64 (1.3.3+ds-1) ...
+Setting up rpcsvc-proto (1.4.3-1) ...
+Setting up make (4.3-4.1) ...
+Setting up libubsan1:amd64 (12.2.0-14) ...
+Setting up libnsl-dev:amd64 (1.3.0-2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.33-2) ...
+Setting up libasan8:amd64 (12.2.0-14) ...
+Setting up libtsan2:amd64 (12.2.0-14) ...
+Setting up libbinutils:amd64 (2.40-2) ...
+Setting up libc-dev-bin (2.36-9+deb12u9) ...
+Setting up libcc1-0:amd64 (12.2.0-14) ...
+Setting up liblsan0:amd64 (12.2.0-14) ...
+Setting up libitm1:amd64 (12.2.0-14) ...
+Setting up libctf0:amd64 (2.40-2) ...
+Setting up libgprofng0:amd64 (2.40-2) ...
+Setting up libgcc-12-dev:amd64 (12.2.0-14) ...
+Setting up libc6-dev:amd64 (2.36-9+deb12u9) ...
+Setting up binutils-x86-64-linux-gnu (2.40-2) ...
+Setting up libstdc++-12-dev:amd64 (12.2.0-14) ...
+Setting up binutils (2.40-2) ...
+Setting up dpkg-dev (1.21.22) ...
+Setting up gcc-12 (12.2.0-14) ...
+Setting up g++-12 (12.2.0-14) ...
+Setting up gcc (4:12.2.0-3) ...
+Setting up g++ (4:12.2.0-3) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.9) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+Log ended: 2025-02-04  16:35:22
+
+Log started: 2025-02-04  16:44:59
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149991 files and directories currently installed.)
+Preparing to unpack .../libwrap0_7.6.q-35_amd64.deb ...
+Unpacking libwrap0:amd64 (7.6.q-35) over (7.6.q-32) ...
+Selecting previously unselected package libwrap0-dev:amd64.
+Preparing to unpack .../libwrap0-dev_7.6.q-35_amd64.deb ...
+Unpacking libwrap0-dev:amd64 (7.6.q-35) ...
+Setting up libwrap0:amd64 (7.6.q-35) ...
+Setting up libwrap0-dev:amd64 (7.6.q-35) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u9) ...
+Log ended: 2025-02-04  16:45:01
+
+Log started: 2025-02-04  16:49:41
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 149999 files and directories currently installed.)
+Preparing to unpack .../base-files_1%3a2024.4.1_amd64.deb ...
+Unpacking base-files (1:2024.4.1) over (12.4+deb12u8) ...
+Setting up base-files (1:2024.4.1) ...
+Installing new version of config file /etc/debian_version ...
+Installing new version of config file /etc/issue ...
+Installing new version of config file /etc/issue.net ...
+Updating /etc/profile to current default.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150014 files and directories currently installed.)
+Preparing to unpack .../libc-l10n_2.40-3_all.deb ...
+Unpacking libc-l10n (2.40-3) over (2.36-9+deb12u9) ...
+Preparing to unpack .../libzstd1_1.5.6+dfsg-2_amd64.deb ...
+Unpacking libzstd1:amd64 (1.5.6+dfsg-2) over (1.5.4+dfsg2-5) ...
+Setting up libzstd1:amd64 (1.5.6+dfsg-2) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150016 files and directories currently installed.)
+Preparing to unpack .../openssh-client_1%3a9.9p1-3_amd64.deb ...
+Unpacking openssh-client (1:9.9p1-3) over (1:9.2p1-2+deb12u3) ...
+Preparing to unpack .../openssl_3.4.0-2_amd64.deb ...
+Unpacking openssl (3.4.0-2) over (3.0.15-1~deb12u1) ...
+[1mdpkg:[0m libssl3:amd64: dependency problems, but removing anyway as you requested:
+ wpasupplicant depends on libssl3 (>= 3.0.0).
+ tor depends on libssl3 (>= 3.0.0).
+ tcpflow depends on libssl3 (>= 3.0.0).
+ tcpdump depends on libssl3 (>= 3.0.0).
+ systemd depends on libssl3 (>= 3.0.0).
+ rsync depends on libssl3 (>= 3.0.0).
+ python3-cryptography depends on libssl3 (>= 3.0.0).
+ ppp depends on libssl3 (>= 3.0.0).
+ perl-openssl-defaults:amd64 depends on libssl3 (>= 3.0.0).
+ open-vm-tools depends on libssl3 (>= 3.0.0).
+ mokutil depends on libssl3 (>= 3.0.0).
+ libxmlsec1-openssl:amd64 depends on libssl3 (>= 3.0.0).
+ libtspi1 depends on libssl3 (>= 3.0.0).
+ libsystemd-shared:amd64 depends on libssl3 (>= 3.0.0).
+ libssh2-1:amd64 depends on libssl3 (>= 3.0.0).
+ libsnmp40:amd64 depends on libssl3 (>= 3.0.0).
+ libshout3:amd64 depends on libssl3 (>= 3.0.0).
+ libsasl2-modules:amd64 depends on libssl3 (>= 3.0.0).
+ librabbitmq4:amd64 depends on libssl3 (>= 3.0.0).
+ libqt5network5:amd64 depends on libssl3.
+ libpython3.11-minimal:amd64 depends on libssl3 (>= 3.0.0).
+ libpipewire-0.3-modules:amd64 depends on libssl3 (>= 3.0.0).
+ libnet-ssleay-perl:amd64 depends on libssl3 (>= 3.0.0).
+ libneon27:amd64 depends on libssl3 (>= 3.0.0).
+ libkrb5-3:amd64 depends on libssl3 (>= 3.0.0).
+ libkmod2:amd64 depends on libssl3 (>= 3.0.0).
+ libimobiledevice6:amd64 depends on libssl3 (>= 3.0.0).
+ libimobiledevice-utils depends on libssl3 (>= 3.0.0).
+ libfido2-1:amd64 depends on libssl3 (>= 3.0.0).
+ libcurl4:amd64 depends on libssl3 (>= 3.0.0).
+ libcryptsetup12:amd64 depends on libssl3 (>= 3.0.0).
+ kmod depends on libssl3 (>= 3.0.0).
+ gstreamer1.0-plugins-good:amd64 depends on libssl3 (>= 3.0.0).
+ gstreamer1.0-plugins-bad:amd64 depends on libssl3 (>= 3.0.0).
+ bind9-libs:amd64 depends on libssl3 (>= 3.0.0).
+
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150042 files and directories currently installed.)
+Removing libssl3:amd64 (3.0.15-1~deb12u1) ...
+Selecting previously unselected package openssl-provider-legacy.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150031 files and directories currently installed.)
+Preparing to unpack .../openssl-provider-legacy_3.4.0-2_amd64.deb ...
+Unpacking openssl-provider-legacy (3.4.0-2) ...
+Selecting previously unselected package libssl3t64:amd64.
+Preparing to unpack .../libssl3t64_3.4.0-2_amd64.deb ...
+Unpacking libssl3t64:amd64 (3.4.0-2) ...
+Preparing to unpack .../locales_2.40-3_all.deb ...
+Unpacking locales (2.40-3) over (2.36-9+deb12u9) ...
+[1mdpkg:[0m considering deconfiguration of systemd, which would be broken by installation of libc6:amd64 ...
+[1mdpkg:[0m yes, will deconfigure systemd (broken by libc6:amd64)
+Preparing to unpack .../libc6_2.40-3_amd64.deb ...
+De-configuring systemd (252.31-1~deb12u1), to allow installation of libc6:amd64 (2.40-3) ...
+Unpacking libc6:amd64 (2.40-3) over (2.36-9+deb12u9) ...
+Setting up libc6:amd64 (2.40-3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150062 files and directories currently installed.)
+Preparing to unpack .../libc-bin_2.40-3_amd64.deb ...
+Unpacking libc-bin (2.40-3) over (2.36-9+deb12u9) ...
+Setting up libc-bin (2.40-3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150062 files and directories currently installed.)
+Preparing to unpack .../libsystemd-shared_257.2-3_amd64.deb ...
+Unpacking libsystemd-shared:amd64 (257.2-3) over (252.31-1~deb12u1) ...
+Setting up openssl-provider-legacy (3.4.0-2) ...
+Setting up libssl3t64:amd64 (3.4.0-2) ...
+Setting up libsystemd-shared:amd64 (257.2-3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150062 files and directories currently installed.)
+Preparing to unpack .../systemd_257.2-3_amd64.deb ...
+Unpacking systemd (257.2-3) over (252.31-1~deb12u1) ...
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system-preset': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/user@0.service.d': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/user@.service.d': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/user-.slice.d': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/timers.target.wants': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/systemd-localed.service.d': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/rc-local.service.d': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/local-fs.target.wants': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/initrd.target.wants': Directory not empty
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/system/getty.target.wants': Directory not empty
+Preparing to unpack .../systemd-timesyncd_257.2-3_amd64.deb ...
+Unpacking systemd-timesyncd (257.2-3) over (252.31-1~deb12u1) ...
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/ntp-units.d': Directory not empty
+Preparing to unpack .../systemd-oomd_257.2-3_amd64.deb ...
+Unpacking systemd-oomd (257.2-3) over (252.31-1~deb12u1) ...
+Preparing to unpack .../libsystemd0_257.2-3_amd64.deb ...
+Unpacking libsystemd0:amd64 (257.2-3) over (252.31-1~deb12u1) ...
+Setting up libsystemd0:amd64 (257.2-3) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150168 files and directories currently installed.)
+Preparing to unpack .../libnss-systemd_257.2-3_amd64.deb ...
+Unpacking libnss-systemd:amd64 (257.2-3) over (252.31-1~deb12u1) ...
+Preparing to unpack .../libpam-systemd_257.2-3_amd64.deb ...
+Unpacking libpam-systemd:amd64 (257.2-3) over (252.31-1~deb12u1) ...
+Preparing to unpack .../libc-dev-bin_2.40-3_amd64.deb ...
+Unpacking libc-dev-bin (2.40-3) over (2.36-9+deb12u9) ...
+Preparing to unpack .../libc6-dev_2.40-3_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.40-3) over (2.36-9+deb12u9) ...
+Setting up systemd (257.2-3) ...
+Installing new version of config file /etc/systemd/journald.conf ...
+Installing new version of config file /etc/systemd/logind.conf ...
+Installing new version of config file /etc/systemd/networkd.conf ...
+Installing new version of config file /etc/systemd/pstore.conf ...
+Installing new version of config file /etc/systemd/sleep.conf ...
+Installing new version of config file /etc/systemd/system.conf ...
+Installing new version of config file /etc/systemd/user.conf ...
+Initializing machine ID from random generator.
+[0;1;39m/usr/lib/tmpfiles.d/legacy.conf:14: Duplicate line for path "/run/lock", ignoring.[0m
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 150176 files and directories currently installed.)
+Preparing to unpack .../systemd-sysv_257.2-3_amd64.deb ...
+Unpacking systemd-sysv (257.2-3) over (252.31-1~deb12u1) ...
+Selecting previously unselected package openssh-sftp-server.
+Preparing to unpack .../openssh-sftp-server_1%3a9.9p1-3_amd64.deb ...
+Unpacking openssh-sftp-server (1:9.9p1-3) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../openssh-server_1%3a9.9p1-3_amd64.deb ...
+Unpacking openssh-server (1:9.9p1-3) ...
+Preparing to unpack .../udev_257.2-3_amd64.deb ...
+Unpacking udev (257.2-3) over (252.31-1~deb12u1) ...
+[1mdpkg:[0m [1;33mwarning:[0m unable to delete old directory '/lib/systemd/network': Directory not empty
+Preparing to unpack .../libudev1_257.2-3_amd64.deb ...
+Unpacking libudev1:amd64 (257.2-3) over (252.31-1~deb12u1) ...
+Setting up libudev1:amd64 (257.2-3) ...
+Setting up systemd-sysv (257.2-3) ...
+Setting up libc-l10n (2.40-3) ...
+Setting up openssh-client (1:9.9p1-3) ...
+
+Configuration file '/etc/ssh/ssh_config'
+ ==> Modified (by you or by a script) since installation.
+ ==> Package distributor has shipped an updated version.
+   What would you like to do about it ?  Your options are:
+    Y or I  : install the package maintainer's version
+    N or O  : keep your currently-installed version
+      D     : show the differences between the versions
+      Z     : start a shell to examine the situation
+ The default action is to keep your current version.
+*** ssh_config (Y/I/N/O/D/Z) [default=N] ? y
+Installing new version of config file /etc/ssh/ssh_config ...
+Setting up libnss-systemd:amd64 (257.2-3) ...
+Setting up locales (2.40-3) ...
+Installing new version of config file /etc/locale.alias ...
+Generating locales (this might take a while)...
+  ar_AE.UTF-8... done
+  ar_BH.UTF-8... done
+  ar_DZ.UTF-8... done
+  ar_EG.UTF-8... done
+  ar_IN.UTF-8... done
+  ar_IQ.UTF-8... done
+  ar_JO.UTF-8... done
+  ar_KW.UTF-8... done
+  ar_LB.UTF-8... done
+  ar_LY.UTF-8... done
+  ar_MA.UTF-8... done
+  ar_OM.UTF-8... done
+  ar_QA.UTF-8... done
+  ar_SA.UTF-8... done
+  ar_SD.UTF-8... done
+  ar_SS.UTF-8... done
+  ar_SY.UTF-8... done
+  ar_TN.UTF-8... done
+  ar_YE.UTF-8... done
+  bg_BG.UTF-8... done
+  bn_BD.UTF-8... done
+  bn_IN.UTF-8... done
+  ca_AD.UTF-8... done
+  ca_ES.UTF-8... done
+  ca_ES.UTF-8@valencia... done
+  ca_FR.UTF-8... done
+  ca_IT.UTF-8... done
+  cs_CZ.UTF-8... done
+  da_DK.UTF-8... done
+  de_AT.UTF-8... done
+  de_BE.UTF-8... done
+  de_CH.UTF-8... done
+  de_DE.UTF-8... done
+  de_IT.UTF-8... done
+  de_LI.UTF-8... done
+  de_LU.UTF-8... done
+  el_CY.UTF-8... done
+  el_GR.UTF-8... done
+  en_AG.UTF-8... done
+  en_AU.UTF-8... done
+  en_BW.UTF-8... done
+  en_CA.UTF-8... done
+  en_DK.UTF-8... done
+  en_GB.UTF-8... done
+  en_HK.UTF-8... done
+  en_IE.UTF-8... done
+  en_IL.UTF-8... done
+  en_IN.UTF-8... done
+  en_NG.UTF-8... done
+  en_NZ.UTF-8... done
+  en_PH.UTF-8... done
+  en_SC.UTF-8... done
+  en_SG.UTF-8... done
+  en_US.UTF-8... done
+  en_ZA.UTF-8... done
+  en_ZM.UTF-8... done
+  en_ZW.UTF-8... done
+  es_AR.UTF-8... done
+  es_BO.UTF-8... done
+  es_CL.UTF-8... done
+  es_CO.UTF-8... done
+  es_CR.UTF-8... done
+  es_CU.UTF-8... done
+  es_DO.UTF-8... done
+  es_EC.UTF-8... done
+  es_ES.UTF-8... done
+  es_GT.UTF-8... done
+  es_HN.UTF-8... done
+  es_MX.UTF-8... done
+  es_NI.UTF-8... done
+  es_PA.UTF-8... done
+  es_PE.UTF-8... done
+  es_PR.UTF-8... done
+  es_PY.UTF-8... done
+  es_SV.UTF-8... done
+  es_US.UTF-8... done
+  es_UY.UTF-8... done
+  es_VE.UTF-8... done
+  et_EE.UTF-8... done
+  eu_ES.UTF-8... done
+  eu_FR.UTF-8... done
+  fa_IR.UTF-8... done
+  fi_FI.UTF-8... done
+  fr_BE.UTF-8... done
+  fr_CA.UTF-8... done
+  fr_CH.UTF-8... done
+  fr_FR.UTF-8... done
+  fr_LU.UTF-8... done
+  ga_IE.UTF-8... done
+  gl_ES.UTF-8... done
+  he_IL.UTF-8... done
+  hi_IN.UTF-8... done
+  hr_HR.UTF-8... done
+  hu_HU.UTF-8... done
+  hy_AM.UTF-8... done
+  id_ID.UTF-8... done
+  is_IS.UTF-8... done
+  it_CH.UTF-8... done
+  it_IT.UTF-8... done
+  ja_JP.UTF-8... done
+  ka_GE.UTF-8... done
+  kk_KZ.UTF-8... done
+  ko_KR.UTF-8... done
+  lt_LT.UTF-8... done
+  lv_LV.UTF-8... done
+  mk_MK.UTF-8... done
+  ml_IN.UTF-8... done
+  ms_MY.UTF-8... done
+  nb_NO.UTF-8... done
+  nl_AW.UTF-8... done
+  nl_BE.UTF-8... done
+  nl_NL.UTF-8... done
+  pl_PL.UTF-8... done
+  pt_BR.UTF-8... done
+  pt_PT.UTF-8... done
+  ro_RO.UTF-8... done
+  ru_RU.UTF-8... done
+  ru_UA.UTF-8... done
+  sk_SK.UTF-8... done
+  sq_AL.UTF-8... done
+  sq_MK.UTF-8... done
+  sr_ME.UTF-8... done
+  sr_RS.UTF-8... done
+  sr_RS.UTF-8@latin... done
+  sv_FI.UTF-8... done
+  sv_SE.UTF-8... done
+  sw_KE.UTF-8... done
+  sw_TZ.UTF-8... done
+  ta_IN.UTF-8... done
+  ta_LK.UTF-8... done
+  th_TH.UTF-8... done
+  tr_CY.UTF-8... done
+  tr_TR.UTF-8... done
+  uk_UA.UTF-8... done
+  vi_VN.UTF-8... done
+  zh_CN.UTF-8... done
+  zh_HK.UTF-8... done
+  zh_SG.UTF-8... done
+  zh_TW.UTF-8... done
+Generation complete.
+Setting up systemd-timesyncd (257.2-3) ...
+Installing new version of config file /etc/dhcp/dhclient-exit-hooks.d/timesyncd ...
+Installing new version of config file /etc/systemd/timesyncd.conf ...
+Setting up udev (257.2-3) ...
+Removing obsolete conffile /etc/init.d/udev ...
+Setting up libpam-systemd:amd64 (257.2-3) ...
+Setting up systemd-oomd (257.2-3) ...
+Installing new version of config file /etc/systemd/oomd.conf ...
+Setting up libc-dev-bin (2.40-3) ...
+Setting up openssl (3.4.0-2) ...
+Installing new version of config file /etc/ssl/openssl.cnf ...
+Setting up openssh-sftp-server (1:9.9p1-3) ...
+Setting up openssh-server (1:9.9p1-3) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:EhjQeKOK6JU2pFr6t+b0UCFTAaBhOul1lCrUixbIaG4 root@kali (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:yYyXhzgUbV01Z9hLSjkUyhFsEi6prBr5qE082jmDGnc root@kali (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:3+ruMs/A/wcXLP8aYUaoRoHoNNeqQoulbPlwbn1XrFo root@kali (ED25519)
+Running in chroot, ignoring request.
+Setting up libc6-dev:amd64 (2.40-3) ...
+Processing triggers for libc-bin (2.40-3) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for cracklib-runtime (2.9.6-5+b1) ...
+Processing triggers for dbus (1.14.10-1~deb12u1) ...
+Processing triggers for shared-mime-info (2.2-1) ...
+Processing triggers for initramfs-tools (0.142+deb12u1) ...
+Log ended: 2025-02-04  16:54:16

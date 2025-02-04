@@ -24,6 +24,8 @@
 /usr/lib/systemd/user
 /usr/lib/systemd/user/graphical-session-pre.target.wants
 /usr/lib/systemd/user/ssh-agent.service
+/usr/lib/tmpfiles.d
+/usr/lib/tmpfiles.d/openssh-client.conf
 /usr/share
 /usr/share/apport
 /usr/share/apport/package-hooks

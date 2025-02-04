@@ -1,0 +1,8 @@
+update-alternatives 2025-02-04 16:35:17: run with --quiet --install /usr/bin/cc cc /usr/bin/gcc 20
+update-alternatives 2025-02-04 16:35:17: link group cc updated to point to /usr/bin/gcc
+update-alternatives 2025-02-04 16:35:17: run with --quiet --install /usr/bin/c89 c89 /usr/bin/c89-gcc 20 --slave /usr/share/man/man1/c89.1.gz c89.1.gz /usr/share/man/man1/c89-gcc.1.gz
+update-alternatives 2025-02-04 16:35:17: link group c89 updated to point to /usr/bin/c89-gcc
+update-alternatives 2025-02-04 16:35:17: run with --quiet --install /usr/bin/c99 c99 /usr/bin/c99-gcc 20 --slave /usr/share/man/man1/c99.1.gz c99.1.gz /usr/share/man/man1/c99-gcc.1.gz
+update-alternatives 2025-02-04 16:35:17: link group c99 updated to point to /usr/bin/c99-gcc
+update-alternatives 2025-02-04 16:35:17: run with --install /usr/bin/c++ c++ /usr/bin/g++ 20
+update-alternatives 2025-02-04 16:35:17: link group c++ updated to point to /usr/bin/g++

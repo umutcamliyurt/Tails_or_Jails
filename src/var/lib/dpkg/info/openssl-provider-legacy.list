@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/ossl-modules
+/usr/lib/x86_64-linux-gnu/ossl-modules/legacy.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/openssl-provider-legacy
+/usr/share/doc/openssl-provider-legacy/changelog.Debian.gz
+/usr/share/doc/openssl-provider-legacy/changelog.gz
+/usr/share/doc/openssl-provider-legacy/copyright

@@ -13,7 +13,7 @@
 # defined.
 HOME			= .
 
- # Use this in order to automatically load providers.
+# Use this in order to automatically load providers.
 openssl_conf = openssl_init
 
 # Comment out the next line to ignore configuration errors
@@ -51,11 +51,11 @@ tsa_policy3 = 1.2.3.4.5.7
 # .include fipsmodule.cnf
 
 [openssl_init]
-# providers = provider_sect
+providers = provider_sect
 
 # List of providers to load
-# [provider_sect]
-# default = default_sect
+[provider_sect]
+default = default_sect
 # The fips section name should match the section name inside the
 # included fipsmodule.cnf.
 # fips = fips_sect
@@ -68,7 +68,7 @@ tsa_policy3 = 1.2.3.4.5.7
 # becomes unavailable in openssl.  As a consequence applications depending on
 # OpenSSL may not work correctly which could lead to significant system
 # problems including inability to remotely access the system.
-# [default_sect]
+[default_sect]
 # activate = 1
 
 
@@ -92,7 +92,7 @@ serial		= $dir/serial 		# The current serial number
 crlnumber	= $dir/crlnumber	# the current crl number
 					# must be commented out to leave a V1 CRL
 crl		= $dir/crl.pem 		# The current CRL
-private_key	= $dir/private/cakey.pem# The private key
+private_key	= $dir/private/cakey.pem # The private key
 
 x509_extensions	= usr_cert		# The extensions to add to the cert
 
@@ -330,8 +330,8 @@ tsa_name		= yes	# Must the TSA name be included in the reply?
 				# (optional, default: no)
 ess_cert_id_chain	= no	# Must the ESS cert id chain be included?
 				# (optional, default: no)
-ess_cert_id_alg		= sha1	# algorithm to compute certificate
-				# identifier (optional, default: sha1)
+ess_cert_id_alg		= sha256	# algorithm to compute certificate
+				# identifier (optional, default: sha256)
 
 [insta] # CMP using Insta Demo CA
 # Message transfer

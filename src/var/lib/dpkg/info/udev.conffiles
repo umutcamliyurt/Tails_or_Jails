@@ -1,2 +1,2 @@
-/etc/init.d/udev
+/etc/udev/iocost.conf
 /etc/udev/udev.conf

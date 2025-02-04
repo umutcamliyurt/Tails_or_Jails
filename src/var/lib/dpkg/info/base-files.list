@@ -1,5 +1,4 @@
 /.
-/bin
 /boot
 /dev
 /etc
@@ -8,6 +7,7 @@
 /etc/dpkg
 /etc/dpkg/origins
 /etc/dpkg/origins/debian
+/etc/dpkg/origins/kali
 /etc/host.conf
 /etc/issue
 /etc/issue.net
@@ -16,11 +16,9 @@
 /etc/update-motd.d
 /etc/update-motd.d/10-uname
 /home
-/lib
 /proc
 /root
 /run
-/sbin
 /sys
 /tmp
 /usr
@@ -29,6 +27,11 @@
 /usr/include
 /usr/lib
 /usr/lib/os-release
+/usr/lib/systemd
+/usr/lib/systemd/system-preset
+/usr/lib/systemd/system-preset/95-kali.preset
+/usr/lib/systemd/system-preset/99-default.preset
+/usr/lib64
 /usr/sbin
 /usr/share
 /usr/share/base-files
@@ -58,6 +61,7 @@
 /usr/share/dict
 /usr/share/doc
 /usr/share/doc/base-files
+/usr/share/doc/base-files/NEWS.Debian.gz
 /usr/share/doc/base-files/README
 /usr/share/doc/base-files/README.FHS
 /usr/share/doc/base-files/changelog.gz
@@ -81,7 +85,11 @@
 /var/run
 /var/spool
 /var/tmp
+/bin
 /etc/os-release
+/lib
+/lib64
+/sbin
 /usr/share/common-licenses/GFDL
 /usr/share/common-licenses/GPL
 /usr/share/common-licenses/LGPL

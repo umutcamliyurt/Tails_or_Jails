@@ -1,5 +1,5 @@
 ld-linux-x86-64.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_2.34@GLIBC_2.34 2.34
  GLIBC_2.35@GLIBC_2.35 2.35
@@ -16,12 +16,12 @@ ld-linux-x86-64.so.2 libc6 #MINVER#
  __rtld_version_placeholder@GLIBC_2.34 2.34
  __tls_get_addr@GLIBC_2.3 2.3
  __tunable_get_val@GLIBC_PRIVATE 0 1
+ __tunable_is_initialized@GLIBC_PRIVATE 0 1
  _dl_allocate_tls@GLIBC_PRIVATE 0 1
  _dl_allocate_tls_init@GLIBC_PRIVATE 0 1
  _dl_argv@GLIBC_PRIVATE 0 1
  _dl_audit_preinit@GLIBC_PRIVATE 0 1
  _dl_audit_symbind_alt@GLIBC_PRIVATE 0 1
- _dl_catch_error@GLIBC_PRIVATE 0 1
  _dl_catch_exception@GLIBC_PRIVATE 0 1
  _dl_deallocate_tls@GLIBC_PRIVATE 0 1
  _dl_debug_state@GLIBC_PRIVATE 0 1
@@ -40,15 +40,15 @@ ld-linux-x86-64.so.2 libc6 #MINVER#
  _rtld_global@GLIBC_PRIVATE 0 1
  _rtld_global_ro@GLIBC_PRIVATE 0 1
 libBrokenLocale.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  __ctype_get_mb_cur_max@GLIBC_2.2.5 2.2.5
 libanl.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  __libanl_version_placeholder@GLIBC_2.2.5 2.2.5
 libc.so.6 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.10@GLIBC_2.10 2.10
  GLIBC_2.11@GLIBC_2.11 2.11
  GLIBC_2.12@GLIBC_2.12 2.12
@@ -78,6 +78,8 @@ libc.so.6 libc6 #MINVER#
  GLIBC_2.34@GLIBC_2.34 2.34
  GLIBC_2.35@GLIBC_2.35 2.35
  GLIBC_2.36@GLIBC_2.36 2.36
+ GLIBC_2.38@GLIBC_2.38 2.38
+ GLIBC_2.39@GLIBC_2.39 2.39
  GLIBC_2.3@GLIBC_2.3 2.3
  GLIBC_2.4@GLIBC_2.4 2.4
  GLIBC_2.5@GLIBC_2.5 2.5
@@ -371,6 +373,38 @@ libc.so.6 libc6 #MINVER#
  __isnanf128@GLIBC_2.34 2.34
  __isnanf@GLIBC_2.2.5 2.2.5
  __isnanl@GLIBC_2.2.5 2.2.5
+ __isoc23_fscanf@GLIBC_2.38 2.38
+ __isoc23_fwscanf@GLIBC_2.38 2.38
+ __isoc23_scanf@GLIBC_2.38 2.38
+ __isoc23_sscanf@GLIBC_2.38 2.38
+ __isoc23_strtoimax@GLIBC_2.38 2.38
+ __isoc23_strtol@GLIBC_2.38 2.38
+ __isoc23_strtol_l@GLIBC_2.38 2.38
+ __isoc23_strtoll@GLIBC_2.38 2.38
+ __isoc23_strtoll_l@GLIBC_2.38 2.38
+ __isoc23_strtoul@GLIBC_2.38 2.38
+ __isoc23_strtoul_l@GLIBC_2.38 2.38
+ __isoc23_strtoull@GLIBC_2.38 2.38
+ __isoc23_strtoull_l@GLIBC_2.38 2.38
+ __isoc23_strtoumax@GLIBC_2.38 2.38
+ __isoc23_swscanf@GLIBC_2.38 2.38
+ __isoc23_vfscanf@GLIBC_2.38 2.38
+ __isoc23_vfwscanf@GLIBC_2.38 2.38
+ __isoc23_vscanf@GLIBC_2.38 2.38
+ __isoc23_vsscanf@GLIBC_2.38 2.38
+ __isoc23_vswscanf@GLIBC_2.38 2.38
+ __isoc23_vwscanf@GLIBC_2.38 2.38
+ __isoc23_wcstoimax@GLIBC_2.38 2.38
+ __isoc23_wcstol@GLIBC_2.38 2.38
+ __isoc23_wcstol_l@GLIBC_2.38 2.38
+ __isoc23_wcstoll@GLIBC_2.38 2.38
+ __isoc23_wcstoll_l@GLIBC_2.38 2.38
+ __isoc23_wcstoul@GLIBC_2.38 2.38
+ __isoc23_wcstoul_l@GLIBC_2.38 2.38
+ __isoc23_wcstoull@GLIBC_2.38 2.38
+ __isoc23_wcstoull_l@GLIBC_2.38 2.38
+ __isoc23_wcstoumax@GLIBC_2.38 2.38
+ __isoc23_wscanf@GLIBC_2.38 2.38
  __isoc99_fscanf@GLIBC_2.7 2.7
  __isoc99_fwscanf@GLIBC_2.7 2.7
  __isoc99_scanf@GLIBC_2.7 2.7
@@ -453,7 +487,6 @@ libc.so.6 libc6 #MINVER#
  __libc_res_queriesmatch@GLIBC_PRIVATE 0 1
  __libc_rpc_getport@GLIBC_PRIVATE 0 1
  __libc_sa_len@GLIBC_2.2.5 2.2.5
- __libc_scratch_buffer_dupfree@GLIBC_PRIVATE 0 1
  __libc_scratch_buffer_grow@GLIBC_PRIVATE 0 1
  __libc_scratch_buffer_grow_preserve@GLIBC_PRIVATE 0 1
  __libc_scratch_buffer_set_array_size@GLIBC_PRIVATE 0 1
@@ -677,7 +710,6 @@ libc.so.6 libc6 #MINVER#
  __sigsetjmp@GLIBC_2.2.5 2.2.5
  __sigsuspend@GLIBC_2.2.5 2.2.5
  __sigtimedwait@GLIBC_PRIVATE 0 1
- __snprintf@GLIBC_PRIVATE 0 1
  __snprintf_chk@GLIBC_2.3.4 2.3.4
  __socket@GLIBC_PRIVATE 0 1
  __sprintf_chk@GLIBC_2.3.4 2.3.4
@@ -702,6 +734,8 @@ libc.so.6 libc6 #MINVER#
  __strerror_r@GLIBC_2.2.5 2.2.5
  __strfmon_l@GLIBC_2.2.5 2.2.5
  __strftime_l@GLIBC_2.3 2.3
+ __strlcat_chk@GLIBC_2.38 2.38
+ __strlcpy_chk@GLIBC_2.38 2.38
  __strncasecmp_l@GLIBC_2.2.5 2.2.5
  __strncat_chk@GLIBC_2.3.4 2.3.4
  __strncpy_chk@GLIBC_2.3.4 2.3.4
@@ -785,6 +819,8 @@ libc.so.6 libc6 #MINVER#
  __wcscoll_l@GLIBC_2.2.5 2.2.5
  __wcscpy_chk@GLIBC_2.4 2.4
  __wcsftime_l@GLIBC_2.3 2.3
+ __wcslcat_chk@GLIBC_2.38 2.38
+ __wcslcpy_chk@GLIBC_2.38 2.38
  __wcsncasecmp_l@GLIBC_2.2.5 2.2.5
  __wcsncat_chk@GLIBC_2.4 2.4
  __wcsncpy_chk@GLIBC_2.4 2.4
@@ -829,13 +865,9 @@ libc.so.6 libc6 #MINVER#
  __xstat64@GLIBC_2.2.5 2.2.5
  __xstat@GLIBC_2.2.5 2.2.5
  _authenticate@GLIBC_2.2.5 2.2.5
- _dl_catch_error@GLIBC_PRIVATE 0 1
- _dl_catch_exception@GLIBC_PRIVATE 0 1
  _dl_find_object@GLIBC_2.35 2.35
  _dl_mcount_wrapper@GLIBC_2.2.5 2.2.5
  _dl_mcount_wrapper_check@GLIBC_2.2.5 2.2.5
- _dl_signal_error@GLIBC_PRIVATE 0 1
- _dl_signal_exception@GLIBC_PRIVATE 0 1
  _environ@GLIBC_2.2.5 2.2.5
  _exit@GLIBC_2.2.5 2.2.5
  _flushlbf@GLIBC_2.2.5 2.2.5
@@ -2012,8 +2044,11 @@ libc.so.6 libc6 #MINVER#
  perror@GLIBC_2.2.5 2.2.5
  personality@GLIBC_2.2.5 2.2.5
  pidfd_getfd@GLIBC_2.36 2.36
+ pidfd_getpid@GLIBC_2.39 2.39
  pidfd_open@GLIBC_2.36 2.36
  pidfd_send_signal@GLIBC_2.36 2.36
+ pidfd_spawn@GLIBC_2.39 2.39
+ pidfd_spawnp@GLIBC_2.39 2.39
  pipe2@GLIBC_2.9 2.9
  pipe@GLIBC_2.2.5 2.2.5
  pivot_root@GLIBC_2.2.5 2.2.5
@@ -2048,6 +2083,7 @@ libc.so.6 libc6 #MINVER#
  posix_spawn_file_actions_destroy@GLIBC_2.2.5 2.2.5
  posix_spawn_file_actions_init@GLIBC_2.2.5 2.2.5
  posix_spawnattr_destroy@GLIBC_2.2.5 2.2.5
+ posix_spawnattr_getcgroup_np@GLIBC_2.39 2.39
  posix_spawnattr_getflags@GLIBC_2.2.5 2.2.5
  posix_spawnattr_getpgroup@GLIBC_2.2.5 2.2.5
  posix_spawnattr_getschedparam@GLIBC_2.2.5 2.2.5
@@ -2055,6 +2091,7 @@ libc.so.6 libc6 #MINVER#
  posix_spawnattr_getsigdefault@GLIBC_2.2.5 2.2.5
  posix_spawnattr_getsigmask@GLIBC_2.2.5 2.2.5
  posix_spawnattr_init@GLIBC_2.2.5 2.2.5
+ posix_spawnattr_setcgroup_np@GLIBC_2.39 2.39
  posix_spawnattr_setflags@GLIBC_2.2.5 2.2.5
  posix_spawnattr_setpgroup@GLIBC_2.2.5 2.2.5
  posix_spawnattr_setschedparam@GLIBC_2.2.5 2.2.5
@@ -2625,6 +2662,76 @@ libc.so.6 libc6 #MINVER#
  statvfs64@GLIBC_2.2.5 2.2.5
  statvfs@GLIBC_2.2.5 2.2.5
  statx@GLIBC_2.28 2.28
+ stdc_bit_ceil_uc@GLIBC_2.39 2.39
+ stdc_bit_ceil_ui@GLIBC_2.39 2.39
+ stdc_bit_ceil_ul@GLIBC_2.39 2.39
+ stdc_bit_ceil_ull@GLIBC_2.39 2.39
+ stdc_bit_ceil_us@GLIBC_2.39 2.39
+ stdc_bit_floor_uc@GLIBC_2.39 2.39
+ stdc_bit_floor_ui@GLIBC_2.39 2.39
+ stdc_bit_floor_ul@GLIBC_2.39 2.39
+ stdc_bit_floor_ull@GLIBC_2.39 2.39
+ stdc_bit_floor_us@GLIBC_2.39 2.39
+ stdc_bit_width_uc@GLIBC_2.39 2.39
+ stdc_bit_width_ui@GLIBC_2.39 2.39
+ stdc_bit_width_ul@GLIBC_2.39 2.39
+ stdc_bit_width_ull@GLIBC_2.39 2.39
+ stdc_bit_width_us@GLIBC_2.39 2.39
+ stdc_count_ones_uc@GLIBC_2.39 2.39
+ stdc_count_ones_ui@GLIBC_2.39 2.39
+ stdc_count_ones_ul@GLIBC_2.39 2.39
+ stdc_count_ones_ull@GLIBC_2.39 2.39
+ stdc_count_ones_us@GLIBC_2.39 2.39
+ stdc_count_zeros_uc@GLIBC_2.39 2.39
+ stdc_count_zeros_ui@GLIBC_2.39 2.39
+ stdc_count_zeros_ul@GLIBC_2.39 2.39
+ stdc_count_zeros_ull@GLIBC_2.39 2.39
+ stdc_count_zeros_us@GLIBC_2.39 2.39
+ stdc_first_leading_one_uc@GLIBC_2.39 2.39
+ stdc_first_leading_one_ui@GLIBC_2.39 2.39
+ stdc_first_leading_one_ul@GLIBC_2.39 2.39
+ stdc_first_leading_one_ull@GLIBC_2.39 2.39
+ stdc_first_leading_one_us@GLIBC_2.39 2.39
+ stdc_first_leading_zero_uc@GLIBC_2.39 2.39
+ stdc_first_leading_zero_ui@GLIBC_2.39 2.39
+ stdc_first_leading_zero_ul@GLIBC_2.39 2.39
+ stdc_first_leading_zero_ull@GLIBC_2.39 2.39
+ stdc_first_leading_zero_us@GLIBC_2.39 2.39
+ stdc_first_trailing_one_uc@GLIBC_2.39 2.39
+ stdc_first_trailing_one_ui@GLIBC_2.39 2.39
+ stdc_first_trailing_one_ul@GLIBC_2.39 2.39
+ stdc_first_trailing_one_ull@GLIBC_2.39 2.39
+ stdc_first_trailing_one_us@GLIBC_2.39 2.39
+ stdc_first_trailing_zero_uc@GLIBC_2.39 2.39
+ stdc_first_trailing_zero_ui@GLIBC_2.39 2.39
+ stdc_first_trailing_zero_ul@GLIBC_2.39 2.39
+ stdc_first_trailing_zero_ull@GLIBC_2.39 2.39
+ stdc_first_trailing_zero_us@GLIBC_2.39 2.39
+ stdc_has_single_bit_uc@GLIBC_2.39 2.39
+ stdc_has_single_bit_ui@GLIBC_2.39 2.39
+ stdc_has_single_bit_ul@GLIBC_2.39 2.39
+ stdc_has_single_bit_ull@GLIBC_2.39 2.39
+ stdc_has_single_bit_us@GLIBC_2.39 2.39
+ stdc_leading_ones_uc@GLIBC_2.39 2.39
+ stdc_leading_ones_ui@GLIBC_2.39 2.39
+ stdc_leading_ones_ul@GLIBC_2.39 2.39
+ stdc_leading_ones_ull@GLIBC_2.39 2.39
+ stdc_leading_ones_us@GLIBC_2.39 2.39
+ stdc_leading_zeros_uc@GLIBC_2.39 2.39
+ stdc_leading_zeros_ui@GLIBC_2.39 2.39
+ stdc_leading_zeros_ul@GLIBC_2.39 2.39
+ stdc_leading_zeros_ull@GLIBC_2.39 2.39
+ stdc_leading_zeros_us@GLIBC_2.39 2.39
+ stdc_trailing_ones_uc@GLIBC_2.39 2.39
+ stdc_trailing_ones_ui@GLIBC_2.39 2.39
+ stdc_trailing_ones_ul@GLIBC_2.39 2.39
+ stdc_trailing_ones_ull@GLIBC_2.39 2.39
+ stdc_trailing_ones_us@GLIBC_2.39 2.39
+ stdc_trailing_zeros_uc@GLIBC_2.39 2.39
+ stdc_trailing_zeros_ui@GLIBC_2.39 2.39
+ stdc_trailing_zeros_ul@GLIBC_2.39 2.39
+ stdc_trailing_zeros_ull@GLIBC_2.39 2.39
+ stdc_trailing_zeros_us@GLIBC_2.39 2.39
  stderr@GLIBC_2.2.5 2.2.5
  stdin@GLIBC_2.2.5 2.2.5
  stdout@GLIBC_2.2.5 2.2.5
@@ -2662,6 +2769,8 @@ libc.so.6 libc6 #MINVER#
  strfry@GLIBC_2.2.5 2.2.5
  strftime@GLIBC_2.2.5 2.2.5
  strftime_l@GLIBC_2.3 2.3
+ strlcat@GLIBC_2.38 2.38
+ strlcpy@GLIBC_2.38 2.38
  strlen@GLIBC_2.2.5 2.2.5
  strncasecmp@GLIBC_2.2.5 2.2.5
  strncasecmp_l@GLIBC_2.3 2.3
@@ -2935,6 +3044,8 @@ libc.so.6 libc6 #MINVER#
  wcsdup@GLIBC_2.2.5 2.2.5
  wcsftime@GLIBC_2.2.5 2.2.5
  wcsftime_l@GLIBC_2.3 2.3
+ wcslcat@GLIBC_2.38 2.38
+ wcslcpy@GLIBC_2.38 2.38
  wcslen@GLIBC_2.2.5 2.2.5
  wcsncasecmp@GLIBC_2.2.5 2.2.5
  wcsncasecmp_l@GLIBC_2.3 2.3
@@ -3075,7 +3186,7 @@ libc.so.6 libc6 #MINVER#
  xprt_register@GLIBC_2.2.5 2.2.5
  xprt_unregister@GLIBC_2.2.5 2.2.5
 libc_malloc_debug.so.0 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.10@GLIBC_2.10 2.10
  GLIBC_2.16@GLIBC_2.16 2.16
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
@@ -3109,7 +3220,7 @@ libc_malloc_debug.so.0 libc6 #MINVER#
  realloc@GLIBC_2.2.5 2.2.5
  valloc@GLIBC_2.2.5 2.2.5
 libdl.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_2.3.3@GLIBC_2.3.3 2.3.3
  GLIBC_2.3.4@GLIBC_2.3.4 2.3.4
@@ -3117,7 +3228,7 @@ libdl.so.2 libc6 #MINVER#
  __libdl_version_placeholder@GLIBC_2.3.3 2.3.3
  __libdl_version_placeholder@GLIBC_2.3.4 2.3.4
 libm.so.6 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.15@GLIBC_2.15 2.15
  GLIBC_2.18@GLIBC_2.18 2.18
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
@@ -3131,6 +3242,9 @@ libm.so.6 libc6 #MINVER#
  GLIBC_2.31@GLIBC_2.31 2.31
  GLIBC_2.32@GLIBC_2.32 2.32
  GLIBC_2.35@GLIBC_2.35 2.35
+ GLIBC_2.38@GLIBC_2.38 2.38
+ GLIBC_2.39@GLIBC_2.39 2.39
+ GLIBC_2.40@GLIBC_2.40 2.40
  GLIBC_2.4@GLIBC_2.4 2.4
  _LIB_VERSION@GLIBC_2.2.5 2.2.5
  __acos_finite@GLIBC_2.15 2.15
@@ -3580,6 +3694,7 @@ libm.so.6 libc6 #MINVER#
  erff@GLIBC_2.2.5 2.2.5
  erfl@GLIBC_2.2.5 2.2.5
  exp10@GLIBC_2.2.5 2.2.5
+ exp10@GLIBC_2.39 2.39
  exp10f128@GLIBC_2.26 2.26
  exp10f32@GLIBC_2.27 2.27
  exp10f32x@GLIBC_2.27 2.27
@@ -3588,6 +3703,14 @@ libm.so.6 libc6 #MINVER#
  exp10f@GLIBC_2.2.5 2.2.5
  exp10f@GLIBC_2.32 2.32
  exp10l@GLIBC_2.2.5 2.2.5
+ exp10m1@GLIBC_2.40 2.40
+ exp10m1f128@GLIBC_2.40 2.40
+ exp10m1f32@GLIBC_2.40 2.40
+ exp10m1f32x@GLIBC_2.40 2.40
+ exp10m1f64@GLIBC_2.40 2.40
+ exp10m1f64x@GLIBC_2.40 2.40
+ exp10m1f@GLIBC_2.40 2.40
+ exp10m1l@GLIBC_2.40 2.40
  exp2@GLIBC_2.2.5 2.2.5
  exp2@GLIBC_2.29 2.29
  exp2f128@GLIBC_2.26 2.26
@@ -3598,6 +3721,14 @@ libm.so.6 libc6 #MINVER#
  exp2f@GLIBC_2.2.5 2.2.5
  exp2f@GLIBC_2.27 2.27
  exp2l@GLIBC_2.2.5 2.2.5
+ exp2m1@GLIBC_2.40 2.40
+ exp2m1f128@GLIBC_2.40 2.40
+ exp2m1f32@GLIBC_2.40 2.40
+ exp2m1f32x@GLIBC_2.40 2.40
+ exp2m1f64@GLIBC_2.40 2.40
+ exp2m1f64x@GLIBC_2.40 2.40
+ exp2m1f@GLIBC_2.40 2.40
+ exp2m1l@GLIBC_2.40 2.40
  exp@GLIBC_2.2.5 2.2.5
  exp@GLIBC_2.29 2.29
  expf128@GLIBC_2.26 2.26
@@ -3832,12 +3963,14 @@ libm.so.6 libc6 #MINVER#
  fminmagf@GLIBC_2.25 2.25
  fminmagl@GLIBC_2.25 2.25
  fmod@GLIBC_2.2.5 2.2.5
+ fmod@GLIBC_2.38 2.38
  fmodf128@GLIBC_2.26 2.26
  fmodf32@GLIBC_2.27 2.27
  fmodf32x@GLIBC_2.27 2.27
  fmodf64@GLIBC_2.27 2.27
  fmodf64x@GLIBC_2.27 2.27
  fmodf@GLIBC_2.2.5 2.2.5
+ fmodf@GLIBC_2.38 2.38
  fmodl@GLIBC_2.2.5 2.2.5
  fmul@GLIBC_2.28 2.28
  fmull@GLIBC_2.28 2.28
@@ -3981,6 +4114,14 @@ libm.so.6 libc6 #MINVER#
  log10f64x@GLIBC_2.27 2.27
  log10f@GLIBC_2.2.5 2.2.5
  log10l@GLIBC_2.2.5 2.2.5
+ log10p1@GLIBC_2.40 2.40
+ log10p1f128@GLIBC_2.40 2.40
+ log10p1f32@GLIBC_2.40 2.40
+ log10p1f32x@GLIBC_2.40 2.40
+ log10p1f64@GLIBC_2.40 2.40
+ log10p1f64x@GLIBC_2.40 2.40
+ log10p1f@GLIBC_2.40 2.40
+ log10p1l@GLIBC_2.40 2.40
  log1p@GLIBC_2.2.5 2.2.5
  log1pf128@GLIBC_2.26 2.26
  log1pf32@GLIBC_2.27 2.27
@@ -3999,6 +4140,14 @@ libm.so.6 libc6 #MINVER#
  log2f@GLIBC_2.2.5 2.2.5
  log2f@GLIBC_2.27 2.27
  log2l@GLIBC_2.2.5 2.2.5
+ log2p1@GLIBC_2.40 2.40
+ log2p1f128@GLIBC_2.40 2.40
+ log2p1f32@GLIBC_2.40 2.40
+ log2p1f32x@GLIBC_2.40 2.40
+ log2p1f64@GLIBC_2.40 2.40
+ log2p1f64x@GLIBC_2.40 2.40
+ log2p1f@GLIBC_2.40 2.40
+ log2p1l@GLIBC_2.40 2.40
  log@GLIBC_2.2.5 2.2.5
  log@GLIBC_2.29 2.29
  logb@GLIBC_2.2.5 2.2.5
@@ -4017,6 +4166,14 @@ libm.so.6 libc6 #MINVER#
  logf@GLIBC_2.2.5 2.2.5
  logf@GLIBC_2.27 2.27
  logl@GLIBC_2.2.5 2.2.5
+ logp1@GLIBC_2.40 2.40
+ logp1f128@GLIBC_2.40 2.40
+ logp1f32@GLIBC_2.40 2.40
+ logp1f32x@GLIBC_2.40 2.40
+ logp1f64@GLIBC_2.40 2.40
+ logp1f64x@GLIBC_2.40 2.40
+ logp1f@GLIBC_2.40 2.40
+ logp1l@GLIBC_2.40 2.40
  lrint@GLIBC_2.2.5 2.2.5
  lrintf128@GLIBC_2.26 2.26
  lrintf32@GLIBC_2.27 2.27
@@ -4314,7 +4471,7 @@ libm.so.6 libc6 #MINVER#
  ynf@GLIBC_2.2.5 2.2.5
  ynl@GLIBC_2.2.5 2.2.5
 libmemusage.so libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  calloc@Base 2.3.6
  free@Base 2.3.6
  malloc@Base 2.3.6
@@ -4324,7 +4481,7 @@ libmemusage.so libc6 #MINVER#
  munmap@Base 2.3.6
  realloc@Base 2.3.6
 libmvec.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.22@GLIBC_2.22 2.22
  GLIBC_2.35@GLIBC_2.35 2.35
  _ZGVbN2v_acos@GLIBC_2.35 2.35
@@ -4544,7 +4701,7 @@ libmvec.so.1 libc6 #MINVER#
  _ZGVeN8vv_pow@GLIBC_2.22 2.22
  _ZGVeN8vvv_sincos@GLIBC_2.22 2.22
 libnsl.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  __create_ib_request@GLIBC_PRIVATE 0 1
@@ -4675,7 +4832,7 @@ libnsl.so.1 libc6 #MINVER#
  yperr_string@GLIBC_2.2.5 2.2.5
  ypprot_err@GLIBC_2.2.5 2.2.5
 libnss_compat.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_compat_endgrent@GLIBC_PRIVATE 0 1
  _nss_compat_endpwent@GLIBC_PRIVATE 0 1
@@ -4693,13 +4850,13 @@ libnss_compat.so.2 libc6 #MINVER#
  _nss_compat_setpwent@GLIBC_PRIVATE 0 1
  _nss_compat_setspent@GLIBC_PRIVATE 0 1
 libnss_dns.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
 libnss_files.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
 libnss_hesiod.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_PRIVATE@GLIBC_PRIVATE 0 1
  _nss_hesiod_endgrent@GLIBC_PRIVATE 0 1
  _nss_hesiod_endprotoent@GLIBC_PRIVATE 0 1
@@ -4719,11 +4876,11 @@ libnss_hesiod.so.2 libc6 #MINVER#
  _nss_hesiod_setpwent@GLIBC_PRIVATE 0 1
  _nss_hesiod_setservent@GLIBC_PRIVATE 0 1
 libpcprofile.so libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  __cyg_profile_func_enter@Base 2.3.6
  __cyg_profile_func_exit@Base 2.3.6
 libpthread.so.0 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.11@GLIBC_2.11 2.11
  GLIBC_2.12@GLIBC_2.12 2.12
  GLIBC_2.18@GLIBC_2.18 2.18
@@ -4749,7 +4906,7 @@ libpthread.so.0 libc6 #MINVER#
  __libpthread_version_placeholder@GLIBC_2.31 2.31
  __libpthread_version_placeholder@GLIBC_2.4 2.4
 libresolv.so.2 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_2.3.2@GLIBC_2.3.2 2.3.2
  GLIBC_2.9@GLIBC_2.9 2.9
@@ -4824,7 +4981,7 @@ libresolv.so.2 libc6 #MINVER#
  res_send_setqhook@GLIBC_2.2.5 2.2.5
  res_send_setrhook@GLIBC_2.2.5 2.2.5
 librt.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_2.3.3@GLIBC_2.3.3 2.3.3
  GLIBC_2.3.4@GLIBC_2.3.4 2.3.4
@@ -4836,7 +4993,7 @@ librt.so.1 libc6 #MINVER#
  __librt_version_placeholder@GLIBC_2.4 2.4
  __librt_version_placeholder@GLIBC_2.7 2.7
 libthread_db.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  GLIBC_2.3.3@GLIBC_2.3.3 2.3.3
  GLIBC_2.3@GLIBC_2.3 2.3
@@ -4881,6 +5038,6 @@ libthread_db.so.1 libc6 #MINVER#
  td_thr_tsd@GLIBC_2.2.5 2.2.5
  td_thr_validate@GLIBC_2.2.5 2.2.5
 libutil.so.1 libc6 #MINVER#
-| libc6 (>> 2.36), libc6 (<< 2.37)
+| libc6 (>> 2.40), libc6 (<< 2.41)
  GLIBC_2.2.5@GLIBC_2.2.5 2.2.5
  __libutil_version_placeholder@GLIBC_2.2.5 2.2.5

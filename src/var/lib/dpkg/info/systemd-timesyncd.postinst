@@ -23,12 +23,29 @@ if [ "$1" = configure ] && [ -z "$2" ]; then
     _adopt_conffile /etc/systemd/timesyncd.conf systemd-timesyncd
 fi
 
-# Automatically added by dh_installsysusers/13.11.4
+# Automatically added by dh_installsysusers/13.24.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
    systemd-sysusers ${DPKG_ROOT:+--root="$DPKG_ROOT"} systemd-timesync.conf
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.11.4
+# Automatically added by dh_installsystemd/13.24.1
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# The following line should be removed in trixie or trixie+1
+	deb-systemd-helper unmask 'systemd-time-wait-sync.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'systemd-time-wait-sync.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'systemd-time-wait-sync.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'systemd-time-wait-sync.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.24.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# The following line should be removed in trixie or trixie+1
 	deb-systemd-helper unmask 'systemd-timesyncd.service' >/dev/null || true
@@ -45,7 +62,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installsystemd/13.11.4
+# Automatically added by dh_installsystemd/13.24.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	if [ -d /run/systemd/system ]; then
 		systemctl --system daemon-reload >/dev/null || true
@@ -54,7 +71,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 		else
 			_dh_action=start
 		fi
-		deb-systemd-invoke $_dh_action 'systemd-timesyncd.service' >/dev/null || true
+		deb-systemd-invoke $_dh_action 'systemd-time-wait-sync.service' 'systemd-timesyncd.service' >/dev/null || true
 	fi
 fi
 # End automatically added section

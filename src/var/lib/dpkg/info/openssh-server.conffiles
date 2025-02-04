@@ -1,0 +1,9 @@
+/etc/default/ssh
+/etc/init.d/ssh
+/etc/pam.d/sshd
+/etc/ssh/moduli
+/etc/sv/ssh/.meta/installed
+/etc/sv/ssh/finish
+/etc/sv/ssh/log/run
+/etc/sv/ssh/run
+/etc/ufw/applications.d/openssh-server

@@ -1,0 +1,4 @@
+#!/bin/sh
+chown _runit-log:adm '/var/log/runit/ssh'
+chmod 750 '/var/log/runit/ssh'
+exec chpst -u _runit-log svlogd -tt '/var/log/runit/ssh'

@@ -13,14 +13,27 @@ _update_catalog() {
 }
 
 _update_binfmt() {
-    # If binfmt-support is installed and active do not restart
-    # systemd-binfmt.service. It will unregister all currently registered
-    # binary formats in ExecStop and not all packages with a binfmt-support
-    # configuration ship a corresponding binfmt.d snippet yet.
-    # Once this is the case, this additional safety check can be removed.
-    if ! _systemctl -q is-active binfmt-support.service; then
-        _systemctl try-restart systemd-binfmt.service || true
+    if [ "$(_systemctl show -P LoadState systemd-binfmt.service)" != "masked" ]; then
+        _systemctl restart systemd-binfmt.service || true
     fi
+}
+
+_update_sysctl() {
+    if [ "$(_systemctl show -P LoadState systemd-sysctl.service)" != "masked" ]; then
+        _systemctl restart systemd-sysctl.service || true
+    fi
+}
+
+_restart_managers() {
+    _systemctl daemon-reexec || true
+    # Re-exec user instances so that running user managers are updated too.
+    # SIGRTMIN+25 -> reexec. Note that this is asynchronous, but we can't use
+    # D-Bus as dbus-user-session is not guaranteed to be available.
+    _systemctl kill --kill-whom='main' --signal='SIGRTMIN+25' 'user@*.service' || true
+    # do not restart logind
+    # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=919509
+    _systemctl try-restart systemd-networkd.service || true
+    _systemctl try-restart systemd-journald.service || true
 }
 
 # Update Message Catalogs database and binfmt registrations in response to dpkg triggers
@@ -34,72 +47,88 @@ if [ "$1" = "triggered" ]; then
             /usr/lib/binfmt.d)
                 _update_binfmt
                 ;;
+            /usr/lib/sysctl.d)
+                _update_sysctl
+                ;;
+            libc-upgrade)
+                _restart_managers
+                ;;
         esac
     done
     exit 0
 fi
 
-# Enable getty and remote-fs.target by default on new installs
+# Enable getty, remote-fs.target and systemd-pstore by default on new installs
 if [ -z "$2" ]; then
     systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable getty@tty1.service || true
     systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable remote-fs.target || true
-fi
-
-# Enable systemd-pstore by default on new installs and upgrades, see #952767
-if dpkg --compare-versions "$2" lt "245.4-4~"; then
     systemctl ${DPKG_ROOT:+--root="$DPKG_ROOT"} enable systemd-pstore.service || true
 fi
 
 # Create /etc/machine-id
 systemd-machine-id-setup ${DPKG_ROOT:+--root="$DPKG_ROOT"}
 
-# Enable persistent journal, in auto-mode, by default on new installs and upgrades
-if dpkg --compare-versions "$2" lt "244.1-2~"; then
+# Enable persistent journal, in auto-mode, by default on new installs
+if [ -z "$2" ]; then
     mkdir -p "$DPKG_ROOT/var/log/journal"
 fi
 
 # Initial update of the Message Catalogs database
 _update_catalog
 
-if dpkg --compare-versions "$2" lt-nl "245.4-4~"; then
-    # systemd-pstore.service is now enabled via sysinit.target
-    rm -f /etc/systemd/system/systemd-remount-fs.service.wants/systemd-pstore.service
-    rmdir --ignore-fail-on-non-empty /etc/systemd/system/systemd-remount-fs.service.wants 2> /dev/null || true
+# Move the old locale file into /etc. Symlinks will be created by tmpfiles.d later
+if [ -f "$DPKG_ROOT/etc/default/locale" ] && [ ! -L "$DPKG_ROOT/etc/default/locale" ] && [ ! -f "$DPKG_ROOT/etc/locale.conf" ]; then
+    mv "$DPKG_ROOT/etc/default/locale" "$DPKG_ROOT/etc/locale.conf"
 fi
 
-if dpkg --compare-versions "$2" lt-nl "245.4-5~"; then
-    # Clean up removed ondemand service
-    rm -f /etc/systemd/system/multi-user.target.wants/ondemand.service
+# On upgrade for now keep the current tmpfiles.d (as it used to be after patches),
+# drop in Forky
+if [ -n "$2" ] && dpkg --compare-versions "$2" lt 256~rc3-3 && [ ! -f "$DPKG_ROOT/etc/tmpfiles.d/tmp.conf" ]; then
+    mkdir -p "$DPKG_ROOT/etc/tmpfiles.d/"
+    echo 'D /tmp 1777 root root -' > "$DPKG_ROOT/etc/tmpfiles.d/tmp.conf"
 fi
 
-# Automatically added by dh_installsysusers/13.11.4
+# We used to ship tmp.mount in /usr/share as an example, and some users link it in /etc/,
+# remove the link as a workaround until Trixie ships. This method would also have created
+# a link in local-fs.target.wants, so remove that too.
+if [ -n "$2" ] && [ -L "$DPKG_ROOT/etc/systemd/system/tmp.mount" ] && [ "$(readlink "$DPKG_ROOT/etc/systemd/system/tmp.mount")" = "/usr/share/systemd/tmp.mount" ]; then
+    rm -f "$DPKG_ROOT/etc/systemd/system/tmp.mount"
+    rm -f "$DPKG_ROOT/etc/systemd/system/local-fs.target.wants/tmp.mount"
+fi
+
+# The user may have used 'systemctl enable /usr/share/systemd/tmp.mount', which
+# would have created a symlink in the local-fs.target.wants directory (as the
+# pre-Trixie tmp.mount included an [install] section for that purpose). If it
+# exists, remove it.
+if [ -n "$2" ] && [ -L "$DPKG_ROOT/etc/systemd/system/local-fs.target.wants/tmp.mount" ] && [ "$(readlink "$DPKG_ROOT/etc/systemd/system/local-fs.target.wants/tmp.mount")" = "/usr/share/systemd/tmp.mount" ]; then
+    rm -f "$DPKG_ROOT/etc/systemd/system/local-fs.target.wants/tmp.mount"
+fi
+
+# Unless it's already running, ensure /tmp/ does not get overwritten by
+# the tmpfs from tmp.mount in case a unit is later activated that implicitly
+# depends on it (for example with PrivateTmp=yes) by runtime masking it
+if ! _systemctl is-active --quiet tmp.mount; then
+    _systemctl mask --runtime tmp.mount
+fi
+
+# Automatically added by dh_installsysusers/13.24.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
    systemd-sysusers ${DPKG_ROOT:+--root="$DPKG_ROOT"} basic.conf systemd-journal.conf systemd-network.conf
 fi
 # End automatically added section
-# Automatically added by dh_installtmpfiles/13.11.4
+# Automatically added by dh_installtmpfiles/13.24.1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	if [ -x "$(command -v systemd-tmpfiles)" ]; then
-		systemd-tmpfiles ${DPKG_ROOT:+--root="$DPKG_ROOT"} --create debian.conf home.conf journal-nocow.conf legacy.conf provision.conf systemd-network.conf systemd-nologin.conf systemd-pstore.conf systemd-tmp.conf systemd.conf tmp.conf var.conf x11.conf >/dev/null || true
+		systemd-tmpfiles ${DPKG_ROOT:+--root="$DPKG_ROOT"} --create 20-systemd-shell-extra.conf 20-systemd-ssh-generator.conf 20-systemd-stub.conf credstore.conf debian.conf home.conf journal-nocow.conf legacy.conf provision.conf systemd-network.conf systemd-nologin.conf systemd-pstore.conf systemd-tmp.conf systemd.conf tmp.conf var.conf x11.conf || true
 	fi
 fi
 # End automatically added section
-# Automatically added by dh_installdeb/13.11.4
-dpkg-maintscript-helper rm_conffile /etc/dhcp/dhclient-exit-hooks.d/timesyncd 245.4-2\~ -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/systemd/timesyncd.conf 245.4-2\~ -- "$@"
-dpkg-maintscript-helper rm_conffile /etc/pam.d/systemd-user 247\~rc2-3\~ -- "$@"
+# Automatically added by dh_installdeb/13.24.1
 dpkg-maintscript-helper rm_conffile /etc/systemd/resolved.conf 251.3-2\~ -- "$@"
 # End automatically added section
 
 
-if [ -n "$2" ]; then
-    _systemctl daemon-reexec || true
-    # do not restart logind
-    # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=919509
-    if dpkg --compare-versions "$2" lt-nl "246.2-2~"; then
-        # the socket configuration changed
-        _systemctl stop systemd-networkd.socket || true
-    fi
-    _systemctl try-restart systemd-networkd.service || true
-    _systemctl try-restart systemd-journald.service || true
+# skip daemon-reexec and try-restarts during shutdown to avoid hitting LP: #1803391
+if [ -n "$2" ] && [ "$(systemctl is-system-running)" != "stopping" ]; then
+    _restart_managers
 fi

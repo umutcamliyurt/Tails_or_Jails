@@ -2,12 +2,6 @@
 /etc
 /etc/systemd
 /etc/systemd/oomd.conf
-/lib
-/lib/systemd
-/lib/systemd/system
-/lib/systemd/system/systemd-oomd.service
-/lib/systemd/system/systemd-oomd.socket
-/lib/systemd/systemd-oomd
 /usr
 /usr/bin
 /usr/bin/oomctl
@@ -18,8 +12,11 @@
 /usr/lib/systemd/system
 /usr/lib/systemd/system/-.slice.d
 /usr/lib/systemd/system/-.slice.d/10-oomd-root-slice-defaults.conf
+/usr/lib/systemd/system/systemd-oomd.service
+/usr/lib/systemd/system/systemd-oomd.socket
 /usr/lib/systemd/system/user@.service.d
 /usr/lib/systemd/system/user@.service.d/10-oomd-user-service-defaults.conf
+/usr/lib/systemd/systemd-oomd
 /usr/lib/sysusers.d
 /usr/lib/sysusers.d/systemd-oom.conf
 /usr/share

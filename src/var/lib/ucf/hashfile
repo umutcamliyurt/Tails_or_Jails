@@ -55,3 +55,4 @@ af4badb19ce1b9328b1cb0e3dca73ceb  /etc/libreoffice/registry/ogltrans.xcd
 bdb08c29bc975f851edc48b14b395931  /etc/libreoffice/registry/calc.xcd
 47a29bd421e11c6b95841e4eab3b9c7d  /etc/libreoffice/registry/writer.xcd
 542997fd673150576b6f6c9979beedf4  /etc/gdm3/greeter.dconf-defaults
+e6fd6e8e29210c5678181f33177d5433  /etc/ssh/sshd_config

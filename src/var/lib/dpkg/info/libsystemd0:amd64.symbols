@@ -33,6 +33,11 @@ libsystemd.so.0 libsystemd0 #MINVER#
  LIBSYSTEMD_250@LIBSYSTEMD_250 250
  LIBSYSTEMD_251@LIBSYSTEMD_251 251
  LIBSYSTEMD_252@LIBSYSTEMD_252 252
+ LIBSYSTEMD_253@LIBSYSTEMD_253 253
+ LIBSYSTEMD_254@LIBSYSTEMD_254 254
+ LIBSYSTEMD_255@LIBSYSTEMD_255 255
+ LIBSYSTEMD_256@LIBSYSTEMD_256 256~rc1
+ LIBSYSTEMD_257@LIBSYSTEMD_257 257~rc1
  sd_booted@LIBSYSTEMD_209 0
  sd_bus_add_fallback@LIBSYSTEMD_221 221
  sd_bus_add_fallback_vtable@LIBSYSTEMD_221 221
@@ -69,6 +74,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_creds_get_mask@LIBSYSTEMD_221 221
  sd_bus_creds_get_owner_uid@LIBSYSTEMD_221 221
  sd_bus_creds_get_pid@LIBSYSTEMD_221 221
+ sd_bus_creds_get_pidfd_dup@LIBSYSTEMD_256 256~rc1
  sd_bus_creds_get_ppid@LIBSYSTEMD_221 221
  sd_bus_creds_get_selinux_context@LIBSYSTEMD_221 221
  sd_bus_creds_get_session@LIBSYSTEMD_221 221
@@ -90,6 +96,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_creds_has_inheritable_cap@LIBSYSTEMD_221 221
  sd_bus_creds_has_permitted_cap@LIBSYSTEMD_221 221
  sd_bus_creds_new_from_pid@LIBSYSTEMD_221 221
+ sd_bus_creds_new_from_pidfd@LIBSYSTEMD_256 256~rc1
  sd_bus_creds_ref@LIBSYSTEMD_221 221
  sd_bus_creds_unref@LIBSYSTEMD_221 221
  sd_bus_default@LIBSYSTEMD_221 221
@@ -106,6 +113,8 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_emit_properties_changed@LIBSYSTEMD_221 221
  sd_bus_emit_properties_changed_strv@LIBSYSTEMD_221 221
  sd_bus_emit_signal@LIBSYSTEMD_221 221
+ sd_bus_emit_signal_to@LIBSYSTEMD_253 253
+ sd_bus_emit_signal_tov@LIBSYSTEMD_253 253
  sd_bus_emit_signalv@LIBSYSTEMD_246 246
  sd_bus_enqueue_for_read@LIBSYSTEMD_245 245
  sd_bus_error_add_map@LIBSYSTEMD_221 221
@@ -218,6 +227,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_message_new_method_errorf@LIBSYSTEMD_221 221
  sd_bus_message_new_method_return@LIBSYSTEMD_221 221
  sd_bus_message_new_signal@LIBSYSTEMD_221 221
+ sd_bus_message_new_signal_to@LIBSYSTEMD_253 253
  sd_bus_message_open_container@LIBSYSTEMD_221 221
  sd_bus_message_peek_type@LIBSYSTEMD_221 221
  sd_bus_message_read@LIBSYSTEMD_221 221
@@ -259,6 +269,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_path_decode_many@LIBSYSTEMD_227 227
  sd_bus_path_encode@LIBSYSTEMD_221 221
  sd_bus_path_encode_many@LIBSYSTEMD_227 227
+ sd_bus_pending_method_calls@LIBSYSTEMD_257 257~rc1
  sd_bus_process@LIBSYSTEMD_221 221
  sd_bus_process_priority@LIBSYSTEMD_221 221
  sd_bus_query_sender_creds@LIBSYSTEMD_221 221
@@ -337,6 +348,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_bus_wait@LIBSYSTEMD_221 221
  sd_device_enumerator_add_match_parent@LIBSYSTEMD_240 240
  sd_device_enumerator_add_match_property@LIBSYSTEMD_240 240
+ sd_device_enumerator_add_match_property_required@LIBSYSTEMD_255 255
  sd_device_enumerator_add_match_subsystem@LIBSYSTEMD_240 240
  sd_device_enumerator_add_match_sysattr@LIBSYSTEMD_240 240
  sd_device_enumerator_add_match_sysname@LIBSYSTEMD_240 240
@@ -355,6 +367,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_device_get_child_next@LIBSYSTEMD_252 252
  sd_device_get_current_tag_first@LIBSYSTEMD_247 247
  sd_device_get_current_tag_next@LIBSYSTEMD_247 247
+ sd_device_get_device_id@LIBSYSTEMD_257 257~rc1
  sd_device_get_devlink_first@LIBSYSTEMD_240 240
  sd_device_get_devlink_next@LIBSYSTEMD_240 240
  sd_device_get_devname@LIBSYSTEMD_240 240
@@ -363,6 +376,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_device_get_devtype@LIBSYSTEMD_240 240
  sd_device_get_diskseq@LIBSYSTEMD_250 250
  sd_device_get_driver@LIBSYSTEMD_240 240
+ sd_device_get_driver_subsystem@LIBSYSTEMD_257 257~rc1
  sd_device_get_ifindex@LIBSYSTEMD_240 240
  sd_device_get_is_initialized@LIBSYSTEMD_240 240
  sd_device_get_parent@LIBSYSTEMD_240 240
@@ -396,7 +410,12 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_device_monitor_get_description@LIBSYSTEMD_252 252
  sd_device_monitor_get_event@LIBSYSTEMD_240 240
  sd_device_monitor_get_event_source@LIBSYSTEMD_240 240
+ sd_device_monitor_get_events@LIBSYSTEMD_257 257~rc1
+ sd_device_monitor_get_fd@LIBSYSTEMD_257 257~rc1
+ sd_device_monitor_get_timeout@LIBSYSTEMD_257 257~rc1
+ sd_device_monitor_is_running@LIBSYSTEMD_257 257~rc1
  sd_device_monitor_new@LIBSYSTEMD_240 240
+ sd_device_monitor_receive@LIBSYSTEMD_257 257~rc1
  sd_device_monitor_ref@LIBSYSTEMD_240 240
  sd_device_monitor_set_description@LIBSYSTEMD_252 252
  sd_device_monitor_set_receive_buffer_size@LIBSYSTEMD_240 240
@@ -427,6 +446,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_event_add_inotify@LIBSYSTEMD_239 239
  sd_event_add_inotify_fd@LIBSYSTEMD_250 250
  sd_event_add_io@LIBSYSTEMD_221 221
+ sd_event_add_memory_pressure@LIBSYSTEMD_254 254
  sd_event_add_post@LIBSYSTEMD_221 221
  sd_event_add_signal@LIBSYSTEMD_221 221
  sd_event_add_time@LIBSYSTEMD_221 221
@@ -460,6 +480,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_event_source_get_exit_on_failure@LIBSYSTEMD_247 247
  sd_event_source_get_floating@LIBSYSTEMD_240 240
  sd_event_source_get_inotify_mask@LIBSYSTEMD_239 239
+ sd_event_source_get_inotify_path@LIBSYSTEMD_256 256~rc1
  sd_event_source_get_io_events@LIBSYSTEMD_221 221
  sd_event_source_get_io_fd@LIBSYSTEMD_221 221
  sd_event_source_get_io_fd_own@LIBSYSTEMD_237 237
@@ -473,6 +494,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_event_source_get_time_clock@LIBSYSTEMD_221 221
  sd_event_source_get_userdata@LIBSYSTEMD_221 221
  sd_event_source_is_ratelimited@LIBSYSTEMD_248 248
+ sd_event_source_leave_ratelimit@LIBSYSTEMD_254 254
  sd_event_source_ref@LIBSYSTEMD_221 221
  sd_event_source_send_child_signal@LIBSYSTEMD_245 245
  sd_event_source_set_child_pidfd_own@LIBSYSTEMD_245 245
@@ -485,6 +507,8 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_event_source_set_io_events@LIBSYSTEMD_221 221
  sd_event_source_set_io_fd@LIBSYSTEMD_221 221
  sd_event_source_set_io_fd_own@LIBSYSTEMD_237 237
+ sd_event_source_set_memory_pressure_period@LIBSYSTEMD_254 254
+ sd_event_source_set_memory_pressure_type@LIBSYSTEMD_254 254
  sd_event_source_set_prepare@LIBSYSTEMD_221 221
  sd_event_source_set_priority@LIBSYSTEMD_221 221
  sd_event_source_set_ratelimit@LIBSYSTEMD_248 248
@@ -494,6 +518,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_event_source_set_time_relative@LIBSYSTEMD_247 247
  sd_event_source_set_userdata@LIBSYSTEMD_221 221
  sd_event_source_unref@LIBSYSTEMD_221 221
+ sd_event_trim_memory@LIBSYSTEMD_254 254
  sd_event_unref@LIBSYSTEMD_221 221
  sd_event_wait@LIBSYSTEMD_221 221
  sd_get_machine_names@LIBSYSTEMD_209 0
@@ -508,9 +533,11 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_hwdb_seek@LIBSYSTEMD_240 240
  sd_hwdb_unref@LIBSYSTEMD_240 240
  sd_id128_from_string@LIBSYSTEMD_209 0
+ sd_id128_get_app_specific@LIBSYSTEMD_255 255
  sd_id128_get_boot@LIBSYSTEMD_209 0
  sd_id128_get_boot_app_specific@LIBSYSTEMD_240 240
  sd_id128_get_invocation@LIBSYSTEMD_232 232
+ sd_id128_get_invocation_app_specific@LIBSYSTEMD_256 256~rc1
  sd_id128_get_machine@LIBSYSTEMD_209 0
  sd_id128_get_machine_app_specific@LIBSYSTEMD_233 233
  sd_id128_randomize@LIBSYSTEMD_209 0
@@ -545,6 +572,7 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_journal_get_fd@LIBSYSTEMD_209 0
  sd_journal_get_monotonic_usec@LIBSYSTEMD_209 0
  sd_journal_get_realtime_usec@LIBSYSTEMD_209 0
+ sd_journal_get_seqnum@LIBSYSTEMD_254 254
  sd_journal_get_timeout@LIBSYSTEMD_209 0
  sd_journal_get_usage@LIBSYSTEMD_209 0
  sd_journal_has_persistent_files@LIBSYSTEMD_229 229
@@ -582,9 +610,115 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_journal_sendv@LIBSYSTEMD_209 0
  sd_journal_sendv_with_location@LIBSYSTEMD_209 0
  sd_journal_set_data_threshold@LIBSYSTEMD_209 0
+ sd_journal_step_one@LIBSYSTEMD_254 254
  sd_journal_stream_fd@LIBSYSTEMD_209 0
+ sd_journal_stream_fd_with_namespace@LIBSYSTEMD_256 256~rc1
  sd_journal_test_cursor@LIBSYSTEMD_209 0
  sd_journal_wait@LIBSYSTEMD_209 0
+ sd_json_build@LIBSYSTEMD_257 257~rc1
+ sd_json_buildv@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_const_string@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_double@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_full@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_id128@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_int16@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_int32@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_int64@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_int8@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_intbool@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_signal@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_stdbool@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_string@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_strv@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_tristate@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_uid_gid@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_uint16@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_uint32@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_uint64@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_uint8@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_unsupported@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_variant@LIBSYSTEMD_257 257~rc1
+ sd_json_dispatch_variant_noref@LIBSYSTEMD_257 257~rc1
+ sd_json_parse@LIBSYSTEMD_257 257~rc1
+ sd_json_parse_continue@LIBSYSTEMD_257 257~rc1
+ sd_json_parse_file@LIBSYSTEMD_257 257~rc1
+ sd_json_parse_file_at@LIBSYSTEMD_257 257~rc1
+ sd_json_parse_with_source@LIBSYSTEMD_257 257~rc1
+ sd_json_parse_with_source_continue@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_append_array@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_append_array_nodup@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_append_arrayb@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_boolean@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_by_index@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_by_key@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_by_key_full@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_dump@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_elements@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_equal@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_filter@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_find@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_format@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_get_source@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_has_type@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_integer@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_array@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_blank_array@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_blank_object@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_boolean@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_integer@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_negative@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_normalized@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_null@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_number@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_object@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_real@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_sensitive@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_sensitive_recursive@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_sorted@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_string@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_is_unsigned@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_merge_object@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_merge_objectb@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_array@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_array_bytes@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_array_strv@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_base32hex@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_base64@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_boolean@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_hex@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_id128@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_integer@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_null@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_object@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_octescape@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_real@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_string@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_stringn@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_unsigned@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_new_uuid@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_normalize@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_real@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_ref@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_sensitive@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_boolean@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_id128@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_integer@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_string@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_strv@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_unsigned@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_field_uuid@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_set_fieldb@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_sort@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_string@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_strv@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_type@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_unbase64@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_unhex@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_unref@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_unref_many@LIBSYSTEMD_257 257~rc1
+ sd_json_variant_unsigned@LIBSYSTEMD_257 257~rc1
  sd_listen_fds@LIBSYSTEMD_209 0
  sd_listen_fds_with_names@LIBSYSTEMD_227 227
  sd_login_monitor_flush@LIBSYSTEMD_209 0
@@ -617,8 +751,18 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_pid_get_user_slice@LIBSYSTEMD_220 220
  sd_pid_get_user_unit@LIBSYSTEMD_209 0
  sd_pid_notify@LIBSYSTEMD_214 214
+ sd_pid_notify_barrier@LIBSYSTEMD_254 254
  sd_pid_notify_with_fds@LIBSYSTEMD_219 219
  sd_pid_notifyf@LIBSYSTEMD_214 214
+ sd_pid_notifyf_with_fds@LIBSYSTEMD_254 254
+ sd_pidfd_get_cgroup@LIBSYSTEMD_253 253
+ sd_pidfd_get_machine_name@LIBSYSTEMD_253 253
+ sd_pidfd_get_owner_uid@LIBSYSTEMD_253 253
+ sd_pidfd_get_session@LIBSYSTEMD_253 253
+ sd_pidfd_get_slice@LIBSYSTEMD_253 253
+ sd_pidfd_get_unit@LIBSYSTEMD_253 253
+ sd_pidfd_get_user_slice@LIBSYSTEMD_253 253
+ sd_pidfd_get_user_unit@LIBSYSTEMD_253 253
  sd_seat_can_graphical@LIBSYSTEMD_209 0
  sd_seat_can_multi_session@LIBSYSTEMD_209 0
  sd_seat_can_tty@LIBSYSTEMD_209 0
@@ -627,20 +771,124 @@ libsystemd.so.0 libsystemd0 #MINVER#
  sd_session_get_class@LIBSYSTEMD_209 0
  sd_session_get_desktop@LIBSYSTEMD_217 217
  sd_session_get_display@LIBSYSTEMD_209 0
+ sd_session_get_leader@LIBSYSTEMD_254 254
  sd_session_get_remote_host@LIBSYSTEMD_209 0
  sd_session_get_remote_user@LIBSYSTEMD_209 0
  sd_session_get_seat@LIBSYSTEMD_209 0
  sd_session_get_service@LIBSYSTEMD_209 0
+ sd_session_get_start_time@LIBSYSTEMD_254 254
  sd_session_get_state@LIBSYSTEMD_209 0
  sd_session_get_tty@LIBSYSTEMD_209 0
  sd_session_get_type@LIBSYSTEMD_209 0
  sd_session_get_uid@LIBSYSTEMD_209 0
+ sd_session_get_username@LIBSYSTEMD_254 254
  sd_session_get_vt@LIBSYSTEMD_209 0
  sd_session_is_active@LIBSYSTEMD_209 0
  sd_session_is_remote@LIBSYSTEMD_209 0
  sd_uid_get_display@LIBSYSTEMD_213 213
+ sd_uid_get_login_time@LIBSYSTEMD_254 254
  sd_uid_get_seats@LIBSYSTEMD_209 0
  sd_uid_get_sessions@LIBSYSTEMD_209 0
  sd_uid_get_state@LIBSYSTEMD_209 0
  sd_uid_is_on_seat@LIBSYSTEMD_209 0
+ sd_varlink_attach_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_bind_reply@LIBSYSTEMD_257 257~rc1
+ sd_varlink_call@LIBSYSTEMD_257 257~rc1
+ sd_varlink_call_full@LIBSYSTEMD_257 257~rc1
+ sd_varlink_callb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_callb_ap@LIBSYSTEMD_257 257~rc1
+ sd_varlink_callb_full@LIBSYSTEMD_257 257~rc1
+ sd_varlink_close@LIBSYSTEMD_257 257~rc1
+ sd_varlink_close_unref@LIBSYSTEMD_257 257~rc1
+ sd_varlink_collect@LIBSYSTEMD_257 257~rc1
+ sd_varlink_collect_full@LIBSYSTEMD_257 257~rc1
+ sd_varlink_collectb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_connect_address@LIBSYSTEMD_257 257~rc1
+ sd_varlink_connect_exec@LIBSYSTEMD_257 257~rc1
+ sd_varlink_connect_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_connect_fd_pair@LIBSYSTEMD_257 257~rc1
+ sd_varlink_connect_url@LIBSYSTEMD_257 257~rc1
+ sd_varlink_detach_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_dispatch@LIBSYSTEMD_257 257~rc1
+ sd_varlink_dispatch_again@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error_errno@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error_invalid_parameter@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error_invalid_parameter_name@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error_is_invalid_parameter@LIBSYSTEMD_257 257~rc1
+ sd_varlink_error_to_errno@LIBSYSTEMD_257 257~rc1
+ sd_varlink_errorb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_flush@LIBSYSTEMD_257 257~rc1
+ sd_varlink_flush_close_unref@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_current_parameters@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_events@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_peer_gid@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_peer_pid@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_peer_pidfd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_peer_uid@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_server@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_timeout@LIBSYSTEMD_257 257~rc1
+ sd_varlink_get_userdata@LIBSYSTEMD_257 257~rc1
+ sd_varlink_idl_dump@LIBSYSTEMD_257 257~rc1
+ sd_varlink_idl_format@LIBSYSTEMD_257 257~rc1
+ sd_varlink_idl_format_full@LIBSYSTEMD_257 257~rc1
+ sd_varlink_invocation@LIBSYSTEMD_257 257~rc1
+ sd_varlink_invoke@LIBSYSTEMD_257 257~rc1
+ sd_varlink_invokeb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_is_idle@LIBSYSTEMD_257 257~rc1
+ sd_varlink_notify@LIBSYSTEMD_257 257~rc1
+ sd_varlink_notifyb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_observe@LIBSYSTEMD_257 257~rc1
+ sd_varlink_observeb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_peek_dup_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_peek_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_process@LIBSYSTEMD_257 257~rc1
+ sd_varlink_push_dup_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_push_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_ref@LIBSYSTEMD_257 257~rc1
+ sd_varlink_reply@LIBSYSTEMD_257 257~rc1
+ sd_varlink_replyb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_send@LIBSYSTEMD_257 257~rc1
+ sd_varlink_sendb@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_add_connection@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_add_connection_pair@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_add_connection_stdio@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_add_interface@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_add_interface_many_internal@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_attach_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_bind_connect@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_bind_disconnect@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_bind_method@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_bind_method_many_internal@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_connections_max@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_connections_per_uid_max@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_current_connections@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_detach_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_get_event@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_get_userdata@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_listen_address@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_listen_auto@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_listen_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_loop_auto@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_new@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_ref@LIBSYSTEMD_257 257~rc3
+ sd_varlink_server_set_connections_max@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_set_connections_per_uid_max@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_set_description@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_set_exit_on_idle@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_set_info@LIBSYSTEMD_257 257
+ sd_varlink_server_set_userdata@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_shutdown@LIBSYSTEMD_257 257~rc1
+ sd_varlink_server_unref@LIBSYSTEMD_257 257~rc3
+ sd_varlink_set_allow_fd_passing_input@LIBSYSTEMD_257 257~rc1
+ sd_varlink_set_allow_fd_passing_output@LIBSYSTEMD_257 257~rc1
+ sd_varlink_set_description@LIBSYSTEMD_257 257~rc1
+ sd_varlink_set_input_sensitive@LIBSYSTEMD_257 257~rc1
+ sd_varlink_set_relative_timeout@LIBSYSTEMD_257 257~rc1
+ sd_varlink_set_userdata@LIBSYSTEMD_257 257~rc1
+ sd_varlink_take_fd@LIBSYSTEMD_257 257~rc1
+ sd_varlink_unref@LIBSYSTEMD_257 257~rc1
+ sd_varlink_wait@LIBSYSTEMD_257 257~rc1
  sd_watchdog_enabled@LIBSYSTEMD_209 0

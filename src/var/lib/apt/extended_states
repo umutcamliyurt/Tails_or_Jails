@@ -5106,3 +5106,127 @@ Package: libplymouth5
 Architecture: amd64
 Auto-Installed: 1
 
+Package: g++-12
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc-12
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libctf-nobfd0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libtsan2
+Architecture: amd64
+Auto-Installed: 1
+
+Package: g++
+Architecture: amd64
+Auto-Installed: 1
+
+Package: gcc
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libbinutils
+Architecture: amd64
+Auto-Installed: 1
+
+Package: binutils-x86-64-linux-gnu
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcc1-0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: dpkg-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libasan8
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libnsl-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: rpcsvc-proto
+Architecture: amd64
+Auto-Installed: 1
+
+Package: make
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libctf0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libcrypt-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: binutils-common
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libitm1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc-dev-bin
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgprofng0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libc6-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libubsan1
+Architecture: amd64
+Auto-Installed: 1
+
+Package: liblsan0
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libtirpc-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: binutils
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libgcc-12-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libstdc++-12-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: linux-libc-dev
+Architecture: amd64
+Auto-Installed: 1
+
+Package: openssl-provider-legacy
+Architecture: amd64
+Auto-Installed: 1
+
+Package: openssh-sftp-server
+Architecture: amd64
+Auto-Installed: 1
+
+Package: libssl3t64
+Architecture: amd64
+Auto-Installed: 1
+

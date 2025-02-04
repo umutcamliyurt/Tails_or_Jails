@@ -1,7 +1,4 @@
 /usr/share/debianutils/shells.d debianutils/noawait
-/usr/lib/systemd/catalog systemd/noawait
-/usr/lib/binfmt.d systemd/noawait
-/lib/udev/hwdb.d udev/noawait
 /etc/dbus-1/system.d dbus/noawait
 /usr/share/dbus-1/system.d dbus/noawait
 /usr/share/dbus-1/system-services dbus/noawait
@@ -41,3 +38,11 @@
 /usr/share/applications gnome-menus/noawait
 /usr/lib/libreoffice/share/extensions libreoffice-common/noawait
 /usr/lib/libreoffice libreoffice-common/noawait
+/usr/lib32 base-files/noawait
+/usr/libo32 base-files/noawait
+/usr/libx32 base-files/noawait
+/usr/lib/systemd/catalog systemd/noawait
+/usr/lib/binfmt.d systemd/noawait
+/usr/lib/sysctl.d systemd/noawait
+/usr/lib/udev/hwdb.d udev/noawait
+/lib/udev/hwdb.d udev/noawait

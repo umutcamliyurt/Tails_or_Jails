@@ -13,34 +13,6 @@ checkpkgver () {
     fi
 }
 
-if [ "$type" = "configure" ]
-then
-    # /etc/ld.so.nohwcap code:
-        # Handle upgrades when libc-opt package has been installed.
-    # When a /etc/ld.so.nohwcap file exists, ld.so only use libraries
-    # from /lib, and ignore all optimised libraries. This file is
-    # inconditionaly created in the preinst script of libc.
- 
-    # We check the version between the current installed libc and
-    # all optimized packages. Due to multiarch, this has to be done
-    # independently of the architecture of the package.
-    all_upgraded=yes
-    for pkg in libc6.1-alphaev67 ; do
-        ver=$(dpkg-query -l $pkg 2>/dev/null | sed -e '/^[a-z][a-z]\s/!d;/^.[nc]/d;' -e "s/^..\s\+$pkg[0-9a-z:]*\s\+//;s/\s.*//g")
-        if [ -n "$ver" ] && [ "$ver" != "2.36-9+deb12u9" ]; then
-            all_upgraded=no
-        fi
-    done
-
-    # If the versions of all optimized packages are the same as the libc
-    # one, we could remove /etc/ld.so.nohwcap. Otherwise, it will be removed
-    # when all optimized packages are upgraded or removed.
-    if [ "$all_upgraded" = yes ] ; then
-        rm -f "$DPKG_ROOT/etc/ld.so.nohwcap"
-    fi
-
-fi
-
 if [ "$type" = configure ]
 then
     # Load debconf module if available
@@ -53,7 +25,7 @@ then
     export LC_ALL=C
 
     if [ -n "$preversion" ] && [ -x "$(command -v ischroot)" ] && ! ischroot; then
-	if dpkg --compare-versions "$preversion" lt 2.36; then
+	if dpkg --compare-versions "$preversion" lt 2.40; then
 	    check="apache2.2-common apache apache-ssl apache-perl autofs at"
 	    check="$check boa cucipop courier-authdaemon cron cups exim"
 	    check="$check exim4-base dovecot-common cucipop incron lprng lpr"
@@ -203,35 +175,15 @@ then
 	    else
 		echo "Nothing to restart."
 	    fi
-	fi # end upgrading and $preversion lt 2.36
+	fi # end upgrading and $preversion lt 2.40
     fi # Upgrading
 
-    # Restart init.  Currently handles chroots, systemd and upstart, and
-    # assumes anything else is going to not fail at behaving like
-    # sysvinit:
-    TELINIT=yes
-    if ischroot 2>/dev/null; then
-        # Don't bother trying to re-exec init from a chroot:
-        TELINIT=no
-    elif [ -n "${DPKG_ROOT:-}" ]; then
-        # Do not re-exec init if we are operating on a chroot from outside:
-        TELINIT=no
-    elif [ -d /run/systemd/system ]; then
-        # Restart systemd on upgrade, but carefully.
-        # The restart is wanted because of LP: #1942276 and Bug: #993821
-        # The care is needed because of https://bugs.debian.org/753725
-        # (if systemd --help fails the system might still be quite broken but
-        # that seems better than the kernel panic that results if systemd
-        # cannot reexec itself).
-        TELINIT=no
-        if systemd --help >/dev/null 2>/dev/null; then
-            systemctl daemon-reexec
-        else
-            echo "Error: Could not restart systemd, systemd binary not working" >&2
-        fi
-    fi
-    if [ "$TELINIT" = "yes" ]; then
-        telinit u 2>/dev/null || true ; sleep 1
+    # Emit triggers to allow depending packages to restart themselves if
+    # needed.  The triggers are called with "--no-await", as packages with the
+    # triggers-awaited state do not satisfy dependencies.
+    dpkg-trigger --no-await libc-upgrade
+    if [ -n "$preversion" ] && dpkg --compare-versions "$preversion" lt 2.40; then
+        dpkg-trigger --no-await libc-major-upgrade
     fi
 fi
 

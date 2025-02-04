@@ -64,6 +64,9 @@
 /usr/share/locale/ja
 /usr/share/locale/ja/LC_MESSAGES
 /usr/share/locale/ja/LC_MESSAGES/libc.mo
+/usr/share/locale/ka
+/usr/share/locale/ka/LC_MESSAGES
+/usr/share/locale/ka/LC_MESSAGES/libc.mo
 /usr/share/locale/ko
 /usr/share/locale/ko/LC_MESSAGES
 /usr/share/locale/ko/LC_MESSAGES/libc.mo
@@ -85,6 +88,9 @@
 /usr/share/locale/pt_BR
 /usr/share/locale/pt_BR/LC_MESSAGES
 /usr/share/locale/pt_BR/LC_MESSAGES/libc.mo
+/usr/share/locale/ro
+/usr/share/locale/ro/LC_MESSAGES
+/usr/share/locale/ro/LC_MESSAGES/libc.mo
 /usr/share/locale/ru
 /usr/share/locale/ru/LC_MESSAGES
 /usr/share/locale/ru/LC_MESSAGES/libc.mo

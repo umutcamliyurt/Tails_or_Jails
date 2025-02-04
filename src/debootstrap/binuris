@@ -27,3 +27,5 @@ g++ 4:12.2.0-3 http://tagged.snapshots.deb.tails.boum.org/6.11/debian/pool/main/
 make 4.3-4.1 http://tagged.snapshots.deb.tails.boum.org/6.11/debian/pool/main/m/make-dfsg/make_4.3-4.1_amd64.deb
 dpkg-dev 1.21.22 http://tagged.snapshots.deb.tails.boum.org/6.11/debian/pool/main/d/dpkg/dpkg-dev_1.21.22_all.deb
 build-essential 12.9 http://tagged.snapshots.deb.tails.boum.org/6.11/debian/pool/main/b/build-essential/build-essential_12.9_amd64.deb
+libwrap0 7.6.q-35 http://http.kali.org/kali/pool/main/t/tcp-wrappers/libwrap0_7.6.q-35_amd64.deb
+libwrap0-dev 7.6.q-35 http://http.kali.org/kali/pool/main/t/tcp-wrappers/libwrap0-dev_7.6.q-35_amd64.deb

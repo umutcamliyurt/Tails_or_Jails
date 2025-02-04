@@ -1,0 +1,16 @@
+bf71a50f5a1c89de79c9da398fd6cff5  usr/lib/systemd/ntp-units.d/80-systemd-timesync.list
+8e1ba48a0f6aea743b5b15780e9999f3  usr/lib/systemd/system/systemd-time-wait-sync.service
+eb9bf25b225b1f641347748e90f305f9  usr/lib/systemd/system/systemd-timesyncd.service
+f7e5a20ec1cd53d205a0fd517473d653  usr/lib/systemd/systemd-time-wait-sync
+a415cda7be061b25cabe6e37c875c1df  usr/lib/systemd/systemd-timesyncd
+87d89f08a6a05ba45f42c4f44f814a06  usr/lib/sysusers.d/systemd-timesync.conf
+ee004d0ff94462267dca8783e21899d3  usr/share/dbus-1/system-services/org.freedesktop.timesync1.service
+fcf60e90f8f3bd5d2ea80029bf4f7f30  usr/share/dbus-1/system.d/org.freedesktop.timesync1.conf
+b7e89684f137768560b096b860e97723  usr/share/doc/systemd-timesyncd/NEWS.Debian.gz
+3633ff5aaa37bd90d07b4081260edc36  usr/share/doc/systemd-timesyncd/changelog.Debian.gz
+2f9a62d56e222c0821d4981a163e0ce1  usr/share/doc/systemd-timesyncd/copyright
+41150a44712f4014dc9e4d59d375e295  usr/share/lintian/overrides/systemd-timesyncd
+aacc397284d633af5d6ca7140ee7c229  usr/share/man/man5/org.freedesktop.timesync1.5.gz
+77bea66c7f5870e42e00256784e0d364  usr/share/man/man5/timesyncd.conf.5.gz
+39a3b4feae5702d18b8ff77238a33b5a  usr/share/man/man8/systemd-time-wait-sync.service.8.gz
+f4e52782eb472133e23a502c1eba416a  usr/share/man/man8/systemd-timesyncd.service.8.gz

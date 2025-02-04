@@ -6,7 +6,7 @@ Label: Tails
 Suite: 6.11
 Codename: 6.11
 Version: 6.0
-Date: Thu, 30 Jan 2025 16:56:33 UTC
+Date: Tue, 04 Feb 2025 17:20:37 UTC
 Architectures: amd64
 Components: main non-free contrib
 Description: Tails 6.11 packages
@@ -87,8 +87,8 @@ SHA256:
  4008cf2ea6e7d189e2581303d7ad123724dbcc91e36b33df7e3b2e805a230395 127 contrib/source/Release
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYIAB0WIQTWj4cUnrp3VBVzwcEkU6qc5BI6mgUCZ5uvQQAKCRAkU6qc5BI6
-mpKkAQDzfYZrunbO4d+TTv7UoS1u/nBYQ1DugeP+JVSYoJtiEwEA86SKE9VEklO+
-zHbbqKHuZyjfbtN4YR2A7OxC/r21zQ4=
-=8a7I
+iHUEARYIAB0WIQTWj4cUnrp3VBVzwcEkU6qc5BI6mgUCZ6JMZQAKCRAkU6qc5BI6
+mpk9AP9f14RYOrs2h+eeF42+NpnnJMXZAqkbzYP+VEinFxT1fwEA2Npnl33NIsCA
+IQr/QObnivdZ7wNL7la77Y4s5Z3wqA0=
+=bsu9
 -----END PGP SIGNATURE-----

@@ -53,8 +53,8 @@ update_to_current_default() {
 }
 
 if [ ! -e "$DPKG_ROOT/etc/dpkg/origins/default" ]; then
-  if [ -e "$DPKG_ROOT/etc/dpkg/origins/debian" ]; then
-    ln -sf debian "$DPKG_ROOT/etc/dpkg/origins/default"
+  if [ -e "$DPKG_ROOT/etc/dpkg/origins/kali" ]; then
+    ln -sf kali "$DPKG_ROOT/etc/dpkg/origins/default"
   fi
 fi
 
@@ -83,6 +83,7 @@ if [ "$1" = "configure" ] && [ "$2" = "" ]; then
   install_local_dir /usr/local/bin
   install_local_dir /usr/local/games
   install_local_dir /usr/local/lib
+  install_local_dir /usr/local/libexec
   install_local_dir /usr/local/include
   install_local_dir /usr/local/sbin
   install_local_dir /usr/local/src
@@ -106,3 +107,27 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
     install_directory mnt 755 root
   fi
 fi
+
+rtlddir="lib64"
+if [ "$1" = "configure" ] && [ -n "$rtlddir" ]; then
+  # Remove temporary DEP17 M4 diversion added by glibc.
+  dpkg-divert --quiet --package base-files --remove --no-rename --divert "/.$rtlddir.usr-is-merged" "/$rtlddir"
+fi
+
+if [ "$1" = "configure" ] || [ "$1" = "triggered" ]; then
+  for d in lib32 libo32 libx32; do
+    if [ -d "$DPKG_ROOT/usr/$d" ]; then
+      if [ -L "$DPKG_ROOT/$d" ]; then
+        :
+      elif [ -d "$DPKG_ROOT/$d" ]; then
+        echo "Warning: /$d is not a symlink, but should be." 1>&2
+      else
+        ln -s "usr/$d" "$DPKG_ROOT/$d"
+      fi
+    elif [ -L "$DPKG_ROOT/$d" ]; then
+      rm "$DPKG_ROOT/$d"
+    fi
+  done
+fi
+
+

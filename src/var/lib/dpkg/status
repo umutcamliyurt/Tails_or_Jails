@@ -737,27 +737,29 @@ Essential: yes
 Status: install ok installed
 Priority: required
 Section: admin
-Installed-Size: 341
-Maintainer: Santiago Vila <sanvila@debian.org>
+Installed-Size: 360
+Maintainer: Kali Developers <devel@kali.org>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 12.4+deb12u8
+Version: 1:2024.4.1
 Replaces: base, dpkg (<= 1.15.0), miscutils
-Provides: base
+Provides: base, usr-is-merged
 Pre-Depends: awk
 Breaks: debian-security-support (<< 2019.04.25), initscripts (<< 2.88dsf-13.3), sendfile (<< 2.1b.20080616-5.2~)
 Conffiles:
- /etc/debian_version 3a38ede161fe2cc4f1b6fb242e0e0a45
+ /etc/debian_version 4f9957c5944c441dd0cd443ce224ddcc
  /etc/dpkg/origins/debian c47b6815f67ad1aeccb0d4529bd0b990
+ /etc/dpkg/origins/kali 3ec487a080323ca00648685e2f1030d5
  /etc/host.conf 4eb63731c9f5e30903ac4fc07a7fe3d6
- /etc/issue 349d61a0e072d678e3e94923f0c3ce0e
- /etc/issue.net 3ae9b9ff69a78d614864f1957778fecb
+ /etc/issue 8b362e210615e66b3bf7f69f6c819056
+ /etc/issue.net 50f6c3d0173030eee3701f6cccc7f22e
  /etc/update-motd.d/10-uname 9e1b832b7b06f566156e7c9e0548247b
 Description: Debian base system miscellaneous files
  This package contains the basic filesystem hierarchy of a Debian system, and
  several important miscellaneous files, such as /etc/debian_version,
  /etc/host.conf, /etc/issue, /etc/motd, /etc/profile, and others,
  and the text of several common licenses in use on Debian systems.
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
 
 Package: base-passwd
 Essential: yes
@@ -997,6 +999,66 @@ Description: mirrors or overlays a local directory with altered permissions
  use-cases need user_allow_other to be defined in /etc/fuse.conf.
 Homepage: https://bindfs.org
 
+Package: binutils
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 109
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Version: 2.40-2
+Provides: binutils-gold, elf-binutils
+Depends: binutils-common (= 2.40-2), libbinutils (= 2.40-2), binutils-x86-64-linux-gnu (= 2.40-2)
+Suggests: binutils-doc (>= 2.40-2)
+Conflicts: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3), binutils-multiarch (<< 2.27-8), modutils (<< 2.4.19-1)
+Description: GNU assembler, linker and binary utilities
+ The programs in this package are used to assemble, link and manipulate
+ binary and object files.  They may be used in conjunction with a compiler
+ and various libraries to build programs.
+Homepage: https://www.gnu.org/software/binutils/
+
+Package: binutils-common
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 15021
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.40-2
+Replaces: binutils (<< 2.38.50.20220527-2), binutils-multiarch (<< 2.38.50.20220527-2)
+Breaks: binutils (<< 2.38.50.20220527-2), binutils-multiarch (<< 2.38.50.20220527-2)
+Conffiles:
+ /etc/gprofng.rc d8f321679d2ce58b1399e4e6de17fcc9
+Description: Common files for the GNU assembler, linker and binary utilities
+ This package contains the localization files used by binutils packages for
+ various target architectures and parts of the binutils documentation. It is
+ not useful on its own.
+Homepage: https://www.gnu.org/software/binutils/
+
+Package: binutils-x86-64-linux-gnu
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 11428
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: allowed
+Source: binutils
+Version: 2.40-2
+Replaces: binutils (<< 2.29-6), binutils-dev (<< 2.38.50.20220609-2)
+Depends: binutils-common (= 2.40-2), libbinutils (= 2.40-2), libc6 (>= 2.36), libctf-nobfd0 (>= 2.36), libctf0 (>= 2.36), libgcc-s1 (>= 4.2), libgprofng0 (>= 2.40-2), libjansson4 (>= 2.14), libstdc++6 (>= 5), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Suggests: binutils-doc (= 2.40-2)
+Breaks: binutils (<< 2.29-6), binutils-dev (<< 2.38.50.20220609-2)
+Description: GNU binary utilities, for x86-64-linux-gnu target
+ This package provides GNU assembler, linker and binary utilities
+ for the x86-64-linux-gnu target.
+ .
+ You don't need this package unless you plan to cross-compile programs
+ for x86-64-linux-gnu and x86-64-linux-gnu is not your native platform.
+Homepage: https://www.gnu.org/software/binutils/
+
 Package: bolt
 Status: install ok installed
 Priority: optional
@@ -1150,6 +1212,37 @@ Description: utility for unprivileged chroot and namespace manipulation
  bwrap executable setuid root, allowing it to create unprivileged
  containers even though ordinary user processes cannot.
 Homepage: https://github.com/containers/bubblewrap
+
+Package: build-essential
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 20
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Version: 12.9
+Depends: libc6-dev | libc-dev, gcc (>= 4:10.2), g++ (>= 4:10.2), make, dpkg-dev (>= 1.17.11)
+Description: Informational list of build-essential packages
+ If you do not plan to build Debian packages, you don't need this
+ package.  Starting with dpkg (>= 1.14.18) this package is required
+ for building Debian packages.
+ .
+ This package contains an informational list of packages which are
+ considered essential for building Debian packages.  This package also
+ depends on the packages on that list, to make it easy to have the
+ build-essential packages installed.
+ .
+ If you have this package installed, you only need to install whatever
+ a package specifies as its build-time dependencies to build the
+ package.  Conversely, if you are determining what your package needs
+ to build-depend on, you can always leave out the packages this
+ package depends on.
+ .
+ This package is NOT the definition of what packages are
+ build-essential; the real definition is in the Debian Policy Manual.
+ This package contains merely an informational list, which is all
+ most people need.   However, if this package and the manual disagree,
+ the manual is correct.
 
 Package: busybox
 Status: install ok installed
@@ -2732,6 +2825,31 @@ Description: Debian package management system
  installation and removal of Debian software packages.
  .
  For Debian package development tools, install dpkg-dev.
+Homepage: https://wiki.debian.org/Teams/Dpkg
+
+Package: dpkg-dev
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 1728
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Architecture: all
+Multi-Arch: foreign
+Source: dpkg
+Version: 1.21.22
+Depends: perl:any, libdpkg-perl (= 1.21.22), tar (>= 1.28-1), bzip2, xz-utils (>= 5.4.0), patch (>= 2.7), make, binutils
+Recommends: build-essential, gcc | c-compiler, fakeroot, gnupg | sq | sqop | pgpainless-cli, gpgv | sq | sqop | pgpainless-cli, libalgorithm-merge-perl
+Suggests: debian-keyring
+Breaks: debhelper (<< 10.10.1~), libsop-java-java (<< 4.0.7~), pgpainless-cli (<< 1.3.13~), sq (<< 0.25.0~), sqop (<< 0.27.2~)
+Conffiles:
+ /etc/dpkg/shlibs.default 1a2b9d0a869e2aa885ae3621c557fb95
+ /etc/dpkg/shlibs.override 84b1e69080569cc5c613a50887af5200
+Description: Debian package development tools
+ This package provides the development tools (including dpkg-source)
+ required to unpack, build and upload Debian source packages.
+ .
+ Most Debian source packages will require additional tools to build;
+ for example, most packages need make and the C compiler gcc.
 Homepage: https://wiki.debian.org/Teams/Dpkg
 
 Package: e2fsprogs
@@ -4323,6 +4441,75 @@ Description: Filesystem in Userspace (3.x version)
  secure method for non privileged users to create and mount their own filesystem
  implementations.
 Homepage: https://github.com/libfuse/libfuse/wiki
+
+Package: g++
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 14
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Source: gcc-defaults (1.203)
+Version: 4:12.2.0-3
+Provides: c++-compiler, g++-x86-64-linux-gnu (= 4:12.2.0-3)
+Depends: cpp (= 4:12.2.0-3), gcc (= 4:12.2.0-3), g++-12 (>= 12.2.0-1~), gcc-12 (>= 12.2.0-1~)
+Suggests: g++-multilib
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+ .
+ This is a dependency package providing the default GNU C++ compiler.
+
+Package: g++-12
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 36161
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Source: gcc-12
+Version: 12.2.0-14
+Provides: c++-compiler, c++abi2-dev
+Depends: gcc-12-base (= 12.2.0-14), gcc-12 (= 12.2.0-14), libstdc++-12-dev (= 12.2.0-14), libc6 (>= 2.36), libgmp10 (>= 2:6.2.1+dfsg1), libisl23 (>= 0.15), libmpc3 (>= 1.1.0), libmpfr6 (>= 3.1.3), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Suggests: g++-12-multilib, gcc-12-doc (>= 12)
+Description: GNU C++ compiler
+ This is the GNU C++ compiler, a fairly portable optimizing compiler for C++.
+Homepage: http://gcc.gnu.org/
+
+Package: gcc
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 47
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Source: gcc-defaults (1.203)
+Version: 4:12.2.0-3
+Provides: c-compiler, gcc-x86-64-linux-gnu (= 4:12.2.0-3)
+Depends: cpp (= 4:12.2.0-3), gcc-12 (>= 12.2.0-1~)
+Recommends: libc6-dev | libc-dev
+Suggests: gcc-multilib, make, manpages-dev, autoconf, automake, libtool, flex, bison, gdb, gcc-doc
+Conflicts: gcc-doc (<< 1:2.95.3)
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+ .
+ This is a dependency package providing the default GNU C compiler.
+
+Package: gcc-12
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 68236
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Version: 12.2.0-14
+Replaces: cpp-12 (<< 7.1.1-8)
+Provides: c-compiler
+Depends: cpp-12 (= 12.2.0-14), gcc-12-base (= 12.2.0-14), libcc1-0 (>= 12.2.0-14), binutils (>= 2.39.90.20230104), libgcc-12-dev (= 12.2.0-14), libc6 (>= 2.36), libgcc-s1 (>= 3.0), libgmp10 (>= 2:6.2.1+dfsg1), libisl23 (>= 0.15), libmpc3 (>= 1.1.0), libmpfr6 (>= 3.1.3), libstdc++6 (>= 5), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Recommends: libc6-dev (>= 2.23-1~)
+Suggests: gcc-12-multilib, gcc-12-doc (>= 12), gcc-12-locales (>= 12)
+Description: GNU C compiler
+ This is the GNU C compiler, a fairly portable optimizing compiler for C.
+Homepage: http://gcc.gnu.org/
 
 Package: gcc-12-base
 Status: install ok installed
@@ -9423,6 +9610,22 @@ Description: memory-hard hashing function - runtime library
  This package includes the dynamic library against which programs are linked.
 Homepage: https://github.com/P-H-C/phc-winner-argon2
 
+Package: libasan8
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 8017
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Description: AddressSanitizer -- a fast memory error detector
+ AddressSanitizer (ASan) is a fast memory error detector.  It finds
+ use-after-free and {heap,stack,global}-buffer overflow bugs in C/C++ programs.
+Homepage: http://gcc.gnu.org/
+
 Package: libasound2
 Status: install ok installed
 Priority: optional
@@ -10155,6 +10358,23 @@ Description: Dynamic, any to any, pixel format conversion library
  also facilitates creation of new and uncommon ones.
 Homepage: http://gegl.org/babl/
 
+Package: libbinutils
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 2469
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.40-2
+Replaces: binutils (<< 2.29-6)
+Depends: libc6 (>= 2.34), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.2.0), binutils-common (= 2.40-2)
+Breaks: binutils (<< 2.29-6)
+Description: GNU binary utilities (private shared library)
+ This package includes the private shared libraries libbfd and libopcodes.
+Homepage: https://www.gnu.org/software/binutils/
+
 Package: libblas3
 Status: install ok installed
 Priority: optional
@@ -10684,13 +10904,13 @@ Essential: yes
 Status: install ok installed
 Priority: required
 Section: libs
-Installed-Size: 2040
+Installed-Size: 2073
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Source: glibc
-Version: 2.36-9+deb12u9
-Depends: libc6 (>> 2.36), libc6 (<< 2.37)
+Version: 2.40-3
+Depends: libc6 (>> 2.40), libc6 (<< 2.41)
 Recommends: manpages
 Breaks: dh-lua (<< 27+nmu1~)
 Conffiles:
@@ -10710,16 +10930,36 @@ Description: GNU C Library: Binaries
   * tzselect, zdump, zic: select/dump/compile time zones
 Homepage: https://www.gnu.org/software/libc/libc.html
 
+Package: libc-dev-bin
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 97
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Source: glibc
+Version: 2.40-3
+Depends: libc6 (>> 2.40), libc6 (<< 2.41)
+Recommends: manpages, manpages-dev
+Suggests: libc-devtools (>> 2.40)
+Description: GNU C Library: Development binaries
+ This package contains utility programs related to the GNU C Library
+ development package.
+ .
+  * gencat: generate message catalogs
+Homepage: https://www.gnu.org/software/libc/libc.html
+
 Package: libc-l10n
 Status: install ok installed
 Priority: standard
 Section: localization
-Installed-Size: 4348
+Installed-Size: 4703
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Architecture: all
 Multi-Arch: foreign
 Source: glibc
-Version: 2.36-9+deb12u9
+Version: 2.40-3
 Description: GNU C Library: localization files
  This package contains the translation files for the GNU C library and
  utility programs.
@@ -10729,23 +10969,44 @@ Package: libc6
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 12986
+Installed-Size: 13130
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: glibc
-Version: 2.36-9+deb12u9
+Version: 2.40-3
 Replaces: libc6-amd64
 Depends: libgcc-s1
 Recommends: libidn2-0 (>= 2.0.5~)
 Suggests: glibc-doc, debconf | debconf-2.0, libc-l10n, locales, libnss-nis, libnss-nisplus
-Breaks: aide (<< 0.17.3-4+b3), busybox (<< 1.30.1-6), chrony (<< 4.2-3~), fakechroot (<< 2.19-3.5), firefox (<< 91~), firefox-esr (<< 91~), gnumach-image-1.8-486 (<< 2:1.8+git20210923~), gnumach-image-1.8-486-dbg (<< 2:1.8+git20210923~), gnumach-image-1.8-xen-486 (<< 2:1.8+git20210923~), gnumach-image-1.8-xen-486-dbg (<< 2:1.8+git20210923~), hurd (<< 1:0.9.git20220301-2), ioquake3 (<< 1.36+u20200211.f2c61c1~dfsg-2~), iraf-fitsutil (<< 2018.07.06-4), libgegl-0.4-0 (<< 0.4.18), libtirpc1 (<< 0.2.3), locales (<< 2.36), locales-all (<< 2.36), macs (<< 2.2.7.1-3~), nocache (<< 1.1-1~), nscd (<< 2.36), openarena (<< 0.8.8+dfsg-4~), openssh-server (<< 1:8.1p1-5), python3-iptables (<< 1.0.0-2), r-cran-later (<< 0.7.5+dfsg-2), tinydns (<< 1:1.05-14), valgrind (<< 1:3.19.0-1~), wcc (<< 0.0.2+dfsg-3)
+Breaks: base-files (<< 13.3~), chrony (<< 4.2-3~), fakechroot (<< 2.19-3.5), firefox (<< 91~), firefox-esr (<< 91~), gnumach-image-1.8-486 (<< 2:1.8+git20210923~), gnumach-image-1.8-486-dbg (<< 2:1.8+git20210923~), gnumach-image-1.8-xen-486 (<< 2:1.8+git20210923~), gnumach-image-1.8-xen-486-dbg (<< 2:1.8+git20210923~), hurd (<< 1:0.9.git20220301-2), locales (<< 2.40), locales-all (<< 2.40), nscd (<< 2.40), python3-iptables (<< 1.0.0-2), systemd (<< 256~rc4-1~), sysvinit (<< 3.09-2~), tinydns (<< 1:1.05-14), valgrind (<< 1:3.19.0-1~)
 Conffiles:
  /etc/ld.so.conf.d/x86_64-linux-gnu.conf d4e7a7b88a71b5ffd9e2644e71a0cfab
 Description: GNU C Library: Shared libraries
  Contains the standard libraries that are used by nearly all programs on
  the system. This package includes shared versions of the standard C library
  and the standard math library, as well as many others.
+Homepage: https://www.gnu.org/software/libc/libc.html
+
+Package: libc6-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 12382
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: glibc
+Version: 2.40-3
+Replaces: libc6 (<= 2.32-1)
+Provides: libc-dev (= 2.40-3)
+Depends: libc6 (= 2.40-3), libc-dev-bin (= 2.40-3), linux-libc-dev, libcrypt-dev, rpcsvc-proto
+Suggests: glibc-doc, manpages-dev
+Breaks: binutils (<< 2.38), catch (<< 1.12.2-0.1), heimdal-multidev (<= 7.7.0+dfsg-4), igblast (<= 1.19.0-1), libassimp-dev (<= 5.2.4~ds0-1), libasyncns-dev (<= 0.8-6+b2), libatm1-dev (<= 1:2.5.1-4), libaws20-dev (<= 20.2-2+b1), libboinc-app-dev (<= 7.20.2+dfsg-1), libbson-dev (<= 1.22.0-1), libc6-dev-amd64-cross (<< 2.40~), libcups2-dev (<= 2.4.2-1), libdeal.ii-dev (<= 9.4.0-1), libdkim-dev (<= 1:1.0.21-4+b2), libdolfin-dev-common (<= 2019.2.0~git20220407.d29e24d-5), libeckit-dev (<= 1.20.0-1), libfclib-dev (<= 3.1.0+dfsg-2), libfltk1.3-dev (<= 1.3.8-4+b1), libghc-resolv-dev (<= 0.1.2.0-3), libghc-resolv-prof (<= 0.1.2.0-3), libglib2.0-dev (<= 2.72.3-1), libgloox-dev (<= 1.0.24-2+b1), libhesiod-dev (<= 3.2.1-3.1+b1), libinfinity-0.7-dev (<= 0.7.2-1+b1), libinsighttoolkit4-dev (<= 4.13.3withdata-dfsg2-3+b1), libinsighttoolkit5-dev (<= 5.2.1-5+b1), libismrmrd-dev (<= 1.8.0-2), libldap-dev (<= 2.5.12+dfsg-2), liblog4cplus-dev (<= 2.0.7-1), libloudmouth1-dev (<= 1.5.4-1), libmgl-dev (<= 8.0.1-2), libmimalloc2.0 (<= 2.0.6+ds-1), libminc-dev (<= 2.4.03-5), libmongoc-dev (<= 1.22.1-1), libmrpt-ros1bridge-dev (<= 1:2.4.9+ds-4+b2), libmysqlclient-dev (<= 8.0.29-1), libnetcdf-dev (<= 1:4.9.0-3), libnetcdf-mpi-dev (<= 1:4.9.0-1), libnetcdf-pnetcdf-dev (<= 1:4.9.0-1), libnfsidmap-dev (<= 1:2.6.1-2), libns3-dev (<= 3.36.1+dfsg-4), libola-dev (<= 0.10.8.nojsmin-2), libopenafs-dev (<= 1.8.8.1-3), libopendkim-dev (<= 2.11.0~beta2-7), libopendmarc-dev (<= 1.4.2-1), libopenms-dev (<= 2.6.0+cleaned1-3+b1), libopenzwave1.6-dev (<= 1.6.1914+ds-1), libpg-query-dev (<= 13-2.1.2-2), librbl-dev (<= 2.11.0~beta2-7), libre-dev (<= 1.1.0-1+b1), libshishi-dev (<= 1.0.2-11), libslurm-dev (<= 21.08.8.2-1), libsocksd0-dev (<= 1.4.2+dfsg-7+b4), libspf2-dev (<= 1.2.10-7.1+b1), libstrophe-dev (<= 0.12.1-2), libtaningia-dev (<= 0.2.2-2+b1), libtrilinos-amesos-dev (<= 13.2.0-3), libtrilinos-amesos2-dev (<= 13.2.0-3), libtrilinos-anasazi-dev (<= 13.2.0-3), libtrilinos-aztecoo-dev (<= 13.2.0-3), libtrilinos-belos-dev (<= 13.2.0-3), libtrilinos-epetra-dev (<= 13.2.0-3), libtrilinos-epetraext-dev (<= 13.2.0-3), libtrilinos-galeri-dev (<= 13.2.0-3), libtrilinos-ifpack-dev (<= 13.2.0-3), libtrilinos-ifpack2-dev (<= 13.2.0-3), libtrilinos-intrepid-dev (<= 13.2.0-3), libtrilinos-intrepid2-dev (<= 13.2.0-3), libtrilinos-isorropia-dev (<= 13.2.0-3), libtrilinos-kokkos-dev (<= 13.2.0-3), libtrilinos-kokkos-kernels-dev (<= 13.2.0-3), libtrilinos-komplex-dev (<= 13.2.0-3), libtrilinos-ml-dev (<= 13.2.0-3), libtrilinos-moertel-dev (<= 13.2.0-3), libtrilinos-muelu-dev (<= 13.2.0-3), libtrilinos-nox-dev (<= 13.2.0-3), libtrilinos-phalanx-dev (<= 13.2.0-3), libtrilinos-pike-dev (<= 13.2.0-3), libtrilinos-piro-dev (<= 13.2.0-3), libtrilinos-pliris-dev (<= 13.2.0-3), libtrilinos-rol-dev (<= 13.2.0-3), libtrilinos-rtop-dev (<= 13.2.0-3), libtrilinos-rythmos-dev (<= 13.2.0-3), libtrilinos-sacado-dev (<= 13.2.0-3), libtrilinos-shylu-dev (<= 13.2.0-3), libtrilinos-stokhos-dev (<= 13.2.0-3), libtrilinos-stratimikos-dev (<= 13.2.0-3), libtrilinos-teko-dev (<= 13.2.0-3), libtrilinos-teuchos-dev (<= 13.2.0-3), libtrilinos-thyra-dev (<= 13.2.0-3), libtrilinos-tpetra-dev (<= 13.2.0-3), libtrilinos-trilinoscouplings-dev (<= 13.2.0-3), libtrilinos-triutils-dev (<= 13.2.0-3), libtrilinos-xpetra-dev (<= 13.2.0-3), libtrilinos-zoltan2-dev (<= 13.2.0-3), libvbr-dev (<= 2.11.0~beta2-7), libvisp-dev (<= 3.5.0-2+b1), libvotca-dev (<= 2022-3), libvtk6-dev (<= 6.3.0+dfsg2-8.1+b1), libvtk7-dev (<= 7.1.1+dfsg2-10.2), open-vm-tools-dev (<= 2:12.0.5-2), pidgin-librvp (<= 0.9.7cvs-3), proftpd-dev (<= 1.3.7d+dfsg-2), slurm-wlm-basic-plugins-dev (<= 21.08.8.2-1)
+Conflicts: libc0.3-dev, libc6.1-dev
+Description: GNU C Library: Development Libraries and Header Files
+ Contains the symlinks, headers, and object files needed to compile
+ and link programs which use the standard C library.
 Homepage: https://www.gnu.org/software/libc/libc.html
 
 Package: libcaca0
@@ -11123,6 +11384,21 @@ Description: library for parsing and generating CBOR (RFC 7049)
  .
  This package contains the runtime library.
 Homepage: https://github.com/PJK/libcbor
+
+Package: libcc1-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 136
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Description: GCC cc1 plugin for GDB
+ libcc1 is a plugin for GDB.
+Homepage: http://gcc.gnu.org/
 
 Package: libccid
 Status: install ok installed
@@ -11911,6 +12187,25 @@ Description: pro-active password checker library
  program. cracklib2 is a LIBRARY.
 Homepage: https://github.com/cracklib/cracklib
 
+Package: libcrypt-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 341
+Maintainer: Marco d'Itri <md@linux.it>
+Architecture: amd64
+Multi-Arch: same
+Source: libxcrypt
+Version: 1:4.4.33-2
+Replaces: libc6-dev (<< 2.29-4), libcrypt1-dev, libcrypt2-dev, manpages-dev (<< 5.01-1)
+Provides: libcrypt1-dev
+Depends: libcrypt1 (= 1:4.4.33-2)
+Breaks: libc6-dev (<< 2.29-4), manpages-dev (<< 5.01-1)
+Conflicts: libcrypt1-dev, libcrypt2-dev
+Description: libcrypt development files
+ This package contains the files needed for developing applications that
+ use libcrypt.
+
 Package: libcrypt1
 Protected: yes
 Status: install ok installed
@@ -11952,6 +12247,40 @@ Description: disk encryption support - shared library
  .
  This package provides the libcryptsetup shared library.
 Homepage: https://gitlab.com/cryptsetup/cryptsetup
+
+Package: libctf-nobfd0
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 301
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.40-2
+Replaces: libbinutils (<< 2.33.50.20191128-1~)
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.2.0)
+Breaks: libbinutils (<< 2.33.50.20191128-1~)
+Description: Compact C Type Format library (runtime, no BFD dependency)
+ This package includes the libctf-nobfd shared library.  The Compact C Type
+ Format (CTF) is a way of representing information about a binary program
+Homepage: https://www.gnu.org/software/binutils/
+
+Package: libctf0
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 232
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.40-2
+Depends: libbinutils (= 2.40-2), libc6 (>= 2.33), zlib1g (>= 1:1.2.0)
+Description: Compact C Type Format library (runtime, BFD dependency)
+ This package includes the libctf shared library.  The Compact C Type
+ Format (CTF) is a way of representing information about a binary program
+Homepage: https://www.gnu.org/software/binutils/
 
 Package: libcue2
 Status: install ok installed
@@ -14520,6 +14849,25 @@ Description: conservative garbage collector for C and C++
  replacement.
 Homepage: https://www.hboehm.info/gc/
 
+Package: libgcc-12-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 14284
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Replaces: libtsan2 (<< 12-20211113-2~)
+Depends: gcc-12-base (= 12.2.0-14), libgcc-s1 (>= 12.2.0-14), libgomp1 (>= 12.2.0-14), libitm1 (>= 12.2.0-14), libatomic1 (>= 12.2.0-14), libasan8 (>= 12.2.0-14), liblsan0 (>= 12.2.0-14), libtsan2 (>= 12.2.0-14), libubsan1 (>= 12.2.0-14), libquadmath0 (>= 12.2.0-14)
+Recommends: libc6-dev (>= 2.23-1~)
+Breaks: libtsan2 (<< 12-20211113-2~)
+Description: GCC support library (development files)
+ This package contains the headers and static library files necessary for
+ building C programs which use libgcc, libgomp, libquadmath, libssp or libitm.
+Homepage: http://gcc.gnu.org/
+
 Package: libgcc-s1
 Protected: yes
 Status: install ok installed
@@ -15862,6 +16210,29 @@ Description: General Purpose Mouse - shared library
  and delivers them to applications. See the description for the 'gpm'
  package for more information.
 Homepage: https://nico.schottelius.org/software/gpm/
+
+Package: libgprofng0
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 3958
+Maintainer: Matthias Klose <doko@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: binutils
+Version: 2.40-2
+Depends: libbinutils (= 2.40-2), libc6 (>= 2.34), libgcc-s1 (>= 3.3.1), libstdc++6 (>= 5.2), zlib1g (>= 1:1.1.4)
+Description: GNU Next Generation profiler (runtime library)
+ Gprofng is the GNU Next Generation profiler for analyzing the performance
+ of Linux applications.  Gprofng allows you to:
+ .
+  - Profile C / C++ / Java / Scala applications without needing to recompile
+  - Profile multi-threaded applications
+  - Analyze and compare multiple experiments
+  - Use time-based sampling and / or hardware event counters
+ .
+ This package includes the libgprofng shared library.
+Homepage: https://www.gnu.org/software/binutils/
 
 Package: libgraphene-1.0-0
 Status: install ok installed
@@ -18133,6 +18504,23 @@ Description: library to create ISO 9660 images
  to the read filesystem image.
  Supported extensions to ISO 9660 are Rock Ridge, Joliet, AAIP, zisofs.
 Homepage: http://libburnia-project.org
+
+Package: libitm1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 115
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.34)
+Description: GNU Transactional Memory Library
+ GNU Transactional Memory Library (libitm) provides transaction support for
+ accesses to the memory of a process, enabling easy-to-use synchronization of
+ accesses to shared memory by several threads.
+Homepage: http://gcc.gnu.org/
 
 Package: libiw30
 Status: install ok installed
@@ -20783,6 +21171,22 @@ Description: library to manipulate RDF files describing LADSPA plugins
  It can also be used for general RDF manipulation.
 Homepage: https://github.com/swh/LRDF
 
+Package: liblsan0
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 2942
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Description: LeakSanitizer -- a memory leak detector (runtime)
+ LeakSanitizer (Lsan) is a memory leak detector which is integrated
+ into AddressSanitizer.
+Homepage: http://gcc.gnu.org/
+
 Package: libltc11
 Status: install ok installed
 Priority: optional
@@ -22953,6 +23357,24 @@ Description: replacement for GNU Pth using system threads
  compatible to GNU Pth.
 Homepage: https://www.gnupg.org/
 
+Package: libnsl-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 345
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: libnsl
+Version: 1.3.0-2
+Replaces: libc6-dev (<< 2.31-4)
+Depends: libnsl2 (= 1.3.0-2), libtirpc-dev
+Breaks: libc6-dev (<< 2.31-4)
+Description: libnsl development files
+ This package contains the files needed for developing applications that
+ use libnsl.
+Homepage: https://github.com/thkukuk/libnsl
+
 Package: libnsl2
 Status: install ok installed
 Priority: optional
@@ -22996,13 +23418,14 @@ Package: libnss-systemd
 Status: install ok installed
 Priority: standard
 Section: admin
-Installed-Size: 388
+Installed-Size: 487
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: systemd
-Version: 252.31-1~deb12u1
-Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), systemd (= 252.31-1~deb12u1)
+Version: 257.2-3
+Depends: libc6 (>= 2.39), libcap2 (>= 1:2.10), systemd (= 257.2-3)
+Suggests: libcryptsetup12, libidn2-0, libp11-kit0, libtss2-rc0t64
 Description: nss module providing dynamic user and group name resolution
  nss-systemd is a plug-in module for the GNU Name Service Switch (NSS)
  functionality of the GNU C Library (glibc), providing UNIX user and group name
@@ -23011,7 +23434,7 @@ Description: nss module providing dynamic user and group name resolution
  option.
  .
  Installing this package automatically adds the module to /etc/nsswitch.conf.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: libnss3
 Status: install ok installed
@@ -23800,15 +24223,17 @@ Package: libpam-systemd
 Status: install ok installed
 Priority: standard
 Section: admin
-Installed-Size: 531
+Installed-Size: 696
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: systemd
-Version: 252.31-1~deb12u1
-Provides: default-logind (= 252.31-1~deb12u1), logind (= 252.31-1~deb12u1)
-Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libpam0g (>= 0.99.7.1), systemd (= 252.31-1~deb12u1), libpam-runtime, default-dbus-system-bus | dbus-system-bus, systemd-sysv
+Version: 257.2-3
+Provides: default-logind (= 257.2-3), logind (= 257.2-3)
+Depends: libc6 (>= 2.39), libcap2 (>= 1:2.10), libpam0g (>= 0.99.7.1), systemd (= 257.2-3), libpam-runtime, default-dbus-system-bus | dbus-system-bus, systemd-sysv
 Recommends: dbus-user-session
+Suggests: libcryptsetup12, libidn2-0, libp11-kit0, libtss2-rc0t64
+Conflicts: libpam-elogind-compat
 Description: system and service manager - PAM module
  This package contains the PAM module which registers user sessions in
  the systemd control group hierarchy for logind.
@@ -23816,7 +24241,7 @@ Description: system and service manager - PAM module
  If in doubt, do install this package.
  .
  Packages that depend on logind functionality need to depend on libpam-systemd.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: libpam0g
 Status: install ok installed
@@ -28471,17 +28896,20 @@ Description: SSH2 client-side library
  This package contains the runtime library.
 Homepage: https://libssh2.org/
 
-Package: libssl3
+Package: libssl3t64
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 6021
+Installed-Size: 7451
 Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
 Architecture: amd64
 Multi-Arch: same
 Source: openssl
-Version: 3.0.15-1~deb12u1
-Depends: libc6 (>= 2.34)
+Version: 3.4.0-2
+Replaces: libssl3
+Provides: libssl3 (= 3.4.0-2)
+Depends: libc6 (>= 2.38), libzstd1 (>= 1.5.5), zlib1g (>= 1:1.1.4), openssl-provider-legacy
+Breaks: libssl3 (<< 3.4.0-2), openssh-client (<< 1:9.4p1), openssh-server (<< 1:9.4p1), python3-m2crypto (<< 0.38.0-4)
 Description: Secure Sockets Layer toolkit - shared libraries
  This package is part of the OpenSSL project's implementation of the SSL
  and TLS cryptographic protocols for secure communication over the
@@ -28527,6 +28955,28 @@ Description: library for program launch feedback (shared library)
  .
  This package contains the shared library.
 Homepage: https://www.freedesktop.org/wiki/Software/startup-notification/
+
+Package: libstdc++-12-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 19446
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Provides: libstdc++-dev
+Depends: gcc-12-base (= 12.2.0-14), libgcc-12-dev (= 12.2.0-14), libstdc++6 (>= 12.2.0-14), libc6-dev (>= 2.23-1~)
+Suggests: libstdc++-12-doc
+Description: GNU Standard C++ Library v3 (development files)
+ This package contains the headers and static library files necessary for
+ building C++ programs which use libstdc++.
+ .
+ libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+ was included up to g++-2.95. The first version of libstdc++-v3 appeared
+ in g++-3.0.
+Homepage: http://gcc.gnu.org/
 
 Package: libstdc++6
 Status: install ok installed
@@ -28990,34 +29440,38 @@ Package: libsystemd-shared
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 5345
+Installed-Size: 6773
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: systemd
-Version: 252.31-1~deb12u1
-Depends: libacl1 (>= 2.2.23), libapparmor1 (>= 2.13), libaudit1 (>= 1:2.2.1), libblkid1 (>= 2.24), libc6 (>= 2.36), libcap2 (>= 1:2.10), libcrypt1 (>= 1:4.4.0), libgcrypt20 (>= 1.10.0), libip4tc2 (>= 1.8.3), libkmod2 (>= 15), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.1.1alpha+20120614), libmount1 (>= 2.30), libpam0g (>= 0.99.7.1), libseccomp2 (>= 2.4.1), libselinux1 (>= 3.1~), libssl3 (>= 3.0.0), libzstd1 (>= 1.5.2)
+Version: 257.2-3
+Depends: libacl1 (>= 2.2.23), libaudit1 (>= 1:2.2.1), libblkid1 (>= 2.30.2), libc6 (>= 2.39), libcap2 (>= 1:2.10), libcrypt1 (>= 1:4.4.0), libmount1 (>= 2.30), libpam0g (>= 0.99.7.1), libseccomp2 (>= 2.4.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.4.0)
+Recommends: libkmod2, libzstd1
+Suggests: libarchive13t64, libbpf1, libcryptsetup12, libdw1t64, libelf1t64, libfido2-1, libgcrypt20, libidn2-0, libip4tc2, liblz4-1, liblzma5, libp11-kit0, libpcre2-8-0, libpwquality1, libqrencode4, libtss2-rc0t64
 Description: systemd shared private library
  This internal shared library provides common code used by various systemd
  components. It is supposed to decrease memory and disk footprint.
  The shared library is not meant for public use and is not API or ABI stable.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: libsystemd0
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 908
+Installed-Size: 1215
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: systemd
-Version: 252.31-1~deb12u1
-Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libgcrypt20 (>= 1.10.0), liblz4-1 (>= 0.0~r122), liblzma5 (>= 5.1.1alpha+20120614), libzstd1 (>= 1.5.2)
+Version: 257.2-3
+Depends: libc6 (>= 2.39), libcap2 (>= 1:2.10)
+Recommends: libzstd1
+Suggests: libgcrypt20, liblz4-1, liblzma5
 Description: systemd utility library
  This library provides APIs to interface with various system components such as
  the system journal, the system service manager, D-Bus and more.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: libtag1v5
 Status: install ok installed
@@ -29492,6 +29946,25 @@ Description: transport-independent RPC library - common files
  associated manpage.
 Homepage: http://sourceforge.net/projects/libtirpc
 
+Package: libtirpc-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 717
+Maintainer: Josue Ortega <josue@debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: libtirpc
+Version: 1.3.3+ds-1
+Depends: libtirpc3 (= 1.3.3+ds-1)
+Description: transport-independent RPC library - development files
+ This package contains a port of Sun's transport-independent RPC library to
+ Linux. The library is intended as a replacement for the RPC code in the GNU C
+ library, providing among others support for RPC (and in turn, NFS) over IPv6.
+ .
+ This package contains the files needed for development against libtirpc.
+Homepage: http://sourceforge.net/projects/libtirpc
+
 Package: libtirpc3
 Status: install ok installed
 Priority: optional
@@ -29603,6 +30076,22 @@ Description: module providing minimalistic try/catch
  handling for those having a hard time installing TryCatch, but who still want
  to write correct eval blocks without 5 lines of boilerplate each time.
 Homepage: https://metacpan.org/release/Try-Tiny
+
+Package: libtsan2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 7815
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.34), libgcc-s1 (>= 3.3)
+Description: ThreadSanitizer -- a Valgrind-based detector of data races (runtime)
+ ThreadSanitizer (Tsan) is a data race detector for C/C++ programs.
+ The Linux and Mac versions are based on Valgrind.
+Homepage: http://gcc.gnu.org/
 
 Package: libtspi1
 Status: install ok installed
@@ -29734,6 +30223,23 @@ Description: Universal 2nd Factor (U2F) — transitional package
  v244, U2F devices are autodetected without needing 3rd party udev rules.
 Homepage: https://developers.yubico.com/libu2f-host/
 
+Package: libubsan1
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 2652
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: gcc-12
+Version: 12.2.0-14
+Depends: gcc-12-base (= 12.2.0-14), libc6 (>= 2.34), libgcc-s1 (>= 3.3), libstdc++6 (>= 4.1.1)
+Description: UBSan -- undefined behaviour sanitizer (runtime)
+ UndefinedBehaviorSanitizer can be enabled via -fsanitize=undefined.
+ Various computations will be instrumented to detect undefined behavior
+ at runtime. Available for C and C++.
+Homepage: http://gcc.gnu.org/
+
 Package: libuchardet0
 Status: install ok installed
 Priority: optional
@@ -29760,17 +30266,18 @@ Package: libudev1
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 239
+Installed-Size: 353
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: systemd
-Version: 252.31-1~deb12u1
-Depends: libc6 (>= 2.34)
+Version: 257.2-3
+Depends: libc6 (>= 2.38), libcap2 (>= 1:2.10)
+Suggests: libidn2-0
 Description: libudev shared library
  This library provides APIs to introspect and enumerate devices on the local
  system.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: libudfread0
 Status: install ok installed
@@ -31233,9 +31740,31 @@ Maintainer: Marco d'Itri <md@linux.it>
 Architecture: amd64
 Multi-Arch: same
 Source: tcp-wrappers
-Version: 7.6.q-32
-Depends: libc6 (>= 2.33), libnsl2 (>= 1.0)
+Version: 7.6.q-35
+Depends: libc6 (>= 2.33)
 Description: Wietse Venema's TCP wrappers library
+ Wietse Venema's network logger, also known as TCPD or LOG_TCP.
+ .
+ These programs log the client host name of incoming telnet,
+ ftp, rsh, rlogin, finger etc. requests.
+ .
+ Security options are:
+  - access control per host, domain and/or service;
+  - detection of host name spoofing or host address spoofing;
+  - booby traps to implement an early-warning system.
+
+Package: libwrap0-dev
+Status: install ok installed
+Priority: optional
+Section: libdevel
+Installed-Size: 103
+Maintainer: Marco d'Itri <md@linux.it>
+Architecture: amd64
+Multi-Arch: same
+Source: tcp-wrappers
+Version: 7.6.q-35
+Depends: libwrap0 (= 7.6.q-35)
+Description: Wietse Venema's TCP wrappers library, development files
  Wietse Venema's network logger, also known as TCPD or LOG_TCP.
  .
  These programs log the client host name of incoming telnet,
@@ -33368,12 +33897,12 @@ Package: libzstd1
 Status: install ok installed
 Priority: optional
 Section: libs
-Installed-Size: 785
+Installed-Size: 835
 Maintainer: RPM packaging team <team+pkg-rpm@tracker.debian.org>
 Architecture: amd64
 Multi-Arch: same
 Source: libzstd
-Version: 1.5.4+dfsg2-5
+Version: 1.5.6+dfsg-2
 Depends: libc6 (>= 2.34)
 Description: fast lossless compression algorithm
  Zstd, short for Zstandard, is a fast lossless compression algorithm, targeting
@@ -33583,6 +34112,22 @@ Description: Linux for 64-bit PCs (meta-package)
 Built-Using: linux (= 6.1.119-1)
 Homepage: https://www.kernel.org/
 
+Package: linux-libc-dev
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 6811
+Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>
+Architecture: amd64
+Multi-Arch: same
+Source: linux
+Version: 6.1.119-1
+Description: Linux support headers for userspace development
+ This package provides userspaces headers from the Linux kernel.  These
+ headers are used by the installed headers for GNU libc and other system
+ libraries.
+Homepage: https://www.kernel.org/
+
 Package: live-boot
 Status: install ok installed
 Priority: optional
@@ -33697,14 +34242,14 @@ Package: locales
 Status: install ok installed
 Priority: standard
 Section: localization
-Installed-Size: 15845
+Installed-Size: 15704
 Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
 Architecture: all
 Source: glibc
-Version: 2.36-9+deb12u9
-Depends: libc-bin (>> 2.36), libc-l10n (>> 2.36), debconf (>= 0.5) | debconf-2.0
+Version: 2.40-3
+Depends: libc-bin (>> 2.40), libc-l10n (>> 2.40), debconf (>= 0.5) | debconf-2.0
 Conffiles:
- /etc/locale.alias 4a3f5ef911616822ec6fe04e31930bbf
+ /etc/locale.alias e61078721cb3be18f48a8d4530b7201c
 Description: GNU C Library: National Language (locale) data [support]
  Machine-readable data files, shared objects and programs used by the
  C library for localization (l10n) and internationalization (i18n) support.
@@ -33964,6 +34509,32 @@ Description: Debian's mailcap system, and support programs
  .
  This package also provides the "debian-view" utility to handle Debian packages
  interactively.
+
+Package: make
+Status: install ok installed
+Priority: optional
+Section: devel
+Installed-Size: 1592
+Maintainer: Manoj Srivastava <srivasta@debian.org>
+Architecture: amd64
+Multi-Arch: allowed
+Source: make-dfsg
+Version: 4.3-4.1
+Replaces: make-guile
+Depends: libc6 (>= 2.27)
+Suggests: make-doc
+Conflicts: make-guile
+Description: utility for directing compilation
+ GNU Make is a utility which controls the generation of executables
+ and other target files of a program from the program's source
+ files. It determines automatically which pieces of a large program
+ need to be (re)created, and issues the commands to (re)create
+ them. Make can be used to organize any task in which targets (files)
+ are to be automatically updated based on input files whenever the
+ corresponding input is newer --- it is not limited to building
+ computer programs. Indeed, Make is a general purpose dependency
+ solver.
+Homepage: https://www.gnu.org/software/make/
 
 Package: man-db
 Status: install ok installed
@@ -34877,21 +35448,21 @@ Package: openssh-client
 Status: install ok installed
 Priority: standard
 Section: net
-Installed-Size: 5780
+Installed-Size: 5008
 Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Source: openssh
-Version: 1:9.2p1-2+deb12u3
+Version: 1:9.9p1-3
 Replaces: openssh-sk-helper, ssh, ssh-krb5
 Provides: ssh-client
-Depends: adduser, passwd, libc6 (>= 2.36), libedit2 (>= 2.11-20080614-0), libfido2-1 (>= 1.8.0), libgssapi-krb5-2 (>= 1.17), libselinux1 (>= 3.1~), libssl3 (>= 3.0.13), zlib1g (>= 1:1.1.4)
+Depends: adduser, passwd, libc6 (>= 2.38), libedit2 (>= 2.11-20080614-0), libfido2-1 (>= 1.8.0), libgssapi-krb5-2 (>= 1.17), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.1.4)
 Recommends: xauth
 Suggests: keychain, libpam-ssh, monkeysphere, ssh-askpass
 Breaks: openssh-sk-helper
 Conflicts: sftp
 Conffiles:
- /etc/ssh/ssh_config 8a5bddc82befb71d8ef34cc903d3d077
+ /etc/ssh/ssh_config d11fe67b3cd9180e1c0e888c5e5b93f6
 Description: secure shell (SSH) client, for secure access to remote machines
  This is the portable version of OpenSSH, a free implementation of
  the Secure Shell protocol as specified by the IETF secsh working
@@ -34916,19 +35487,110 @@ Description: secure shell (SSH) client, for secure access to remote machines
  obsolete for most purposes.
 Homepage: https://www.openssh.com/
 
+Package: openssh-server
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 2315
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Source: openssh
+Version: 1:9.9p1-3
+Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
+Provides: ssh-server
+Depends: adduser, libpam-modules, libpam-runtime, lsb-base, openssh-client (= 1:9.9p1-3), openssh-sftp-server, procps, ucf, debconf (>= 0.5) | debconf-2.0, runit-helper (>= 2.14.0~), libaudit1 (>= 1:2.2.1), libc6 (>= 2.38), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.0.0), libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Pre-Depends: init-system-helpers (>= 1.54~)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
+Suggests: molly-guard, monkeysphere, ssh-askpass, ufw
+Breaks: runit (<< 2.1.2-51~)
+Conflicts: sftp, ssh-socks, ssh2
+Conffiles:
+ /etc/default/ssh 500e3cf069fe9a7b9936108eb9d9c035
+ /etc/init.d/ssh 3649a6fe8c18ad1d5245fd91737de507
+ /etc/pam.d/sshd 72487a556c4f0e23fd25ce21fc294ca8
+ /etc/ssh/moduli 441f4d1b54a967fe8da01db292a55ab2
+ /etc/sv/ssh/.meta/installed d41d8cd98f00b204e9800998ecf8427e
+ /etc/sv/ssh/finish f5f032f6f3e569c821346294d410b636
+ /etc/sv/ssh/log/run 63e0ec3e1080dafc68d6d71d42b150a9
+ /etc/sv/ssh/run 411f69ac55d12f0c98998552846b1c78
+ /etc/ufw/applications.d/openssh-server 486b78d54b93cc9fdc950c1d52ff479e
+Description: secure shell (SSH) server, for secure access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the sshd server.
+ .
+ In some countries it may be illegal to use any encryption at all
+ without a special permit.
+ .
+ sshd replaces the insecure rshd program, which is obsolete for most
+ purposes.
+Homepage: https://www.openssh.com/
+
+Package: openssh-sftp-server
+Status: install ok installed
+Priority: optional
+Section: net
+Installed-Size: 173
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Source: openssh
+Version: 1:9.9p1-3
+Replaces: openssh-server (<< 1:6.5p1-5)
+Depends: openssh-client (= 1:9.9p1-3), libc6 (>= 2.38)
+Recommends: openssh-server | ssh-server
+Breaks: openssh-server (<< 1:6.5p1-5)
+Enhances: openssh-server, ssh-server
+Description: secure shell (SSH) sftp server module, for SFTP access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the SFTP server module for the SSH server. It
+ is needed if you want to access your SSH server with SFTP. The SFTP
+ server module also works with other SSH daemons like dropbear.
+ .
+ OpenSSH's sftp and sftp-server implement revision 3 of the SSH filexfer
+ protocol described in:
+ .
+  http://www.openssh.com/txt/draft-ietf-secsh-filexfer-02.txt
+ .
+ Newer versions of the draft will not be supported, though some features
+ are individually implemented as extensions.
+Homepage: https://www.openssh.com/
+
 Package: openssl
 Status: install ok installed
 Priority: optional
 Section: utils
-Installed-Size: 2296
+Installed-Size: 2361
 Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 3.0.15-1~deb12u1
-Depends: libc6 (>= 2.34), libssl3 (>= 3.0.9)
+Version: 3.4.0-2
+Depends: libc6 (>= 2.34), libssl3t64 (>= 3.4.0)
 Suggests: ca-certificates
 Conffiles:
- /etc/ssl/openssl.cnf fe1993ec22f6b8a46cb9706acd8fc68f
+ /etc/ssl/openssl.cnf e8afc6a3f874e6d772b1c5902ce1e09e
 Description: Secure Sockets Layer toolkit - cryptographic utility
  This package is part of the OpenSSL project's implementation of the SSL
  and TLS cryptographic protocols for secure communication over the
@@ -34942,6 +35604,31 @@ Description: Secure Sockets Layer toolkit - cryptographic utility
   * encrypting and decrypting with ciphers;
   * testing SSL/TLS clients and servers;
   * handling S/MIME signed or encrypted mail.
+Homepage: https://www.openssl.org/
+
+Package: openssl-provider-legacy
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 402
+Maintainer: Debian OpenSSL Team <pkg-openssl-devel@alioth-lists.debian.net>
+Architecture: amd64
+Multi-Arch: foreign
+Source: openssl
+Version: 3.4.0-2
+Replaces: libssl3 (<< 3.3.1-5), libssl3t64 (<< 3.3.1-5)
+Depends: libc6 (>= 2.14), libssl3t64 (>= 3.0.0)
+Breaks: libssl3 (<< 3.3.1-5), libssl3t64 (<< 3.3.1-5)
+Description: Secure Sockets Layer toolkit - cryptographic utility
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ This package contains the legacy provider. The OpenSSL legacy provider
+ supplies OpenSSL implementations of algorithms that have been deemed legacy.
+ Such algorithms have commonly fallen out of use, have been deemed insecure by
+ the cryptography community, or something similar.
+ For details see OSSL_PROVIDER-legacy man page.
 Homepage: https://www.openssl.org/
 
 Package: orca
@@ -38587,6 +39274,27 @@ Description: daemon to use a Hardware RNG (classic version)
  that package offers more performant support for those, even if it lacks
  the new functionality from this version.
 
+Package: rpcsvc-proto
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 246
+Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: amd64
+Multi-Arch: foreign
+Version: 1.4.3-1
+Replaces: libc-dev-bin (<< 2.31-14), libc6-dev (<< 2.31-14)
+Depends: libc6 (>= 2.34)
+Breaks: libc-dev-bin (<< 2.31-14), libc6-dev (<< 2.31-14)
+Description: RPC protocol compiler and definitions
+ rpcgen is a tool that generates C code to implement an RPC protocol. The input
+ to rpcgen is a language similar to C known as RPC Language (Remote Procedure
+ Call Language).
+ .
+ This package also includes several rpcsvc header files and RPC protocol
+ definitions from SunRPC sources that were previously shipped by glibc.
+Homepage: https://github.com/thkukuk/rpcsvc-proto
+
 Package: rsync
 Status: install ok installed
 Priority: optional
@@ -39356,26 +40064,27 @@ Package: systemd
 Status: install ok installed
 Priority: important
 Section: admin
-Installed-Size: 9664
+Installed-Size: 9948
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
-Version: 252.31-1~deb12u1
-Provides: systemd-sysusers (= 252.31-1~deb12u1), systemd-tmpfiles (= 252.31-1~deb12u1)
-Depends: libacl1 (>= 2.2.23), libaudit1 (>= 1:2.2.1), libblkid1 (>= 2.24.2), libcryptsetup12 (>= 2:2.4), libfdisk1 (>= 2.33), libkmod2 (>= 15), libp11-kit0 (>= 0.23.18.1), libseccomp2 (>= 2.3.1), libsystemd-shared (= 252.31-1~deb12u1), libsystemd0 (= 252.31-1~deb12u1), mount
-Pre-Depends: libblkid1 (>= 2.24), libc6 (>= 2.34), libcap2 (>= 1:2.10), libgcrypt20 (>= 1.10.0), liblz4-1 (>= 0.0~r122), liblzma5 (>= 5.1.1alpha+20120614), libmount1 (>= 2.30), libselinux1 (>= 3.1~), libssl3 (>= 3.0.0), libzstd1 (>= 1.5.2)
-Recommends: default-dbus-system-bus | dbus-system-bus, systemd-timesyncd | time-daemon
-Suggests: systemd-container, systemd-homed, systemd-userdbd, systemd-boot, systemd-resolved, libfido2-1, libqrencode4, libtss2-esys-3.0.2-0, libtss2-mu0, libtss2-rc0, polkitd | policykit-1
-Breaks: less (<< 563), resolvconf (<< 1.83~), sicherboot (<< 0.1.6), udev (<< 247~)
-Conflicts: consolekit, libpam-ck-connector, systemd-shim
+Version: 257.2-3
+Provides: systemd-sysusers (= 257.2-3), systemd-tmpfiles (= 257.2-3)
+Depends: libacl1 (>= 2.2.23), libapparmor1 (>= 2.13), libmount1 (>= 2.30), libpam0g (>= 0.99.7.1), libseccomp2 (>= 2.3.1), libselinux1 (>= 3.1~), libssl3t64 (>= 3.4.0), libsystemd0 (= 257.2-3), mount
+Pre-Depends: libc6 (>= 2.38), libsystemd-shared (= 257.2-3)
+Recommends: default-dbus-system-bus | dbus-system-bus, linux-sysctl-defaults, systemd-timesyncd | time-daemon, systemd-cryptsetup
+Suggests: systemd-container, systemd-homed, systemd-userdbd, systemd-boot, systemd-resolved, systemd-repart, libtss2-tcti-device0, polkitd
+Breaks: dracut-core (<< 102-2~), less (<< 563), sicherboot (<< 0.1.6)
+Conflicts: consolekit, libpam-ck-connector, opensysusers, systemd-shim
 Conffiles:
- /etc/systemd/journald.conf d2187d732ab2911016a4d4017c155dbb
- /etc/systemd/logind.conf 8276eeafa20aa65e6a5dca3bdcddafb4
- /etc/systemd/networkd.conf f461eed370e565cbe9890dd6b2c43996
- /etc/systemd/pstore.conf ea1d43113c41edaacb39180d60a50b08
- /etc/systemd/sleep.conf 72e9b6cd3c3c7c2abbe19564771336d0
- /etc/systemd/system.conf 36ace4ee4543e277db35948826aa6979
- /etc/systemd/user.conf a908ebf52cb61e955dcf6b6662666c8d
+ /etc/security/limits.d/10-coredump-debian.conf bb509d1c69a68c82ecdcd22c9b1c7d04
+ /etc/systemd/journald.conf 226f112ac6367d270670e2c2dd9471d7
+ /etc/systemd/logind.conf 2f26319b0e390d5ddd383d04ced8ea00
+ /etc/systemd/networkd.conf c8ffe444e15b1f9e8be31e54a6eaf800
+ /etc/systemd/pstore.conf 8086c035fbf3bde72f2339a6ee50d2a4
+ /etc/systemd/sleep.conf 894f85ddfb666958fad7b7217b7f48c2
+ /etc/systemd/system.conf 9c032a82b936a8513e74296bf491a538
+ /etc/systemd/user.conf c13845a7cbc3e115e4c23949a3e2b917
 Description: system and service manager
  systemd is a system and service manager for Linux. It provides aggressive
  parallelization capabilities, uses socket and D-Bus activation for starting
@@ -39385,71 +40094,71 @@ Description: system and service manager
  .
  Installing the systemd package will not switch your init system unless you
  boot with init=/lib/systemd/systemd or install systemd-sysv in addition.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: systemd-oomd
 Status: install ok installed
 Priority: optional
 Section: admin
-Installed-Size: 186
+Installed-Size: 206
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Source: systemd
-Version: 252.31-1~deb12u1
+Version: 257.2-3
 Replaces: systemd (<< 250.2-2~)
-Depends: libc6 (>= 2.34), libsystemd-shared (= 252.31-1~deb12u1), systemd | systemd-standalone-sysusers | systemd-sysusers
+Depends: libc6 (>= 2.34), libsystemd-shared (= 257.2-3), systemd | systemd-standalone-sysusers | systemd-sysusers
 Breaks: systemd (<< 250.2-2~)
 Conffiles:
- /etc/systemd/oomd.conf 2214a142d48b48ae70f4bedf64b0b6fd
+ /etc/systemd/oomd.conf a17b86a97adcdb283e0ec34540c79841
 Description: userspace out-of-memory (OOM) killer
  systemd-oomd is a system service that uses cgroups-v2 and
  pressure stall information (PSI) to monitor and take action on
  processes before an OOM occurs in kernel space.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: systemd-sysv
 Status: install ok installed
 Priority: important
 Section: admin
-Installed-Size: 73
+Installed-Size: 90
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Source: systemd
-Version: 252.31-1~deb12u1
+Version: 257.2-3
 Replaces: sysvinit-core
+Depends: systemd (= 257.2-3)
 Pre-Depends: systemd
 Recommends: libpam-systemd, libnss-systemd
-Conflicts: file-rc, systemd-shim, sysvinit-core
+Conflicts: bfh-container (<< 20211009-22~), file-rc, initscripts, insserv, molly-guard (<< 0.8.2~), orphan-sysvinit-scripts, progress-linux-container (<< 20221002-11~), startpar, systemd-shim, sysv-rc, sysvinit-core
 Description: system and service manager - SysV compatibility symlinks
  This package provides manual pages and compatibility symlinks needed for
  systemd to replace sysvinit.
  .
  Installing systemd-sysv will overwrite /sbin/init with a symlink to systemd.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: systemd-timesyncd
 Status: install ok installed
 Priority: standard
 Section: admin
-Installed-Size: 147
+Installed-Size: 199
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Source: systemd
-Version: 252.31-1~deb12u1
-Replaces: systemd (<< 245.4-2~), time-daemon
+Version: 257.2-3
+Replaces: time-daemon
 Provides: time-daemon
-Depends: libc6 (>= 2.34), libsystemd-shared (= 252.31-1~deb12u1), systemd
-Breaks: systemd (<< 245.4-2~)
-Conflicts: time-daemon
+Depends: libc6 (>= 2.34), libsystemd-shared (= 257.2-3), systemd
+Conflicts: systemd (<< 256.2-2~), time-daemon
 Conffiles:
- /etc/dhcp/dhclient-exit-hooks.d/timesyncd c66e563f4050725592e2da20a4e1bfef
- /etc/systemd/timesyncd.conf 9bca5bc8be90d2921301a24084ffcd55
+ /etc/dhcp/dhclient-exit-hooks.d/timesyncd 1f941d2a11991ff151fe74064f2b5cf4
+ /etc/systemd/timesyncd.conf bd00db81a9f876df90e9d5c94b9ca2e7
 Description: minimalistic service to synchronize local time with NTP servers
  The package contains the systemd-timesyncd system service that may be used to
  synchronize the local system clock with a remote Network Time Protocol server.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: sysvinit-utils
 Essential: yes
@@ -40191,20 +40900,23 @@ Package: udev
 Status: install ok installed
 Priority: important
 Section: admin
-Installed-Size: 10629
+Installed-Size: 9733
 Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Multi-Arch: foreign
 Source: systemd
-Version: 252.31-1~deb12u1
-Depends: libacl1 (>= 2.2.23), libblkid1 (>= 2.37.2), libc6 (>= 2.34), libcap2 (>= 1:2.10), libkmod2 (>= 15), libselinux1 (>= 3.1~), adduser, libudev1 (= 252.31-1~deb12u1)
+Version: 257.2-3
+Replaces: systemd (<< 255~rc1-4~)
+Depends: libblkid1 (>= 2.37.2), libc6 (>= 2.38), libsystemd-shared (= 257.2-3), systemd | systemd-standalone-sysusers | systemd-sysusers, libkmod2, libudev1 (= 257.2-3)
+Breaks: systemd (<< 257.2-3)
+Conflicts: systemd (<< 255~rc1-4~)
 Conffiles:
- /etc/init.d/udev e9424814d107af7d8f58a22b1011810a
+ /etc/udev/iocost.conf fad2a2c4c34d796b6802bc62c19cc4ae
  /etc/udev/udev.conf bf60be80a4cc51271a1618edf5a6d66f
 Description: /dev/ and hotplug management daemon
  udev is a daemon which dynamically creates and removes device nodes from
  /dev/, handles hotplug events and loads drivers at boot time.
-Homepage: https://www.freedesktop.org/wiki/Software/systemd
+Homepage: https://systemd.io
 
 Package: udisks2
 Status: install ok installed

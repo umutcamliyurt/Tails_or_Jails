@@ -1,0 +1,34 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installsystemd/13.20
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'ssh.socket' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.20
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -d /run/systemd/system ] ; then
+	deb-systemd-invoke stop 'ssh.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.20
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = remove ] && [ -x "/etc/init.d/ssh" ] ; then
+	invoke-rc.d --skip-systemd-native ssh stop || exit 1
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.20
+dpkg-maintscript-helper rm_conffile /etc/network/if-up.d/openssh-server 1:7.9p1-1\~ -- "$@"
+# End automatically added section
+# Automatically added by dh_runit/2.16.3
+# Unlike postrm, I can be sure, that runit-helper is present on
+# prerm.
+#start: remove after trixie
+if  [ ! -e /usr/lib/runit-helper/runit-helper ]; then
+    #should not happen
+    echo "warning: can't find runit-helper, prerm action skipped!"
+    echo "warning: runit-helper: please report this bug"
+fi
+#end: remove after trixie
+if [ -z "${DPKG_ROOT:-}" ]  && [ -x /usr/lib/runit-helper/runit-helper ]; then
+    NAME='ssh' ENABLE='yes' ONUPGRADE='restart' /usr/lib/runit-helper/runit-helper prerm "$@"
+fi
+# End automatically added section
